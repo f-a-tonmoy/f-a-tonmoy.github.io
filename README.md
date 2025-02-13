@@ -7,7 +7,7 @@
 ---
 
 ## About Me
-Data Scientist and Machine Learning Engineer specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, Scikit-learn, SQL, and big data processing, I focus on feature engineering, model optimization, and scalable AI solutions.
+Data Scientist and Machine Learning Engineer specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, PyTorch, Scikit-learn, SQL, EDA, and Data Visualization, I focus on feature engineering, model optimization, and scalable AI solutions.
 
 ---
 
@@ -112,12 +112,12 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 - Processed and analyzed **2.5+ million network traffic records**, uncovering key anomaly patterns.  
 - Reduced **memory usage by 47.5%** through optimized numerical data type downcasting.  
 - Achieved **97% median accuracy** in detecting network anomalies using **machine learning models**.  
-
+<!--
 ### Tic-Tac-Toe Using Alpha-Beta Pruning  
 - Implemented an optimized **minimax algorithm with alpha-beta pruning**, reducing computation time by **50%**.  
 - Designed a **scalable N×N grid-based system** with two difficulty levels for human and AI gameplay.  
 - Integrated **intelligent AI decision-making**, supporting estimated and stochastic moves.  
-
+-->
 ### ML-Enabled Code Smell Detection System  
 - Developed an **ML-based system** for detecting code smells, addressing class imbalance and feature selection analysis.  
 - Achieved over **90% accuracy** in detecting code smells using **Random Forest and XGBoost**.  
