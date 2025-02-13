@@ -2,7 +2,7 @@
 
 ---
 
-[Email](mailto:f.a.tonmoy00@gmail.com)  | [LinkedIn](https://linkedin.com/in/f-a-tonmoy)  | [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ)  | [ORCID](https://orcid.org/0009-0006-2638-6521)
+[f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com) | [LinkedIn](https://linkedin.com/in/f-a-tonmoy) | [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ) | [ORCID](https://orcid.org/0009-0006-2638-6521)
 
 ---
 
