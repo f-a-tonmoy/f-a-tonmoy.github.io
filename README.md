@@ -2,6 +2,10 @@
 
 ---
 
+[Email](mailto:f.a.tonmoy00@gmail.com)  | [LinkedIn](https://linkedin.com/in/f-a-tonmoy)  | [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ)  | [ORCID](https://orcid.org/0009-0006-2638-6521)
+
+---
+
 ## About Me
 Data Scientist and Machine Learning Engineer specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, Scikit-learn, SQL, and big data processing, I focus on feature engineering, model optimization, and scalable AI solutions.
 
