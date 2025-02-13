@@ -2,6 +2,11 @@
 
 ---
 
+## About Me
+Data Scientist and Machine Learning Engineer specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, Scikit-learn, SQL, and big data processing, I focus on feature engineering, model optimization, and scalable AI solutions.
+
+---
+
 ## Education  
 #### East West University, Bangladesh  
 - BSc in Computer Science & Engineering 
