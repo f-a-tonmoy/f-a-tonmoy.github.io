@@ -12,12 +12,16 @@ Levittown, NY | [f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com)  | [Link
 
 ---
 
-## Work Experience 
-** Project Lead & researcher @ East West University (_January 2023 - December 2023_)**
-- Digitized mixed Bangla-English prescriptions with a custom CNN model, achieving a median 91% accuracy rate in OCR, including accurate recognition of cursive handwriting.
--	Reduced model training time by 20% through optimized hyperparameter tuning and implemented advanced preprocessing pipelines, including noise reduction and character segmentation.
--	Enhanced system scalability by incorporating modular preprocessing components, enabling efficient adaptation to varied handwriting styles.
--	Authored a research paper currently under review at the International Journal of Computing and Digital Systems, highlighting the model’s effectiveness in improving OCR accuracy and prescription digitization.
+## Work Experience  
+
+### **Project Lead & Researcher**  
+**East West University** _(January 2023 - December 2023)_  
+
+- Digitized **mixed Bangla-English prescriptions** using a **custom CNN model**, achieving **91% OCR accuracy**, including cursive handwriting recognition.  
+- Reduced **model training time by 20%** through optimized hyperparameter tuning and advanced preprocessing techniques, including **noise reduction and character segmentation**.  
+- Improved **system scalability** by integrating **modular preprocessing components**, allowing efficient adaptation to varied handwriting styles.  
+- Authored a **research paper** (currently under review at the **International Journal of Computing and Digital Systems**) demonstrating the model’s effectiveness in **OCR accuracy and prescription digitization**.  
+
 ---
 
 ## Research & Publications  
