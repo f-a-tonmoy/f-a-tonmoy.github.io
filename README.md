@@ -1,24 +1,18 @@
 # Fahim Ahamed (Tonmoy)  
 
-## Data Scientist & AI Researcher  
-
-Levittown, NY  
-Email: [f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com)  
-[LinkedIn](https://linkedin.com/in/f-a-tonmoy) | [GitHub](https://github.com/f-a-tonmoy)  
+Levittown, NY | [f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com)  | [LinkedIn](https://linkedin.com/in/f-a-tonmoy) 
 
 ---
 
 ### About Me  
 
-I am a Data Scientist and AI Researcher specializing in Machine Learning, Deep Learning, NLP, and Computer Vision with expertise in Python, TensorFlow, SQL, and MLOps. My research interests include AI fairness, adversarial machine learning, and explainable AI.  
-
-I have led multiple research projects, developed AI-driven healthcare applications, and worked on cybersecurity, recommendation systems, and NLP-based mental health analysis.  
+Data Scientist and AI Researcher with expertise in Machine Learning, Deep Learning, NLP, and Computer Vision. Skilled in Python, TensorFlow, PyTorch, SQL, and MLOps, I specialize in predictive modeling, data analysis, and scalable model deployment. My experience spans both industry and research, where I have developed AI-driven solutions for healthcare and cybersecurity.   
 
 ---
 
 ## Education  
 
-Bachelor of Science in Computer Science & Engineering – East West University, Bangladesh  
+BSc in Computer Science & Engineering – East West University, Bangladesh  
 Specialization: Intelligent Systems & Data Science  
 GPA: 3.74/4.0 (US Equivalent, WES Evaluated)   
 
