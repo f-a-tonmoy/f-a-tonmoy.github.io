@@ -1,4 +1,3 @@
-# Fahim Ahamed (Tonmoy)  
 ## AI Research | Data Science | NLP | Computer Vision
 Levittown, NY | [f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com)  | [LinkedIn](https://linkedin.com/in/f-a-tonmoy) 
 
