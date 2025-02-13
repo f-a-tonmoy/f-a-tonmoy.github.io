@@ -49,11 +49,12 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
   - Demonstrated the potential of sponge attacks to **increase energy consumption by up to 30x and **inference latency by over 13%**, significantly impacting mission-critical systems like MIoT and autonomous vehicles.
   - **Proposed effective defense strategies**, including energy-aware training and adversarial detection mechanisms, to mitigate the risks of such stealth attacks.
   
-
+<!--
 ### Ongoing Research  
 **Mining Mental States: Depression Detection from Social Media Using NLP, Deep Learning & Explainable AI**  
   - **Achieved 92% accuracy** in initial model testing using NLP and deep learning techniques on benchmark datasets, demonstrating reliable depressive tendency classification.
   - **Utilized GAN-BERT for robust text classification**, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
+-->
 
 ---
 
@@ -80,8 +81,8 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 - Achieved **92% accuracy** in initial model testing using **NLP and deep learning techniques** on benchmark datasets.  
 - Utilized **GAN-BERT** for robust text classification, effectively handling imbalanced datasets and improving model generalizability.  
 - Integrated **explainable AI**, improving decision transparency and supporting more informed analyses.  
-- Designed a **robust preprocessing pipeline** to handle noisy and unstructured social media text, ensuring consistency and accuracy in feature extraction.  
-
+- Designed a **robust preprocessing pipeline** to handle noisy and unstructured social media text.
+<!--
 ### Cursive Handwritten Prescription Recognition  
 - Digitized **mixed Bangla-English prescriptions** with a custom **CNN model**, achieving **91% accuracy** in OCR, including cursive handwriting recognition.  
 - Reduced **model training time by 20%** through optimized hyperparameter tuning and advanced preprocessing pipelines.  
@@ -96,7 +97,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 - Reduced annual household electricity consumption by **34.54%**, saving **90,449 watts per household**.  
 - Optimized energy usage patterns using real-world household datasets, significantly reducing standby power consumption.  
 - Proposed a **nationwide scalable model** for reducing energy wastage and carbon footprints.  
-
+-->
 ### Hybrid Recommendation System  
 - Developed a **hybrid recommendation engine** combining collaborative and content-based filtering to address the **cold-start problem**.  
 - Processed and analyzed over **100,000 user interaction records**, improving user engagement metrics by **15%**.  
