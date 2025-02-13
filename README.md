@@ -1,4 +1,4 @@
-# AI Research | Data Science | NLP | Computer Vision 
+# AI Research | Data Science | Machine Learning | NLP | Computer Vision 
 
 ---
 
@@ -25,9 +25,9 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 **East West University** _(January 2023 - December 2023)_  
 
 - Digitized **mixed Bangla-English prescriptions** using a **custom CNN model**, achieving **91% OCR accuracy**, including cursive handwriting recognition.  
-- Reduced **model training time by 20%** through optimized hyperparameter tuning and advanced preprocessing techniques, including **noise reduction and character segmentation**.  
+- Reduced **model training time by 20%** through optimized hyperparameter tuning and **advanced preprocessing techniques**, including noise reduction and character segmentation.  
 - Improved **system scalability** by integrating **modular preprocessing components**, allowing efficient adaptation to varied handwriting styles.  
-- Authored a **research paper** (currently under review at the **International Journal of Computing and Digital Systems**) demonstrating the model’s effectiveness in **OCR accuracy and prescription digitization**.  
+- Authored a **research paper** (currently under review at the **International Journal of Computing and Digital Systems**) demonstrating the model’s effectiveness in OCR accuracy and prescription digitization.  
 
 ---
 
@@ -35,25 +35,25 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 
 ### Published Papers  
 **Texture Feature-Based Colonic Polyp Detection Using Deep Learning Techniques** (ICO-2023, Springer)  
-  - Achieved a 97.33% segmentation accuracy (IoU) using DeepLab3+ model, outperforming VGG16 in delineating polyp boundaries.
-  - Delivered superior results compared to previous research, setting a new benchmark for polyp segmentation accuracy in colorectal cancer detection.
+  - **Achieved a 97.33% segmentation accuracy (IoU)** using DeepLab3+ model, outperforming VGG16 in delineating polyp boundaries.
+  - **Delivered superior results** compared to previous research, setting a new benchmark for polyp segmentation accuracy in colorectal cancer detection.
   - [Read Paper](https://link.springer.com/chapter/10.1007/978-3-031-73324-6_2)  
 
 **Optimizing Energy Usage: Genetic Algorithms Leading the Charge Toward Sustainability** (ICO-2023, Springer)  
-  - Reduced annual household electricity consumption by 34.54%, saving over 90,000 watts per household, demonstrating significant environmental and cost-saving impacts.
-  - Highlighted the potential for nationwide scalability, offering a sustainable solution to reduce energy wastage and carbon footprints.
+  - Reduced annual household electricity consumption by **34.54%**, saving over **90,000 watts per household**, demonstrating significant environmental and cost-saving impacts.
+  - Highlighted the potential for **nationwide scalability**, offering a sustainable solution to reduce energy wastage and carbon footprints.
   - [Read Paper](https://link.springer.com/chapter/10.1007/978-3-031-50887-5_9)  
 
 ### Papers Under Review  
 **Adversarial Energy Latency Sponge Attack on Resource Constraint Devices** (IEEE IoT Journal)  
-  - Demonstrated the potential of sponge attacks to increase energy consumption by up to 30x and inference latency by over 13%, significantly impacting mission-critical systems like MIoT and autonomous vehicles.
-  - Proposed effective defense strategies, including energy-aware training and adversarial detection mechanisms, to mitigate the risks of such stealth attacks.
+  - Demonstrated the potential of sponge attacks to **increase energy consumption by up to 30x and **inference latency by over 13%**, significantly impacting mission-critical systems like MIoT and autonomous vehicles.
+  - **Proposed effective defense strategies**, including energy-aware training and adversarial detection mechanisms, to mitigate the risks of such stealth attacks.
   
 
 ### Ongoing Research  
 **Mining Mental States: Depression Detection from Social Media Using NLP, Deep Learning & Explainable AI**  
-  - Achieved 92% accuracy in initial model testing using NLP and deep learning techniques on benchmark datasets, demonstrating reliable depressive tendency classification.
-  - Utilized GAN-BERT for robust text classification, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
+  - **Achieved 92% accuracy** in initial model testing using NLP and deep learning techniques on benchmark datasets, demonstrating reliable depressive tendency classification.
+  - **Utilized GAN-BERT for robust text classification**, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
 
 ---
 
@@ -150,7 +150,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 
 ## Additional Highlights  
 
--	Solved 500+ problems on platforms like LeetCode, HackerRank, and Beecrowd (formerly URI), Combined.
+-	**Solved 500+ problems** on platforms like LeetCode, HackerRank, and Beecrowd (formerly URI), Combined.
 -	Gold-labeled problem solver on HackerRank. Awarded Gold Badges for JAVA and SQL.
 
 ---
