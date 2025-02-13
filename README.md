@@ -2,10 +2,6 @@
 
 ---
 
-Levittown, NY-11756 | [Email](mailto:f.a.tonmoy00@gmail.com) | [LinkedIn](https://linkedin.com/in/f-a-tonmoy) | [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ) | [ORCID](https://orcid.org/0009-0006-2638-6521)
-
----
-
 ## About Me  
 I am a Data Scientist and Machine Learning Engineer specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, Scikit-learn, SQL, and big data processing, I focus on feature engineering, model optimization, and scalable AI solutions. With experience in MLOps and cloud deployment (AWS, GCP), I build production-ready machine learning systems. Passionate about AI research and real-world applications, I strive to develop impactful, interpretable, and efficient models.
 
