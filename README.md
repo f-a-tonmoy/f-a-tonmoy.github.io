@@ -56,6 +56,11 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
   - **Utilized GAN-BERT for robust text classification**, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
 -->
 
+## Articles
+  - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
+  - [Beyond the Black Box: Why Explainability Matters in AI](https://www.linkedin.com/pulse/beyond-black-box-why-explainability-matters-ai-fahim-ahamed-q6gje/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
+  - [The Hidden Bias in AI – Can We Fix It?](https://www.linkedin.com/pulse/hidden-bias-ai-can-we-fix-fahim-ahamed-1vzae/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
+
 ---
 
 ## Technical Skills  
