@@ -12,8 +12,8 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 ---
 
 ## Education  
-#### East West University, Bangladesh  
-- BSc in Computer Science & Engineering 
+#### BSc in Computer Science & Engineering
+- East West University, Bangladesh 
 - Specialization: Intelligent Systems & Data Science  
 - GPA: 3.74/4.0 (US Equivalent, WES Evaluated)
 
@@ -33,7 +33,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 
 ## Research & Publications  
 
-### Published Papers  
+### Published Papers (Newest First)
 **Texture Feature-Based Colonic Polyp Detection Using Deep Learning Techniques** (ICO-2023, Springer)  
   - **Achieved a 97.33% segmentation accuracy (IoU)** using DeepLab3+ model, outperforming VGG16 in delineating polyp boundaries.
   - **Delivered superior results** compared to previous research, setting a new benchmark for polyp segmentation accuracy in colorectal cancer detection.
@@ -56,7 +56,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
   - **Utilized GAN-BERT for robust text classification**, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
 -->
 
-## Articles
+## Articles (Newest First)
   - [Shapley Values: The Gold Standard for AI Explainability](https://www.linkedin.com/pulse/shapley-values-gold-standard-ai-explainability-fahim-ahamed-vvfpe/?trackingId=8oEGcMf6RRe%2Bzz4yRXFPJw%3D%3D)
   - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
   - [Beyond the Black Box: Why Explainability Matters in AI](https://www.linkedin.com/pulse/beyond-black-box-why-explainability-matters-ai-fahim-ahamed-q6gje/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
