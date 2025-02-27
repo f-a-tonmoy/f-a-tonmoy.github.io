@@ -71,7 +71,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 **AI & ML:** TensorFlow, Keras, Scikit-learn, OpenCV, NLTK, SpaCy  
 **Data Analysis & Visualization:** NumPy, Pandas, Matplotlib, Seaborn, Tableau  
 **Web Development:** Django, Flask, HTML, CSS, JavaScript  
-**Databases & Big Data:** SQL (Oracle, MySQL), Hadoop, Spark  
+**Databases & Big Data:** SQL (Oracle, MySQL), NoSQL(MongoDB), Hadoop, Spark  
 **Cloud & Deployment:** AWS, GCP  
 **MLOps & CI/CD:** MLflow, Git, GitHub  
 
