@@ -57,6 +57,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 -->
 
 ## Articles (Newest First)
+  - [Counterfactual Explanations: A New Frontier in AI Transparency](https://www.linkedin.com/pulse/counterfactual-explanations-new-frontier-ai-fahim-ahamed-6xhpe/?trackingId=pff4mZA23buN0HgAzflSVA%3D%3D)
   - [Shapley Values: The Gold Standard for AI Explainability](https://www.linkedin.com/pulse/shapley-values-gold-standard-ai-explainability-fahim-ahamed-vvfpe/?trackingId=8oEGcMf6RRe%2Bzz4yRXFPJw%3D%3D)
   - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
   - [Beyond the Black Box: Why Explainability Matters in AI](https://www.linkedin.com/pulse/beyond-black-box-why-explainability-matters-ai-fahim-ahamed-q6gje/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
@@ -158,8 +159,8 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 ## Additional Highlights  
 
 -	**Solved 500+ problems** on platforms like LeetCode, HackerRank, and Beecrowd (formerly URI), Combined.
--	Gold-labeled problem solver on HackerRank. Awarded Gold Badges for JAVA and SQL.
+-	**Gold-labeled problem solver** on HackerRank. Awarded Gold Badges for JAVA and SQL.
 
 ---
 
-Open to collaborations and research discussions.  
+**Open to collaborations and research discussions.**
