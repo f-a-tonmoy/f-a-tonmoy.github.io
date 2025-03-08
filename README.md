@@ -71,14 +71,15 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 ## Technical Skills 
 
 **Languages:** Python, Java, C/C++  
-**AI & ML:** TensorFlow, Keras, PyTorch, Scikit-learn
-**CV & NLP:** OpenCV, Pillow, NLTK, SpaCy, Gensim
+**AI & ML:** TensorFlow, Keras, PyTorch, Scikit-learn  
+**Computer Vision & NLP:** OpenCV, Pillow, NLTK, SpaCy, Gensim  
 **Data Analysis & Visualization:** NumPy, Pandas, Matplotlib, Seaborn, Tableau  
 **Web Development:** Django, Flask, HTML, CSS, JavaScript  
-**Databases & Big Data:** SQL (Oracle, MySQL), NoSQL(MongoDB), Hadoop, Spark  
+**Databases & Big Data:** SQL (Oracle, MySQL), NoSQL (MongoDB), Hadoop, Spark  
 **Cloud & Deployment:** AWS, GCP  
-**MLOps & CI/CD:** MLflow, Git, GitHub
-**R&D Tools:** LaTeX, Mendeley, Jupyter Notebook, VS Code, JetBrains IDEs
+**MLOps & CI/CD:** MLflow, Git, GitHub  
+**R&D Tools:** LaTeX, Mendeley, Jupyter Notebook, VS Code, JetBrains IDEs  
+
 
 ---
 
