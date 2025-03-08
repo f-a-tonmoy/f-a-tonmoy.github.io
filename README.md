@@ -95,6 +95,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 - Utilized **GAN-BERT** for robust text classification, effectively handling imbalanced datasets and improving model generalizability.  
 - Integrated **explainable AI**, improving decision transparency and supporting more informed analyses.  
 - Designed a **robust preprocessing pipeline** to handle noisy and unstructured social media text.
+
 <!--
 ### Cursive Handwritten Prescription Recognition  
 - Digitized **mixed Bangla-English prescriptions** with a custom **CNN model**, achieving **91% accuracy** in OCR, including cursive handwriting recognition.  
@@ -111,6 +112,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 - Optimized energy usage patterns using real-world household datasets, significantly reducing standby power consumption.  
 - Proposed a **nationwide scalable model** for reducing energy wastage and carbon footprints.  
 -->
+
 ### Hybrid Recommendation System  
 - Developed a **hybrid recommendation engine** combining collaborative and content-based filtering to address the **cold-start problem**.  
 - Processed and analyzed over **100,000 user interaction records**, improving user engagement metrics by **15%**.  
