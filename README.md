@@ -27,7 +27,7 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 - Digitized **mixed Bangla-English prescriptions** using a **custom CNN model**, achieving **91% OCR accuracy**, including cursive handwriting recognition.  
 - Reduced **model training time by 20%** through optimized hyperparameter tuning and **advanced preprocessing techniques**, including noise reduction and character segmentation.  
 - Improved **system scalability** by integrating **modular preprocessing components**, allowing efficient adaptation to varied handwriting styles.  
-- Authored a **research paper** (currently under review at the **International Journal of Computing and Digital Systems**) demonstrating the model’s effectiveness in OCR accuracy and prescription digitization.  
+- **Authored a research paper** (currently under review at the **International Journal of Computing and Digital Systems**) demonstrating the model’s effectiveness in OCR accuracy and prescription digitization.  
 
 ---
 
