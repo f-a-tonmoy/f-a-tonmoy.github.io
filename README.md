@@ -57,6 +57,9 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 -->
 
 ## Articles (Newest First)
+  - [Data Leakage in Machine Learning: The Silent Model Killer and How to Prevent It](https://www.linkedin.com/pulse/data-leakage-machine-learning-silent-model-killer-how-fahim-ahamed-fnqje)
+  - [Interpretable Machine Learning: How Much Transparency is Too Much?](https://www.linkedin.com/pulse/interpretable-machine-learning-how-much-transparency-too-fahim-ahamed-zi0nf)
+  - [Causal Inference in AI: A New Approach to Model Transparency](https://www.linkedin.com/pulse/causal-inference-ai-new-approach-model-transparency-fahim-ahamed-heorf)
   - [Counterfactual Explanations: A New Frontier in AI Transparency](https://www.linkedin.com/pulse/counterfactual-explanations-new-frontier-ai-fahim-ahamed-6xhpe/?trackingId=pff4mZA23buN0HgAzflSVA%3D%3D)
   - [Shapley Values: The Gold Standard for AI Explainability](https://www.linkedin.com/pulse/shapley-values-gold-standard-ai-explainability-fahim-ahamed-vvfpe/?trackingId=8oEGcMf6RRe%2Bzz4yRXFPJw%3D%3D)
   - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
@@ -68,12 +71,14 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 ## Technical Skills 
 
 **Languages:** Python, Java, C/C++  
-**AI & ML:** TensorFlow, Keras, Scikit-learn, OpenCV, NLTK, SpaCy  
+**AI & ML:** TensorFlow, Keras, PyTorch, Scikit-learn
+**CV & NLP:** OpenCV, Pillow, NLTK, SpaCy, Gensim
 **Data Analysis & Visualization:** NumPy, Pandas, Matplotlib, Seaborn, Tableau  
 **Web Development:** Django, Flask, HTML, CSS, JavaScript  
 **Databases & Big Data:** SQL (Oracle, MySQL), NoSQL(MongoDB), Hadoop, Spark  
 **Cloud & Deployment:** AWS, GCP  
-**MLOps & CI/CD:** MLflow, Git, GitHub  
+**MLOps & CI/CD:** MLflow, Git, GitHub
+**R&D Tools:** LaTeX, Mendeley, Jupyter Notebook, VS Code, JetBrains IDEs
 
 ---
 
@@ -119,16 +124,16 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 - Processed and analyzed **2.5+ million network traffic records**, uncovering key anomaly patterns.  
 - Reduced **memory usage by 47.5%** through optimized numerical data type downcasting.  
 - Achieved **97% median accuracy** in detecting network anomalies using **machine learning models**.  
-<!--
-### Tic-Tac-Toe Using Alpha-Beta Pruning  
-- Implemented an optimized **minimax algorithm with alpha-beta pruning**, reducing computation time by **50%**.  
-- Designed a **scalable N×N grid-based system** with two difficulty levels for human and AI gameplay.  
-- Integrated **intelligent AI decision-making**, supporting estimated and stochastic moves.  
--->
+
 ### ML-Enabled Code Smell Detection System  
 - Developed an **ML-based system** for detecting code smells, addressing class imbalance and feature selection analysis.  
 - Achieved over **90% accuracy** in detecting code smells using **Random Forest and XGBoost**.  
 - Balanced a **dataset of 190,707 entries** with **73.6% class imbalance**, improving detection rates by **32%**.  
+
+### Tic-Tac-Toe Using Alpha-Beta Pruning  
+- Implemented an optimized **minimax algorithm with alpha-beta pruning**, reducing computation time by **50%**.  
+- Designed a **scalable N×N grid-based system** with two difficulty levels for human and AI gameplay.  
+- Integrated **intelligent AI decision-making**, supporting estimated and stochastic moves.  
 
 ---
 
