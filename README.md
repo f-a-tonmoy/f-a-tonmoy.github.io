@@ -57,6 +57,8 @@ Data Scientist and Machine Learning Engineer specializing in predictive modeling
 -->
 
 ## Articles (Newest First)
+  - [Why Data Preprocessing is More Important Than the Model Itself](https://www.linkedin.com/pulse/why-data-preprocessing-more-important-than-model-itself-fahim-ahamed-lhyxe)
+  - [The Curse of Dimensionality: Why More Features Aren’t Always Better](https://www.linkedin.com/pulse/curse-dimensionality-why-more-features-arent-always-better-ahamed-gpbie)
   - [Data Leakage in Machine Learning: The Silent Model Killer and How to Prevent It](https://www.linkedin.com/pulse/data-leakage-machine-learning-silent-model-killer-how-fahim-ahamed-fnqje)
   - [Interpretable Machine Learning: How Much Transparency is Too Much?](https://www.linkedin.com/pulse/interpretable-machine-learning-how-much-transparency-too-fahim-ahamed-zi0nf)
   - [Causal Inference in AI: A New Approach to Model Transparency](https://www.linkedin.com/pulse/causal-inference-ai-new-approach-model-transparency-fahim-ahamed-heorf)
