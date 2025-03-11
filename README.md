@@ -7,7 +7,7 @@
 ---
 
 ## About Me
-Data Scientist and Machine Learning Engineer specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, PyTorch, Scikit-learn, SQL, EDA, and Data Visualization, I focus on feature engineering, model optimization, and scalable AI solutions.
+Data Scientist and AI Researcher specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, PyTorch, Scikit-learn, SQL, EDA, and Data Visualization, I focus on feature engineering, model optimization, and scalable AI solutions.
 
 ---
 
