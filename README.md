@@ -55,19 +55,6 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
   - **Achieved 92% accuracy** in initial model testing using NLP and deep learning techniques on benchmark datasets, demonstrating reliable depressive tendency classification.
   - **Utilized GAN-BERT for robust text classification**, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
 -->
-
-## Articles (Newest First)
-  - [Why Data Preprocessing is More Important Than the Model Itself](https://www.linkedin.com/pulse/why-data-preprocessing-more-important-than-model-itself-fahim-ahamed-lhyxe)
-  - [The Curse of Dimensionality: Why More Features Aren’t Always Better](https://www.linkedin.com/pulse/curse-dimensionality-why-more-features-arent-always-better-ahamed-gpbie)
-  - [Data Leakage in Machine Learning: The Silent Model Killer and How to Prevent It](https://www.linkedin.com/pulse/data-leakage-machine-learning-silent-model-killer-how-fahim-ahamed-fnqje)
-  - [Interpretable Machine Learning: How Much Transparency is Too Much?](https://www.linkedin.com/pulse/interpretable-machine-learning-how-much-transparency-too-fahim-ahamed-zi0nf)
-  - [Causal Inference in AI: A New Approach to Model Transparency](https://www.linkedin.com/pulse/causal-inference-ai-new-approach-model-transparency-fahim-ahamed-heorf)
-  - [Counterfactual Explanations: A New Frontier in AI Transparency](https://www.linkedin.com/pulse/counterfactual-explanations-new-frontier-ai-fahim-ahamed-6xhpe/?trackingId=pff4mZA23buN0HgAzflSVA%3D%3D)
-  - [Shapley Values: The Gold Standard for AI Explainability](https://www.linkedin.com/pulse/shapley-values-gold-standard-ai-explainability-fahim-ahamed-vvfpe/?trackingId=8oEGcMf6RRe%2Bzz4yRXFPJw%3D%3D)
-  - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
-  - [Beyond the Black Box: Why Explainability Matters in AI](https://www.linkedin.com/pulse/beyond-black-box-why-explainability-matters-ai-fahim-ahamed-q6gje/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
-  - [The Hidden Bias in AI – Can We Fix It?](https://www.linkedin.com/pulse/hidden-bias-ai-can-we-fix-fahim-ahamed-1vzae/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
-
 ---
 
 ## Technical Skills 
@@ -82,6 +69,20 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 **MLOps & CI/CD:** MLflow, Git, GitHub  
 **R&D Tools:** LaTeX, Mendeley, Jupyter Notebook, VS Code, JetBrains IDEs  
 
+
+---
+
+## Articles (Newest First)
+  - [Why Data Preprocessing is More Important Than the Model Itself](https://www.linkedin.com/pulse/why-data-preprocessing-more-important-than-model-itself-fahim-ahamed-lhyxe)
+  - [The Curse of Dimensionality: Why More Features Aren’t Always Better](https://www.linkedin.com/pulse/curse-dimensionality-why-more-features-arent-always-better-ahamed-gpbie)
+  - [Data Leakage in Machine Learning: The Silent Model Killer and How to Prevent It](https://www.linkedin.com/pulse/data-leakage-machine-learning-silent-model-killer-how-fahim-ahamed-fnqje)
+  - [Interpretable Machine Learning: How Much Transparency is Too Much?](https://www.linkedin.com/pulse/interpretable-machine-learning-how-much-transparency-too-fahim-ahamed-zi0nf)
+  - [Causal Inference in AI: A New Approach to Model Transparency](https://www.linkedin.com/pulse/causal-inference-ai-new-approach-model-transparency-fahim-ahamed-heorf)
+  - [Counterfactual Explanations: A New Frontier in AI Transparency](https://www.linkedin.com/pulse/counterfactual-explanations-new-frontier-ai-fahim-ahamed-6xhpe/?trackingId=pff4mZA23buN0HgAzflSVA%3D%3D)
+  - [Shapley Values: The Gold Standard for AI Explainability](https://www.linkedin.com/pulse/shapley-values-gold-standard-ai-explainability-fahim-ahamed-vvfpe/?trackingId=8oEGcMf6RRe%2Bzz4yRXFPJw%3D%3D)
+  - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
+  - [Beyond the Black Box: Why Explainability Matters in AI](https://www.linkedin.com/pulse/beyond-black-box-why-explainability-matters-ai-fahim-ahamed-q6gje/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
+  - [The Hidden Bias in AI – Can We Fix It?](https://www.linkedin.com/pulse/hidden-bias-ai-can-we-fix-fahim-ahamed-1vzae/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
 
 ---
 
