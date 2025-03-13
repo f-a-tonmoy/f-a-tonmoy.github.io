@@ -119,7 +119,12 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 - Developed a **hybrid recommendation engine** combining collaborative and content-based filtering to address the **cold-start problem**.  
 - Processed and analyzed over **100,000 user interaction records**, improving user engagement metrics by **15%**.  
 - Implemented a **scalable architecture** to enhance data handling efficiency and seamless integration.
-  
+
+### Intrusion Detection System  
+- Processed and analyzed **2.5+ million network traffic records**, uncovering key anomaly patterns.  
+- Reduced **memory usage by 47.5%** through optimized numerical data type downcasting.  
+- Achieved **97% median accuracy** in detecting network anomalies using **machine learning models**. 
+
 ### Credit Score Classification  
 - Processed **100,000+ financial records**, applying extensive **data cleaning and feature engineering** to improve model quality.  
 - Trained and optimized classification models, achieving **92% accuracy** in predicting credit scores.  
@@ -129,11 +134,6 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 - Developed an **ML-based system** for detecting code smells, addressing class imbalance, and feature selection analysis.  
 - Achieved over **90% accuracy** in detecting code smells using **Random Forest and XGBoost**.  
 - Balanced a **dataset of 190,707 entries** with **73.6% class imbalance**, improving detection rates by **32%**.  
-
-### Intrusion Detection System  
-- Processed and analyzed **2.5+ million network traffic records**, uncovering key anomaly patterns.  
-- Reduced **memory usage by 47.5%** through optimized numerical data type downcasting.  
-- Achieved **97% median accuracy** in detecting network anomalies using **machine learning models**. 
 
 ### Tic-Tac-Toe Using Alpha-Beta Pruning  
 - Implemented an optimized **minimax algorithm with alpha-beta pruning**, reducing computation time by **50%**.  
