@@ -73,6 +73,8 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [The Future of NLP: Leveraging Large Language Models Responsibly](https://www.linkedin.com/pulse/future-nlp-leveraging-large-language-models-fahim-ahamed-7rede)
+  - [From Data to Decisions: The Role of Data Science in Business Strategy](https://www.linkedin.com/pulse/from-data-decisions-role-science-business-strategy-fahim-ahamed-fxise)
   - [Why Data Preprocessing is More Important Than the Model Itself](https://www.linkedin.com/pulse/why-data-preprocessing-more-important-than-model-itself-fahim-ahamed-lhyxe)
   - [The Curse of Dimensionality: Why More Features Aren’t Always Better](https://www.linkedin.com/pulse/curse-dimensionality-why-more-features-arent-always-better-ahamed-gpbie)
   - [Data Leakage in Machine Learning: The Silent Model Killer and How to Prevent It](https://www.linkedin.com/pulse/data-leakage-machine-learning-silent-model-killer-how-fahim-ahamed-fnqje)
