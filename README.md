@@ -69,10 +69,10 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 **MLOps & CI/CD:** MLflow, Git, GitHub  
 **R&D Tools:** LaTeX, Mendeley, Jupyter Notebook, VS Code, JetBrains IDEs  
 
-
 ---
 
 ## Articles (Newest First)
+  - [The Evolution of Computer Vision: From Classic Techniques to AI-Powered Systems](https://www.linkedin.com/pulse/evolution-computer-vision-from-classic-techniques-systems-ahamed-tzwfe)
   - [The Future of NLP: Leveraging Large Language Models Responsibly](https://www.linkedin.com/pulse/future-nlp-leveraging-large-language-models-fahim-ahamed-7rede)
   - [From Data to Decisions: The Role of Data Science in Business Strategy](https://www.linkedin.com/pulse/from-data-decisions-role-science-business-strategy-fahim-ahamed-fxise)
   - [Why Data Preprocessing is More Important Than the Model Itself](https://www.linkedin.com/pulse/why-data-preprocessing-more-important-than-model-itself-fahim-ahamed-lhyxe)
