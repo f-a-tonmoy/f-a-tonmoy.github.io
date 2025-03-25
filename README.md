@@ -12,7 +12,7 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Education  
-#### BSc in Computer Science & Engineering
+#### BSc in Computer Science & Engineering (CSE)
 - East West University, Bangladesh 
 - Specialization: Intelligent Systems & Data Science  
 - GPA: 3.74/4.0 (US Equivalent)
