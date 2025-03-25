@@ -72,6 +72,9 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Causal Impact Analysis: How to Measure the True Effect of Your Decisions](https://www.linkedin.com/pulse/causal-impact-analysis-how-measure-true-effect-your-decisions-ahamed-vxb3e)
+  - [Using GenAI Without Oversharing Your Data](https://www.linkedin.com/pulse/using-genai-without-oversharing-your-data-fahim-ahamed-dvtbf)
+  - [The Ethics of Data Science: Balancing Innovation and Privacy in a Data-Driven World](https://www.linkedin.com/pulse/ethics-data-science-balancing-innovation-privacy-world-fahim-ahamed-lirnf)
   - [The Evolution of Computer Vision: From Classic Techniques to AI-Powered Systems](https://www.linkedin.com/pulse/evolution-computer-vision-from-classic-techniques-systems-ahamed-tzwfe)
   - [The Future of NLP: Leveraging Large Language Models Responsibly](https://www.linkedin.com/pulse/future-nlp-leveraging-large-language-models-fahim-ahamed-7rede)
   - [From Data to Decisions: The Role of Data Science in Business Strategy](https://www.linkedin.com/pulse/from-data-decisions-role-science-business-strategy-fahim-ahamed-fxise)
