@@ -72,6 +72,10 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [The AI Feedback Loop: How Algorithms Change the Data They Learn From](https://www.linkedin.com/pulse/ai-feedback-loop-how-algorithms-change-data-learn-from-fahim-ahamed-iizvf)
+  - [Retraining AI Models: When, Why, and How Often?](https://www.linkedin.com/pulse/retraining-ai-models-when-why-how-often-fahim-ahamed-srjhe)
+  - [Synthetic Data in Machine Learning: Innovation or Illusion?](https://www.linkedin.com/pulse/synthetic-data-machine-learning-innovation-illusion-fahim-ahamed-jpybe)
+  - [Data Provenance: Why Knowing Where Your Data Comes From Is Crucial](https://www.linkedin.com/pulse/data-provenance-why-knowing-where-your-comes-from-crucial-ahamed-zynxe)
   - [Causal Impact Analysis: How to Measure the True Effect of Your Decisions](https://www.linkedin.com/pulse/causal-impact-analysis-how-measure-true-effect-your-decisions-ahamed-vxb3e)
   - [Using GenAI Without Oversharing Your Data](https://www.linkedin.com/pulse/using-genai-without-oversharing-your-data-fahim-ahamed-dvtbf)
   - [The Ethics of Data Science: Balancing Innovation and Privacy in a Data-Driven World](https://www.linkedin.com/pulse/ethics-data-science-balancing-innovation-privacy-world-fahim-ahamed-lirnf)
