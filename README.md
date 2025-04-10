@@ -72,6 +72,9 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Multiclass vs. Multilabel Classification: Understanding the Differences Clearly](https://www.linkedin.com/pulse/multiclass-vs-multilabel-classification-understanding-fahim-ahamed-o2zse)
+  - [The Double Descent Phenomenon: Rethinking Overfitting in Machine Learning](https://www.linkedin.com/pulse/double-descent-phenomenon-rethinking-overfitting-machine-fahim-ahamed-skqie)
+  - [Demystifying Loss Functions: Choosing the Right One for Your ML Task](https://www.linkedin.com/pulse/demystifying-loss-functions-choosing-right-one-your-ml-fahim-ahamed-ysbxe)
   - [The AI Feedback Loop: How Algorithms Change the Data They Learn From](https://www.linkedin.com/pulse/ai-feedback-loop-how-algorithms-change-data-learn-from-fahim-ahamed-iizvf)
   - [Retraining AI Models: When, Why, and How Often?](https://www.linkedin.com/pulse/retraining-ai-models-when-why-how-often-fahim-ahamed-srjhe)
   - [Synthetic Data in Machine Learning: Innovation or Illusion?](https://www.linkedin.com/pulse/synthetic-data-machine-learning-innovation-illusion-fahim-ahamed-jpybe)
