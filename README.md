@@ -131,12 +131,12 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 - Developed an **ML-based system** for detecting code smells, addressing class imbalance, and feature selection analysis.  
 - Achieved over **90% accuracy** in detecting code smells using **Random Forest and XGBoost**.  
 - Balanced a **dataset of 190,707 entries** with **73.6% class imbalance**, improving detection rates by **32%**.  
-<!--
+
 ### Tic-Tac-Toe Using Alpha-Beta Pruning  
 - Implemented an optimized **minimax algorithm with alpha-beta pruning**, reducing computation time by **50%**.  
 - Designed a **scalable N×N grid-based system** with two difficulty levels for human and AI gameplay.  
 - Integrated **intelligent AI decision-making**, supporting estimated and stochastic moves.  
--->
+
 ---
 
 ## Software Engineering Projects  
