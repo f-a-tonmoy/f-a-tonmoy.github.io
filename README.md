@@ -6,7 +6,7 @@
 
 ---
 
-#### Actively pursuing ML/DS roles | Open to research collaborations
+### Actively pursuing ML/DS roles | Open to research collaborations
 
 ---
 
