@@ -6,6 +6,10 @@
 
 ---
 
+**Actively pursuing ML/DS roles | Open to research collaborations**
+
+---
+
 ## About Me
 Data Scientist and AI Researcher specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, PyTorch, Scikit-learn, SQL, EDA, and Data Visualization, I focus on feature engineering, model optimization, and scalable AI solutions.
 
@@ -78,35 +82,6 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 
 ---
 
-## Articles (Newest First)
-  - [How Neural Networks Approximate Any Function: Understanding the Universal Approximation Theorem](https://www.linkedin.com/pulse/how-neural-networks-approximate-any-function-universal-fahim-ahamed-gbw0e)
-  - [Federated Learning: Revolutionizing Data Privacy in the AI Age](https://www.linkedin.com/pulse/federated-learning-revolutionizing-data-privacy-ai-age-fahim-ahamed-moege)
-  - [Multiclass vs. Multilabel Classification: Understanding the Differences Clearly](https://www.linkedin.com/pulse/multiclass-vs-multilabel-classification-understanding-fahim-ahamed-o2zse)
-  - [The Double Descent Phenomenon: Rethinking Overfitting in Machine Learning](https://www.linkedin.com/pulse/double-descent-phenomenon-rethinking-overfitting-machine-fahim-ahamed-skqie)
-  - [Demystifying Loss Functions: Choosing the Right One for Your ML Task](https://www.linkedin.com/pulse/demystifying-loss-functions-choosing-right-one-your-ml-fahim-ahamed-ysbxe)
-  - [The AI Feedback Loop: How Algorithms Change the Data They Learn From](https://www.linkedin.com/pulse/ai-feedback-loop-how-algorithms-change-data-learn-from-fahim-ahamed-iizvf)
-  - [Retraining AI Models: When, Why, and How Often?](https://www.linkedin.com/pulse/retraining-ai-models-when-why-how-often-fahim-ahamed-srjhe)
-  - [Synthetic Data in Machine Learning: Innovation or Illusion?](https://www.linkedin.com/pulse/synthetic-data-machine-learning-innovation-illusion-fahim-ahamed-jpybe)
-  - [Data Provenance: Why Knowing Where Your Data Comes From Is Crucial](https://www.linkedin.com/pulse/data-provenance-why-knowing-where-your-comes-from-crucial-ahamed-zynxe)
-  - [Causal Impact Analysis: How to Measure the True Effect of Your Decisions](https://www.linkedin.com/pulse/causal-impact-analysis-how-measure-true-effect-your-decisions-ahamed-vxb3e)
-  - [Using GenAI Without Oversharing Your Data](https://www.linkedin.com/pulse/using-genai-without-oversharing-your-data-fahim-ahamed-dvtbf)
-  - [The Ethics of Data Science: Balancing Innovation and Privacy in a Data-Driven World](https://www.linkedin.com/pulse/ethics-data-science-balancing-innovation-privacy-world-fahim-ahamed-lirnf)
-  - [The Evolution of Computer Vision: From Classic Techniques to AI-Powered Systems](https://www.linkedin.com/pulse/evolution-computer-vision-from-classic-techniques-systems-ahamed-tzwfe)
-  - [The Future of NLP: Leveraging Large Language Models Responsibly](https://www.linkedin.com/pulse/future-nlp-leveraging-large-language-models-fahim-ahamed-7rede)
-  - [From Data to Decisions: The Role of Data Science in Business Strategy](https://www.linkedin.com/pulse/from-data-decisions-role-science-business-strategy-fahim-ahamed-fxise)
-  - [Why Data Preprocessing is More Important Than the Model Itself](https://www.linkedin.com/pulse/why-data-preprocessing-more-important-than-model-itself-fahim-ahamed-lhyxe)
-  - [The Curse of Dimensionality: Why More Features Aren’t Always Better](https://www.linkedin.com/pulse/curse-dimensionality-why-more-features-arent-always-better-ahamed-gpbie)
-  - [Data Leakage in Machine Learning: The Silent Model Killer and How to Prevent It](https://www.linkedin.com/pulse/data-leakage-machine-learning-silent-model-killer-how-fahim-ahamed-fnqje)
-  - [Interpretable Machine Learning: How Much Transparency is Too Much?](https://www.linkedin.com/pulse/interpretable-machine-learning-how-much-transparency-too-fahim-ahamed-zi0nf)
-  - [Causal Inference in AI: A New Approach to Model Transparency](https://www.linkedin.com/pulse/causal-inference-ai-new-approach-model-transparency-fahim-ahamed-heorf)
-  - [Counterfactual Explanations: A New Frontier in AI Transparency](https://www.linkedin.com/pulse/counterfactual-explanations-new-frontier-ai-fahim-ahamed-6xhpe/?trackingId=pff4mZA23buN0HgAzflSVA%3D%3D)
-  - [Shapley Values: The Gold Standard for AI Explainability](https://www.linkedin.com/pulse/shapley-values-gold-standard-ai-explainability-fahim-ahamed-vvfpe/?trackingId=8oEGcMf6RRe%2Bzz4yRXFPJw%3D%3D)
-  - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
-  - [Beyond the Black Box: Why Explainability Matters in AI](https://www.linkedin.com/pulse/beyond-black-box-why-explainability-matters-ai-fahim-ahamed-q6gje/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
-  - [The Hidden Bias in AI – Can We Fix It?](https://www.linkedin.com/pulse/hidden-bias-ai-can-we-fix-fahim-ahamed-1vzae/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
-
----
-
 ## AI/ML Projects
 
 ### Deep Learning-Based Wound Classification  
@@ -166,7 +141,7 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 
 ## Software Engineering Projects  
 
-### Vromonkonna – A Travel Management System  
+### WanderWoman – A Travel Management System  
 - Designed and deployed a **secure travel management platform** for solo women travelers.  
 - Integrated **real-time updates and community interactions** to enhance user engagement.  
 - Increased **query efficiency by 30%** through database indexing and optimization.  
@@ -188,11 +163,37 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
  
 ---
 
-## Additional Highlights  
-
--	**Solved 500+ problems** on platforms like LeetCode, HackerRank, and Beecrowd (formerly URI), Combined.
--	**Gold-labeled problem solver** on HackerRank. Awarded Gold Badges for JAVA and SQL.
+## Articles (Newest First)
+  - [How Neural Networks Approximate Any Function: Understanding the Universal Approximation Theorem](https://www.linkedin.com/pulse/how-neural-networks-approximate-any-function-universal-fahim-ahamed-gbw0e)
+  - [Federated Learning: Revolutionizing Data Privacy in the AI Age](https://www.linkedin.com/pulse/federated-learning-revolutionizing-data-privacy-ai-age-fahim-ahamed-moege)
+  - [Multiclass vs. Multilabel Classification: Understanding the Differences Clearly](https://www.linkedin.com/pulse/multiclass-vs-multilabel-classification-understanding-fahim-ahamed-o2zse)
+  - [The Double Descent Phenomenon: Rethinking Overfitting in Machine Learning](https://www.linkedin.com/pulse/double-descent-phenomenon-rethinking-overfitting-machine-fahim-ahamed-skqie)
+  - [Demystifying Loss Functions: Choosing the Right One for Your ML Task](https://www.linkedin.com/pulse/demystifying-loss-functions-choosing-right-one-your-ml-fahim-ahamed-ysbxe)
+  - [The AI Feedback Loop: How Algorithms Change the Data They Learn From](https://www.linkedin.com/pulse/ai-feedback-loop-how-algorithms-change-data-learn-from-fahim-ahamed-iizvf)
+  - [Retraining AI Models: When, Why, and How Often?](https://www.linkedin.com/pulse/retraining-ai-models-when-why-how-often-fahim-ahamed-srjhe)
+  - [Synthetic Data in Machine Learning: Innovation or Illusion?](https://www.linkedin.com/pulse/synthetic-data-machine-learning-innovation-illusion-fahim-ahamed-jpybe)
+  - [Data Provenance: Why Knowing Where Your Data Comes From Is Crucial](https://www.linkedin.com/pulse/data-provenance-why-knowing-where-your-comes-from-crucial-ahamed-zynxe)
+  - [Causal Impact Analysis: How to Measure the True Effect of Your Decisions](https://www.linkedin.com/pulse/causal-impact-analysis-how-measure-true-effect-your-decisions-ahamed-vxb3e)
+  - [Using GenAI Without Oversharing Your Data](https://www.linkedin.com/pulse/using-genai-without-oversharing-your-data-fahim-ahamed-dvtbf)
+  - [The Ethics of Data Science: Balancing Innovation and Privacy in a Data-Driven World](https://www.linkedin.com/pulse/ethics-data-science-balancing-innovation-privacy-world-fahim-ahamed-lirnf)
+  - [The Evolution of Computer Vision: From Classic Techniques to AI-Powered Systems](https://www.linkedin.com/pulse/evolution-computer-vision-from-classic-techniques-systems-ahamed-tzwfe)
+  - [The Future of NLP: Leveraging Large Language Models Responsibly](https://www.linkedin.com/pulse/future-nlp-leveraging-large-language-models-fahim-ahamed-7rede)
+  - [From Data to Decisions: The Role of Data Science in Business Strategy](https://www.linkedin.com/pulse/from-data-decisions-role-science-business-strategy-fahim-ahamed-fxise)
+  - [Why Data Preprocessing is More Important Than the Model Itself](https://www.linkedin.com/pulse/why-data-preprocessing-more-important-than-model-itself-fahim-ahamed-lhyxe)
+  - [The Curse of Dimensionality: Why More Features Aren’t Always Better](https://www.linkedin.com/pulse/curse-dimensionality-why-more-features-arent-always-better-ahamed-gpbie)
+  - [Data Leakage in Machine Learning: The Silent Model Killer and How to Prevent It](https://www.linkedin.com/pulse/data-leakage-machine-learning-silent-model-killer-how-fahim-ahamed-fnqje)
+  - [Interpretable Machine Learning: How Much Transparency is Too Much?](https://www.linkedin.com/pulse/interpretable-machine-learning-how-much-transparency-too-fahim-ahamed-zi0nf)
+  - [Causal Inference in AI: A New Approach to Model Transparency](https://www.linkedin.com/pulse/causal-inference-ai-new-approach-model-transparency-fahim-ahamed-heorf)
+  - [Counterfactual Explanations: A New Frontier in AI Transparency](https://www.linkedin.com/pulse/counterfactual-explanations-new-frontier-ai-fahim-ahamed-6xhpe/?trackingId=pff4mZA23buN0HgAzflSVA%3D%3D)
+  - [Shapley Values: The Gold Standard for AI Explainability](https://www.linkedin.com/pulse/shapley-values-gold-standard-ai-explainability-fahim-ahamed-vvfpe/?trackingId=8oEGcMf6RRe%2Bzz4yRXFPJw%3D%3D)
+  - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
+  - [Beyond the Black Box: Why Explainability Matters in AI](https://www.linkedin.com/pulse/beyond-black-box-why-explainability-matters-ai-fahim-ahamed-q6gje/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
+  - [The Hidden Bias in AI – Can We Fix It?](https://www.linkedin.com/pulse/hidden-bias-ai-can-we-fix-fahim-ahamed-1vzae/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
 
 ---
 
-**Open to collaborations and research discussions.**
+## Additional Highlights  
+
+-	**Solved 500+ problems** across platforms like LeetCode, HackerRank, and Beecrowd (formerly URI)..
+-	**Gold-labeled problem solver** on HackerRank. Awarded Gold Badges for JAVA and SQL.
+-	Participated in university-led ML and **programming bootcamps**, enhancing hands-on skills in AI and ML techniques.
