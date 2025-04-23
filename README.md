@@ -19,10 +19,17 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 
 ---
 
-## Work Experience  
+## Work Experience
+
+### **AI/ML Consultant (Associate)**  
+**EKAGRA Health** _(Dec 2024 – Present · Part-time · Remote)_
+
+- Lead the integration of AI/ML solutions by optimizing machine learning pipelines, data workflows, and automation systems across internal infrastructure.  
+- Oversee the transition of deployed models from external partners to in-house systems, ensuring scalable deployment and long-term maintainability.  
+- Conduct system audits and performance evaluations to enhance ML/NLP pipeline efficiency and support predictive analytics implementation.
 
 ### **Project Lead & Researcher**  
-**East West University** _(January 2023 - December 2023)_  
+**East West University** _(January 2023 - December 2023 · Hybrid)_  
 
 - Digitized **mixed Bangla-English prescriptions** using a **custom CNN model**, achieving **91% OCR accuracy**, including cursive handwriting recognition.  
 - Reduced **model training time by 20%** through optimized hyperparameter tuning and **advanced preprocessing techniques**, including noise reduction and character segmentation.  
@@ -72,6 +79,8 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [How Neural Networks Approximate Any Function: Understanding the Universal Approximation Theorem](https://www.linkedin.com/pulse/how-neural-networks-approximate-any-function-universal-fahim-ahamed-gbw0e)
+  - [Federated Learning: Revolutionizing Data Privacy in the AI Age](https://www.linkedin.com/pulse/federated-learning-revolutionizing-data-privacy-ai-age-fahim-ahamed-moege)
   - [Multiclass vs. Multilabel Classification: Understanding the Differences Clearly](https://www.linkedin.com/pulse/multiclass-vs-multilabel-classification-understanding-fahim-ahamed-o2zse)
   - [The Double Descent Phenomenon: Rethinking Overfitting in Machine Learning](https://www.linkedin.com/pulse/double-descent-phenomenon-rethinking-overfitting-machine-fahim-ahamed-skqie)
   - [Demystifying Loss Functions: Choosing the Right One for Your ML Task](https://www.linkedin.com/pulse/demystifying-loss-functions-choosing-right-one-your-ml-fahim-ahamed-ysbxe)
