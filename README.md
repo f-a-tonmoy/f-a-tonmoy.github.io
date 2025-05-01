@@ -164,6 +164,7 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Dataset Distillation Explained: Building AI Models from Tiny Synthetic Samples](https://www.linkedin.com/pulse/dataset-distillation-explained-building-ai-models-from-fahim-ahamed-yrp2f)
   - [How Neural Networks Approximate Any Function: Understanding the Universal Approximation Theorem](https://www.linkedin.com/pulse/how-neural-networks-approximate-any-function-universal-fahim-ahamed-gbw0e)
   - [Federated Learning: Revolutionizing Data Privacy in the AI Age](https://www.linkedin.com/pulse/federated-learning-revolutionizing-data-privacy-ai-age-fahim-ahamed-moege)
   - [Multiclass vs. Multilabel Classification: Understanding the Differences Clearly](https://www.linkedin.com/pulse/multiclass-vs-multilabel-classification-understanding-fahim-ahamed-o2zse)
