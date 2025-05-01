@@ -195,5 +195,5 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ## Additional Highlights  
 
 -	**Solved 500+ problems** across platforms like LeetCode, HackerRank, and Beecrowd (formerly URI)..
--	**Gold-labeled problem solver** on HackerRank. Awarded Gold Badges for JAVA and SQL.
+-	**Gold-labeled problem solver** on HackerRank. Awarded Gold Badges for **JAVA** and **SQL.**
 -	Participated in university-led **ML and programming bootcamps**, enhancing hands-on skills in AI and ML techniques.
