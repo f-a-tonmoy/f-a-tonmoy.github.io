@@ -164,6 +164,9 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Knowledge Distillation: How Large Language Models Learn from Each Other](https://www.linkedin.com/pulse/knowledge-distillation-how-large-language-models-learn-fahim-ahamed-2inie)
+  - [Privacy-Preserving Machine Learning: Techniques for Safer Data Science](https://www.linkedin.com/pulse/privacy-preserving-machine-learning-techniques-safer-data-ahamed-dar0e)
+  - [Graph Neural Networks: Unlocking the Power of Graph-Structured Data](https://www.linkedin.com/pulse/graph-neural-networks-unlocking-power-data-fahim-ahamed-uklje)
   - [Dataset Distillation Explained: Building AI Models from Tiny Synthetic Samples](https://www.linkedin.com/pulse/dataset-distillation-explained-building-ai-models-from-fahim-ahamed-yrp2f)
   - [How Neural Networks Approximate Any Function: Understanding the Universal Approximation Theorem](https://www.linkedin.com/pulse/how-neural-networks-approximate-any-function-universal-fahim-ahamed-gbw0e)
   - [Federated Learning: Revolutionizing Data Privacy in the AI Age](https://www.linkedin.com/pulse/federated-learning-revolutionizing-data-privacy-ai-age-fahim-ahamed-moege)
