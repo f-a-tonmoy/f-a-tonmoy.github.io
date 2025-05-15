@@ -164,6 +164,9 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Prompt Injection Attacks: A Growing Risk for Generative AI](https://www.linkedin.com/pulse/prompt-injection-attacks-growing-risk-generative-ai-fahim-ahamed-cqpne)
+  - [Silent Data Failures Are Costly: How Observability Safeguards Your Data Stack](https://www.linkedin.com/pulse/silent-data-failures-costly-how-observability-your-stack-fahim-ahamed-grxre)
+  - [Data Contracting: Bridging the Gap Between Data Engineering and Data Science](https://www.linkedin.com/pulse/data-contracting-bridging-gap-between-engineering-science-ahamed-lqhle)
   - [Knowledge Distillation: How Large Language Models Learn from Each Other](https://www.linkedin.com/pulse/knowledge-distillation-how-large-language-models-learn-fahim-ahamed-2inie)
   - [Privacy-Preserving Machine Learning: Techniques for Safer Data Science](https://www.linkedin.com/pulse/privacy-preserving-machine-learning-techniques-safer-data-ahamed-dar0e)
   - [Graph Neural Networks: Unlocking the Power of Graph-Structured Data](https://www.linkedin.com/pulse/graph-neural-networks-unlocking-power-data-fahim-ahamed-uklje)
