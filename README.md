@@ -164,6 +164,13 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Data Cascades: How Small Data Mistakes Turn into Big Machine Learning Failures](https://www.linkedin.com/pulse/data-cascades-how-small-mistakes-turn-big-machine-learning-ahamed-favqe)
+  - [Inside the Mind of AI: Reward Hacking, Scheming, and Transparency](https://www.linkedin.com/pulse/inside-mind-ai-reward-hacking-scheming-transparency-fahim-ahamed-vbute)
+  - [Semantic Compression in AI: Learning More by Storing Less](https://www.linkedin.com/pulse/semantic-compression-ai-learning-more-storing-less-fahim-ahamed-xxuwe)
+  - [Absolute Zero: A Self-Taught AI That Learns Reasoning from Scratch](https://www.linkedin.com/pulse/absolute-zero-self-taught-ai-learns-reasoning-from-scratch-ahamed-pktse)
+  - [MCP vs API: How AI Agents Are Getting a Smarter Standard for Integration](https://www.linkedin.com/pulse/mcp-vs-api-how-ai-agents-getting-smarter-standard-fahim-ahamed-fwgxe)
+  - [PyTorch vs TensorFlow: Which Deep Learning Framework Should You Use?](https://www.linkedin.com/pulse/pytorch-vs-tensorflow-which-deep-learning-framework-should-ahamed-4ij2e)
+  - [Fine-Tuning vs. Prompt Engineering: What's the Best Way to Customize LLMs?](https://www.linkedin.com/pulse/fine-tuning-vs-prompt-engineering-whats-best-way-customize-ahamed-jkxre)
   - [Prompt Injection Attacks: A Growing Risk for Generative AI](https://www.linkedin.com/pulse/prompt-injection-attacks-growing-risk-generative-ai-fahim-ahamed-cqpne)
   - [Silent Data Failures Are Costly: How Observability Safeguards Your Data Stack](https://www.linkedin.com/pulse/silent-data-failures-costly-how-observability-your-stack-fahim-ahamed-grxre)
   - [Data Contracting: Bridging the Gap Between Data Engineering and Data Science](https://www.linkedin.com/pulse/data-contracting-bridging-gap-between-engineering-science-ahamed-lqhle)
