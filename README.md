@@ -164,6 +164,7 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [DTrain-Serving Skew: The Mismatch That Breaks Real-World Models](https://www.linkedin.com/pulse/train-serving-skew-mismatch-breaks-real-world-models-fahim-ahamed-hhole)
   - [Data Cascades: How Small Data Mistakes Turn into Big Machine Learning Failures](https://www.linkedin.com/pulse/data-cascades-how-small-mistakes-turn-big-machine-learning-ahamed-favqe)
   - [Inside the Mind of AI: Reward Hacking, Scheming, and Transparency](https://www.linkedin.com/pulse/inside-mind-ai-reward-hacking-scheming-transparency-fahim-ahamed-vbute)
   - [Semantic Compression in AI: Learning More by Storing Less](https://www.linkedin.com/pulse/semantic-compression-ai-learning-more-storing-less-fahim-ahamed-xxuwe)
