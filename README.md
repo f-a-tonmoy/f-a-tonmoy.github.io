@@ -74,9 +74,9 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 
 ### Ongoing Research
 **VLM-Based Adversarial Robustness for Autonomous Driving** 
-- Building a Vision-Language Model (VLM) pipeline leveraging NuScenes and Waymo datasets, with a focus on camera-based scene understanding for autonomous driving systems.  
-- Designing and generating adversarial sponge samples to evaluate and expose VLM vulnerabilities, specifically targeting stealth attacks that inflate latency and resource consumption.  
-- Enhancing model interpretability and robustness through explainable AI techniques and adversarial training, aiming to develop resilient VLM architectures for real-world deployment.
+- Building a **Vision-Language Model (VLM) pipeline** leveraging **NuScenes** and **Waymo** datasets, with a focus on **camera-based scene understanding** for **autonomous driving systems**.  
+- Designing and generating **adversarial sponge samples** to evaluate and expose **VLM vulnerabilities**, specifically targeting **stealth attacks** that inflate **latency** and **resource consumption**.  
+- Enhancing model **interpretability** and **robustness** through **Explainable AI** techniques and **adversarial training**, aiming to develop resilient **VLM architectures** for **real-world deployment**.
   
 ---
 
