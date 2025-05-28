@@ -59,6 +59,10 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 **Adversarial Energy Latency Sponge Attack on Resource Constraint Devices** (IEEE IoT Journal)  
   - Demonstrated the potential of sponge attacks to **increase energy consumption by up to 30x and **inference latency by over 13%**, significantly impacting mission-critical systems like MIoT and autonomous vehicles.
   - **Proposed effective defense strategies**, including energy-aware training and adversarial detection mechanisms, to mitigate the risks of such stealth attacks.
+
+**Simplifying Healthcare Documentation: Deep Learning Approaches for Understanding Medical Prescriptions** (International Journal of Computing and Digital System)  
+  - Digitized mixed Bangla-English prescriptions with **custom CNN models**, achieving a **median 91% accuracy rate in OCR**, including **accurate recognition of cursive handwriting.**
+  - **Implemented advanced preprocessing pipelines**, including noise reduction and character segmentation, to enhance recognition accuracy and **reduce error rates in challenging datasets.**
   
 <!--
 ### Ongoing Research  
@@ -66,6 +70,14 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
   - **Achieved 92% accuracy** in initial model testing using NLP and deep learning techniques on benchmark datasets, demonstrating reliable depressive tendency classification.
   - **Utilized GAN-BERT for robust text classification**, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
 -->
+---
+
+### Ongoing Research
+**VLM-Based Adversarial Robustness for Autonomous Driving** 
+- Building a Vision-Language Model (VLM) pipeline leveraging NuScenes and Waymo datasets, with a focus on camera-based scene understanding for autonomous driving systems.  
+- Designing and generating adversarial sponge samples to evaluate and expose VLM vulnerabilities, specifically targeting stealth attacks that inflate latency and resource consumption.  
+- Enhancing model interpretability and robustness through explainable AI techniques and adversarial training, aiming to develop resilient VLM architectures for real-world deployment.
+  
 ---
 
 ## Technical Skills 
@@ -164,7 +176,7 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
-  - [DTrain-Serving Skew: The Mismatch That Breaks Real-World Models](https://www.linkedin.com/pulse/train-serving-skew-mismatch-breaks-real-world-models-fahim-ahamed-hhole)
+  - [Train-Serving Skew: The Mismatch That Breaks Real-World Models](https://www.linkedin.com/pulse/train-serving-skew-mismatch-breaks-real-world-models-fahim-ahamed-hhole)
   - [Data Cascades: How Small Data Mistakes Turn into Big Machine Learning Failures](https://www.linkedin.com/pulse/data-cascades-how-small-mistakes-turn-big-machine-learning-ahamed-favqe)
   - [Inside the Mind of AI: Reward Hacking, Scheming, and Transparency](https://www.linkedin.com/pulse/inside-mind-ai-reward-hacking-scheming-transparency-fahim-ahamed-vbute)
   - [Semantic Compression in AI: Learning More by Storing Less](https://www.linkedin.com/pulse/semantic-compression-ai-learning-more-storing-less-fahim-ahamed-xxuwe)
