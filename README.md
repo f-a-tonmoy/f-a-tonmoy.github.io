@@ -176,6 +176,7 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [What Makes a Dataset Good for Machine Learning?](https://www.linkedin.com/pulse/what-makes-dataset-good-machine-learning-fahim-ahamed-jht0e)
   - [Train-Serving Skew: The Mismatch That Breaks Real-World Models](https://www.linkedin.com/pulse/train-serving-skew-mismatch-breaks-real-world-models-fahim-ahamed-hhole)
   - [Data Cascades: How Small Data Mistakes Turn into Big Machine Learning Failures](https://www.linkedin.com/pulse/data-cascades-how-small-mistakes-turn-big-machine-learning-ahamed-favqe)
   - [Inside the Mind of AI: Reward Hacking, Scheming, and Transparency](https://www.linkedin.com/pulse/inside-mind-ai-reward-hacking-scheming-transparency-fahim-ahamed-vbute)
