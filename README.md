@@ -176,6 +176,11 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Distributions in Data Science: Why They Matter More Than You Think](https://www.linkedin.com/pulse/distributions-data-science-why-matter-more-than-you-think-ahamed-0gd9e)
+  - [Why Randomness in Machine Learning Isn’t Really Random](https://www.linkedin.com/pulse/why-randomness-machine-learning-isnt-really-random-fahim-ahamed-pqbpe)
+  - [Bias-Variance Tradeoff: Why Simpler Models Sometimes Win](https://www.linkedin.com/pulse/bias-variance-tradeoff-why-simpler-models-sometimes-win-fahim-ahamed-hkine)
+  - [Outliers in Data: Keep or Remove?](https://www.linkedin.com/pulse/outliers-data-keep-remove-fahim-ahamed-satqe)
+  - [Avoiding “Time Travel” in Machine Learning](https://www.linkedin.com/pulse/avoiding-time-travel-machine-learning-fahim-ahamed-8node)
   - [What Makes a Dataset Good for Machine Learning?](https://www.linkedin.com/pulse/what-makes-dataset-good-machine-learning-fahim-ahamed-jht0e)
   - [Train-Serving Skew: The Mismatch That Breaks Real-World Models](https://www.linkedin.com/pulse/train-serving-skew-mismatch-breaks-real-world-models-fahim-ahamed-hhole)
   - [Data Cascades: How Small Data Mistakes Turn into Big Machine Learning Failures](https://www.linkedin.com/pulse/data-cascades-how-small-mistakes-turn-big-machine-learning-ahamed-favqe)
