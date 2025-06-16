@@ -176,6 +176,8 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Turning Raw Logs into Strategy: The Full Spectrum of Data Analytics](https://www.linkedin.com/pulse/turning-raw-logs-strategy-full-spectrum-data-analytics-fahim-ahamed-tuqge)
+  - [Recommendation Systems: From Fundamentals to Frontier](https://www.linkedin.com/pulse/recommendation-systems-from-fundamentals-frontier-fahim-ahamed-xmnhe)
   - [Distributions in Data Science: Why They Matter More Than You Think](https://www.linkedin.com/pulse/distributions-data-science-why-matter-more-than-you-think-ahamed-0gd9e)
   - [Why Randomness in Machine Learning Isn’t Really Random](https://www.linkedin.com/pulse/why-randomness-machine-learning-isnt-really-random-fahim-ahamed-pqbpe)
   - [Bias-Variance Tradeoff: Why Simpler Models Sometimes Win](https://www.linkedin.com/pulse/bias-variance-tradeoff-why-simpler-models-sometimes-win-fahim-ahamed-hkine)
