@@ -176,6 +176,8 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [Data Valuation: How Much Is Your Data Actually Worth?](https://www.linkedin.com/pulse/data-valuation-how-much-your-actually-worth-fahim-ahamed-7ruvf)
+  - [The Dangerous Side of Statistics: When Numbers Lie](https://www.linkedin.com/pulse/dangerous-side-statistics-when-numbers-lie-fahim-ahamed-5e1xe)
   - [Turning Raw Logs into Strategy: The Full Spectrum of Data Analytics](https://www.linkedin.com/pulse/turning-raw-logs-strategy-full-spectrum-data-analytics-fahim-ahamed-tuqge)
   - [Recommendation Systems: From Fundamentals to Frontier](https://www.linkedin.com/pulse/recommendation-systems-from-fundamentals-frontier-fahim-ahamed-xmnhe)
   - [Distributions in Data Science: Why They Matter More Than You Think](https://www.linkedin.com/pulse/distributions-data-science-why-matter-more-than-you-think-ahamed-0gd9e)
