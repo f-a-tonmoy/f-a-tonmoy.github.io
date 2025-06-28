@@ -176,6 +176,12 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [AI Reasoning: Smart Leap or Fancy Pattern Match?](https://www.linkedin.com/pulse/ai-reasoning-smart-leap-fancy-pattern-match-fahim-ahamed-z9aje)
+  - [Why GRPO Is Reshaping How We Align Large Language Models](https://www.linkedin.com/pulse/why-grpo-reshaping-how-we-align-large-language-models-fahim-ahamed-hlfre)
+  - [The Hidden Impact of Data Granularity in Analytics and ML](https://www.linkedin.com/pulse/hidden-impact-data-granularity-analytics-ml-fahim-ahamed-8tc9e)
+  - [The Alignment Tax: What We Lose When We Make AI Safer](https://www.linkedin.com/pulse/alignment-tax-what-we-lose-when-make-ai-safer-fahim-ahamed-c9qie)
+  - [Why Recommendation Systems Fail New Users: The Cold Start Problem](https://www.linkedin.com/pulse/why-recommendation-systems-fail-new-users-cold-start-problem-ahamed-8dxre)
+  - [Self-Adapting AI: Understanding the SEAL Framework](https://www.linkedin.com/pulse/self-adapting-ai-understanding-seal-framework-fahim-ahamed-9oede)
   - [Data Valuation: How Much Is Your Data Actually Worth?](https://www.linkedin.com/pulse/data-valuation-how-much-your-actually-worth-fahim-ahamed-7ruvf)
   - [The Dangerous Side of Statistics: When Numbers Lie](https://www.linkedin.com/pulse/dangerous-side-statistics-when-numbers-lie-fahim-ahamed-5e1xe)
   - [Turning Raw Logs into Strategy: The Full Spectrum of Data Analytics](https://www.linkedin.com/pulse/turning-raw-logs-strategy-full-spectrum-data-analytics-fahim-ahamed-tuqge)
