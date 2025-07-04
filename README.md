@@ -11,7 +11,7 @@
 ---
 
 ## About Me
-Data Scientist and AI Researcher specializing in predictive modeling, deep learning, NLP, and computer vision. Skilled in TensorFlow, PyTorch, Scikit-learn, SQL, EDA, and Data Visualization, I focus on feature engineering, model optimization, and scalable AI solutions.
+Data Scientist and AI Researcher with hands-on experience in **machine learning**, **deep learning**, **natural language processing (NLP)**, and **computer vision**. Proficient in **Python**, **TensorFlow**, **PyTorch**, **SQL**, and **MLOps**, I specialize in **predictive modeling**, **data analysis**, and deploying **scalable AI solutions**.
 
 ---
 
@@ -176,6 +176,9 @@ Data Scientist and AI Researcher specializing in predictive modeling, deep learn
 ---
 
 ## Articles (Newest First)
+  - [From Deep Blue to Chain-of-Thought: How Machines Slowly Learned to Reason](https://www.linkedin.com/pulse/from-deep-blue-chain-of-thought-how-machines-slowly-learned-ahamed-60nqe)
+  - [AI Under Watch: Real-World Threats and the Safeguards We Need](https://www.linkedin.com/pulse/ai-under-watch-real-world-threats-safeguards-we-need-fahim-ahamed-465le)
+  - [Inside Embeddings: The Hidden Language of Machines](https://www.linkedin.com/pulse/inside-embeddings-hidden-language-machines-fahim-ahamed-bfose)
   - [AI Reasoning: Smart Leap or Fancy Pattern Match?](https://www.linkedin.com/pulse/ai-reasoning-smart-leap-fancy-pattern-match-fahim-ahamed-z9aje)
   - [Why GRPO Is Reshaping How We Align Large Language Models](https://www.linkedin.com/pulse/why-grpo-reshaping-how-we-align-large-language-models-fahim-ahamed-hlfre)
   - [The Hidden Impact of Data Granularity in Analytics and ML](https://www.linkedin.com/pulse/hidden-impact-data-granularity-analytics-ml-fahim-ahamed-8tc9e)
