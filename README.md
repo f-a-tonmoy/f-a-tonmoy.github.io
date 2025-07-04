@@ -17,7 +17,8 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 
 ## Education  
 #### BSc in Computer Science & Engineering (CSE)
-- East West University, Bangladesh 
+- East West University, Bangladesh
+- Recognized under the [Washington Accord](https://accreditation.org/find-accredited-programs/university-search?search_api_fulltext_2=East+West+University&program_search%5B0%5D=country%3A92) and **equivalent to a U.S. engineering degree**
 - Specialization: Intelligent Systems & Data Science  
 - GPA: 3.74/4.0 (US Equivalent)
 
