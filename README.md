@@ -11,7 +11,7 @@
 ---
 
 ## About Me
-Data Scientist and AI Researcher with hands-on experience in **machine learning**, **deep learning**, **natural language processing (NLP)**, and **computer vision**. Proficient in **Python**, **TensorFlow**, **PyTorch**, **SQL**, and **MLOps**, I specialize in **predictive modeling**, **data analysis**, and deploying **scalable AI solutions**.
+Data Scientist and AI Researcher with hands-on experience in **machine learning**, **deep learning**, **NLP**, and **computer vision**. Proficient in **Python**, **TensorFlow**, **PyTorch**, **SQL**, and **MLOps**, I specialize in **predictive modeling**, **data analysis**, and deploying **scalable AI solutions**.
 
 ---
 
@@ -46,7 +46,7 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 
 ## Research & Publications  
 
-### Published Papers (Newest First)
+### Published Papers
 **Texture Feature-Based Colonic Polyp Detection Using Deep Learning Techniques** (ICO-2023, Springer)  
   - **Achieved a 97.33% segmentation accuracy (IoU)** using DeepLab3+ model, outperforming VGG16 in delineating polyp boundaries.
   - **Delivered superior results** compared to previous research, setting a new benchmark for polyp segmentation accuracy in colorectal cancer detection.
