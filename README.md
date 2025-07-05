@@ -20,18 +20,19 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 - East West University, Bangladesh
 - Recognized under the [Washington Accord](https://accreditation.org/find-accredited-programs/university-search?search_api_fulltext_2=East+West+University&program_search%5B0%5D=country%3A92) and **equivalent to a U.S. engineering degree**
 - Specialization: Intelligent Systems & Data Science  
-- GPA: 3.74/4.0 (US Equivalent)
+- GPA: 3.74/4.0 *(US Equivalent)*
 
 ---
 
 ## Work Experience
 
-### **AI/ML Consultant (Associate)**  
+### **AI/ML Consultant**  
 **EKAGRA Health** _(Dec 2024 – Present · Part-time · Remote)_
 
-- Lead the integration of AI/ML solutions by optimizing machine learning pipelines, data workflows, and automation systems across internal infrastructure.  
-- Oversee the transition of deployed models from external partners to in-house systems, ensuring scalable deployment and long-term maintainability.  
-- Conduct system audits and performance evaluations to enhance ML/NLP pipeline efficiency and support predictive analytics implementation.
+- Spearheading the development of **AI/ML infrastructure**, transitioning models from external partners to **in-house systems** for improved control and scalability.  
+- Optimizing **ML workflows** and **data pipelines** to streamline processing, deployment, and maintenance across EKAGRA’s healthcare platform.  
+- Conducting comprehensive **system audits** and **performance evaluations** to enhance ML/NLP pipeline efficiency and support **predictive analytics** initiatives.  
+- Advising on **AI strategy and implementation**, aligning technical solutions with business goals to ensure long-term impact and maintainability.
 
 ### **Project Lead & Researcher**  
 **East West University** _(January 2023 - December 2023 · Hybrid)_  
@@ -84,13 +85,12 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 ## Technical Skills 
 
 **Languages:** Python, Java, C/C++  
-**AI & ML:** TensorFlow, Keras, PyTorch, Scikit-learn  
-**Computer Vision & NLP:** OpenCV, Pillow, NLTK, SpaCy, Gensim  
+**AI & ML:** TensorFlow, PyTorch, Scikit-learn  
+**Computer Vision & NLP:** OpenCV, NLTK, SpaCy, Gensim  
 **Data Analysis & Visualization:** NumPy, Pandas, Matplotlib, Seaborn, Tableau  
 **Web Development:** Django, Flask, HTML, CSS, JavaScript  
-**Databases & Big Data:** SQL (Oracle, MySQL), NoSQL (MongoDB), Hadoop, Spark  
-**Cloud & Deployment:** AWS, GCP  
-**MLOps & CI/CD:** MLflow, Git, GitHub  
+**Databases & Big Data:** SQL (Oracle, MySQL), NoSQL (MongoDB), Hadoop, Spark   
+**Cloud & MLOps:**AWS, MLflow, Git/GitHub, Docker  
 **R&D Tools:** LaTeX, Mendeley, Jupyter Notebook, VS Code, JetBrains IDEs  
 
 ---
@@ -106,7 +106,6 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 - Achieved **92% accuracy** in initial model testing using **NLP and deep learning techniques** on benchmark datasets.  
 - Utilized **GAN-BERT** for robust text classification, effectively handling imbalanced datasets and improving model generalizability.  
 - Integrated **explainable AI**, improving decision transparency and supporting more informed analyses.  
-- Designed a **robust preprocessing pipeline** to handle noisy and unstructured social media text.
 
 <!--
 ### Cursive Handwritten Prescription Recognition  
