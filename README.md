@@ -87,7 +87,7 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 **Languages:** Python, Java, C/C++  
 **AI & ML:** TensorFlow, PyTorch, Scikit-learn  
 **Computer Vision & NLP:** OpenCV, NLTK, SpaCy, Gensim  
-**Data Analysis & Visualization:** NumPy, Pandas, Matplotlib, Seaborn, Tableau  
+**Data Analysis & Visualization:** NumPy, Pandas, SciPy, Matplotlib, Seaborn, Tableau  
 **Web Development:** Django, Flask, HTML, CSS, JavaScript  
 **Databases & Big Data:** SQL (Oracle, MySQL), NoSQL (MongoDB), Hadoop, Spark   
 **Cloud & MLOps:**AWS, MLflow, Git/GitHub, Docker  
