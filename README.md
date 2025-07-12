@@ -34,7 +34,7 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 - Conducting comprehensive **system audits** and **performance evaluations** to enhance ML/NLP pipeline efficiency and support **predictive analytics** initiatives.  
 - Advising on **AI strategy and implementation**, aligning technical solutions with business goals to ensure long-term impact and maintainability.
 
-### **Project Lead & Researcher**  
+### **ML Project Lead & Researcher**  
 **East West University** _(January 2023 - December 2023 · Hybrid)_  
 
 - Digitized **mixed Bangla-English prescriptions** using a **custom CNN model**, achieving **91% OCR accuracy**, including cursive handwriting recognition.  
