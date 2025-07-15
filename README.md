@@ -176,6 +176,9 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 ---
 
 ## Articles (Newest First)
+  - [Sampling Strategies That Turn Raw Data Into Reliable, Bias-Free Insights for Decision Makers](https://www.linkedin.com/pulse/sampling-strategies-turn-raw-data-reliable-bias-free-insights-ahamed-oad4e)
+  - [Analytics Engineering vs Data Science: Are the Lines Blurring?](https://www.linkedin.com/pulse/analytics-engineering-vs-data-science-lines-blurring-fahim-ahamed-fftof)
+  - [Context Engineering: the Craft of Feeding Large Language Models the Right Stuff](https://www.linkedin.com/pulse/context-engineering-craft-feeding-large-language-models-fahim-ahamed-gfgje)
   - [From Deep Blue to Chain-of-Thought: How Machines Slowly Learned to Reason](https://www.linkedin.com/pulse/from-deep-blue-chain-of-thought-how-machines-slowly-learned-ahamed-60nqe)
   - [AI Under Watch: Real-World Threats and the Safeguards We Need](https://www.linkedin.com/pulse/ai-under-watch-real-world-threats-safeguards-we-need-fahim-ahamed-465le)
   - [Inside Embeddings: The Hidden Language of Machines](https://www.linkedin.com/pulse/inside-embeddings-hidden-language-machines-fahim-ahamed-bfose)
