@@ -176,6 +176,7 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 ---
 
 ## Articles (Newest First)
+  - [Graph Theory and Data Science: Connecting the Dots for Smarter Analytics](https://www.linkedin.com/pulse/graph-theory-data-science-connecting-dots-smarter-analytics-ahamed-cfxmf)
   - [Sampling Strategies That Turn Raw Data Into Reliable, Bias-Free Insights for Decision Makers](https://www.linkedin.com/pulse/sampling-strategies-turn-raw-data-reliable-bias-free-insights-ahamed-oad4e)
   - [Analytics Engineering vs Data Science: Are the Lines Blurring?](https://www.linkedin.com/pulse/analytics-engineering-vs-data-science-lines-blurring-fahim-ahamed-fftof)
   - [Context Engineering: the Craft of Feeding Large Language Models the Right Stuff](https://www.linkedin.com/pulse/context-engineering-craft-feeding-large-language-models-fahim-ahamed-gfgje)
