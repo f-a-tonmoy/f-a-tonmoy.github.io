@@ -34,6 +34,11 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 - Conducting comprehensive **system audits** and **performance evaluations** to enhance ML/NLP pipeline efficiency and support **predictive analytics** initiatives.  
 - Advising on **AI strategy and implementation**, aligning technical solutions with business goals to ensure long-term impact and maintainability.
 
+### Career Break 
+_(February 2023 - November 2024)_  
+- Relocated to the U.S. as a **permanent resident (Green Card holder)** and focused on professional development during this transition.  
+- Upskilled through **independent projects** and contributed to **research** in **Healthcare**, **NLP**, and **Adversarial AI**.
+
 ### **ML Project Lead & Researcher**  
 **East West University** _(January 2023 - December 2023 · Hybrid)_  
 
