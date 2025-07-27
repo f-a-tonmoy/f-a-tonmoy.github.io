@@ -90,7 +90,7 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 **Data Analysis & Visualization:** NumPy, Pandas, SciPy, Matplotlib, Seaborn, Tableau  
 **Web Development:** Django, Flask, HTML, CSS, JavaScript  
 **Databases & Big Data:** SQL (Oracle, MySQL), NoSQL (MongoDB), Hadoop, Spark   
-**Cloud & MLOps:**AWS, MLflow, Git/GitHub, Docker  
+**Cloud & MLOps:** AWS, MLflow, Git/GitHub, Docker  
 **R&D Tools:** LaTeX, Mendeley, Jupyter Notebook, VS Code, JetBrains IDEs  
 
 ---
