@@ -34,13 +34,15 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 - Conducting comprehensive **system audits** and **performance evaluations** to enhance ML/NLP pipeline efficiency and support **predictive analytics** initiatives.  
 - Advising on **AI strategy and implementation**, aligning technical solutions with business goals to ensure long-term impact and maintainability.
 
-### Career Break 
-_(February 2023 - November 2024)_  
-- Relocated to the U.S. as a **permanent resident (Green Card holder)** and focused on professional development during this transition.  
-- Upskilled through **independent projects** and contributed to **research** in **Healthcare**, **NLP**, and **Adversarial AI**.
+### **AI Researcher – Healthcare, NLP & Adversarial AI**
+**East West University** _(Feb 2024 – Present · Remote)_ 
+- Conducted research on **depression detection**, **skin cancer diagnosis**, and **adversarial attacks**, applying deep learning and explainable AI to real-world healthcare and safety-critical problems.  
+- Built high-accuracy models like a **hybrid skin cancer classifier (98.65%)** and **GAN-BERT-based depression detector (92%)**, ensuring transparency and deployment-readiness.  
+- Investigated **energy-based adversarial threats** in IoT and VLM systems, proposing defense strategies to enhance robustness and reduce latency and resource misuse.
+
 
 ### **ML Project Lead & Researcher**  
-**East West University** _(January 2023 - December 2023 · Hybrid)_  
+**East West University** _(Jan 2023 - Dec 2023 · Hybrid)_  
 
 - Digitized **mixed Bangla-English prescriptions** using a **custom CNN model**, achieving **91% OCR accuracy**, including cursive handwriting recognition.  
 - Reduced **model training time by 20%** through optimized hyperparameter tuning and **advanced preprocessing techniques**, including noise reduction and character segmentation.  
