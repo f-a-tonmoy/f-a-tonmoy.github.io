@@ -183,6 +183,7 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 ---
 
 ## Articles (Newest First)
+  - [Simulations in Data Science: Turning Uncertainty into Insight](https://www.linkedin.com/pulse/simulations-data-science-turning-uncertainty-insight-fahim-ahamed-gbb0e)
   - [Context Rot in LLMs: Why Bigger Isn’t Always Better](https://www.linkedin.com/pulse/context-rot-llms-why-bigger-isnt-always-better-fahim-ahamed-xvxre)
   - [Graph Theory and Data Science: Connecting the Dots for Smarter Analytics](https://www.linkedin.com/pulse/graph-theory-data-science-connecting-dots-smarter-analytics-ahamed-cfxmf)
   - [Sampling Strategies That Turn Raw Data Into Reliable, Bias-Free Insights for Decision Makers](https://www.linkedin.com/pulse/sampling-strategies-turn-raw-data-reliable-bias-free-insights-ahamed-oad4e)
