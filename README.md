@@ -29,10 +29,10 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 ### **AI/ML Consultant**  
 **EKAGRA Health** _(Dec 2024 – Present · Part-time · Remote)_
 
-- Spearheading the development of **AI/ML infrastructure**, transitioning models from external partners to **in-house systems** for improved control and scalability.  
-- Optimizing **ML workflows** and **data pipelines** to streamline processing, deployment, and maintenance across EKAGRA’s healthcare platform.  
-- Conducting comprehensive **system audits** and **performance evaluations** to enhance ML/NLP pipeline efficiency and support **predictive analytics** initiatives.  
-- Advising on **AI strategy and implementation**, aligning technical solutions with business goals to ensure long-term impact and maintainability.
+- Leading the development of **in-house AI/ML infrastructure** to support scalable model training, deployment, and iterative experimentation across core **healthcare modules**.  
+- Optimizing **end-to-end machine learning pipelines**, reducing manual overhead and integration friction for **NLP** and **predictive models** in clinical workflows.  
+- Structuring **data pipelines and automation systems** to process thousands of patient records, enabling **real-time analytics** and future model scalability.  
+- Collaborating with engineering and data teams to align **AI implementation** with operational goals, improving deployment turnaround and **cross-functional coordination**.
 
 ### **AI Researcher – Healthcare, NLP & Adversarial AI**
 **East West University** _(Feb 2024 – Present · Remote)_ 
@@ -183,6 +183,8 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 ---
 
 ## Articles (Newest First)
+  - [Model-Centric AI vs Data-Centric AI: Where Should You Focus First?](https://www.linkedin.com/pulse/model-centric-ai-vs-data-centric-where-should-you-focus-fahim-ahamed-to6se)
+  - [Mind the Gaps: Core Assumptions Behind Popular ML Algorithms](https://www.linkedin.com/pulse/mind-gaps-core-assumptions-behind-popular-ml-fahim-ahamed-5riqf)
   - [Simulations in Data Science: Turning Uncertainty into Insight](https://www.linkedin.com/pulse/simulations-data-science-turning-uncertainty-insight-fahim-ahamed-gbb0e)
   - [Context Rot in LLMs: Why Bigger Isn’t Always Better](https://www.linkedin.com/pulse/context-rot-llms-why-bigger-isnt-always-better-fahim-ahamed-xvxre)
   - [Graph Theory and Data Science: Connecting the Dots for Smarter Analytics](https://www.linkedin.com/pulse/graph-theory-data-science-connecting-dots-smarter-analytics-ahamed-cfxmf)
