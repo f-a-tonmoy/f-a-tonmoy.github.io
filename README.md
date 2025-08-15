@@ -11,16 +11,21 @@
 ---
 
 ## About Me
-Data Scientist and AI Researcher with hands-on experience in **machine learning**, **deep learning**, **NLP**, and **computer vision**. Proficient in **Python**, **TensorFlow**, **PyTorch**, **SQL**, and **MLOps**, I specialize in **predictive modeling**, **data analysis**, and deploying **scalable AI solutions**.
+**Data Scientist** and **AI Researcher** with expertise in delivering applied AI solutions across **healthcare**, **cybersecurity**, and **enterprise systems**. Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments. Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**, with a strong track record of turning complex data challenges into measurable business impact. Skilled collaborator with proven ability to translate technical insights into operational success.
 
 ---
 
-## Education  
-#### BSc in Computer Science & Engineering (CSE)
-- East West University, Bangladesh
+## Education
+
+#### The City College of New York (CUNY)
+*MS in Data Science & Engineering (DSE)* _(Aug 2024 – Present)_
+- New York, NY
+  
+#### East West University, Bangladesh
+*BSc in Computer Science & Engineering (CSE)* _(May 2019 – Dec 2023)_
 - Recognized under the [Washington Accord](https://accreditation.org/find-accredited-programs/university-search?search_api_fulltext_2=East+West+University&program_search%5B0%5D=country%3A92) and **equivalent to a U.S. engineering degree**
 - Specialization: Intelligent Systems & Data Science  
-- GPA: 3.74/4.0 *(US Equivalent)*
+- GPA: 3.74/4.0 *(US Equivalent, [WES](https://www.wes.org/) evaluated)*
 
 ---
 
@@ -35,7 +40,7 @@ Data Scientist and AI Researcher with hands-on experience in **machine learning*
 - Collaborating with engineering and data teams to align **AI implementation** with operational goals, improving deployment turnaround and **cross-functional coordination**.
 
 ### **AI Researcher – Healthcare, NLP & Adversarial AI**
-**East West University** _(Feb 2024 – Present · Remote)_ 
+**East West University** _(Feb 2024 – Present · Freelance · Remote)_ 
 - Conducted research on **depression detection**, **skin cancer diagnosis**, and **adversarial attacks**, applying deep learning and explainable AI to real-world healthcare and safety-critical problems.  
 - Built high-accuracy models like a **hybrid skin cancer classifier (98.65%)** and **GAN-BERT-based depression detector (92%)**, ensuring transparency and deployment-readiness.  
 - Investigated **energy-based adversarial threats** in IoT and VLM systems, proposing defense strategies to enhance robustness and reduce latency and resource misuse.
