@@ -21,7 +21,7 @@
 ## Education
 
 #### The City College of New York (CUNY)
-*MS in Data Science & Engineering (DSE)* _(Aug 2024 – Present)_
+*MS in Data Science & Engineering (DSE)* _(Aug 2025 – Present)_
 - New York, NY
 - Grove School of Engineering
 - **Focus:** Advanced machine learning, big data systems, and applied AI
