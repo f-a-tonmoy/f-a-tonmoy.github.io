@@ -11,7 +11,10 @@
 ---
 
 ## About Me
-**Data Scientist** and **AI Researcher** with expertise in delivering applied AI solutions across **healthcare**, **cybersecurity**, and **enterprise systems**. Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments. Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**, with a strong track record of turning complex data challenges into measurable business impact. Skilled collaborator with proven ability to translate technical insights into operational success.
+- **Data Scientist** and **AI Researcher** with expertise in delivering applied AI solutions across **healthcare**, **cybersecurity**, and **enterprise systems**.
+- Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments.
+- Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**, with a strong track record of turning complex data challenges into measurable business impact.
+- Skilled collaborator with proven ability to translate technical insights into operational success.
 
 ---
 
@@ -20,9 +23,13 @@
 #### The City College of New York (CUNY)
 *MS in Data Science & Engineering (DSE)* _(Aug 2024 – Present)_
 - New York, NY
+- Grove School of Engineering
+- **Focus:** Advanced machine learning, big data systems, and applied AI
   
-#### East West University, Bangladesh
+#### East West University
 *BSc in Computer Science & Engineering (CSE)* _(May 2019 – Dec 2023)_
+- Dhaka, Bangladesh
+- Conferred: Feb 2024
 - Recognized under the [Washington Accord](https://accreditation.org/find-accredited-programs/university-search?search_api_fulltext_2=East+West+University&program_search%5B0%5D=country%3A92) and **equivalent to a U.S. engineering degree**
 - Specialization: Intelligent Systems & Data Science  
 - GPA: 3.74/4.0 *(US Equivalent, [WES](https://www.wes.org/) evaluated)*
