@@ -21,13 +21,13 @@
 ## Education
 
 #### The City College of New York (CUNY)
-*MS in Data Science & Engineering (DSE)* _(Aug 2025 – Present)_
+*MS in Data Science & Engineering* _(Aug 2025 – Present)_
 - New York, NY
 - Grove School of Engineering
 - **Focus:** Advanced machine learning, big data systems, and applied AI
   
 #### East West University
-*BSc in Computer Science & Engineering (CSE)* _(May 2019 – Dec 2023)_
+*BSc in Computer Science & Engineering* _(May 2019 – Dec 2023)_
 - Dhaka, Bangladesh
 - Conferred: Feb 2024
 - Recognized under the [Washington Accord](https://accreditation.org/find-accredited-programs/university-search?search_api_fulltext_2=East+West+University&program_search%5B0%5D=country%3A92) and **equivalent to a U.S. engineering degree**
