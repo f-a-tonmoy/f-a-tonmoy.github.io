@@ -162,12 +162,12 @@
 - Developed an **ML-based system** for detecting code smells, addressing class imbalance, and feature selection analysis.  
 - Achieved over **90% accuracy** in detecting code smells using **Random Forest and XGBoost**.  
 - Balanced a **dataset of 190,707 entries** with **73.6% class imbalance**, improving detection rates by **32%**.  
-
+<!--
 ### Tic-Tac-Toe Using Alpha-Beta Pruning  
 - Implemented an optimized **minimax algorithm with alpha-beta pruning**, reducing computation time by **50%**.  
 - Designed a **scalable N×N grid-based system** with two difficulty levels for human and AI gameplay.  
 - Integrated **intelligent AI decision-making**, supporting estimated and stochastic moves.  
-
+-->
 ---
 
 ## Software Engineering Projects  
@@ -195,6 +195,8 @@
 ---
 
 ## Articles (Newest First)
+  - [Data Science vs Decision Science: Two Sides of the Same Coin](https://www.linkedin.com/pulse/data-science-vs-decision-two-sides-same-coin-fahim-ahamed-dtoke)
+  - [MCAR vs MAR vs MNAR: why “missing” isn’t all the same in datasets](https://www.linkedin.com/pulse/mcar-vs-mar-mnar-why-missing-isnt-all-same-datasets-fahim-ahamed-alxee)
   - [Model-Centric AI vs Data-Centric AI: Where Should You Focus First?](https://www.linkedin.com/pulse/model-centric-ai-vs-data-centric-where-should-you-focus-fahim-ahamed-to6se)
   - [Mind the Gaps: Core Assumptions Behind Popular ML Algorithms](https://www.linkedin.com/pulse/mind-gaps-core-assumptions-behind-popular-ml-fahim-ahamed-5riqf)
   - [Simulations in Data Science: Turning Uncertainty into Insight](https://www.linkedin.com/pulse/simulations-data-science-turning-uncertainty-insight-fahim-ahamed-gbb0e)
