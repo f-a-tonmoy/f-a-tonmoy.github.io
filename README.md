@@ -14,7 +14,7 @@
 - **Data Scientist** and **AI Researcher** with expertise in delivering applied AI solutions across **healthcare**, **cybersecurity**, and **enterprise systems**.
 - Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments.
 - Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**, with a strong track record of turning complex data challenges into measurable business impact.
-- Skilled collaborator with proven ability to translate technical insights into operational success.
+- Skilled collaborator with proven ability to **translate technical insights into operational success.**
 
 ---
 
