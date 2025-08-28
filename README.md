@@ -47,7 +47,7 @@
 - Collaborating with engineering and data teams to align **AI implementation** with operational goals, improving deployment turnaround and **cross-functional coordination**.
 
 ### **AI Researcher – Healthcare, NLP & Adversarial AI**
-**East West University** _(Feb 2024 – Present · Freelance · Remote)_ 
+**East West University** _(Feb 2024 – Aug 2025 · Freelance · Remote)_ 
 - Conducted research on **depression detection**, **skin cancer diagnosis**, and **adversarial attacks**, applying deep learning and explainable AI to real-world healthcare and safety-critical problems.  
 - Built high-accuracy models like a **hybrid skin cancer classifier (98.65%)** and **GAN-BERT-based depression detector (92%)**, ensuring transparency and deployment-readiness.  
 - Investigated **energy-based adversarial threats** in IoT and VLM systems, proposing defense strategies to enhance robustness and reduce latency and resource misuse.
@@ -195,6 +195,7 @@
 ---
 
 ## Articles (Newest First)
+  - [Garbage In, Bias Out: How Poor Data Quality Fuels AI Bias](https://www.linkedin.com/pulse/garbage-bias-out-how-poor-data-quality-fuels-ai-fahim-ahamed-84vre)
   - [Data Science vs Decision Science: Two Sides of the Same Coin](https://www.linkedin.com/pulse/data-science-vs-decision-two-sides-same-coin-fahim-ahamed-dtoke)
   - [MCAR vs MAR vs MNAR: why “missing” isn’t all the same in datasets](https://www.linkedin.com/pulse/mcar-vs-mar-mnar-why-missing-isnt-all-same-datasets-fahim-ahamed-alxee)
   - [Model-Centric AI vs Data-Centric AI: Where Should You Focus First?](https://www.linkedin.com/pulse/model-centric-ai-vs-data-centric-where-should-you-focus-fahim-ahamed-to6se)
