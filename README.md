@@ -36,7 +36,7 @@
 
 ---
 
-## Work Experience
+## Work/Research Experience
 
 ### **AI/ML Consultant**  
 **EKAGRA Health** _(Dec 2024 – Present · Part-time · Remote)_
