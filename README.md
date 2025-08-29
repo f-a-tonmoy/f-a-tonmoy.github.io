@@ -121,7 +121,7 @@
 - Improved model accuracy by **9%** (from 89.8% to 98.5%) by increasing architectural complexity with additional convolutional layers, batch normalization, dropout, and regularization techniques.  
 - Enhanced model fairness and performance by **oversampling underrepresented classes**, effectively addressing challenges posed by class imbalance.  
 
-### Depression Detection from Social Media Posts  
+### Mental Health Assessment Through Social Media Text Analysis  
 - Achieved **92% accuracy** in initial model testing using **NLP and deep learning techniques** on benchmark datasets.  
 - Utilized **GAN-BERT** for robust text classification, effectively handling imbalanced datasets and improving model generalizability.  
 - Integrated **explainable AI**, improving decision transparency and supporting more informed analyses.  
