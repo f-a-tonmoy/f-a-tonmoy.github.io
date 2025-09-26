@@ -23,13 +23,13 @@
 ## Education
 
 #### The City College of New York (CUNY)
-*MS in Data Science & Engineering* _(Aug 2025 – Present)_
+*M.S. in Data Science & Engineering* _(Aug 2025 - Present)_
 - New York, NY
 - Grove School of Engineering
 - **Focus:** Advanced machine learning, big data systems, and applied AI
   
 #### East West University
-*BSc in Computer Science & Engineering* _(May 2019 – Dec 2023)_
+*B.S. in Computer Science & Engineering* _(Graduated: Dec 2023)_
 - Dhaka, Bangladesh
 - Conferred: Feb 2024
 - Recognized under the [Washington Accord](https://accreditation.org/find-accredited-programs/university-search?search_api_fulltext_2=East+West+University&program_search%5B0%5D=country%3A92) and **equivalent to a U.S. engineering degree**
@@ -41,15 +41,15 @@
 ## Work/Research Experience
 
 ### **AI/ML Consultant**  
-**EKAGRA Health** _(Dec 2024 – Present · Part-time · Remote)_
+**EKAGRA Health** _(Dec 2024 - Present · Part-time · Remote)_
 
 - Leading the development of **in-house AI/ML infrastructure** to support scalable model training, deployment, and iterative experimentation across core **healthcare modules**.  
 - Optimizing **end-to-end machine learning pipelines**, reducing manual overhead and integration friction for **NLP** and **predictive models** in clinical workflows.  
 - Structuring **data pipelines and automation systems** to process thousands of patient records, enabling **real-time analytics** and future model scalability.  
 - Collaborating with engineering and data teams to align **AI implementation** with operational goals, improving deployment turnaround and **cross-functional coordination**.
 
-### **AI Researcher – Healthcare, NLP & Adversarial AI**
-**East West University** _(Feb 2024 – Aug 2025 · Freelance · Remote)_ 
+### **AI Researcher - Healthcare, NLP & Adversarial AI**
+**East West University** _(Feb 2024 - Aug 2025 · Freelance · Remote)_ 
 - Conducted research on **depression detection**, **skin cancer diagnosis**, and **adversarial attacks**, applying deep learning and explainable AI to real-world healthcare and safety-critical problems.  
 - Built high-accuracy models like a **hybrid skin cancer classifier (98.65%)** and **GAN-BERT-based depression detector (92%)**, ensuring transparency and deployment-readiness.  
 - Investigated **energy-based adversarial threats** in IoT and VLM systems, proposing defense strategies to enhance robustness and reduce latency and resource misuse.
@@ -68,22 +68,41 @@
 ## Research & Publications  
 
 ### Published Papers
-**Texture Feature-Based Colonic Polyp Detection Using Deep Learning Techniques** (ICO-2023, Springer)  
+**Texture Feature-Based Colonic Polyp Detection Using Deep Learning Techniques** (Springer Nature)  
   - **Achieved a 97.33% segmentation accuracy (IoU)** using DeepLab3+ model, outperforming VGG16 in delineating polyp boundaries.
   - **Delivered superior results** compared to previous research, setting a new benchmark for polyp segmentation accuracy in colorectal cancer detection.
   - [Read Paper](https://link.springer.com/chapter/10.1007/978-3-031-73324-6_2)  
 
-**Optimizing Energy Usage: Genetic Algorithms Leading the Charge Toward Sustainability** (ICO-2023, Springer)  
+**Optimizing Energy Usage: Genetic Algorithms Leading the Charge Toward Sustainability** (Springer Nature)  
   - Reduced annual household electricity consumption by **34.54%**, saving over **90,000 watts per household**, demonstrating significant environmental and cost-saving impacts.
   - Highlighted the potential for **nationwide scalability**, offering a sustainable solution to reduce energy wastage and carbon footprints.
   - [Read Paper](https://link.springer.com/chapter/10.1007/978-3-031-50887-5_9)  
 
+### Accepted Papers
+
+**A Lightweight Transformer Ensemble for Explainable Depression Emotion and Severity Detection** (COMPAS 2025, IEEE)
+- Designed **MobileDepFormer-XAI**, a lightweight ensemble of four **transformer models** with **hybrid embeddings**, achieving **state-of-the-art results** (F1: **81.63%**, Precision: **83.24%**, Specificity: **86.92%**) on **depression detection** benchmarks.  
+- Delivered **interpretable and deployable analysis** using **LIME-based explanations** and the **MindScope web interface**, ensuring transparency and **clinical applicability** for real-time mental health assessment.
+
+**Robust Dual-Site Cancer Screening via Multi-Scale Vision Transformer and Rapid Recognition Pipeline** (COMPAS 2025, IEEE) 
+- Developed a **multi-scale Vision Transformer** framework (Multi-ViT, MA-Transformer V2, MobileUNETR, TinyViT, Xception), achieving **99.12% accuracy** on **PAD-UFES-20** and **99.37%** on **oral cancer** datasets, with strong **F1** and **AUC-PR** scores.  
+- Built a **real-time web-based screening pipeline** with targeted **preprocessing** and lightweight deployment, enabling **accessible dual-site cancer detection** without specialized equipment.
+
 ### Papers Under Review  
+
+**Interpretable Hybrid Transfer Learning for Enhanced Skin Cancer Detection** (Image and Vision Computing)
+- Introduced a hybrid model combining **EfficientNetB0** and **Random Forest**, achieving **98.65% accuracy** (F1: **98.64%**) on combined datasets and **95% accuracy** on **HAM10000**, validated with statistical significance.  
+- Tackled **class imbalance** and **generalization challenges**, deploying a **clinical web app** to support seamless early skin cancer diagnosis.
+
+**Lightweight and Explainable Vision Transformer for Cross-Corpus Drowsiness Detection Using Multi-Path Token Fusion and Attention-Based Interpretability** (Array Journal)
+- Proposed **EMTF-ViT**, a lightweight vision transformer with **multi-path token fusion**, achieving **99.2% intra-dataset accuracy** and **93%+ cross-dataset transfer**, outperforming ViT baselines by 2–4%.  
+- Delivered **explainable fatigue detection** via **Grad-CAM** and deployed a **low-power**, real-time application (<120 ms latency, <4 W) for **ADAS**, **workplace safety**, and **telehealth**.
+
 **Adversarial Energy Latency Sponge Attack on Resource Constraint Devices** (IEEE IoT Journal)  
   - Demonstrated the potential of sponge attacks to **increase energy consumption by up to 30x and **inference latency by over 13%**, significantly impacting mission-critical systems like MIoT and autonomous vehicles.
   - **Proposed effective defense strategies**, including energy-aware training and adversarial detection mechanisms, to mitigate the risks of such stealth attacks.
 
-**Simplifying Healthcare Documentation: Deep Learning Approaches for Understanding Medical Prescriptions** (International Journal of Computing and Digital System)  
+**A Deep Learning Framework for Multilingual Medical Text Recognition** (International Journal of Computing and Digital Systems)  
   - Digitized mixed Bangla-English prescriptions with **custom CNN models**, achieving a **median 91% accuracy rate in OCR**, including **accurate recognition of cursive handwriting.**
   - **Implemented advanced preprocessing pipelines**, including noise reduction and character segmentation, to enhance recognition accuracy and **reduce error rates in challenging datasets.**
   
@@ -105,8 +124,8 @@
 
 ## Technical Skills 
 
-**Languages:** Python, Java, C/C++  
-**AI & ML:** TensorFlow, PyTorch, Scikit-learn  
+**Languages:** Python, R, Java, C/C++  
+**AI & ML:** TensorFlow, PyTorch, Scikit-learn, LLMs  
 **Computer Vision & NLP:** OpenCV, NLTK, SpaCy, Gensim  
 **Data Analysis & Visualization:** NumPy, Pandas, SciPy, Matplotlib, Seaborn, Tableau  
 **Web Development:** Django, Flask, HTML, CSS, JavaScript  
@@ -123,12 +142,13 @@
 - Improved model accuracy by **9%** (from 89.8% to 98.5%) by increasing architectural complexity with additional convolutional layers, batch normalization, dropout, and regularization techniques.  
 - Enhanced model fairness and performance by **oversampling underrepresented classes**, effectively addressing challenges posed by class imbalance.  
 
+<!--
+
 ### Mental Health Assessment Through Social Media Text Analysis  
 - Achieved **92% accuracy** in initial model testing using **NLP and deep learning techniques** on benchmark datasets.  
 - Utilized **GAN-BERT** for robust text classification, effectively handling imbalanced datasets and improving model generalizability.  
 - Integrated **explainable AI**, improving decision transparency and supporting more informed analyses.  
 
-<!--
 ### Cursive Handwritten Prescription Recognition  
 - Digitized **mixed Bangla-English prescriptions** with a custom **CNN model**, achieving **91% accuracy** in OCR, including cursive handwriting recognition.  
 - Reduced **model training time by 20%** through optimized hyperparameter tuning and advanced preprocessing pipelines.  
@@ -197,6 +217,9 @@
 ---
 
 ## Articles (Newest First)
+  - [Data Science vs Statistics: A 50-Year Evolution Explained](https://www.linkedin.com/pulse/data-science-vs-statistics-50-year-evolution-explained-fahim-ahamed-dwtte)
+  - [Cognitive Offloading: The Hidden Risk of Everyday AI Use](https://www.linkedin.com/pulse/cognitive-offloading-hidden-risk-everyday-ai-use-fahim-ahamed-vdgee)
+  - [Why AI Needs Strong Guardrails to Protect Vulnerable Users](https://www.linkedin.com/pulse/why-ai-needs-strong-guardrails-protect-vulnerable-users-fahim-ahamed-a3dpe)
   - [Garbage In, Bias Out: How Poor Data Quality Fuels AI Bias](https://www.linkedin.com/pulse/garbage-bias-out-how-poor-data-quality-fuels-ai-fahim-ahamed-84vre)
   - [Data Science vs Decision Science: Two Sides of the Same Coin](https://www.linkedin.com/pulse/data-science-vs-decision-two-sides-same-coin-fahim-ahamed-dtoke)
   - [MCAR vs MAR vs MNAR: why “missing” isn’t all the same in datasets](https://www.linkedin.com/pulse/mcar-vs-mar-mnar-why-missing-isnt-all-same-datasets-fahim-ahamed-alxee)
