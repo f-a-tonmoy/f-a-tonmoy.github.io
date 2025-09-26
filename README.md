@@ -1,4 +1,4 @@
-# AI Research | Data Science | Machine Learning | NLP | Computer Vision 
+# Data Science | AI Research | Machine Learning | NLP | Computer Vision 
 
 ---
 
@@ -17,6 +17,7 @@
 - Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments.
 - Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**, with a strong track record of turning complex data challenges into measurable business impact.
 - Skilled collaborator with proven ability to **translate technical insights into operational success.**
+- **Authorized to work in the U.S. and do not require sponsorship.**
 
 ---
 
@@ -94,7 +95,7 @@
 - Introduced a hybrid model combining **EfficientNetB0** and **Random Forest**, achieving **98.65% accuracy** (F1: **98.64%**) on combined datasets and **95% accuracy** on **HAM10000**, validated with statistical significance.  
 - Tackled **class imbalance** and **generalization challenges**, deploying a **clinical web app** to support seamless early skin cancer diagnosis.
 
-**Lightweight and Explainable Vision Transformer for Cross-Corpus Drowsiness Detection Using Multi-Path Token Fusion and Attention-Based Interpretability** (Array Journal)
+**Explainable Token-Fusion Transformer for Early Drowsiness State Recognition in Safety-Critical Systems** (Array Journal)
 - Proposed **EMTF-ViT**, a lightweight vision transformer with **multi-path token fusion**, achieving **99.2% intra-dataset accuracy** and **93%+ cross-dataset transfer**, outperforming ViT baselines by 2–4%.  
 - Delivered **explainable fatigue detection** via **Grad-CAM** and deployed a **low-power**, real-time application (<120 ms latency, <4 W) for **ADAS**, **workplace safety**, and **telehealth**.
 
