@@ -2,10 +2,7 @@
 
 ---
 
-[f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com) | [LinkedIn](https://linkedin.com/in/f-a-tonmoy) | [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ)
-<!--
-| [ORCID](https://orcid.org/0009-0006-2638-6521)
--->
+[f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com) | [LinkedIn](https://linkedin.com/in/f-a-tonmoy) | [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ) | [ORCID](https://orcid.org/0009-0006-2638-6521)
 ---
 
 ### Open to ML/DS roles | Open to research collaborations
@@ -15,7 +12,7 @@
 ## About Me
 - **Data Scientist** and **AI Researcher** with expertise in delivering applied AI solutions across **healthcare**, **cybersecurity**, and **enterprise systems**.
 - Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments.
-- Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**, with a strong track record of turning complex data challenges into measurable business impact.
+- Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**.
 - Skilled collaborator with proven ability to **translate technical insights into operational success.**
 - **Authorized to work in the U.S. and do not require sponsorship.**
 
@@ -24,7 +21,7 @@
 ## Education
 
 #### The City College of New York (CUNY)
-*M.S. in Data Science & Engineering* _(Aug 2025 - Present)_
+*M.S. in Data Science & Engineering* _(Aug 2025 - May 2027)_
 - New York, NY
 - Grove School of Engineering
 - **Focus:** Advanced machine learning, big data systems, and applied AI
