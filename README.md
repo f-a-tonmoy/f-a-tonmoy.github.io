@@ -195,12 +195,12 @@
 
 ## Software Engineering Projects  
 
-### WanderWoman – A Travel Management System  
+### WanderWoman - A Travel Management System  
 - Designed and deployed a **secure travel management platform** for solo women travelers.  
 - Integrated **real-time updates and community interactions** to enhance user engagement.  
 - Increased **query efficiency by 30%** through database indexing and optimization.  
 
-### ExprAsm – An Assembly Instructions Generator  
+### ExprAsm - An Assembly Instructions Generator  
 - Converted **arithmetic expressions** into optimized assembly instructions with **100% accuracy**.  
 - Supported **four address types**, automating over **95% of common instruction patterns**.  
 - Handled **100+ test cases**, ensuring robust error handling and validation.  
