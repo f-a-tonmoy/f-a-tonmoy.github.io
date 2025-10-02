@@ -48,10 +48,17 @@
 
 ### **AI Researcher - Healthcare, NLP & Adversarial AI**
 **East West University** _(Feb 2024 - Aug 2025 · Freelance · Remote)_ 
-- Conducted research on **depression detection**, **skin cancer diagnosis**, and **adversarial attacks**, applying deep learning and explainable AI to real-world healthcare and safety-critical problems.  
-- Built high-accuracy models like a **hybrid skin cancer classifier (98.65%)** and **GAN-BERT-based depression detector (92%)**, ensuring transparency and deployment-readiness.  
-- Investigated **energy-based adversarial threats** in IoT and VLM systems, proposing defense strategies to enhance robustness and reduce latency and resource misuse.
+- Conducted applied AI research across healthcare, mental health, and safety-critical domains, focusing on explainable deep learning, vision transformers, and adversarial robustness.
 
+- Developed deployable systems including:
+  - A hybrid skin cancer classifier (98.65% accuracy)
+  - A depression severity detector using MobileDepFormer-XAI (F1: 81.63%)
+  - A drowsiness recognition model with <120 ms latency and <4 W power
+  - A dual-site cancer screening pipeline (up to 99.37% accuracy)
+
+- Investigated energy-latency sponge attacks on IoT and Vision-Language Models, demonstrating up to 30× energy amplification and proposing defenses for MIoT and autonomous systems.
+
+- Delivered interpretable AI solutions with real-time web apps using Grad-CAM and LIME, ensuring transparency and clinical usability across all deployments.
 
 ### **ML Project Lead & Researcher**  
 **East West University** _(Jan 2023 - Dec 2023 · Hybrid)_  
