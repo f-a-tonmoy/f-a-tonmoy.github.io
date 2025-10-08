@@ -2,7 +2,8 @@
 
 ---
 
-[f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com) | [LinkedIn](https://linkedin.com/in/f-a-tonmoy) | [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ) | [ORCID](https://orcid.org/0009-0006-2638-6521)
+[f.a.tonmoy00@gmail.com](mailto:f.a.tonmoy00@gmail.com) | [LinkedIn](https://linkedin.com/in/f-a-tonmoy) | [ORCID](https://orcid.org/0009-0006-2638-6521)
+
 ---
 
 ### Open to ML/DS roles | Open to research collaborations
@@ -50,7 +51,7 @@
 **East West University** _(Feb 2024 - Aug 2025 · Freelance · Remote)_ 
 - Conducted applied AI research across healthcare, mental health, and safety-critical domains, focusing on explainable deep learning, vision transformers, and adversarial robustness.
 
-- Developed deployable systems including:
+- Developed deployable systems, including:
   - A hybrid skin cancer classifier (98.65% accuracy)
   - A depression severity detector using MobileDepFormer-XAI (F1: 81.63%)
   - A drowsiness recognition model with <120 ms latency and <4 W power
@@ -100,7 +101,7 @@
 - Tackled **class imbalance** and **generalization challenges**, deploying a **clinical web app** to support seamless early skin cancer diagnosis.
 
 **Explainable Token-Fusion Transformer for Early Drowsiness State Recognition in Safety-Critical Systems** (Array Journal)
-- Proposed **EMTF-ViT**, a lightweight vision transformer with **multi-path token fusion**, achieving **99.2% intra-dataset accuracy** and **93%+ cross-dataset transfer**, outperforming ViT baselines by 2–4%.  
+- Proposed **EMTF-ViT**, a lightweight vision transformer with **multi-path token fusion**, achieving **99.2% intra-dataset accuracy** and **93%+ cross-dataset transfer**, outperforming ViT baselines by 2-4%.  
 - Delivered **explainable fatigue detection** via **Grad-CAM** and deployed a **low-power**, real-time application (<120 ms latency, <4 W) for **ADAS**, **workplace safety**, and **telehealth**.
 
 **Adversarial Energy Latency Sponge Attack on Resource Constraint Devices** (IEEE IoT Journal)  
@@ -116,6 +117,8 @@
 **Mining Mental States: Depression Detection from Social Media Using NLP, Deep Learning & Explainable AI**  
   - **Achieved 92% accuracy** in initial model testing using NLP and deep learning techniques on benchmark datasets, demonstrating reliable depressive tendency classification.
   - **Utilized GAN-BERT for robust text classification**, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
+
+| [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ) 
 -->
 ---
 
@@ -222,6 +225,7 @@
 ---
 
 ## Articles (Newest First)
+  - [AI Hype or AI Bubble? What’s Really Going On](https://www.linkedin.com/pulse/ai-hype-bubble-whats-really-going-fahim-ahamed-syzqe)
   - [Data Science vs Statistics: A 50-Year Evolution Explained](https://www.linkedin.com/pulse/data-science-vs-statistics-50-year-evolution-explained-fahim-ahamed-dwtte)
   - [Cognitive Offloading: The Hidden Risk of Everyday AI Use](https://www.linkedin.com/pulse/cognitive-offloading-hidden-risk-everyday-ai-use-fahim-ahamed-vdgee)
   - [Why AI Needs Strong Guardrails to Protect Vulnerable Users](https://www.linkedin.com/pulse/why-ai-needs-strong-guardrails-protect-vulnerable-users-fahim-ahamed-a3dpe)
@@ -294,7 +298,7 @@
   - [Shapley Values: The Gold Standard for AI Explainability](https://www.linkedin.com/pulse/shapley-values-gold-standard-ai-explainability-fahim-ahamed-vvfpe/?trackingId=8oEGcMf6RRe%2Bzz4yRXFPJw%3D%3D)
   - [LIME: A Deep Dive into Explainability in AI Models](https://www.linkedin.com/pulse/lime-deep-dive-explainability-ai-models-fahim-ahamed-wl6xe/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
   - [Beyond the Black Box: Why Explainability Matters in AI](https://www.linkedin.com/pulse/beyond-black-box-why-explainability-matters-ai-fahim-ahamed-q6gje/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
-  - [The Hidden Bias in AI – Can We Fix It?](https://www.linkedin.com/pulse/hidden-bias-ai-can-we-fix-fahim-ahamed-1vzae/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
+  - [The Hidden Bias in AI - Can We Fix It?](https://www.linkedin.com/pulse/hidden-bias-ai-can-we-fix-fahim-ahamed-1vzae/?trackingId=KSMQlWKRTwi6c8lVLSbRfA%3D%3D)
 
 ---
 
