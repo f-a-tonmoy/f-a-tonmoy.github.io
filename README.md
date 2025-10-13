@@ -11,7 +11,7 @@
 ---
 
 ## About Me
-- **Data Scientist** and **AI Researcher** with expertise in delivering applied AI solutions across **healthcare**, **cybersecurity**, and **enterprise systems**.
+- **Data Scientist** with a strong background in **AI Research**, delivering data-driven solutions across **healthcare**, **cybersecurity**, and **enterprise systems**.
 - Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments.
 - Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**.
 - Skilled collaborator with proven ability to **translate technical insights into operational success.**
