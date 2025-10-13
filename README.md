@@ -42,10 +42,17 @@
 ### **AI/ML Consultant**  
 **EKAGRA Health** _(Dec 2024 - Sep 2025 · Part-time · Remote)_
 
+- **Led the transition from third-party vendors to an internal R&D team**, reducing long-term costs and increasing system adaptability.
+- **Developed in-house AI/ML infrastructure** to support scalable model training and deployment across 3+ core healthcare modules.
+- **Streamlined ML pipelines and automation systems**, cutting manual effort by ~23% and reducing integration friction in clinical workflows.
+- **Collaborated with engineering and data teams** to align AI initiatives with operational goals, accelerating deployment cycles and improving system efficiency.
+
+<!--
 - Developed **in-house AI/ML infrastructure** to support **scalable model training**, deployment, and experimentation across key **healthcare modules**.  
 - Streamlined **ML pipelines**, reducing integration friction and manual overhead in **clinical** and **predictive workflows**.  
 - Structured **data pipelines** and automation systems to handle thousands of **patient records**, enabling **real-time analytics** and model readiness.  
 - Collaborated with **engineering** and **data teams** to align AI initiatives with operational needs, improving **deployment efficiency** and technical coordination.
+-->
 
 ### **AI Researcher - Healthcare, NLP & Adversarial AI**
 **East West University** _(Feb 2024 - Aug 2025 · Freelance · Remote)_ 
