@@ -93,11 +93,11 @@
 
 ### Accepted Papers
 
-**A Lightweight Transformer Ensemble for Explainable Depression Emotion and Severity Detection** (COMPAS 2025, IEEE)
+**A Lightweight Transformer Ensemble for Explainable Depression Emotion and Severity Detection** (2025, IEEE)
 - Designed **MobileDepFormer-XAI**, a lightweight ensemble of four **transformer models** with **hybrid embeddings**, achieving **state-of-the-art results** (F1: **81.63%**, Precision: **83.24%**, Specificity: **86.92%**) on **depression detection** benchmarks.  
 - Delivered **interpretable and deployable analysis** using **LIME-based explanations** and the **MindScope web interface**, ensuring transparency and **clinical applicability** for real-time mental health assessment.
 
-**Robust Dual-Site Cancer Screening via Multi-Scale Vision Transformer and Rapid Recognition Pipeline** (COMPAS 2025, IEEE) 
+**Robust Dual-Site Cancer Screening via Multi-Scale Vision Transformer and Rapid Recognition Pipeline** (2025, IEEE) 
 - Developed a **multi-scale Vision Transformer** framework (Multi-ViT, MA-Transformer V2, MobileUNETR, TinyViT, Xception), achieving **99.12% accuracy** on **PAD-UFES-20** and **99.37%** on **oral cancer** datasets, with strong **F1** and **AUC-PR** scores.  
 - Built a **real-time web-based screening pipeline** with targeted **preprocessing** and lightweight deployment, enabling **accessible dual-site cancer detection** without specialized equipment.
 
