@@ -15,13 +15,13 @@
 - Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments.
 - Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**.
 - Skilled collaborator with proven ability to **translate technical insights into operational success.**
-- **Authorized to work in the U.S. and do not require sponsorship.**
+- **Authorized to work in the U.S. and do not require sponsorship - U.S. Permanent Resident**
 
 ---
 
 ## Education
 
-#### The City College of New York (CUNY)
+#### The City College of New York
 *M.S. in Data Science & Engineering* _(Aug 2025 - May 2027)_
 - New York, NY
 - Grove School of Engineering
@@ -39,8 +39,15 @@
 
 ## Work/Research Experience
 
+### **Data Analyst**  
+**The City College of New York (CCNY)** _(Oct 2025 – Present · New York, NY)_
+
+- **Leading the analysis** of extensive institutional student data using **Excel**, **Tableau**, and **Python**, translating insights into actionable **advising** and **engagement strategies**.  
+- **Conducting data-driven surveys** and retention studies to uncover **behavioral patterns** that inform targeted outreach and support programs.  
+- **Building analytical reports** and **visual dashboards** that highlight key trends, anomalies, and improvement areas, enhancing **decision-making efficiency** across departments.
+
 ### **AI/ML Consultant**  
-**EKAGRA Health** _(Dec 2024 - Sep 2025 · Part-time · Remote)_
+**EKAGRA Health** _(Dec 2024 - Sep 2025 · Remote)_
 
 - **Led the transition from third-party vendors to an internal R&D team**, reducing long-term costs and increasing system adaptability.
 - **Developed in-house AI/ML infrastructure** to support scalable model training and deployment across 3+ core healthcare modules.
