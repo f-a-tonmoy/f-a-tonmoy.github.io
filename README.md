@@ -40,7 +40,7 @@
 ## Work/Research Experience
 
 ### **Data Analyst**  
-**The City College of New York (CCNY)** _(Oct 2025 – Present · New York, NY)_
+**The City College of New York (CCNY)** _(Oct 2025 - Present · New York, NY)_
 
 - **Leading the analysis** of extensive institutional student data using **Excel**, **Tableau**, and **Python**, translating insights into actionable **advising** and **engagement strategies**.  
 - **Conducting data-driven surveys** and retention studies to uncover **behavioral patterns** that inform targeted outreach and support programs.  
