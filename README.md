@@ -110,7 +110,7 @@
 
 ### Papers Under Review  
 
-**Interpretable Hybrid Transfer Learning for Enhanced Skin Cancer Detection** (Image and Vision Computing)
+**Interpretable Hybrid Transfer Learning for Enhanced Skin Cancer Detection** (Digital Health Journal)
 - Introduced a hybrid model combining **EfficientNetB0** and **Random Forest**, achieving **98.65% accuracy** (F1: **98.64%**) on combined datasets and **95% accuracy** on **HAM10000**, validated with statistical significance.  
 - Tackled **class imbalance** and **generalization challenges**, deploying a **clinical web app** to support seamless early skin cancer diagnosis.
 
