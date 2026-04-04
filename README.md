@@ -46,7 +46,7 @@
 - Documenting analytical processes and communicating findings through **structured write-ups**, supporting transparent, **data-driven decision-making**.
 
 ### **Data Analyst**  
-**The City College of New York (CCNY)** _(Oct 2025 - Feb 2026 · New York, NY)_
+**The City College of New York** _(Oct 2025 - Feb 2026 · New York, NY)_
 
 - **Led the analysis** of extensive institutional data using **Excel**, **Tableau**, and **Python**, translating insights into actionable **advising** and **engagement strategies**.  
 - **Conducted data-driven surveys** and retention studies to uncover **behavioral patterns** that inform targeted outreach and support programs.  
