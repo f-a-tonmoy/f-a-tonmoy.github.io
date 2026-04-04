@@ -11,7 +11,7 @@
 ---
 
 ## About Me
-- **Data Scientist** with a strong background in **AI Research**, delivering data-driven solutions across **healthcare**, **cybersecurity**, and **enterprise systems**.
+- **Data Scientist** with a background in **AI Research**, delivering data-driven solutions across **healthcare**, **cybersecurity**, and **enterprise systems**.
 - Experienced in building **scalable ML pipelines**, optimizing **predictive models**, and integrating **NLP** and **computer vision** into production environments.
 - Proficient in **Python**, **PyTorch**, **TensorFlow**, **SQL**, and **MLOps**.
 - Skilled collaborator with proven ability to **translate technical insights into operational success.**
@@ -121,10 +121,6 @@
 
 ### Papers Under Review  
 
-**Interpretable Hybrid Transfer Learning for Enhanced Skin Cancer Detection** (Digital Health Journal)
-- Introduced a hybrid model combining **EfficientNetB0** and **Random Forest**, achieving **98.65% accuracy** (F1: **98.64%**) on combined datasets and **95% accuracy** on **HAM10000**, validated with statistical significance.  
-- Tackled **class imbalance** and **generalization challenges**, deploying a **clinical web app** to support seamless early skin cancer diagnosis.
-
 **Explainable Token-Fusion Transformer for Early Drowsiness State Recognition in Safety-Critical Systems** (Array Journal)
 - Proposed **EMTF-ViT**, a lightweight vision transformer with **multi-path token fusion**, achieving **99.2% intra-dataset accuracy** and **93%+ cross-dataset transfer**, outperforming ViT baselines by 2-4%.  
 - Delivered **explainable fatigue detection** via **Grad-CAM** and deployed a **low-power**, real-time application (<120 ms latency, <4 W) for **ADAS**, **workplace safety**, and **telehealth**.
@@ -146,7 +142,7 @@
 **Computer Vision & NLP:** OpenCV, NLTK, SpaCy, Gensim  
 **Data Analysis & Visualization:** NumPy, Pandas, SciPy, Matplotlib, Seaborn, Tableau  
 **Web Development:** Django, Flask, HTML, CSS, JavaScript  
-**Databases & Big Data:** SQL (Oracle, MySQL), NoSQL (MongoDB), Hadoop, Spark   
+**Databases & Big Data:** SQL (Oracle, MySQL), NoSQL (MongoDB), Snowflake   
 **Cloud & MLOps:** AWS, MLflow, Git/GitHub, Docker  
 **R&D Tools:** LaTeX, Mendeley, Jupyter Notebook, VS Code, JetBrains IDEs  
 
@@ -231,6 +227,12 @@
 ---
 
 ## Articles (Newest First)
+  - [Backpropagation Explained: How Neural Networks Actually Learn](https://www.linkedin.com/pulse/backpropagation-explained-how-neural-networks-actually-fahim-ahamed-xdwie)
+  - [Can We Really Trust a p-Value Below 0.05?](https://www.linkedin.com/pulse/can-we-really-trust-p-value-below-005-fahim-ahamed-6efdc)
+  - [The Real Limits of Artificial Intelligence in 2025](https://www.linkedin.com/pulse/real-limits-artificial-intelligence-2025-fahim-ahamed-plh3e)
+  - [It Takes Only 250 Bad Examples to Fool a Giant AI](https://www.linkedin.com/pulse/takes-only-250-bad-examples-fool-giant-ai-fahim-ahamed-va7ke)
+  - [The Age of AI Slop: How the Internet Is Losing Its Soul](https://www.linkedin.com/pulse/age-ai-slop-how-internet-losing-its-soul-fahim-ahamed-ty0ye)
+  - [Why AI Can’t Replace Humans (Yet)](https://www.linkedin.com/pulse/why-ai-cant-replace-humans-yet-fahim-ahamed-hcd1e)
   - [AI Hype or AI Bubble? What’s Really Going On](https://www.linkedin.com/pulse/ai-hype-bubble-whats-really-going-fahim-ahamed-syzqe)
   - [Data Science vs Statistics: A 50-Year Evolution Explained](https://www.linkedin.com/pulse/data-science-vs-statistics-50-year-evolution-explained-fahim-ahamed-dwtte)
   - [Cognitive Offloading: The Hidden Risk of Everyday AI Use](https://www.linkedin.com/pulse/cognitive-offloading-hidden-risk-everyday-ai-use-fahim-ahamed-vdgee)
