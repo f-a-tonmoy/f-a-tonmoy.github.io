@@ -94,6 +94,12 @@
 ## Research & Publications  
 
 ### Published Papers
+
+**Explainable AI-driven hybrid deep learning framework for accurate skin cancer diagnosis** (Digital Health, SAGE)  
+- Built a **hybrid DL model (EfficientNetB0 + Random Forest)** with fusion, achieving **98.61% accuracy** (F1: 98.60%) and **95.02% accuracy** on **HAM10000**.  
+- Applied robust preprocessing and **class imbalance handling**, while enabling **interpretable predictions** using **Grad-CAM** and a **web-based interface** for clinical decision support.
+- [Read Paper](https://journals.sagepub.com/doi/10.1177/20552076261438923)
+
 **Texture Feature-Based Colonic Polyp Detection Using Deep Learning Techniques** (Springer Nature)  
   - **Achieved a 97.33% segmentation accuracy (IoU)** using DeepLab3+ model, outperforming VGG16 in delineating polyp boundaries.
   - **Delivered superior results** compared to previous research, setting a new benchmark for polyp segmentation accuracy in colorectal cancer detection.
@@ -103,11 +109,6 @@
   - Reduced annual household electricity consumption by **34.54%**, saving over **90,000 watts per household**, demonstrating significant environmental and cost-saving impacts.
   - Highlighted the potential for **nationwide scalability**, offering a sustainable solution to reduce energy wastage and carbon footprints.
   - [Read Paper](https://link.springer.com/chapter/10.1007/978-3-031-50887-5_9)
-
-**Explainable AI-driven hybrid deep learning framework for accurate skin cancer diagnosis** (Digital Health, SAGE)  
-- Built a **hybrid DL model (EfficientNetB0 + Random Forest)** with fusion, achieving **98.61% accuracy** (F1: 98.60%) and **95.02% accuracy** on **HAM10000**.  
-- Applied robust preprocessing and **class imbalance handling**, while enabling **interpretable predictions** using **Grad-CAM** and a **web-based interface** for clinical decision support.
-- [Read Paper](https://journals.sagepub.com/doi/10.1177/20552076261438923)
 
 ### Accepted Papers
 
