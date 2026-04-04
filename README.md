@@ -33,18 +33,24 @@
 - Conferred: Feb 2024
 - Recognized under the [Washington Accord](https://accreditation.org/find-accredited-programs/university-search?search_api_fulltext_2=East+West+University&program_search%5B0%5D=country%3A92) and **equivalent to a U.S. engineering degree**
 - Specialization: Intelligent Systems & Data Science  
-- GPA: 3.74/4.0 *(US Equivalent, [WES](https://www.wes.org/) evaluated)*
 
 ---
 
 ## Work/Research Experience
 
-### **Data Analyst**  
-**The City College of New York (CCNY)** _(Oct 2025 - Present · New York, NY)_
+### **Data Evangelist Intern**  
+**DataCamp** _(Feb 2026 - Present · New York, NY)_
 
-- **Leading the analysis** of extensive institutional data using **Excel**, **Tableau**, and **Python**, translating insights into actionable **advising** and **engagement strategies**.  
-- **Conducting data-driven surveys** and retention studies to uncover **behavioral patterns** that inform targeted outreach and support programs.  
-- **Building analytical reports** and **visual dashboards** that highlight key trends, anomalies, and improvement areas, enhancing **decision-making efficiency** across departments.
+- Designing and maintaining **scalable, reproducible data pipelines** to integrate, clean, and validate **multi-source data** for reliable analysis.  
+- Developing **interactive data applications** that enable stakeholders to explore key metrics and derive actionable insights.  
+- Documenting analytical processes and communicating findings through **structured write-ups**, supporting transparent, **data-driven decision-making**.
+
+### **Data Analyst**  
+**The City College of New York (CCNY)** _(Oct 2025 - Feb 2026 · New York, NY)_
+
+- **Led the analysis** of extensive institutional data using **Excel**, **Tableau**, and **Python**, translating insights into actionable **advising** and **engagement strategies**.  
+- **Conducted data-driven surveys** and retention studies to uncover **behavioral patterns** that inform targeted outreach and support programs.  
+- **Built analytical reports** and **visual dashboards** that highlight key trends, anomalies, and improvement areas, enhancing **decision-making efficiency** across departments.
 
 ### **AI/ML Consultant**  
 **EKAGRA Health** _(Dec 2024 - Sep 2025 · Remote)_
@@ -96,7 +102,12 @@
 **Optimizing Energy Usage: Genetic Algorithms Leading the Charge Toward Sustainability** (Springer Nature)  
   - Reduced annual household electricity consumption by **34.54%**, saving over **90,000 watts per household**, demonstrating significant environmental and cost-saving impacts.
   - Highlighted the potential for **nationwide scalability**, offering a sustainable solution to reduce energy wastage and carbon footprints.
-  - [Read Paper](https://link.springer.com/chapter/10.1007/978-3-031-50887-5_9)  
+  - [Read Paper](https://link.springer.com/chapter/10.1007/978-3-031-50887-5_9)
+
+**Explainable AI-driven hybrid deep learning framework for accurate skin cancer diagnosis** (Digital Health, SAGE)  
+- Built a **hybrid DL model (EfficientNetB0 + Random Forest)** with fusion, achieving **98.61% accuracy** (F1: 98.60%) and **95.02% accuracy** on **HAM10000**.  
+- Applied robust preprocessing and **class imbalance handling**, while enabling **interpretable predictions** using **Grad-CAM** and a **web-based interface** for clinical decision support.
+- [Read Paper](https://journals.sagepub.com/doi/10.1177/20552076261438923)
 
 ### Accepted Papers
 
@@ -126,22 +137,6 @@
   - Digitized mixed Bangla-English prescriptions with **custom CNN models**, achieving a **median 91% accuracy rate in OCR**, including **accurate recognition of cursive handwriting.**
   - **Implemented advanced preprocessing pipelines**, including noise reduction and character segmentation, to enhance recognition accuracy and **reduce error rates in challenging datasets.**
   
-<!--
-### Ongoing Research  
-**Mining Mental States: Depression Detection from Social Media Using NLP, Deep Learning & Explainable AI**  
-  - **Achieved 92% accuracy** in initial model testing using NLP and deep learning techniques on benchmark datasets, demonstrating reliable depressive tendency classification.
-  - **Utilized GAN-BERT for robust text classification**, effectively addressing imbalanced datasets and improving model generalizability. Enhanced model interpretability by integrating Explainable AI.
-
-| [Google Scholar](https://scholar.google.com/citations?user=qEKKZGMAAAAJ) 
--->
----
-
-### Ongoing Research
-**VLM-Based Adversarial Robustness for Autonomous Driving** 
-- Building a **Vision-Language Model (VLM) pipeline** leveraging **NuScenes** and **Waymo** datasets, with a focus on **camera-based scene understanding** for **autonomous driving systems**.  
-- Designing and generating **adversarial sponge samples** to evaluate and expose **VLM vulnerabilities**, specifically targeting **stealth attacks** that inflate **latency** and **resource consumption**.  
-- Enhancing model **interpretability** and **robustness** through **Explainable AI** techniques and **adversarial training**, aiming to develop resilient **VLM architectures** for **real-world deployment**.
-  
 ---
 
 ## Technical Skills 
@@ -157,85 +152,82 @@
 
 ---
 
+## Data Projects
+
+### NYC HIV/AIDS Trend Analysis & Predictive Modeling  
+*R, Tidyverse, ggplot2, sf, rpart, RandomForest, caret*  
+- Cleaned and engineered **multi-year NYC Open Data**, resolving suppressed values and producing **analysis-ready datasets**.  
+- Conducted **spatiotemporal analysis**, uncovering geographic and demographic disparities with implications for **public health interventions**.  
+- Built **tree-based ML models**, with Random Forest achieving **R² = 0.65**, identifying key predictors for planning.
+
+### Global Population Growth Modeling & Forecasting  
+*R, Tidyverse, ggplot2, leaps, caret*  
+- Engineered a **longitudinal time-series dataset** integrating demographic indicators across **200+ countries**.  
+- Performed **60+ year trend analysis** by region and income group, identifying structural growth patterns.  
+- Developed forecasting models achieving **R² = 0.755**, validated using **rolling-window cross-validation**.
+
+---
+
 ## AI/ML Projects
 
-### Deep Learning-Based Wound Classification  
+### Clinical Risk Modeling & Unsupervised Structure Analysis  
+*Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn*  
+- Curated and standardized **clinical datasets**, addressing missingness, outliers, and scaling.  
+- Conducted **EDA and diagnostic analysis**, identifying limitations in linear separability.  
+- Built a **logistic regression model (~80% accuracy)** and evaluated **K-Means clustering** using PCA and t-SNE for latent structure analysis.
+
+### Deep Learning-Based Wound Classification
+*Python, TensorFlow, OpenCV, NumPy, Pandas, Matplotlib*
 - Achieved **98.5% accuracy** and reduced loss to **0.1061** by refining the CNN architecture and optimizing the training process.  
 - Improved model accuracy by **9%** (from 89.8% to 98.5%) by increasing architectural complexity with additional convolutional layers, batch normalization, dropout, and regularization techniques.  
 - Enhanced model fairness and performance by **oversampling underrepresented classes**, effectively addressing challenges posed by class imbalance.  
 
-<!--
-
-### Mental Health Assessment Through Social Media Text Analysis  
-- Achieved **92% accuracy** in initial model testing using **NLP and deep learning techniques** on benchmark datasets.  
-- Utilized **GAN-BERT** for robust text classification, effectively handling imbalanced datasets and improving model generalizability.  
-- Integrated **explainable AI**, improving decision transparency and supporting more informed analyses.  
-
-### Cursive Handwritten Prescription Recognition  
-- Digitized **mixed Bangla-English prescriptions** with a custom **CNN model**, achieving **91% accuracy** in OCR, including cursive handwriting recognition.  
-- Reduced **model training time by 20%** through optimized hyperparameter tuning and advanced preprocessing pipelines.  
-- Enhanced system scalability by incorporating **modular preprocessing components**, enabling efficient adaptation to varied handwriting styles.  
-
-### Texture Feature-Based Colonic Polyp Detection  
-- Achieved **97.33% segmentation accuracy (IoU)** using **DeepLab3+**, outperforming **VGG16** in polyp boundary delineation.  
-- Applied advanced **data augmentation techniques**, improving detection precision by **10%**.  
-- Set a new benchmark for **colorectal cancer detection** with superior segmentation accuracy.  
-
-### Optimizing Energy Consumption Using Genetic Algorithms  
-- Reduced annual household electricity consumption by **34.54%**, saving **90,449 watts per household**.  
-- Optimized energy usage patterns using real-world household datasets, significantly reducing standby power consumption.  
-- Proposed a **nationwide scalable model** for reducing energy wastage and carbon footprints.  
--->
-
-### Hybrid Recommendation System  
+### Hybrid Recommendation System
+*Python, NumPy, Pandas, Matplotlib, TKinter*
 - Developed a **hybrid recommendation engine** combining collaborative and content-based filtering to address the **cold-start problem**.  
 - Processed and analyzed over **100,000 user interaction records**, improving user engagement metrics by **15%**.  
 - Implemented a **scalable architecture** to enhance data handling efficiency and seamless integration.
 
-### Intrusion Detection System  
+### Intrusion Detection System
+*Python, NumPy, Pandas, SciPy, Matplotlib, Seaborn, Scikit-learn*
 - Processed and analyzed **2.5+ million network traffic records**, uncovering key anomaly patterns.  
 - Reduced **memory usage by 47.5%** through optimized numerical data type downcasting.  
 - Achieved **97% median accuracy** in detecting network anomalies using **machine learning models**. 
 
-### Credit Score Classification  
+### Credit Score Classification
+*Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn*  
 - Processed **100,000+ financial records**, applying extensive **data cleaning and feature engineering** to improve model quality.  
 - Trained and optimized classification models, achieving **92% accuracy** in predicting credit scores.  
 - Reduced **training time by 20%** through hyperparameter tuning and feature selection.   
 
-### ML-Enabled Code Smell Detection System  
+### ML-Enabled Code Smell Detection System
+*Python, NumPy, Pandas, Matplotlib, SMOTE, Seaborn, Scikit-learn*
 - Developed an **ML-based system** for detecting code smells, addressing class imbalance, and feature selection analysis.  
 - Achieved over **90% accuracy** in detecting code smells using **Random Forest and XGBoost**.  
 - Balanced a **dataset of 190,707 entries** with **73.6% class imbalance**, improving detection rates by **32%**.  
-<!--
-### Tic-Tac-Toe Using Alpha-Beta Pruning  
-- Implemented an optimized **minimax algorithm with alpha-beta pruning**, reducing computation time by **50%**.  
-- Designed a **scalable N×N grid-based system** with two difficulty levels for human and AI gameplay.  
-- Integrated **intelligent AI decision-making**, supporting estimated and stochastic moves.  
--->
+
 ---
 
 ## Software Engineering Projects  
 
-### WanderWoman - A Travel Management System  
+### WanderWoman - A Travel Management System
+*Django, HTML, CSS, JavaScript, SQLite, MySQL*  
 - Designed and deployed a **secure travel management platform** for solo women travelers.  
 - Integrated **real-time updates and community interactions** to enhance user engagement.  
 - Increased **query efficiency by 30%** through database indexing and optimization.  
 
-### ExprAsm - An Assembly Instructions Generator  
+### ExprAsm - An Assembly Instructions Generator
+*Python, PrettyTable*
 - Converted **arithmetic expressions** into optimized assembly instructions with **100% accuracy**.  
 - Supported **four address types**, automating over **95% of common instruction patterns**.  
 - Handled **100+ test cases**, ensuring robust error handling and validation.  
 
-### FIFA World Cup 2022 Web Application  
+### FIFA World Cup 2022 Web Application
+*Oracle SQL, HTML, CSS, JavaScript*
 - Developed a **feature-rich web application** with **real-time match simulation, team statistics, and ticket bookings**.  
 - Integrated an **Oracle database** with over **1,000 data points** for match tracking.  
 - Awarded **Best Project** for **advanced technical architecture and database design**.  
 
-### Task Manager for Linux Operating System  
-- Monitored **50+ active system processes** with insights into **CPU, RAM, and disk usage**.  
-- Implemented sorting and filtering functionalities for processes, reducing troubleshooting time.  
-- Supported **up to 200 concurrent processes**, ensuring seamless system performance monitoring.  
- 
 ---
 
 ## Articles (Newest First)
@@ -318,7 +310,7 @@
 
 ## Additional Highlights  
 
--	**Solved 500+ problems** across platforms like LeetCode, HackerRank, and Beecrowd (formerly URI)..
+-	**Solved 500+ problems** across platforms like LeetCode, HackerRank, and Beecrowd (formerly URI).
 -	**Gold-labeled problem solver** on HackerRank. Awarded Gold Badges for **JAVA** and **SQL.**
 -	Participated in university-led **ML and programming bootcamps**, enhancing hands-on skills in AI and ML techniques.
 -	**Organized** and managed **technical events** and **community workshops**, handling logistics, outreach, and student engagement across campus.
