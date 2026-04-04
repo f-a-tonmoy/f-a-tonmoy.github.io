@@ -213,12 +213,6 @@
 - Integrated **real-time updates and community interactions** to enhance user engagement.  
 - Increased **query efficiency by 30%** through database indexing and optimization.  
 
-### ExprAsm - An Assembly Instructions Generator
-*Python, PrettyTable*
-- Converted **arithmetic expressions** into optimized assembly instructions with **100% accuracy**.  
-- Supported **four address types**, automating over **95% of common instruction patterns**.  
-- Handled **100+ test cases**, ensuring robust error handling and validation.  
-
 ### FIFA World Cup 2022 Web Application
 *Oracle SQL, HTML, CSS, JavaScript*
 - Developed a **feature-rich web application** with **real-time match simulation, team statistics, and ticket bookings**.  
