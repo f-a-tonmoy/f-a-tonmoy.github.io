@@ -41,9 +41,9 @@
 ### **Data Evangelist Intern**  
 **DataCamp** _(Feb 2026 - Present · New York, NY)_
 
-- Designing and maintaining **scalable, reproducible data pipelines** to integrate, clean, and validate **multi-source data** for reliable analysis.  
-- Developing **interactive data applications** that enable stakeholders to explore key metrics and derive actionable insights.  
-- Documenting analytical processes and communicating findings through **structured write-ups**, supporting transparent, **data-driven decision-making**.
+- Design and maintain **scalable, reproducible pipelines** to collect, integrate, and validate **multi-source data**, including API-based and web-scraped datasets.  
+- Build **data applications** and **analytical workflows** to explore key metrics and support structured analysis across datasets.  
+- Analyze data to identify **trends, patterns, and key drivers**, producing clear outputs for **data-driven decision-making**.
 
 ### **Data Analyst**  
 **The City College of New York** _(Oct 2025 - Feb 2026 · New York, NY)_
