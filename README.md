@@ -51,7 +51,7 @@
 - **Led the analysis** of extensive institutional data using **Excel**, **Tableau**, and **Python**, translating insights into actionable **advising** and **engagement strategies**.  
 - **Conducted data-driven surveys** and retention studies to uncover **behavioral patterns** that inform targeted outreach and support programs.  
 - **Built analytical reports** and **visual dashboards** that highlight key trends, anomalies, and improvement areas, enhancing **decision-making efficiency** across departments.
-
+<!--
 ### **AI/ML Consultant**  
 **EKAGRA Health** _(Dec 2024 - Sep 2025 · Remote)_
 
@@ -60,7 +60,7 @@
 - **Streamlined ML pipelines and automation systems**, cutting manual effort by ~23% and reducing integration friction in clinical workflows.
 - **Collaborated with engineering and data teams** to align AI initiatives with operational goals, accelerating deployment cycles and improving system efficiency.
 
-<!--
+
 - Developed **in-house AI/ML infrastructure** to support **scalable model training**, deployment, and experimentation across key **healthcare modules**.  
 - Streamlined **ML pipelines**, reducing integration friction and manual overhead in **clinical** and **predictive workflows**.  
 - Structured **data pipelines** and automation systems to handle thousands of **patient records**, enabling **real-time analytics** and model readiness.  
