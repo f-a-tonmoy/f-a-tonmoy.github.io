@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research | Fahim Ahamed</title>
+    <meta name="description" content="Research and publications by Fahim Ahamed in healthcare AI, NLP, computer vision, and adversarial AI." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Fahim Ahamed home">FA</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="experience.html">Experience</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="writing.html">Articles</a>
+      </nav>
+      <a class="header-cta" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <p class="eyebrow">Research</p>
+        <h1>Explainable & deployable AI systems.</h1>
+        <p class="lede">
+          Publications and manuscripts across medical imaging, mental health, fatigue detection,
+          adversarial robustness, multilingual OCR, and sustainable optimization.
+        </p>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-label">Published Papers</p>
+          <h2>Peer-reviewed work</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="tag">Digital Health, SAGE</span>
+            <h3>Explainable AI-driven hybrid deep learning framework for accurate skin cancer diagnosis</h3>
+            <p>Hybrid EfficientNetB0 and Random Forest framework with 98.61% accuracy, class imbalance handling, Grad-CAM explainability, and a clinical decision support interface.</p>
+            <a href="https://journals.sagepub.com/doi/10.1177/20552076261438923">Read paper</a>
+          </article>
+          <article class="card">
+            <span class="tag">Springer Nature</span>
+            <h3>Texture Feature-Based Colonic Polyp Detection Using Deep Learning Techniques</h3>
+            <p>DeepLab3+ segmentation model achieving 97.33% IoU accuracy for colonic polyp boundary detection.</p>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-73324-6_2">Read paper</a>
+          </article>
+          <article class="card">
+            <span class="tag">Springer Nature</span>
+            <h3>Optimizing Energy Usage: Genetic Algorithms Leading the Charge Toward Sustainability</h3>
+            <p>Genetic algorithm approach reducing annual household electricity consumption by 34.54% with potential for wider sustainability applications.</p>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-50887-5_9">Read paper</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-label">Accepted & Under Review</p>
+          <h2>Current pipeline</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="tag">IEEE, 2025</span>
+            <h3>A Lightweight Transformer Ensemble for Explainable Depression Emotion & Severity Detection</h3>
+            <p>MobileDepFormer-XAI ensemble with hybrid embeddings, F1 of 81.63%, LIME explanations, and a deployable MindScope interface.</p>
+            <span class="paper-status">Accepted</span>
+          </article>
+          <article class="card">
+            <span class="tag">IEEE, 2025</span>
+            <h3>Robust Dual-Site Cancer Screening via Multi-Scale Vision Transformer & Rapid Recognition Pipeline</h3>
+            <p>Multi-scale ViT framework for skin and oral cancer screening, reaching up to 99.37% accuracy across target datasets.</p>
+            <span class="paper-status">Accepted</span>
+          </article>
+          <article class="card">
+            <span class="tag">Array Journal</span>
+            <h3>Explainable Token-Fusion Transformer for Early Drowsiness State Recognition</h3>
+            <p>EMTF-ViT fatigue detection model with 99.2% intra-dataset accuracy and low-power, real-time deployment targets.</p>
+            <span class="paper-status">Under review</span>
+          </article>
+          <article class="card">
+            <span class="tag">IEEE IoT Journal</span>
+            <h3>Adversarial Energy Latency Sponge Attack on Resource Constraint Devices</h3>
+            <p>Study of sponge attacks that increase energy consumption and inference latency in mission-critical IoT and autonomous systems.</p>
+            <span class="paper-status">Under review</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-copy">&copy; 2026 Fahim Ahamed</span>
+        <div class="footer-links">
+          <a href="https://linkedin.com/in/f-a-tonmoy">LinkedIn</a>
+          <a href="https://orcid.org/0009-0006-2638-6521">ORCID</a>
+          <a href="mailto:f.a.tonmoy00@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.querySelector('.nav');
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('open');
+          toggle.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+      })();
+    </script>
+  </body>
+</html>

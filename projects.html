@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects | Fahim Ahamed</title>
+    <meta name="description" content="Selected data science, machine learning, AI, and software engineering projects by Fahim Ahamed." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Fahim Ahamed home">FA</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="experience.html">Experience</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="writing.html">Articles</a>
+      </nav>
+      <a class="header-cta" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <p class="eyebrow">Projects</p>
+        <h1>Applied models, analytics, & software systems.</h1>
+        <p class="lede">
+          A selection of machine learning, deep learning, public health analytics, cybersecurity,
+          recommendation, and software engineering projects.
+        </p>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-label">Data Projects</p>
+          <h2>Analytics & forecasting</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div>
+              <h3>NYC HIV/AIDS Trend Analysis & Predictive Modeling</h3>
+              <ul class="detail-list">
+                <li>Cleaned and engineered multi-year NYC Open Data, resolving suppressed values and producing analysis-ready datasets.</li>
+                <li>Conducted spatiotemporal analysis to uncover geographic and demographic disparities relevant to public health interventions.</li>
+                <li>Built tree-based ML models, with Random Forest achieving R-squared of 0.65 and identifying key predictors for planning.</li>
+              </ul>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/hiv-nyc-trends-eda-modeling" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <span>R, Tidyverse, ggplot2, sf, rpart, RandomForest, caret</span>
+          </article>
+          <article class="project">
+            <div>
+              <h3>Global Population Growth Modeling & Forecasting</h3>
+              <ul class="detail-list">
+                <li>Engineered a longitudinal time-series dataset integrating demographic indicators across 200+ countries.</li>
+                <li>Performed 60+ year trend analysis by region and income group to identify structural growth patterns.</li>
+                <li>Developed forecasting models achieving R-squared of 0.755, validated using rolling-window cross-validation.</li>
+              </ul>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/global-population-dynamics-forecasting" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <span>R, Tidyverse, ggplot2, leaps, caret</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-label">AI Projects</p>
+          <h2>Machine learning & deep learning</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div>
+              <h3>Clinical Risk Modeling & Unsupervised Structure Analysis</h3>
+              <ul class="detail-list">
+                <li>Curated and standardized clinical datasets, addressing missingness, outliers, and scaling.</li>
+                <li>Conducted EDA and diagnostic analysis to identify limitations in linear separability.</li>
+                <li>Built a logistic regression model around 80% accuracy and evaluated K-Means clustering using PCA and t-SNE for latent structure analysis.</li>
+              </ul>
+            </div>
+            <span>Python, NumPy, pandas, Matplotlib, Seaborn, scikit-learn</span>
+          </article>
+          <article class="project">
+            <div>
+              <h3>Deep Learning-Based Wound Classification</h3>
+              <ul class="detail-list">
+                <li>Achieved 98.5% accuracy and reduced loss to 0.1061 by refining the CNN architecture and training process.</li>
+                <li>Improved model accuracy by 9 percentage points by adding convolutional layers, batch normalization, dropout, and regularization.</li>
+                <li>Enhanced model fairness and performance by oversampling underrepresented classes to address class imbalance.</li>
+              </ul>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/Wound-Classification-DL" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <span>Python, TensorFlow, OpenCV, NumPy, pandas, Matplotlib</span>
+          </article>
+          <article class="project">
+            <div>
+              <h3>Intrusion Detection System</h3>
+              <ul class="detail-list">
+                <li>Processed and analyzed 2.5M+ network traffic records to uncover key anomaly patterns.</li>
+                <li>Reduced memory usage by 47.5% through optimized numerical data type downcasting.</li>
+                <li>Achieved 97% median accuracy in detecting network anomalies using machine learning models.</li>
+              </ul>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/Intrusion-Detection-System" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <span>Python, NumPy, pandas, SciPy, Matplotlib, Seaborn, scikit-learn</span>
+          </article>
+          <article class="project">
+            <div>
+              <h3>Credit Score Classification</h3>
+              <ul class="detail-list">
+                <li>Processed 100,000+ financial records with extensive data cleaning and feature engineering.</li>
+                <li>Trained and optimized classification models, achieving 92% accuracy in predicting credit scores.</li>
+                <li>Reduced training time by 20% through hyperparameter tuning and feature selection.</li>
+              </ul>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/Credit-Score-Classification" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <span>Python, NumPy, pandas, Matplotlib, Seaborn, scikit-learn</span>
+          </article>
+          <article class="project">
+            <div>
+              <h3>Hybrid Recommendation System</h3>
+              <ul class="detail-list">
+                <li>Developed a hybrid recommendation engine combining collaborative and content-based filtering to address the cold-start problem.</li>
+                <li>Processed and analyzed over 100,000 user interaction records, improving user engagement metrics by 15%.</li>
+                <li>Implemented a scalable architecture to improve data handling efficiency and integration.</li>
+              </ul>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/Hybrid-Movie-Recommendation-System" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <span>Python, NumPy, Tkinter</span>
+          </article>
+          <article class="project">
+            <div>
+              <h3>ML-Enabled Code Smell Detection System</h3>
+              <ul class="detail-list">
+                <li>Developed an ML-based system for detecting code smells with imbalance handling and feature selection analysis.</li>
+                <li>Achieved over 90% accuracy in detecting code smells using Random Forest and XGBoost.</li>
+                <li>Balanced a dataset of 190,707 entries with 73.6% class imbalance, improving detection rates by 32%.</li>
+              </ul>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/Code-Smell-Detection" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <span>Python, NumPy, pandas, Matplotlib, SMOTE, Seaborn, scikit-learn, XGBoost</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-label">Software Engineering</p>
+          <h2>Application work</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div>
+              <h3>WanderWoman - Travel Management System</h3>
+              <ul class="detail-list">
+                <li>Designed and deployed a secure travel management platform for solo women travelers.</li>
+                <li>Integrated real-time updates and community interactions to improve user engagement.</li>
+                <li>Increased query efficiency by 30% through database indexing and optimization.</li>
+              </ul>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/WanderWoman-Travel-Management-System" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+            <span>Django, HTML, CSS, JavaScript, SQLite, MySQL</span>
+          </article>
+          <article class="project">
+            <div>
+              <h3>FIFA World Cup 2022 Web Application</h3>
+              <ul class="detail-list">
+                <li>Developed a feature-rich web application with real-time match simulation, team statistics, and ticket booking.</li>
+                <li>Integrated an Oracle database with over 1,000 data points for match tracking.</li>
+                <li>Awarded Best Project for advanced technical architecture and database design.</li>
+              </ul>
+            </div>
+            <span>Oracle SQL, HTML, CSS, JavaScript</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-copy">&copy; 2026 Fahim Ahamed</span>
+        <div class="footer-links">
+          <a href="https://linkedin.com/in/f-a-tonmoy">LinkedIn</a>
+          <a href="https://orcid.org/0009-0006-2638-6521">ORCID</a>
+          <a href="mailto:f.a.tonmoy00@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.querySelector('.nav');
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('open');
+          toggle.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+      })();
+    </script>
+  </body>
+</html>

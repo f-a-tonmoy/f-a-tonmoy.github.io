@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Articles | Fahim Ahamed</title>
+    <meta name="description" content="Recent data science, machine learning, AI, statistics, and responsible AI writing by Fahim Ahamed." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Fahim Ahamed home">FA</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="experience.html">Experience</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="writing.html" aria-current="page">Articles</a>
+      </nav>
+      <a class="header-cta" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <p class="eyebrow">Articles</p>
+        <h1>Technical writing on data science, machine learning, & responsible AI.</h1>
+        <p class="lede">
+          80 articles explaining model behavior, statistics, data quality, AI safety,
+          recommendation systems, explainability, and modern machine learning practice.
+        </p>
+      </section>
+
+      <section class="section page-section">
+        <div class="writing-toolbar" aria-label="Article categories">
+          <button class="tab-button active" type="button" data-filter="All">All</button>
+          <button class="tab-button" type="button" data-filter="Data Science">Data Science</button>
+          <button class="tab-button" type="button" data-filter="Machine Learning">Machine Learning</button>
+          <button class="tab-button" type="button" data-filter="Deep Learning">Deep Learning</button>
+          <button class="tab-button" type="button" data-filter="Explainable AI">Explainable AI</button>
+          <button class="tab-button" type="button" data-filter="Responsible AI">Responsible AI</button>
+        </div>
+        <div class="article-count" id="article-count" aria-live="polite"></div>
+        <div class="article-card-grid" id="article-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-copy">&copy; 2026 Fahim Ahamed</span>
+        <div class="footer-links">
+          <a href="https://linkedin.com/in/f-a-tonmoy">LinkedIn</a>
+          <a href="https://orcid.org/0009-0006-2638-6521">ORCID</a>
+          <a href="mailto:f.a.tonmoy00@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.querySelector('.nav');
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('open');
+          toggle.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+      })();
+    </script>
+    <script src="articles.js"></script>
+    <script>
+      const grid = document.querySelector('#article-grid');
+      const count = document.querySelector('#article-count');
+      const tabs = Array.from(document.querySelectorAll('.tab-button'));
+
+      function articleCard(article) {
+        const image = article.image
+          ? `<img src="${article.image}" alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />`
+          : '';
+        return `
+          <a class="article-card" href="${article.url}" target="_blank" rel="noopener">
+            <span class="article-thumb ${article.image ? '' : 'is-empty'}">${image}</span>
+            <span class="article-body">
+              <span class="article-category">${article.category}</span>
+              <span class="article-title">${article.title}</span>
+            </span>
+          </a>
+        `;
+      }
+
+      function render(filter) {
+        const filtered = filter === 'All' ? articles : articles.filter((article) => article.category === filter);
+        grid.innerHTML = filtered.map(articleCard).join('');
+        count.textContent = `${filtered.length} article${filtered.length === 1 ? '' : 's'}`;
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((item) => item.classList.remove('active'));
+          tab.classList.add('active');
+          render(tab.dataset.filter);
+        });
+      });
+
+      render('All');
+    </script>
+  </body>
+</html>
