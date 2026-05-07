@@ -65,6 +65,12 @@ a {
   color: inherit;
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -207,13 +213,26 @@ a {
 }
 
 .eyebrow,
-.section-label,
-.tag {
+.section-label {
   margin: 0 0 12px;
   color: var(--rust);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.tag {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0 0 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -536,6 +555,7 @@ h3 {
 }
 
 .card a {
+  width: fit-content;
   margin-top: auto;
   color: var(--accent-dark);
   font-weight: 800;
@@ -550,13 +570,22 @@ h3 {
   transform: translateX(2px);
 }
 
+.card a[target="_blank"],
+.project-link[target="_blank"],
+.hero-meta a {
+  position: relative;
+  padding-right: 18px;
+}
+
 .card a[target="_blank"]::after,
 .project-link[target="_blank"]::after,
 .hero-meta a::after {
-  content: " \2197";
-  display: inline-block;
-  margin-left: 2px;
+  content: "\2197";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
   font-style: normal;
+  text-decoration: none;
   transition: transform 0.18s ease;
 }
 
