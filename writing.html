@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Articles · Fahim Ahamed | Data & AI</title>
     <meta name="description" content="Recent data science, machine learning, AI, statistics, and responsible AI writing by Fahim Ahamed." />
+    <link rel="canonical" href="https://f-a-tonmoy.github.io/writing.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://f-a-tonmoy.github.io/writing.html" />
+    <meta property="og:title" content="Articles · Fahim Ahamed | Data & AI" />
+    <meta property="og:description" content="80+ articles on data science, machine learning, AI safety, statistics, and modern ML practice." />
+    <meta property="og:image" content="https://f-a-tonmoy.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Articles · Fahim Ahamed" />
+    <meta name="twitter:description" content="80+ articles on data science, machine learning, AI safety, statistics, and modern ML practice." />
+    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/og-image.png" />
+    <meta name="theme-color" content="#0f766e" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +63,13 @@
           <button class="tab-button" type="button" data-filter="Explainable AI">Explainable AI</button>
           <button class="tab-button" type="button" data-filter="Responsible AI">Responsible AI</button>
         </div>
-        <div class="article-count" id="article-count" aria-live="polite"></div>
+        <div class="article-search-row">
+          <label class="article-search">
+            <span class="visually-hidden">Search articles</span>
+            <input id="article-search-input" type="search" placeholder="Search articles by title..." autocomplete="off" />
+          </label>
+          <div class="article-count" id="article-count" aria-live="polite"></div>
+        </div>
         <div class="article-card-grid" id="article-grid"></div>
       </section>
     </main>
@@ -87,7 +106,8 @@
           window.addEventListener('scroll', onScroll, { passive: true });
           onScroll();
           btt.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
           });
         }
       })();
@@ -97,6 +117,10 @@
       const grid = document.querySelector('#article-grid');
       const count = document.querySelector('#article-count');
       const tabs = Array.from(document.querySelectorAll('.tab-button'));
+      const searchInput = document.querySelector('#article-search-input');
+
+      let activeCategory = 'All';
+      let searchTerm = '';
 
       function articleCard(article) {
         const image = article.image
@@ -113,9 +137,18 @@
         `;
       }
 
-      function render(filter) {
-        const filtered = filter === 'All' ? articles : articles.filter((article) => article.category === filter);
-        grid.innerHTML = filtered.map(articleCard).join('');
+      function render() {
+        const term = searchTerm.trim().toLowerCase();
+        const filtered = articles.filter((article) => {
+          const matchesCategory = activeCategory === 'All' || article.category === activeCategory;
+          const matchesSearch = !term || article.title.toLowerCase().includes(term);
+          return matchesCategory && matchesSearch;
+        });
+        if (filtered.length === 0) {
+          grid.innerHTML = '<p class="article-empty">No articles match your search.</p>';
+        } else {
+          grid.innerHTML = filtered.map(articleCard).join('');
+        }
         count.textContent = `${filtered.length} article${filtered.length === 1 ? '' : 's'}`;
       }
 
@@ -123,11 +156,19 @@
         tab.addEventListener('click', () => {
           tabs.forEach((item) => item.classList.remove('active'));
           tab.classList.add('active');
-          render(tab.dataset.filter);
+          activeCategory = tab.dataset.filter;
+          render();
         });
       });
 
-      render('All');
+      if (searchInput) {
+        searchInput.addEventListener('input', (event) => {
+          searchTerm = event.target.value;
+          render();
+        });
+      }
+
+      render();
     </script>
   </body>
 </html>

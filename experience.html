@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Experience · Fahim Ahamed | Data & AI</title>
     <meta name="description" content="Work experience, research roles, and education for Fahim Ahamed." />
+    <link rel="canonical" href="https://f-a-tonmoy.github.io/experience.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://f-a-tonmoy.github.io/experience.html" />
+    <meta property="og:title" content="Experience · Fahim Ahamed | Data & AI" />
+    <meta property="og:description" content="Timeline of applied data science, institutional analytics, healthcare AI research, NLP, computer vision, and adversarial AI work." />
+    <meta property="og:image" content="https://f-a-tonmoy.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Experience · Fahim Ahamed" />
+    <meta name="twitter:description" content="Timeline of applied data science, institutional analytics, healthcare AI research, NLP, computer vision, and adversarial AI work." />
+    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/og-image.png" />
+    <meta name="theme-color" content="#0f766e" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -158,7 +171,8 @@
           window.addEventListener('scroll', onScroll, { passive: true });
           onScroll();
           btt.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
           });
         }
       })();

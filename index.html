@@ -6,8 +6,21 @@
     <title>Fahim Ahamed | Data & AI</title>
     <meta
       name="description"
-      content="Portfolio of Fahim Ahamed, a data scientist and AI researcher working across machine learning, NLP, computer vision, healthcare AI, cybersecurity, and analytics."
+      content="Portfolio of Fahim Ahamed, a data scientist and AI researcher working across machine learning, NLP, computer vision, healthcare AI, and analytics."
     />
+    <link rel="canonical" href="https://f-a-tonmoy.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://f-a-tonmoy.github.io/" />
+    <meta property="og:title" content="Fahim Ahamed | Data & AI" />
+    <meta property="og:description" content="Data scientist with a research background in applied AI - turning data into models, analytics, and decisions across healthcare, NLP, computer vision, and beyond." />
+    <meta property="og:image" content="https://f-a-tonmoy.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fahim Ahamed | Data & AI" />
+    <meta name="twitter:description" content="Data scientist with a research background in applied AI - turning data into models, analytics, and decisions across healthcare, NLP, computer vision, and beyond." />
+    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/og-image.png" />
+    <meta name="theme-color" content="#0f766e" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -368,7 +381,8 @@
           window.addEventListener('scroll', onScroll, { passive: true });
           onScroll();
           btt.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
           });
         }
       })();
