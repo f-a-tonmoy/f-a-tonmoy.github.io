@@ -1008,7 +1008,6 @@ h3 {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 80px;
   align-items: center;
-  margin-bottom: 40px;
   padding: 36px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1152,7 +1151,7 @@ h3 {
 }
 
 .site-footer {
-  margin-top: 40px;
+  margin-top: 90px;
   border-top: 1px solid var(--line);
   background: var(--surface);
 }
