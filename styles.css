@@ -668,6 +668,28 @@ h3 {
   color: var(--accent);
 }
 
+.now-section {
+  display: grid;
+  grid-template-columns: minmax(500px, 0.92fr) minmax(0, 1fr);
+  gap: 54px;
+  align-items: stretch;
+}
+
+.now-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.now-heading h2 {
+  margin: auto 0;
+  font-size: clamp(2.75rem, 4vw, 3rem);
+}
+
+.now-copy p:last-child {
+  margin-bottom: 0;
+}
+
+
 .skills-heading {
   margin-bottom: 28px;
 }
@@ -1070,9 +1092,14 @@ h3 {
 
   .hero,
   .split,
+  .now-section,
   .contact,
   .timeline-item {
     grid-template-columns: 1fr;
+  }
+
+  .now-heading h2 {
+    margin: 0;
   }
 
   .hero {
