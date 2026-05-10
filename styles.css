@@ -104,21 +104,38 @@ a {
 }
 
 .brand {
-  padding: 10px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  min-height: 38px;
+  padding: 0;
+  border: 1px solid transparent;
   border-radius: 8px;
-  color: var(--ink);
+  color: var(--accent-dark);
+  background: transparent;
   font-size: 0.9rem;
   font-weight: 800;
   text-decoration: none;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.brand-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 .brand:hover {
+  border-color: var(--accent);
   background: rgba(15, 118, 110, 0.08);
   color: var(--accent-dark);
+  transform: translateY(-1px);
 }
 
 .brand[aria-current="page"] {
-  background: var(--accent);
+  color: var(--accent-dark);
+  background: rgba(15, 118, 110, 0.1);
 }
 
 .nav-toggle {
