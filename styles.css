@@ -609,6 +609,10 @@ h3 {
   align-items: center;
 }
 
+.split h2 {
+  line-height: 1.06; /* tighter than the global 1.18 — this h2 has no descenders that need extra room */
+}
+
 .prose {
   margin-top: 40px;
   font-size: 1.05rem;
