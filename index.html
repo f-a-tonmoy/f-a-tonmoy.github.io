@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=37" />
+    <link rel="stylesheet" href="styles.css?v=40" />
     <script>
       (function () {
         try {
@@ -472,6 +472,90 @@
             + '</span>'
             + '</a>';
         }).join('');
+      })();
+    </script>
+
+    <script>
+      // Stats card animations: count-up for numeric, typewriter for "Millions"
+      // Cards animate sequentially (card-by-card), 500ms each.
+      (function () {
+        var section = document.querySelector('.stats');
+        if (!section) return;
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Snapshot each strong's final text + classify type
+        var items = Array.prototype.map.call(section.querySelectorAll('strong'), function (el) {
+          var text = el.textContent.trim();
+          var m = text.match(/^(\d+)(\+)?$/);
+          if (m) {
+            return { el: el, type: 'count', target: parseInt(m[1], 10), suffix: m[2] || '' };
+          }
+          return { el: el, type: 'text', target: text };
+        });
+
+        if (prefersReduced) return; // leave final values intact, no animation
+
+        // Reset to "starting" state immediately to prevent the final value flashing
+        items.forEach(function (s) {
+          s.el.textContent = s.type === 'count' ? '0' : '';
+        });
+
+        var STARTS    = [  0, 300, 700, 1000]; // ms — when each card begins animating
+        var DURATIONS = [500, 500, 700,  900]; // ms — per-card animation length
+        var DEFAULT_DURATION = 500;
+        var started = false;
+
+        function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+        function animateCard(s, duration) {
+          var startTime = performance.now();
+          if (s.type === 'count') {
+            function tick(now) {
+              var t = Math.min(1, (now - startTime) / duration);
+              var eased = easeOutCubic(t);
+              if (t < 1) {
+                s.el.textContent = Math.floor(eased * s.target);
+                requestAnimationFrame(tick);
+              } else {
+                // Land on target and reveal the suffix (the "+")
+                s.el.textContent = s.target + s.suffix;
+              }
+            }
+            requestAnimationFrame(tick);
+          } else if (s.type === 'text') {
+            var chars = s.target.split('');
+            var charMs = duration / chars.length;
+            chars.forEach(function (c, i) {
+              setTimeout(function () {
+                s.el.textContent = s.target.substring(0, i + 1);
+              }, Math.round(charMs * (i + 1)));
+            });
+          }
+        }
+
+        function startAnimation() {
+          if (started) return;
+          started = true;
+          items.forEach(function (s, index) {
+            var delay = STARTS[index] != null ? STARTS[index] : index * DEFAULT_DURATION;
+            var dur = DURATIONS[index] != null ? DURATIONS[index] : DEFAULT_DURATION;
+            setTimeout(function () { animateCard(s, dur); }, delay);
+          });
+        }
+
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                startAnimation();
+                io.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.3 });
+          io.observe(section);
+        } else {
+          startAnimation();
+        }
       })();
     </script>
   </body>

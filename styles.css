@@ -152,11 +152,6 @@ body {
   transition: background-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
 }
 
-main > section:not(.hero) {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 800px;
-}
-
 a {
   color: inherit;
 }
@@ -580,7 +575,7 @@ h3 {
 .stats div:hover,
 .card:hover,
 .education-grid article:hover {
-  transform: translateY(-3px);
+  transform: translate3d(0, -3px, 0);
   border-color: var(--accent);
   box-shadow: var(--shadow-soft);
 }
@@ -588,6 +583,7 @@ h3 {
 .stats strong {
   display: block;
   margin-bottom: 6px;
+  min-height: 1em;
   color: var(--accent-dark);
   font-family: var(--font-display);
   font-weight: 700;
