@@ -38,7 +38,7 @@
   --surface-translucent: rgba(28, 40, 36, 0.92);
   --ink: #ecf2ee;
   --ink-soft: #c9d3ce;
-  --muted: #94a39c;
+  --muted: #b0bcb5;
   --line: #2a3832;
   --line-soft: rgba(62, 81, 73, 0.7);
   --accent: #4dd0c4;
@@ -70,7 +70,7 @@
     --surface-translucent: rgba(28, 40, 36, 0.92);
     --ink: #ecf2ee;
     --ink-soft: #c9d3ce;
-    --muted: #94a39c;
+    --muted: #b0bcb5;
     --line: #2a3832;
     --line-soft: rgba(62, 81, 73, 0.7);
     --accent: #4dd0c4;
@@ -1303,8 +1303,8 @@ h3 {
 
 .copy-email svg {
   display: block;
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   fill: currentColor;
 }
 
@@ -1491,7 +1491,7 @@ h3 {
 
 .footer-copy {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -1507,7 +1507,7 @@ h3 {
   padding: 6px 10px;
   border-radius: 6px;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
 }
