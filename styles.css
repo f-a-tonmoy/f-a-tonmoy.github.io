@@ -176,6 +176,7 @@ a {
   justify-content: space-between;
   gap: 1rem;
   width: min(1120px, calc(100% - 32px));
+  min-height: 60px; /* reserve space before site.js injects nav content */
   margin: 16px auto 0;
   padding: 10px 12px;
   border: 1px solid var(--line-soft);
@@ -472,12 +473,6 @@ h3 {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: var(--shadow);
-  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
-}
-
-.profile-panel:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lift);
 }
 
 .profile-panel img {
@@ -565,19 +560,37 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--bg-elev);
-  transition: transform 0.35s var(--ease-out), border-color 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
 }
 
 .stats div {
   padding: 22px;
 }
 
+/* ---------- Shared "lift card" hover pattern ---------- */
+.stats div,
+.card,
+.education-grid article,
+.profile-panel,
+.article-card {
+  transition: transform 0.3s var(--ease-out),
+              border-color 0.3s var(--ease-out),
+              box-shadow 0.3s var(--ease-out);
+}
+
 .stats div:hover,
 .card:hover,
-.education-grid article:hover {
+.education-grid article:hover,
+.profile-panel:hover,
+.article-card:hover {
   transform: translate3d(0, -3px, 0);
   border-color: var(--accent);
   box-shadow: var(--shadow-soft);
+}
+
+/* Larger surfaces get the heavier shadow */
+.profile-panel:hover,
+.article-card:hover {
+  box-shadow: var(--shadow-lift);
 }
 
 .stats strong {
@@ -1092,16 +1105,6 @@ h3 {
   text-decoration: none;
 }
 
-.article-card {
-  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s var(--ease-out);
-}
-
-.article-card:hover {
-  border-color: var(--accent);
-  box-shadow: var(--shadow-lift);
-  transform: translateY(-3px);
-}
-
 .article-card:hover .article-thumb img {
   transform: scale(1.04);
 }
@@ -1315,6 +1318,7 @@ h3 {
 }
 
 .site-footer {
+  min-height: 84px; /* reserve space before site.js injects footer content */
   margin-top: 90px;
   border-top: 1px solid var(--line);
   background: var(--surface);

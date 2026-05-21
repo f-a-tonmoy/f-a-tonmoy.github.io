@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=41" />
+    <link rel="stylesheet" href="styles.css?v=43" />
     <script>
       (function () {
         try {
@@ -43,32 +43,7 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Home">
-        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3.75 10.5 12 3.75l8.25 6.75v8.25a1.5 1.5 0 0 1-1.5 1.5h-4.5v-5.5h-4.5v5.5h-4.5a1.5 1.5 0 0 1-1.5-1.5V10.5Z" />
-        </svg>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="experience.html">Experience</a>
-        <a href="research.html">Research</a>
-        <a href="projects.html">Projects</a>
-        <a href="writing.html">Articles</a>
-        <a class="nav-mobile-action" href="assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>
-        <a class="nav-mobile-action" href="https://linkedin.com/in/f-a-tonmoy" target="_blank" rel="noopener">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a class="header-cta" href="assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>
-        <a class="header-cta" href="https://linkedin.com/in/f-a-tonmoy" target="_blank" rel="noopener">Contact</a>
-      </div>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </header>
-
-    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
-      <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-      <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-6a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm11-7a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM4 12a1 1 0 0 1-1 1H1a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm15.07-7.07a1 1 0 0 1 0 1.41l-1.41 1.42a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zM7.76 16.24a1 1 0 0 1 0 1.41l-1.41 1.42a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zm11.31 2.83a1 1 0 0 1-1.41 0l-1.42-1.41a1 1 0 1 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41zM7.76 7.76a1 1 0 0 1-1.41 0L4.93 6.35a1 1 0 0 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41z"/></svg>
-    </button>
 
     <main id="top">
       <section class="hero section">
@@ -382,78 +357,10 @@
       </section>
     </main>
 
-    <button class="back-to-top" type="button" aria-label="Back to top">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
-    </button>
-
     <footer class="site-footer">
-      <div class="footer-inner">
-        <span class="footer-copy">&copy; 2026 Fahim Ahamed</span>
-        <div class="footer-links">
-          <a href="https://github.com/f-a-tonmoy" target="_blank" rel="noopener">GitHub</a>
-          <a href="mailto:f.a.tonmoy00@gmail.com">Email</a>
-        </div>
-      </div>
     </footer>
 
-    <script>
-      (function () {
-        var toggle = document.querySelector('.nav-toggle');
-        var nav = document.querySelector('.nav');
-        if (toggle && nav) {
-          toggle.addEventListener('click', function () {
-            var open = nav.classList.toggle('open');
-            toggle.classList.toggle('open', open);
-            toggle.setAttribute('aria-expanded', String(open));
-          });
-        }
-
-        var btt = document.querySelector('.back-to-top');
-        if (btt) {
-          var onScroll = function () {
-            btt.classList.toggle('visible', window.scrollY > 500);
-          };
-          window.addEventListener('scroll', onScroll, { passive: true });
-          onScroll();
-          btt.addEventListener('click', function () {
-            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
-          });
-        }
-
-        // Theme toggle (persists to localStorage, falls back to system)
-        var themeBtn = document.querySelector('.theme-toggle');
-        if (themeBtn) {
-          themeBtn.addEventListener('click', function () {
-            var current = document.documentElement.getAttribute('data-theme');
-            var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            var nextDark;
-            if (current === 'dark') nextDark = false;
-            else if (current === 'light') nextDark = true;
-            else nextDark = !systemDark;
-            var next = nextDark ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', next);
-            try { localStorage.setItem('theme', next); } catch (e) {}
-          });
-        }
-
-        // Scroll-reveal (no-op when reduced-motion is set; CSS already handles fallback)
-        var revealEls = document.querySelectorAll('.reveal');
-        if (revealEls.length && 'IntersectionObserver' in window) {
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                io.unobserve(entry.target);
-              }
-            });
-          }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-          revealEls.forEach(function (el) { io.observe(el); });
-        } else {
-          revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-        }
-      })();
-    </script>
+    <script src="site.js?v=3" defer></script>
 
     <script src="articles.js"></script>
     <script>
