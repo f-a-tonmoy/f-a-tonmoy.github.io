@@ -1594,39 +1594,12 @@ h3 {
   }
 }
 
-/* ---------- View Transitions: page navigation + theme toggle ---------- */
-/* Opt-in to cross-document transitions between same-origin pages.
-   Browsers without support simply do normal hard navigation — no broken state. */
-@view-transition {
-  navigation: auto;
-}
+/* ---------- View Transitions: theme toggle circular reveal ---------- */
+/* Page navigation transitions were removed — JS-injected chrome (theme toggle)
+   created intermittent visual artifacts during cross-document snapshots. */
 
-/* Default animation — applies to BOTH page navigation AND theme toggle
-   (unless overridden below by :active-view-transition-type). Subtle fade-with-drift. */
-::view-transition-old(root) {
-  animation: vt-fade-out 0.22s var(--ease-out) both;
-}
-
-::view-transition-new(root) {
-  animation: vt-fade-in 0.32s var(--ease-out) both;
-}
-
-@keyframes vt-fade-out {
-  to {
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-}
-
-@keyframes vt-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-}
-
-/* Theme-toggle override: circular reveal from the click point.
-   JS passes types: ['theme'] to startViewTransition() and sets --theme-anim-x/y/r. */
+/* Theme-toggle: circle reveal from click point.
+   JS passes types: ['theme'] and sets --theme-anim-x/y/r before startViewTransition(). */
 :root:active-view-transition-type(theme)::view-transition-old(root) {
   animation: none;
   z-index: 1;
