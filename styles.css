@@ -25,21 +25,22 @@
   --scrollbar-thumb: rgba(15, 118, 110, 0.45);
   --scrollbar-thumb-hover: rgba(15, 118, 110, 0.9);
   --focus-ring: rgba(15, 118, 110, 0.18);
+  --card-glow: rgba(15, 118, 110, 0.05);
   --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-body: "Inter", Arial, sans-serif;
 }
 
 [data-theme="dark"] {
-  --bg: #0c1410;
-  --bg-elev: rgba(22, 32, 28, 0.7);
-  --surface: #131c18;
-  --surface-translucent: rgba(19, 28, 24, 0.92);
+  --bg: #131c18;
+  --bg-elev: rgba(28, 40, 36, 0.7);
+  --surface: #1c2622;
+  --surface-translucent: rgba(28, 40, 36, 0.92);
   --ink: #ecf2ee;
   --ink-soft: #c9d3ce;
   --muted: #94a39c;
-  --line: #25332d;
-  --line-soft: rgba(56, 73, 65, 0.7);
+  --line: #2a3832;
+  --line-soft: rgba(62, 81, 73, 0.7);
   --accent: #4dd0c4;
   --accent-dark: #7be0d4;
   --accent-soft: rgba(77, 208, 196, 0.16);
@@ -57,20 +58,21 @@
   --scrollbar-thumb: rgba(77, 208, 196, 0.32);
   --scrollbar-thumb-hover: rgba(123, 224, 212, 0.75);
   --focus-ring: rgba(77, 208, 196, 0.24);
+  --card-glow: rgba(180, 235, 225, 0.10);
   color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0c1410;
-    --bg-elev: rgba(22, 32, 28, 0.7);
-    --surface: #131c18;
-    --surface-translucent: rgba(19, 28, 24, 0.92);
+    --bg: #131c18;
+    --bg-elev: rgba(28, 40, 36, 0.7);
+    --surface: #1c2622;
+    --surface-translucent: rgba(28, 40, 36, 0.92);
     --ink: #ecf2ee;
     --ink-soft: #c9d3ce;
     --muted: #94a39c;
-    --line: #25332d;
-    --line-soft: rgba(56, 73, 65, 0.7);
+    --line: #2a3832;
+    --line-soft: rgba(62, 81, 73, 0.7);
     --accent: #4dd0c4;
     --accent-dark: #7be0d4;
     --accent-soft: rgba(77, 208, 196, 0.16);
@@ -88,6 +90,7 @@
     --scrollbar-thumb: rgba(77, 208, 196, 0.32);
     --scrollbar-thumb-hover: rgba(123, 224, 212, 0.75);
     --focus-ring: rgba(77, 208, 196, 0.24);
+    --card-glow: rgba(180, 235, 225, 0.10);
     color-scheme: dark;
   }
 }
@@ -439,11 +442,12 @@ h3 {
   border-radius: 8px;
   font-weight: 800;
   text-decoration: none;
-  transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+  transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease, transform 0.18s var(--ease-out);
 }
 
 .button:hover {
-  transform: translateY(-1px);
+  /* Magnetic offset (set by JS on hover-capable devices) combined with a 1px lift */
+  transform: translate(var(--mag-x, 0px), calc(var(--mag-y, 0px) - 1px));
 }
 
 .button.primary {
@@ -585,6 +589,76 @@ h3 {
   transform: translate3d(0, -3px, 0);
   border-color: var(--accent);
   box-shadow: var(--shadow-soft);
+}
+
+/* ---------- Cursor-aware glow on hover-cards ---------- */
+.stats div,
+.card,
+.education-grid article,
+.profile-panel,
+.article-card,
+.timeline-card,
+.contact {
+  position: relative;
+}
+
+.stats div,
+.card,
+.education-grid article,
+.profile-panel,
+.timeline-card,
+.contact {
+  overflow: hidden;
+}
+
+.stats div::before,
+.card::before,
+.education-grid article::before,
+.profile-panel::before,
+.article-card::before,
+.timeline-card::before,
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(140px circle at var(--mx, -200px) var(--my, -200px), var(--card-glow), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-out);
+}
+
+.stats div:hover::before,
+.card:hover::before,
+.education-grid article:hover::before,
+.profile-panel:hover::before,
+.article-card:hover::before,
+.timeline-card:hover::before,
+.contact:hover::before {
+  opacity: 1;
+}
+
+.stats div > *,
+.card > *,
+.education-grid article > *,
+.profile-panel > *,
+.article-card > *,
+.timeline-card > *,
+.contact > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  .stats div::before,
+  .card::before,
+  .education-grid article::before,
+  .profile-panel::before,
+  .article-card::before,
+  .timeline-card::before,
+  .contact::before {
+    display: none;
+  }
 }
 
 /* Larger surfaces get the heavier shadow */
@@ -1176,6 +1250,86 @@ h3 {
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow);
+}
+
+/* ---------- Email link + copy button (paired in one container) + toast ---------- */
+
+/* The wrapper owns the box (padding, radius, hover bg) — children sit naked inside */
+.footer-links .email-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--muted);
+  transition: color 0.18s ease, background 0.18s ease;
+}
+
+.footer-links .email-action:hover {
+  color: var(--ink);
+  background: var(--hover-bg);
+}
+
+/* Strip the inherited footer-link styling from the child <a> so the wrapper is the only "box" */
+.footer-links .email-action a {
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  background: transparent;
+}
+
+.footer-links .email-action a:hover {
+  color: inherit;
+  background: transparent;
+}
+
+.copy-email {
+  display: inline-grid;
+  place-items: center;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.18s ease;
+}
+
+.copy-email:hover {
+  color: var(--accent-dark);
+  background: transparent;
+}
+
+.copy-email svg {
+  display: block;
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  z-index: 100;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transform: translate(-50%, 16px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
+}
+
+.toast.visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
 }
 
 .back-to-top {

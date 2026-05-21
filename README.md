@@ -8,7 +8,7 @@ Personal portfolio site for **Fahim Ahamed** — data scientist with a backgroun
 
 ## About
 
-Data scientist with a background in applied AI research — turning data into models, analytics, and decisions across healthcare, NLP, computer vision, and beyond.
+Data scientist with a background in applied AI research — turning data into models, insights, and decisions across healthcare, NLP, computer vision, and beyond.
 
 - **7+ peer-reviewed AI research papers** (SAGE, Springer, IEEE)
 - **80+ articles** on data science, ML, and responsible AI

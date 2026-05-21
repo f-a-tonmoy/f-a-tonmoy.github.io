@@ -50,7 +50,12 @@
       +   '<span class="footer-copy">&copy; 2026 Fahim Ahamed</span>'
       +   '<div class="footer-links">'
       +     '<a href="https://github.com/f-a-tonmoy" target="_blank" rel="noopener">GitHub</a>'
-      +     '<a href="mailto:f.a.tonmoy00@gmail.com">Email</a>'
+      +     '<span class="email-action">'
+      +       '<a href="mailto:f.a.tonmoy00@gmail.com">Email</a>'
+      +       '<button class="copy-email" type="button" data-email="f.a.tonmoy00@gmail.com" aria-label="Copy email address" title="Copy email">'
+      +         '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>'
+      +       '</button>'
+      +     '</span>'
       +   '</div>'
       + '</div>';
   }
@@ -147,5 +152,86 @@
     revealEls.forEach(function (el) { io.observe(el); });
   } else if (revealEls.length) {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  // ============================================================
+  //  3. Interactivity polish
+  // ============================================================
+
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canHover = window.matchMedia('(hover: hover)').matches;
+
+  // --- Copy-email button + toast -----------------------------------
+  var copyBtn = document.querySelector('.copy-email');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var email = copyBtn.dataset.email || '';
+      var done = function (ok) {
+        showToast(ok ? 'Email copied to clipboard' : 'Couldn’t copy — try selecting');
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(function () { done(true); }, function () { done(false); });
+      } else {
+        // Legacy fallback
+        var ta = document.createElement('textarea');
+        ta.value = email; ta.setAttribute('readonly', '');
+        ta.style.position = 'absolute'; ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        done(ok);
+      }
+    });
+  }
+
+  function showToast(msg) {
+    var toast = document.querySelector('.toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    // Force reflow so the transition runs even if the toast was just created
+    void toast.offsetWidth;
+    toast.classList.add('visible');
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(function () {
+      toast.classList.remove('visible');
+    }, 1800);
+  }
+
+  // --- Cursor-aware glow on cards ---------------------------------
+  // Only wires up on hover-capable, no-reduced-motion devices
+  if (canHover && !prefersReducedMotion) {
+    var glowCards = document.querySelectorAll('.stats > div, .card, .education-grid > article, .profile-panel, .article-card, .timeline-card, .contact');
+    glowCards.forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var rect = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+      });
+    });
+
+    // --- Magnetic primary/secondary buttons ------------------------
+    var magnetButtons = document.querySelectorAll('.button');
+    magnetButtons.forEach(function (btn) {
+      btn.addEventListener('mousemove', function (e) {
+        var rect = btn.getBoundingClientRect();
+        var dx = e.clientX - rect.left - rect.width / 2;
+        var dy = e.clientY - rect.top - rect.height / 2;
+        // Pull strength ~25% of cursor distance from button center
+        btn.style.setProperty('--mag-x', (dx * 0.25).toFixed(1) + 'px');
+        btn.style.setProperty('--mag-y', (dy * 0.25).toFixed(1) + 'px');
+      });
+      btn.addEventListener('mouseleave', function () {
+        btn.style.setProperty('--mag-x', '0px');
+        btn.style.setProperty('--mag-y', '0px');
+      });
+    });
   }
 })();
