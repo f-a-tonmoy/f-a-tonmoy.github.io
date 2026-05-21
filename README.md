@@ -42,8 +42,8 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 ├── styles.css     # single stylesheet
 ├── site.js        # shared chrome injection + interactivity
 ├── articles.js    # article data
-├── _config.yml    # GitHub Pages / Jekyll config
-└── assets/        # thumbnails, school logos, resume
+├── .nojekyll      # tells GitHub Pages to skip Jekyll (pure-HTML site)
+└── assets/        # thumbnails, school logos, headshot, favicon, OG image, resume
 ```
 
 ---
