@@ -184,7 +184,7 @@
         return p.replace(/\/$/, '');
       };
       return normalize(url.pathname) === normalize(window.location.pathname);
-    } catch (e) {
+    } catch (err) {
       return false;
     }
   }
@@ -249,7 +249,7 @@
         document.body.appendChild(ta);
         ta.select();
         var ok = false;
-        try { ok = document.execCommand('copy'); } catch (e) {}
+        try { ok = document.execCommand('copy'); } catch (err) {}
         document.body.removeChild(ta);
         done(ok);
       }
