@@ -123,9 +123,11 @@
   }
 
   // Theme toggle (persists to localStorage; theme-init script in <head> handles the cold-load)
+  // Uses the View Transitions API for a circular reveal animation from the click point.
+  // Gracefully falls back to instant toggle on unsupported browsers and reduced-motion users.
   var themeBtn = document.querySelector('.theme-toggle');
   if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
+    themeBtn.addEventListener('click', function (e) {
       var current = document.documentElement.getAttribute('data-theme');
       var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       var nextDark;
@@ -133,10 +135,78 @@
       else if (current === 'light') nextDark = true;
       else nextDark = !systemDark;
       var next = nextDark ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
+
+      var apply = function () {
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (err) {}
+      };
+
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Instant fallback when View Transitions API isn't supported or user wants reduced motion
+      if (!document.startViewTransition || prefersReduced) {
+        apply();
+        return;
+      }
+
+      // Capture click point for the circular-reveal origin; compute end radius so
+      // the circle is guaranteed to cover the whole viewport from that point.
+      var x = e.clientX;
+      var y = e.clientY;
+      var endRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y)
+      );
+
+      document.documentElement.style.setProperty('--theme-anim-x', x + 'px');
+      document.documentElement.style.setProperty('--theme-anim-y', y + 'px');
+      document.documentElement.style.setProperty('--theme-anim-r', endRadius + 'px');
+
+      // Newer API (Chrome 125+, Safari 18.2+) accepts {update, types}; older just takes a fn
+      try {
+        document.startViewTransition({ update: apply, types: ['theme'] });
+      } catch (err) {
+        document.startViewTransition(apply);
+      }
     });
   }
+
+  // Intercept clicks on nav links pointing to the CURRENT page — prevents the redundant
+  // reload (which would trigger an unwanted page-transition flicker). Instead, scroll to
+  // top + brief pulse on the link as an acknowledgement.
+  function isSamePage(href) {
+    if (!href) return false;
+    try {
+      var url = new URL(href, window.location.href);
+      if (url.origin !== window.location.origin) return false;
+      var normalize = function (p) {
+        if (!p || p === '/' || p === '/index.html') return '/';
+        return p.replace(/\/$/, '');
+      };
+      return normalize(url.pathname) === normalize(window.location.pathname);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  document.querySelectorAll('.brand, .nav > a').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (link.target === '_blank') return; // external / new-tab links unaffected
+      if (!isSamePage(link.href)) return;
+      var url = new URL(link.href, window.location.href);
+      if (url.hash) return; // anchor link — let the browser jump normally
+
+      e.preventDefault();
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+
+      // Brief pulse to confirm the click registered
+      link.classList.remove('nav-pulse'); // re-trigger animation on rapid clicks
+      void link.offsetWidth;
+      link.classList.add('nav-pulse');
+      setTimeout(function () { link.classList.remove('nav-pulse'); }, 400);
+    });
+  });
 
   // Scroll-reveal (no-op when reduced-motion is set; CSS handles fallback)
   var revealEls = document.querySelectorAll('.reveal');

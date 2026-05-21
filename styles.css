@@ -294,6 +294,26 @@ a {
   font-weight: 800;
 }
 
+/* Brief pulse when a same-page nav link is clicked — acknowledges the click
+   without triggering a full navigation/transition (handled in JS). */
+@keyframes nav-pulse-kf {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.nav a.nav-pulse,
+.brand.nav-pulse {
+  animation: nav-pulse-kf 0.35s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav a.nav-pulse,
+  .brand.nav-pulse {
+    animation: none;
+  }
+}
+
 .header-cta {
   color: var(--accent-dark);
 }
@@ -1571,6 +1591,58 @@ h3 {
     left: auto;
     right: 24px;
     bottom: 80px;
+  }
+}
+
+/* ---------- View Transitions: page navigation + theme toggle ---------- */
+/* Opt-in to cross-document transitions between same-origin pages.
+   Browsers without support simply do normal hard navigation — no broken state. */
+@view-transition {
+  navigation: auto;
+}
+
+/* Default animation — applies to BOTH page navigation AND theme toggle
+   (unless overridden below by :active-view-transition-type). Subtle fade-with-drift. */
+::view-transition-old(root) {
+  animation: vt-fade-out 0.22s var(--ease-out) both;
+}
+
+::view-transition-new(root) {
+  animation: vt-fade-in 0.32s var(--ease-out) both;
+}
+
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* Theme-toggle override: circular reveal from the click point.
+   JS passes types: ['theme'] to startViewTransition() and sets --theme-anim-x/y/r. */
+:root:active-view-transition-type(theme)::view-transition-old(root) {
+  animation: none;
+  z-index: 1;
+}
+
+:root:active-view-transition-type(theme)::view-transition-new(root) {
+  z-index: 2;
+  animation: theme-circle-reveal 0.5s var(--ease-out) forwards;
+}
+
+@keyframes theme-circle-reveal {
+  from {
+    clip-path: circle(0 at var(--theme-anim-x, 50%) var(--theme-anim-y, 50%));
+  }
+  to {
+    clip-path: circle(var(--theme-anim-r, 150vmax) at var(--theme-anim-x, 50%) var(--theme-anim-y, 50%));
   }
 }
 
