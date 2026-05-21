@@ -12,8 +12,8 @@ Data scientist with a background in applied AI research — turning data into in
 
 - **7+ peer-reviewed AI research papers** (SAGE, Springer, IEEE)
 - **80+ articles** on data science, ML, and responsible AI
-- Specialties: explainable AI, medical imaging, NLP, adversarial robustness
-- Based in NYC · U.S. Permanent Resident · No sponsorship required
+- Specialties: explainable AI, computer vision, NLP, adversarial robustness
+- Based in NYC · U.S. Permanent Resident · No sponsorship needed
 
 📄 **[Resume](assets/Resume%20-%20Fahim%20Ahamed.pdf)** &nbsp;·&nbsp; 💼 **[LinkedIn](https://linkedin.com/in/f-a-tonmoy)** &nbsp;·&nbsp; 🔬 **[ORCID](https://orcid.org/0009-0006-2638-6521)** &nbsp;·&nbsp; ✉️ **[Email](mailto:f.a.tonmoy00@gmail.com)**
 
@@ -26,7 +26,7 @@ Data scientist with a background in applied AI research — turning data into in
 | 🏠 [Home](https://f-a-tonmoy.github.io) | Overview, recent work, articles |
 | 💼 [Experience](https://f-a-tonmoy.github.io/experience.html) | Timeline of roles + education |
 | 🔬 [Research](https://f-a-tonmoy.github.io/research.html) | Published papers + manuscripts in pipeline |
-| 🛠️ [Projects](https://f-a-tonmoy.github.io/projects.html) | Applied ML, deep learning, software engineering |
+| 🛠️ [Projects](https://f-a-tonmoy.github.io/projects.html) | ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
 | ✍️ [Articles](https://f-a-tonmoy.github.io/writing.html) | 80+ technical articles, filterable + searchable |
 
 ---
@@ -38,12 +38,12 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 ```
 .
 ├── index.html / experience.html / research.html / projects.html / writing.html
-├── 404.html               # branded not-found page
-├── styles.css             # single stylesheet
-├── articles.js            # article data
-├── assets/                # thumbnails, school logos, resume
-├── compress-thumbnails.py # one-shot image optimization
-└── deploy.sh / deploy.bat # one-shot push to GitHub Pages
+├── 404.html       # branded not-found page
+├── styles.css     # single stylesheet
+├── site.js        # shared chrome injection + interactivity
+├── articles.js    # article data
+├── _config.yml    # GitHub Pages / Jekyll config
+└── assets/        # thumbnails, school logos, resume
 ```
 
 ---
@@ -59,7 +59,9 @@ python -m http.server 8000
 ## Deploy
 
 ```bash
-./deploy.sh "your commit message"
+git add .
+git commit -m "your commit message"
+git push
 ```
 
 GitHub Pages auto-rebuilds on push to `main`. Live in ~30–60s.
