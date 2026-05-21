@@ -2,7 +2,7 @@
 
 Personal portfolio site for **Fahim Ahamed** — data scientist with a background in applied AI research.
 
-🌐 **Live**: [f-a-tonmoy.github.io](https://f-a-tonmoy.github.io)
+**Live**: [f-a-tonmoy.github.io](https://f-a-tonmoy.github.io)
 
 ---
 
@@ -15,7 +15,7 @@ Data scientist with a background in applied AI research — turning data into in
 - Specialties: explainable AI, computer vision, NLP, adversarial robustness
 - Based in NYC · U.S. Permanent Resident · No sponsorship needed
 
-📄 **[Resume](assets/Resume%20-%20Fahim%20Ahamed.pdf)** &nbsp;·&nbsp; 💼 **[LinkedIn](https://linkedin.com/in/f-a-tonmoy)** &nbsp;·&nbsp; 🔬 **[ORCID](https://orcid.org/0009-0006-2638-6521)** &nbsp;·&nbsp; ✉️ **[Email](mailto:f.a.tonmoy00@gmail.com)**
+**[Resume](assets/Resume%20-%20Fahim%20Ahamed.pdf)** &nbsp;·&nbsp; **[LinkedIn](https://linkedin.com/in/f-a-tonmoy)** &nbsp;·&nbsp; **[ORCID](https://orcid.org/0009-0006-2638-6521)** &nbsp;·&nbsp; **[Email](mailto:f.a.tonmoy00@gmail.com)**
 
 ---
 
@@ -23,11 +23,11 @@ Data scientist with a background in applied AI research — turning data into in
 
 | | |
 |---|---|
-| 🏠 [Home](https://f-a-tonmoy.github.io) | Overview, recent work, articles |
-| 💼 [Experience](https://f-a-tonmoy.github.io/experience.html) | Timeline of roles + education |
-| 🔬 [Research](https://f-a-tonmoy.github.io/research.html) | Published papers + manuscripts in pipeline |
-| 🛠️ [Projects](https://f-a-tonmoy.github.io/projects.html) | ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
-| ✍️ [Articles](https://f-a-tonmoy.github.io/writing.html) | 80+ technical articles, filterable + searchable |
+| [Home](https://f-a-tonmoy.github.io) | Overview, recent work, articles |
+| [Experience](https://f-a-tonmoy.github.io/experience.html) | Timeline of roles + education |
+| [Research](https://f-a-tonmoy.github.io/research.html) | Published papers + manuscripts in pipeline |
+| [Projects](https://f-a-tonmoy.github.io/projects.html) | ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
+| [Articles](https://f-a-tonmoy.github.io/writing.html) | 80+ technical articles, filterable + searchable |
 
 ---
 
