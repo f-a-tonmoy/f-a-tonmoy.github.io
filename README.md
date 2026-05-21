@@ -1,6 +1,6 @@
 # Fahim Ahamed — Portfolio
 
-Personal portfolio site for **Fahim Ahamed** — data scientist with a research background in applied AI.
+Personal portfolio site for **Fahim Ahamed** — data scientist with a background in applied AI research.
 
 🌐 **Live**: [f-a-tonmoy.github.io](https://f-a-tonmoy.github.io)
 
@@ -8,7 +8,7 @@ Personal portfolio site for **Fahim Ahamed** — data scientist with a research 
 
 ## About
 
-Data scientist with a research background in applied AI — turning data into models, analytics, and decisions across healthcare, NLP, computer vision, and beyond.
+Data scientist with a background in applied AI research — turning data into models, analytics, and decisions across healthcare, NLP, computer vision, and beyond.
 
 - **7+ peer-reviewed AI research papers** (SAGE, Springer, IEEE)
 - **80+ articles** on data science, ML, and responsible AI
