@@ -190,7 +190,9 @@ a {
 
 /* On narrow desktop widths (901-1280px) the floating theme toggle (top-right, 44px
    at right: 24px) would overlap the navbar's right edge. Shift the navbar left and
-   shrink it so 80px of right-edge real estate is reserved for the toggle. */
+   shrink it so 80px of right-edge real estate is reserved for the toggle. The same
+   shift is applied to .section (after its declaration below) and .footer-inner
+   (under its own rule) so all three layout containers stay vertically aligned. */
 @media (min-width: 901px) and (max-width: 1280px) {
   .site-header {
     width: min(1120px, calc(100% - 96px));
@@ -351,6 +353,16 @@ a {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   padding: 92px 0;
+}
+
+/* Mirror the navbar's narrow-width shift on main sections so the right edges of
+   header, sections, and footer-inner all line up at 901-1280px. */
+@media (min-width: 901px) and (max-width: 1280px) {
+  .section {
+    width: min(1120px, calc(100% - 96px));
+    margin-left: auto;
+    margin-right: 80px;
+  }
 }
 
 .hero {
@@ -707,7 +719,12 @@ h3 {
 
 .section-heading {
   display: flex;
-  align-items: end;
+  /* Baseline-align the small label, large h2, and small link so their text
+     baselines (not their box bottoms) sit on the same horizontal line.
+     align-items: end would leave the small text floating because line-height
+     differs between h2 (1.18) and the body text (1.65), and the label's
+     12px margin-bottom (used in stacked contexts) pushes it further up. */
+  align-items: baseline;
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 34px;
