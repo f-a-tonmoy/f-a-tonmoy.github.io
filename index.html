@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=70" />
+    <link rel="stylesheet" href="styles.css?v=80" />
     <script>
       (function () {
         try {
@@ -443,11 +443,19 @@
         function startAnimation() {
           if (started) return;
           started = true;
+          var maxEnd = 0;
           items.forEach(function (s, index) {
             var delay = STARTS[index] != null ? STARTS[index] : index * DEFAULT_DURATION;
             var dur = DURATIONS[index] != null ? DURATIONS[index] : DEFAULT_DURATION;
+            maxEnd = Math.max(maxEnd, delay + dur);
             setTimeout(function () { animateCard(s, dur); }, delay);
           });
+          // Enable the L→R shimmer only after every per-card text animation
+          // (count-up + typewriter) has finished, plus a small buffer so the
+          // shimmer never overlaps the first-impression text reveal.
+          setTimeout(function () {
+            section.classList.add('shimmer-on');
+          }, maxEnd + 250);
         }
 
         if ('IntersectionObserver' in window) {

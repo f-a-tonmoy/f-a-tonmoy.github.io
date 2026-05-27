@@ -567,7 +567,80 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
-  padding-top: 0;
+  /* Replace .section's vertical padding with margin so the ::after overlay
+     (which uses inset: 0) covers only the card row — not the 92 px of
+     padding-bottom below. Same spacing to neighbors, no overflowing shimmer. */
+  padding: 0;
+  margin-bottom: 92px;
+  /* Anchor for the L→R shimmer pseudo-element below; isolation keeps the
+     overlay's stacking context contained so it can't bleed into sibling cards.
+     overflow: hidden clips the transformed shimmer to the card-row bounds so it
+     doesn't leak into the gutters left and right of .stats. */
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* L→R shimmer sweep — a single diagonal accent-tinted gradient passes across
+   the card row every ~9 s (~5.5 s sweep, ~3.5 s rest). Provides ambient visual
+   guidance from card 1 to card 4 without competing with the count-up
+   animation. Opacity is kept very low (~5%) so the numbers stay perfectly legible.
+
+   Gated behind .shimmer-on: the inline stats script adds this class once the
+   per-card count-up / typewriter text animations finish, so the shimmer never
+   competes with the first-impression text animation. */
+.stats::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 8px;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(15, 118, 110, 0.05) 50%,
+    transparent 60%
+  );
+  z-index: 1;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.stats.shimmer-on::after {
+  animation: stats-shimmer 9s ease-in-out infinite;
+}
+
+[data-theme="dark"] .stats::after {
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(180, 235, 225, 0.04) 50%,
+    transparent 60%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .stats::after {
+    background: linear-gradient(
+      110deg,
+      transparent 40%,
+      rgba(180, 235, 225, 0.04) 50%,
+      transparent 60%
+    );
+  }
+}
+
+@keyframes stats-shimmer {
+  /* Sweep:   0–61% of timeline (≈5.5 s at 9 s duration, +25 % vs prior)
+     Rest: 61–100% of timeline (≈3.5 s). */
+  0%        { transform: translateX(-110%); opacity: 0; }
+  5%        { opacity: 1; }
+  55%       { transform: translateX(110%); opacity: 1; }
+  61%, 100% { transform: translateX(110%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stats::after { animation: none; opacity: 0; }
 }
 
 .stats div,
@@ -732,10 +805,30 @@ h3 {
 
 .section-link {
   flex: 0 0 auto;
+  position: relative;
+  padding-right: 18px;
   color: var(--accent-dark);
   font-weight: 800;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  text-decoration: none;
+  transition: color 0.18s var(--ease-out);
+}
+
+.section-link:hover {
+  color: var(--accent);
+}
+
+/* ↗ arrow to match .card a / .project-link external indicators. */
+.section-link::after {
+  content: "\2197";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  text-decoration: none;
+  transition: transform 0.18s var(--ease-out);
+}
+
+.section-link:hover::after {
+  transform: translate(2px, -2px);
 }
 
 .page-hero {
@@ -828,8 +921,7 @@ h3 {
   color: var(--accent-dark);
   font-weight: 800;
   font-style: italic;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  text-decoration: none;
   transition: color 0.18s var(--ease-out), transform 0.12s var(--ease-out);
 }
 
@@ -899,8 +991,7 @@ h3 {
   color: var(--accent-dark);
   font-weight: 800;
   font-style: italic;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  text-decoration: none;
   transition: color 0.18s var(--ease-out);
 }
 
@@ -1644,6 +1735,13 @@ h3 {
   .section {
     width: min(100% - 24px, 1120px);
     padding: 64px 0;
+  }
+
+  /* Match the narrower mobile section padding so the stats row keeps the same
+     spacing to neighbors (we replaced .stats's padding with margin so the
+     shimmer overlay aligns with the cards). */
+  .stats {
+    margin-bottom: 64px;
   }
 
   .site-header {
