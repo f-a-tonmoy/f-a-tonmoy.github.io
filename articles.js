@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "Your XAI Tools Are Both Right. Here's Why They Disagree.",
+    "url": "https://www.linkedin.com/pulse/your-xai-tools-both-right-heres-why-disagree-fahim-ahamed-18yoe",
+    "image": "assets/article-thumbnails/your-xai-tools-are-both-right-here-s-why-they-disagree.jpg",
+    "category": "Explainable AI"
+  },
+  {
     "title": "Backpropagation Explained: How Neural Networks Actually Learn",
     "url": "https://www.linkedin.com/pulse/backpropagation-explained-how-neural-networks-actually-fahim-ahamed-xdwie",
     "image": "assets/article-thumbnails/backpropagation-explained-how-neural-networks-actually-learn.jpg",
