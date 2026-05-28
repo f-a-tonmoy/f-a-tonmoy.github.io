@@ -574,11 +574,9 @@ h3 {
   margin-bottom: 92px;
   /* Anchor for the L→R shimmer pseudo-element below; isolation keeps the
      overlay's stacking context contained so it can't bleed into sibling cards.
-     overflow: hidden clips the transformed shimmer to the card-row bounds so it
-     doesn't leak into the gutters left and right of .stats. */
+     (No overflow: hidden — that would clip the cards' hover lift.) */
   position: relative;
   isolation: isolate;
-  overflow: hidden;
 }
 
 /* L→R shimmer sweep — a single diagonal accent-tinted gradient passes across
@@ -598,12 +596,19 @@ h3 {
   background: linear-gradient(
     110deg,
     transparent 40%,
-    rgba(15, 118, 110, 0.04) 50%,
+    rgba(15, 118, 110, 0.05) 50%,
     transparent 60%
   );
+  /* Gradient image is 2.2× the ::after width so the light band can travel
+     across the full row while staying inside its bounding box — animating
+     background-position (instead of transform) means no overflow leaks
+     beyond the card row, so the parent doesn't need overflow: hidden. */
+  background-size: 220% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
   z-index: 1;
   opacity: 0;
-  will-change: transform, opacity;
+  will-change: background-position, opacity;
 }
 
 .stats.shimmer-on::after {
@@ -611,32 +616,34 @@ h3 {
 }
 
 [data-theme="dark"] .stats::after {
-  background: linear-gradient(
+  background-image: linear-gradient(
     110deg,
     transparent 40%,
-    rgba(180, 235, 225, 0.04) 50%,
+    rgba(180, 235, 225, 0.05) 50%,
     transparent 60%
   );
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .stats::after {
-    background: linear-gradient(
+    background-image: linear-gradient(
       110deg,
       transparent 40%,
-      rgba(180, 235, 225, 0.04) 50%,
+      rgba(180, 235, 225, 0.05) 50%,
       transparent 60%
     );
   }
 }
 
 @keyframes stats-shimmer {
-  /* Sweep:   0–61% of timeline (≈5.5 s at 9 s duration, +25 % vs prior)
-     Rest: 61–100% of timeline (≈3.5 s). */
-  0%        { transform: translateX(-110%); opacity: 0; }
+  /* Sweep:   0–61% of timeline (≈5.5 s at 9 s duration)
+     Rest: 61–100% of timeline (≈3.5 s).
+     background-position 100% → 0% slides the light band L→R inside the
+     ::after's bounds (no transform = no overflow). */
+  0%        { background-position: 100% 0; opacity: 0; }
   5%        { opacity: 1; }
-  55%       { transform: translateX(110%); opacity: 1; }
-  61%, 100% { transform: translateX(110%); opacity: 0; }
+  55%       { background-position: 0% 0; opacity: 1; }
+  61%, 100% { background-position: 0% 0; opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
