@@ -612,7 +612,7 @@ h3 {
 }
 
 .stats.shimmer-on::after {
-  animation: stats-shimmer 9s ease-in-out infinite;
+  animation: stats-shimmer 8.5s ease-in-out infinite;
 }
 
 [data-theme="dark"] .stats::after {
@@ -636,14 +636,16 @@ h3 {
 }
 
 @keyframes stats-shimmer {
-  /* Sweep:   0–61% of timeline (≈5.5 s at 9 s duration)
-     Rest: 61–100% of timeline (≈3.5 s).
-     background-position 100% → 0% slides the light band L→R inside the
-     ::after's bounds (no transform = no overflow). */
+  /* At 8.5 s duration:
+       Movement (bg-position 100% → 0%): 0–47% ≈ 4 s
+       Fade-out tail:                    47–53%
+       Rest (invisible gap):             53–100% ≈ 4 s
+     Animating background-position (not transform) keeps the light band inside
+     the ::after's bounds — no overflow, so the parent needs no overflow: hidden. */
   0%        { background-position: 100% 0; opacity: 0; }
   5%        { opacity: 1; }
-  55%       { background-position: 0% 0; opacity: 1; }
-  61%, 100% { background-position: 0% 0; opacity: 0; }
+  47%       { background-position: 0% 0; opacity: 1; }
+  53%, 100% { background-position: 0% 0; opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
