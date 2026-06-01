@@ -1008,6 +1008,12 @@ h3 {
   color: var(--accent);
 }
 
+.project span.project-link-sep {
+  color: var(--ink-soft);
+  margin: 0 6px;
+  font-weight: 400;
+}
+
 .now-section {
   display: grid;
   grid-template-columns: minmax(500px, 0.92fr) minmax(0, 1fr);

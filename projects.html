@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=85" />
+    <link rel="stylesheet" href="styles.css?v=86" />
     <script>
       (function () {
         try {
@@ -44,9 +44,32 @@
         <p class="eyebrow">Projects</p>
         <h1>Applied models, analytics, & software systems.</h1>
         <p class="lede">
-          A selection of machine learning, deep learning, public health analytics, cybersecurity,
-          recommendation systems, and software engineering projects.
+          A selection of case studies, machine learning, deep learning, public health analytics,
+          cybersecurity, recommendation systems, and software engineering projects.
         </p>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-label">Case Studies</p>
+          <h2>Data Stories</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div>
+              <h3>The Quiet Math of NYC's Restaurant Inspections</h3>
+              <ul class="detail-list">
+                <li>Wrangled 83,354 NYC DOHMH inspections across 27,350 restaurants, collapsing noisy violation-level rows into a clean inspection-level dataset.</li>
+                <li>Examined what an A grade actually signals: pile-ups at the passing (or 'A') grade boundary, which violations trigger on-the-spot closures, how quickly failing kitchens recover, geographic clustering by cuisine, and how very few restaurants have a clean inspection history.</li>
+                <li>Shipped the findings as a self-contained interactive article with Plotly visualizations, no backend required.</li>
+              </ul>
+              <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-inspections-case-study/" target="_blank" rel="noopener">Read article</a>
+              <span class="project-link-sep" aria-hidden="true">|</span>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/nyc-inspections-case-study" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <span>Python, pandas, NumPy, Plotly, Pillow, HTML/CSS, JavaScript</span>
+          </article>
+        </div>
       </section>
 
       <section class="section page-section">
