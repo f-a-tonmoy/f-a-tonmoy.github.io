@@ -481,6 +481,16 @@ h3 {
   border-color: var(--accent);
 }
 
+.button.tertiary {
+  background: transparent;
+  color: var(--ink-soft);
+}
+
+.button.tertiary:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .profile-panel {
   padding: 18px;
   border: 1px solid var(--line-soft);
