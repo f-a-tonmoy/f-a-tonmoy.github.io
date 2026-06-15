@@ -27,7 +27,7 @@ const articles = [
     "title": "It Takes Only 250 Bad Examples to Fool a Giant AI",
     "url": "https://www.linkedin.com/pulse/takes-only-250-bad-examples-fool-giant-ai-fahim-ahamed-va7ke",
     "image": "assets/article-thumbnails/it-takes-only-250-bad-examples-to-fool-a-giant-ai.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "The Age of AI Slop: How the Internet Is Losing Its Soul",
@@ -69,7 +69,7 @@ const articles = [
     "title": "Garbage In, Bias Out: How Poor Data Quality Fuels AI Bias",
     "url": "https://www.linkedin.com/pulse/garbage-bias-out-how-poor-data-quality-fuels-ai-fahim-ahamed-84vre",
     "image": "assets/article-thumbnails/garbage-in-bias-out-how-poor-data-quality-fuels-ai-bias.jpg",
-    "category": "Responsible AI"
+    "category": "Machine Learning"
   },
   {
     "title": "Data Science vs Decision Science: Two Sides of the Same Coin",
@@ -105,7 +105,7 @@ const articles = [
     "title": "Context Rot in LLMs: Why Bigger Isn't Always Better",
     "url": "https://www.linkedin.com/pulse/context-rot-llms-why-bigger-isnt-always-better-fahim-ahamed-xvxre",
     "image": "assets/article-thumbnails/context-rot-in-llms-why-bigger-isn-t-always-better.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "Graph Theory and Data Science: Connecting the Dots for Smarter Analytics",
@@ -129,13 +129,13 @@ const articles = [
     "title": "Context Engineering: The Craft of Feeding Large Language Models the Right Stuff",
     "url": "https://www.linkedin.com/pulse/context-engineering-craft-feeding-large-language-models-fahim-ahamed-gfgje",
     "image": "assets/article-thumbnails/context-engineering-the-craft-of-feeding-large-language-models-the-right-stuff.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "From Deep Blue to Chain-of-Thought: How Machines Slowly Learned to Reason",
     "url": "https://www.linkedin.com/pulse/from-deep-blue-chain-of-thought-how-machines-slowly-learned-ahamed-60nqe",
     "image": "assets/article-thumbnails/from-deep-blue-to-chain-of-thought-how-machines-slowly-learned-to-reason.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "AI Under Watch: Real-World Threats and the Safeguards We Need",
@@ -153,13 +153,13 @@ const articles = [
     "title": "AI Reasoning: Smart Leap or Fancy Pattern Match?",
     "url": "https://www.linkedin.com/pulse/ai-reasoning-smart-leap-fancy-pattern-match-fahim-ahamed-z9aje",
     "image": "assets/article-thumbnails/ai-reasoning-smart-leap-or-fancy-pattern-match.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "Why GRPO Is Reshaping How We Align Large Language Models",
     "url": "https://www.linkedin.com/pulse/why-grpo-reshaping-how-we-align-large-language-models-fahim-ahamed-hlfre",
     "image": "assets/article-thumbnails/why-grpo-is-reshaping-how-we-align-large-language-models.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "The Hidden Impact of Data Granularity in Analytics and ML",
@@ -183,7 +183,7 @@ const articles = [
     "title": "Self-Adapting AI: Understanding the SEAL Framework",
     "url": "https://www.linkedin.com/pulse/self-adapting-ai-understanding-seal-framework-fahim-ahamed-9oede",
     "image": "assets/article-thumbnails/self-adapting-ai-understanding-the-seal-framework.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "Data Valuation: How Much Is Your Data Actually Worth?",
@@ -267,19 +267,19 @@ const articles = [
     "title": "Semantic Compression in AI: Learning More by Storing Less",
     "url": "https://www.linkedin.com/pulse/semantic-compression-ai-learning-more-storing-less-fahim-ahamed-xxuwe",
     "image": "assets/article-thumbnails/semantic-compression-in-ai-learning-more-by-storing-less.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "Absolute Zero: A Self-Taught AI That Learns Reasoning from Scratch",
     "url": "https://www.linkedin.com/pulse/absolute-zero-self-taught-ai-learns-reasoning-from-scratch-ahamed-pktse",
     "image": "assets/article-thumbnails/absolute-zero-a-self-taught-ai-that-learns-reasoning-from-scratch.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "MCP vs API: How AI Agents Are Getting a Smarter Standard for Integration",
     "url": "https://www.linkedin.com/pulse/mcp-vs-api-how-ai-agents-getting-smarter-standard-fahim-ahamed-fwgxe",
     "image": "assets/article-thumbnails/mcp-vs-api-how-ai-agents-are-getting-a-smarter-standard-for-integration.jpg",
-    "category": "Responsible AI"
+    "category": "Generative AI"
   },
   {
     "title": "PyTorch vs TensorFlow: Which Deep Learning Framework Should You Use?",
@@ -291,7 +291,7 @@ const articles = [
     "title": "Fine-Tuning vs. Prompt Engineering: What's the Best Way to Customize LLMs?",
     "url": "https://www.linkedin.com/pulse/fine-tuning-vs-prompt-engineering-whats-best-way-customize-ahamed-jkxre",
     "image": "assets/article-thumbnails/fine-tuning-vs-prompt-engineering-what-s-the-best-way-to-customize-llms.jpg",
-    "category": "Machine Learning"
+    "category": "Generative AI"
   },
   {
     "title": "Prompt Injection Attacks: A Growing Risk for Generative AI",
@@ -309,13 +309,13 @@ const articles = [
     "title": "Data Contracting: Bridging the Gap Between Data Engineering and Data Science",
     "url": "https://www.linkedin.com/pulse/data-contracting-bridging-gap-between-engineering-science-ahamed-lqhle",
     "image": "assets/article-thumbnails/data-contracting-bridging-the-gap-between-data-engineering-and-data-science.jpg",
-    "category": "Machine Learning"
+    "category": "Data Science"
   },
   {
     "title": "Knowledge Distillation: How Large Language Models Learn from Each Other",
     "url": "https://www.linkedin.com/pulse/knowledge-distillation-how-large-language-models-learn-fahim-ahamed-2inie",
     "image": "assets/article-thumbnails/knowledge-distillation-how-large-language-models-learn-from-each-other.jpg",
-    "category": "Deep Learning"
+    "category": "Generative AI"
   },
   {
     "title": "Privacy-Preserving Machine Learning: Techniques for Safer Data Science",
@@ -411,7 +411,7 @@ const articles = [
     "title": "The Evolution of Computer Vision: From Classic Techniques to AI-Powered Systems",
     "url": "https://www.linkedin.com/pulse/evolution-computer-vision-from-classic-techniques-systems-ahamed-tzwfe",
     "image": "assets/article-thumbnails/the-evolution-of-computer-vision-from-classic-techniques-to-ai-powered-systems.jpg",
-    "category": "Machine Learning"
+    "category": "Deep Learning"
   },
   {
     "title": "The Future of NLP: Leveraging Large Language Models Responsibly",
@@ -423,7 +423,7 @@ const articles = [
     "title": "From Data to Decisions: The Role of Data Science in Business Strategy",
     "url": "https://www.linkedin.com/pulse/from-data-decisions-role-science-business-strategy-fahim-ahamed-fxise",
     "image": "assets/article-thumbnails/from-data-to-decisions-the-role-of-data-science-in-business-strategy.jpg",
-    "category": "Machine Learning"
+    "category": "Data Science"
   },
   {
     "title": "Why Data Preprocessing is More Important Than the Model Itself",
@@ -483,6 +483,6 @@ const articles = [
     "title": "The Hidden Bias in AI - Can We Fix It?",
     "url": "https://www.linkedin.com/pulse/hidden-bias-ai-can-we-fix-fahim-ahamed-1vzae/",
     "image": "assets/article-thumbnails/the-hidden-bias-in-ai-can-we-fix-it.jpg",
-    "category": "Machine Learning"
+    "category": "Responsible AI"
   }
 ];

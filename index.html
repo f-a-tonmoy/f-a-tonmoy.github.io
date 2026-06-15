@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=88" />
+    <link rel="stylesheet" href="styles.css?v=89" />
     <script>
       (function () {
         try {
@@ -122,6 +122,17 @@
         </div>
         <div class="timeline">
           <article class="timeline-item">
+            <div class="timeline-date">Dec 2025 - Present</div>
+            <div class="timeline-card">
+              <h3>Research Assistant</h3>
+              <p class="meta">CUNY Research Foundation | New York, NY</p>
+              <p>
+                Building an agentic AI pipeline with RAG, LLMs, and MCP to support natural
+                language querying over geoscience databases under an NSF grant.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
             <div class="timeline-date">Feb 2026 - May 2026</div>
             <div class="timeline-card">
               <h3>Data Evangelist Intern</h3>
@@ -140,28 +151,6 @@
               <p>
                 Analyzed institutional data with Excel, Tableau, and Python to support advising,
                 retention, and engagement strategy.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-date">Feb 2024 - Aug 2025</div>
-            <div class="timeline-card">
-              <h3>AI Researcher - Healthcare, NLP & Adversarial AI</h3>
-              <p class="meta">East West University | Remote</p>
-              <p>
-                Worked on multiple research projects across medical imaging, mental health,
-                fatigue detection, and adversarial robustness.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <div class="timeline-date">Jan 2023 - Dec 2023</div>
-            <div class="timeline-card">
-              <h3>ML Project Lead & Researcher</h3>
-              <p class="meta">East West University | Hybrid</p>
-              <p>
-                Led multilingual prescription OCR research using extensive data processing
-                and custom CNN models for mixed Bangla-English handwriting.
               </p>
             </div>
           </article>
@@ -275,14 +264,10 @@
         </div>
         <div class="prose now-copy">
           <p>
-            Developing a research workflow that combines <strong>large language models</strong>, <strong>retrieval-augmented
-            generation</strong>, and <strong>data engineering</strong>. The system ingests structured and unstructured
-            sources, prepares them for retrieval, and connects models to tools and databases
-            through <strong>MCP</strong>.
+            Building an agentic AI pipeline that connects <strong>RAG</strong>, <strong>LLMs</strong>, and <strong>MCP-connected tools</strong> to enable natural language querying over complex geoscience databases &mdash; part of an NSF-funded geoinformatics research project.
           </p>
           <p>
-            The goal is a pipeline that keeps generation grounded in real sources, with retrieval
-            and the model working as a single system.
+            The end-to-end stack spans <strong>vector database architecture</strong>, domain-specific embedding models, and LLM optimization, designed to keep outputs grounded in real scientific sources and interpretable to domain experts.
           </p>
         </div>
       </section>
@@ -439,8 +424,8 @@
           s.el.textContent = s.type === 'count' ? '0' : '';
         });
 
-        var STARTS    = [  0, 300, 700, 1000]; // ms — when each card begins animating
-        var DURATIONS = [500, 500, 700,  900]; // ms — per-card animation length
+        var STARTS    = [  0, 300, 700, 1000]; // ms â€” when each card begins animating
+        var DURATIONS = [500, 500, 700,  900]; // ms â€” per-card animation length
         var DEFAULT_DURATION = 500;
         var started = false;
 
@@ -482,7 +467,7 @@
             maxEnd = Math.max(maxEnd, delay + dur);
             setTimeout(function () { animateCard(s, dur); }, delay);
           });
-          // Enable the L→R shimmer only after every per-card text animation
+          // Enable the Lâ†’R shimmer only after every per-card text animation
           // (count-up + typewriter) has finished, plus a small buffer so the
           // shimmer never overlaps the first-impression text reveal.
           setTimeout(function () {
@@ -507,4 +492,5 @@
     </script>
   </body>
 </html>
+
 
