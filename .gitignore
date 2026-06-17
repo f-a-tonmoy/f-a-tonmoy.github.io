@@ -1,5 +1,6 @@
 # Local-only working folder
 misc/
+experiment/
 .claude
 
 # OS
@@ -12,3 +13,5 @@ Thumbs.db
 *.swp
 
 # Misc
+.impeccable
+PRODUCT.md
