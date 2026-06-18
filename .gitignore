@@ -1,6 +1,7 @@
 # Local-only working folder
 misc/
 experiment/
+plans/
 .claude
 
 # OS
@@ -15,3 +16,5 @@ Thumbs.db
 # Misc
 .impeccable
 PRODUCT.md
+plan-blocks.md
+*.py

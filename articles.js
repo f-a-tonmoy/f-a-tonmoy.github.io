@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "JEPA Explained: Predicting Representations, Not Pixels",
+    "url": "https://www.linkedin.com/pulse/jepa-explained-predicting-representations-pixels-fahim-ahamed-trlif/",
+    "image": "assets/article-thumbnails/jepa-explained-predicting-representations-not-pixels.jpg",
+    "category": "Deep Learning"
+  },
+  {
     "title": "Your XAI Tools Are Both Right. Here's Why They Disagree.",
     "url": "https://www.linkedin.com/pulse/your-xai-tools-both-right-heres-why-disagree-fahim-ahamed-18yoe",
     "image": "assets/article-thumbnails/your-xai-tools-are-both-right-here-s-why-they-disagree.jpg",
