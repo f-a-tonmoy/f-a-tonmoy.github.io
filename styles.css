@@ -491,21 +491,28 @@ h3 {
   border-color: var(--accent);
 }
 
+@keyframes panel-float {
+  0%, 100% { transform: translateY(0);   }
+  50%      { transform: translateY(-8px); }
+}
+
 .profile-panel {
-  padding: 18px;
+  padding: 28px 18px 18px;
   border: 1px solid var(--line-soft);
   border-radius: 8px;
   background: var(--bg-elev);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: var(--shadow);
+  animation: panel-float 3s ease-in-out infinite;
 }
 
 .profile-panel img {
   display: block;
-  width: 85%;
-  max-width: 320px;
-  aspect-ratio: 1;
+  width: 77%;
+  max-width: 292px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
   object-fit: cover;
   border-radius: 50%;
@@ -1737,6 +1744,7 @@ h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .status-dot::after { animation: none; }
+  .profile-panel { animation: none !important; }
 }
 
 /* ---------- Scroll reveal ---------- */
