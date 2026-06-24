@@ -239,20 +239,7 @@
       var done = function (ok) {
         showToast(ok ? 'Email copied to clipboard' : 'Couldn’t copy — try selecting');
       };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(function () { done(true); }, function () { done(false); });
-      } else {
-        // Legacy fallback
-        var ta = document.createElement('textarea');
-        ta.value = email; ta.setAttribute('readonly', '');
-        ta.style.position = 'absolute'; ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        var ok = false;
-        try { ok = document.execCommand('copy'); } catch (err) {}
-        document.body.removeChild(ta);
-        done(ok);
-      }
+      navigator.clipboard.writeText(email).then(function () { done(true); }, function () { done(false); });
     });
   }
 

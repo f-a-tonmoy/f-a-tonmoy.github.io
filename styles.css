@@ -1757,6 +1757,7 @@ h3 {
 
 .reveal.is-visible {
   opacity: 1;
+  will-change: auto;
   transform: none;
 }
 
