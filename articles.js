@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "Why Smart People Still Get Fooled by AI",
+    "url": "https://www.linkedin.com/pulse/why-smart-people-still-get-fooled-ai-fahim-ahamed-fadue/",
+    "image": "assets/article-thumbnails/why-smart-people-still-get-fooled-by-ai.jpg",
+    "category": "Responsible AI"
+  },
+  {
     "title": "JEPA Explained: Predicting Representations, Not Pixels",
     "url": "https://www.linkedin.com/pulse/jepa-explained-predicting-representations-pixels-fahim-ahamed-trlif/",
     "image": "assets/article-thumbnails/jepa-explained-predicting-representations-not-pixels.jpg",
