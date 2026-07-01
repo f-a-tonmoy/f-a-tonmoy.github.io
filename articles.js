@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "Your Cross-Validation Is Lying to You",
+    "url": "https://www.linkedin.com/pulse/your-cross-validation-lying-you-fahim-ahamed-nhsre",
+    "image": "assets/article-thumbnails/your-cross-validation-is-lying-to-you.jpg",
+    "category": "Machine Learning"
+  },
+  {
     "title": "Why Smart People Still Get Fooled by AI",
     "url": "https://www.linkedin.com/pulse/why-smart-people-still-get-fooled-ai-fahim-ahamed-fadue/",
     "image": "assets/article-thumbnails/why-smart-people-still-get-fooled-by-ai.jpg",
