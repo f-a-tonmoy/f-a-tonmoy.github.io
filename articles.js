@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "Your Anonymized Data Probably Isn't",
+    "url": "https://www.linkedin.com/pulse/your-anonymized-data-probably-isnt-fahim-ahamed-oshye",
+    "image": "assets/article-thumbnails/your-anonymized-data-probably-isnt.jpg",
+    "category": "Data Science"
+  },
+  {
     "title": "Your Cross-Validation Is Lying to You",
     "url": "https://www.linkedin.com/pulse/your-cross-validation-lying-you-fahim-ahamed-nhsre",
     "image": "assets/article-thumbnails/your-cross-validation-is-lying-to-you.jpg",
