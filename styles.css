@@ -898,6 +898,13 @@ h3 {
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), border-left-color 0.3s var(--ease-out);
 }
 
+.timeline-card .tag.part-time {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  margin: 0;
+}
+
 .timeline-card:hover {
   transform: translateX(3px);
   box-shadow: var(--shadow-soft);
