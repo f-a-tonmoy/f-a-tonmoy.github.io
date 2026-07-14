@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "Four Ways to Fix Class Imbalance. You've Probably Only Tried One.",
+    "url": "https://www.linkedin.com/pulse/four-ways-fix-class-imbalance-youve-probably-only-tried-fahim-ahamed-f6eye",
+    "image": "assets/article-thumbnails/four-ways-to-fix-class-imbalance.jpg",
+    "category": "Machine Learning"
+  },
+  {
     "title": "Your Anonymized Data Probably Isn't",
     "url": "https://www.linkedin.com/pulse/your-anonymized-data-probably-isnt-fahim-ahamed-oshye",
     "image": "assets/article-thumbnails/your-anonymized-data-probably-isnt.jpg",
@@ -24,7 +30,7 @@ const articles = [
     "category": "Deep Learning"
   },
   {
-    "title": "Your XAI Tools Are Both Right. Here's Why They Disagree.",
+    "title": "Your XAI Tools Are Both Right. Here's Why They Disagree",
     "url": "https://www.linkedin.com/pulse/your-xai-tools-both-right-heres-why-disagree-fahim-ahamed-18yoe",
     "image": "assets/article-thumbnails/your-xai-tools-are-both-right-here-s-why-they-disagree.jpg",
     "category": "Explainable AI"
