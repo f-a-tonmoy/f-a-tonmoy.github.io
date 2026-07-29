@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "Bagging, Boosting, Stacking: Why Each One Works",
+    "url": "https://www.linkedin.com/pulse/bagging-boosting-stacking-why-each-one-works-fahim-ahamed-xo85e",
+    "image": "assets/article-thumbnails/bagging-boosting-stacking-why-each-one-works.jpg",
+    "category": "Machine Learning"
+  },
+  {
     "title": "Four Ways to Fix Class Imbalance. You've Probably Only Tried One.",
     "url": "https://www.linkedin.com/pulse/four-ways-fix-class-imbalance-youve-probably-only-tried-fahim-ahamed-f6eye",
     "image": "assets/article-thumbnails/four-ways-to-fix-class-imbalance.jpg",
