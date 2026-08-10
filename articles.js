@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "Why \"Thinking Mode\" Doesn't Fix AI Hallucinations",
+    "url": "https://www.linkedin.com/pulse/why-thinking-mode-doesnt-fix-ai-hallucinations-fahim-ahamed-h9j4e",
+    "image": "assets/article-thumbnails/why-thinking-mode-doesnt-fix-ai-hallucinations.jpg",
+    "category": "Generative AI"
+  },
+  {
     "title": "Bagging, Boosting, Stacking: Why Each One Works",
     "url": "https://www.linkedin.com/pulse/bagging-boosting-stacking-why-each-one-works-fahim-ahamed-xo85e",
     "image": "assets/article-thumbnails/bagging-boosting-stacking-why-each-one-works.jpg",
