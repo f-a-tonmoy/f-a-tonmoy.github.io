@@ -857,6 +857,14 @@ h3 {
   transform: translate(2px, -2px);
 }
 
+/* Short lead-in under a .section-heading. Negative top margin tightens the
+   34px the heading already reserves below itself. */
+.section-intro {
+  max-width: 70ch;
+  margin: -18px 0 30px;
+  color: var(--muted);
+}
+
 .page-hero {
   padding-top: 92px;
   padding-bottom: 44px;

@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=89" />
+    <link rel="stylesheet" href="styles.css?v=102" />
     <script>
       (function () {
         try {
@@ -54,14 +54,32 @@
           <p class="section-label">Case Studies</p>
           <h2>Data Stories</h2>
         </div>
+        <p class="section-intro">
+          Long-form analyses built as reproducible Python pipelines and published as
+          self-contained interactive articles, no backend required.
+        </p>
         <div class="project-list">
+          <article class="project">
+            <div>
+              <h3>New York City's Quietest Emergency</h3>
+              <ul class="detail-list">
+                <li>Pulled 2.59M NYC 911 dispatch rows in year-partitioned, resumable batches with per-year verification counts, deduplicated to 1,348,385 EDP crisis incidents (2018-2025), and spatially joined census blocks to precincts for per-resident baselines.</li>
+                <li>Examined where crisis burden falls once precinct population is accounted for, and whether the raw decline reflects fewer people in crisis or a change in how calls are dispatched.</li>
+                <li>Broke the eight-year window down by hour, weekday, and season. Measured how unevenly volume spreads across the city's 78 precincts.</li>
+              </ul>
+              <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-mental-health-case-study/" target="_blank" rel="noopener">Read article</a>
+              <span class="project-link-sep" aria-hidden="true">|</span>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/nyc-mental-health-case-study" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <span>Python, pandas, NumPy, GeoPandas, Plotly, HTML/CSS, JavaScript</span>
+          </article>
           <article class="project">
             <div>
               <h3>The Quiet Math of NYC's Restaurant Inspections</h3>
               <ul class="detail-list">
                 <li>Wrangled 83,354 NYC DOHMH inspections across 27,350 restaurants, collapsing noisy violation-level rows into a clean inspection-level dataset.</li>
-                <li>Examined what an A grade actually signals, what the pile-ups at the passing ('A') grade boundary indicate, which violations trigger on-the-spot closures, how quickly failing kitchens recover, how cuisines cluster geographically, and how very few restaurants hold a clean inspection history.</li>
-                <li>Shipped the findings as a self-contained interactive article with Plotly visualizations, no backend required.</li>
+                <li>Investigated what an A grade actually signals, what the pile-ups at the passing ('A') grade boundary indicate, and which violations trigger on-the-spot closures.</li>
+                <li>Traced how quickly failing kitchens recover, how cuisines cluster geographically, and how few restaurants hold a clean inspection history.</li>
               </ul>
               <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-inspections-case-study/" target="_blank" rel="noopener">Read article</a>
               <span class="project-link-sep" aria-hidden="true">|</span>
