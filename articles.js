@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "The Number Behind Every Tech Layoff Was Broken the Whole Time",
+    "url": "https://www.linkedin.com/pulse/number-behind-every-tech-layoff-broken-whole-time-fahim-ahamed-uzjae",
+    "image": "assets/article-thumbnails/the-number-behind-every-tech-layoff-was-broken-the-whole-time.jpg",
+    "category": "Responsible AI"
+  },
+  {
     "title": "Why \"Thinking Mode\" Doesn't Fix AI Hallucinations",
     "url": "https://www.linkedin.com/pulse/why-thinking-mode-doesnt-fix-ai-hallucinations-fahim-ahamed-h9j4e",
     "image": "assets/article-thumbnails/why-thinking-mode-doesnt-fix-ai-hallucinations.jpg",
