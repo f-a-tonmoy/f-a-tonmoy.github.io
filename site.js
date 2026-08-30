@@ -8,16 +8,10 @@
   // ============================================================
 
   var path = window.location.pathname;
-  var currentPage = (function () {
-    if (/\/experience\.html$/i.test(path)) return 'experience';
-    if (/\/research\.html$/i.test(path))   return 'research';
-    if (/\/projects\.html$/i.test(path))   return 'projects';
-    if (/\/writing\.html$/i.test(path))    return 'writing';
-    return null; // home, 404, anything else
-  })();
+  var currentPage = (path.split('/').pop() || 'index.html').toLowerCase();
 
   function ariaCurrent(name) {
-    return currentPage === name ? ' aria-current="page"' : '';
+    return currentPage === name + '.html' ? ' aria-current="page"' : '';
   }
 
   function headerHTML() {
@@ -60,26 +54,21 @@
       + '</div>';
   }
 
-  function makeThemeToggle() {
+  function iconButton(cls, label, svg, title) {
     var btn = document.createElement('button');
-    btn.className = 'theme-toggle';
+    btn.className = cls;
     btn.type = 'button';
-    btn.setAttribute('aria-label', 'Toggle dark mode');
-    btn.title = 'Toggle theme';
-    btn.innerHTML = ''
-      + '<svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>'
-      + '<svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-6a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm11-7a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM4 12a1 1 0 0 1-1 1H1a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm15.07-7.07a1 1 0 0 1 0 1.41l-1.41 1.42a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zM7.76 16.24a1 1 0 0 1 0 1.41l-1.41 1.42a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zm11.31 2.83a1 1 0 0 1-1.41 0l-1.42-1.41a1 1 0 1 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41zM7.76 7.76a1 1 0 0 1-1.41 0L4.93 6.35a1 1 0 0 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41z"/></svg>';
+    btn.setAttribute('aria-label', label);
+    if (title) btn.title = title;
+    btn.innerHTML = svg;
     return btn;
   }
 
-  function makeBackToTop() {
-    var btn = document.createElement('button');
-    btn.className = 'back-to-top';
-    btn.type = 'button';
-    btn.setAttribute('aria-label', 'Back to top');
-    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>';
-    return btn;
-  }
+  var THEME_SVG = ''
+    + '<svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>'
+    + '<svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-6a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm11-7a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM4 12a1 1 0 0 1-1 1H1a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm15.07-7.07a1 1 0 0 1 0 1.41l-1.41 1.42a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zM7.76 16.24a1 1 0 0 1 0 1.41l-1.41 1.42a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zm11.31 2.83a1 1 0 0 1-1.41 0l-1.42-1.41a1 1 0 1 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41zM7.76 7.76a1 1 0 0 1-1.41 0L4.93 6.35a1 1 0 0 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41z"/></svg>';
+
+  var TOP_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>';
 
   // Populate header (children.length ignores whitespace text nodes between tags)
   var header = document.querySelector('.site-header');
@@ -90,8 +79,12 @@
   if (footer && footer.children.length === 0) footer.innerHTML = footerHTML();
 
   // Append floating buttons (idempotent — skips if already present in HTML)
-  if (!document.querySelector('.theme-toggle')) document.body.appendChild(makeThemeToggle());
-  if (!document.querySelector('.back-to-top')) document.body.appendChild(makeBackToTop());
+  if (!document.querySelector('.theme-toggle')) {
+    document.body.appendChild(iconButton('theme-toggle', 'Toggle dark mode', THEME_SVG, 'Toggle theme'));
+  }
+  if (!document.querySelector('.back-to-top')) {
+    document.body.appendChild(iconButton('back-to-top', 'Back to top', TOP_SVG));
+  }
 
   // ============================================================
   //  2. Wire up handlers (run AFTER injection so elements exist)
@@ -175,15 +168,11 @@
   // reload (which would trigger an unwanted page-transition flicker). Instead, scroll to
   // top + brief pulse on the link as an acknowledgement.
   function isSamePage(href) {
-    if (!href) return false;
+    var norm = function (p) { return p.replace(/\/index\.html$/, '/').replace(/(.)\/$/, '$1'); };
     try {
       var url = new URL(href, window.location.href);
-      if (url.origin !== window.location.origin) return false;
-      var normalize = function (p) {
-        if (!p || p === '/' || p === '/index.html') return '/';
-        return p.replace(/\/$/, '');
-      };
-      return normalize(url.pathname) === normalize(window.location.pathname);
+      return url.origin === window.location.origin
+        && norm(url.pathname) === norm(window.location.pathname);
     } catch (err) {
       return false;
     }
@@ -261,6 +250,27 @@
       toast.classList.remove('visible');
     }, 1800);
   }
+
+  // --- Missing thumbnail -> labelled placeholder -------------------
+  // Delegated in the capture phase because error events don't bubble. The sweep
+  // afterwards catches any image that already failed before this script ran.
+  function thumbFailed(img) {
+    var holder = img.closest('.project-thumb');
+    if (!holder || holder.classList.contains('is-empty')) return;
+    var heading = img.closest('.project') && img.closest('.project').querySelector('h3');
+    holder.className = 'project-thumb is-empty';
+    holder.setAttribute('data-fallback', heading ? heading.textContent.trim() : 'Project');
+    ['role', 'tabindex', 'aria-label'].forEach(function (a) { holder.removeAttribute(a); });
+    img.remove();
+  }
+
+  document.addEventListener('error', function (e) {
+    if (e.target.tagName === 'IMG' && e.target.closest('.project-thumb')) thumbFailed(e.target);
+  }, true);
+
+  document.querySelectorAll('.project-thumb img').forEach(function (img) {
+    if (img.complete && !img.naturalWidth) thumbFailed(img);
+  });
 
   // --- Thumbnail lightbox -----------------------------------------
   // Native <dialog> supplies the focus trap, Esc-to-close, and backdrop, so
