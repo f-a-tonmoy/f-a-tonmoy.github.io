@@ -10,7 +10,7 @@ Personal portfolio site for **Fahim Ahamed** — data scientist with a backgroun
 
 Data scientist with a background in applied AI research — turning data into insights, predictive models, and decisions across healthcare, NLP, computer vision, and beyond.
 
-- **4 peer-reviewed AI research papers** (SAGE, Springer, IEEE), 2 more accepted or under review
+- **4+ peer-reviewed AI research papers** (SAGE, Springer, IEEE), 2 more accepted or under review
 - **85+ articles** on data science, ML, and responsible AI
 - Specialties: explainable AI, computer vision, NLP, adversarial robustness
 - Based in NYC · U.S. Permanent Resident · No sponsorship needed
