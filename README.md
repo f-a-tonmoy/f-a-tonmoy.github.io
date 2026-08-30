@@ -10,8 +10,8 @@ Personal portfolio site for **Fahim Ahamed** — data scientist with a backgroun
 
 Data scientist with a background in applied AI research — turning data into insights, predictive models, and decisions across healthcare, NLP, computer vision, and beyond.
 
-- **7+ peer-reviewed AI research papers** (SAGE, Springer, IEEE)
-- **80+ articles** on data science, ML, and responsible AI
+- **4 peer-reviewed AI research papers** (SAGE, Springer, IEEE), 2 more accepted or under review
+- **85+ articles** on data science, ML, and responsible AI
 - Specialties: explainable AI, computer vision, NLP, adversarial robustness
 - Based in NYC · U.S. Permanent Resident · No sponsorship needed
 
@@ -27,7 +27,7 @@ Data scientist with a background in applied AI research — turning data into in
 | [Experience](https://f-a-tonmoy.github.io/experience.html) | Timeline of roles + education |
 | [Research](https://f-a-tonmoy.github.io/research.html) | Published papers + manuscripts in pipeline |
 | [Projects](https://f-a-tonmoy.github.io/projects.html) | ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
-| [Articles](https://f-a-tonmoy.github.io/writing.html) | 80+ technical articles, filterable + searchable |
+| [Articles](https://f-a-tonmoy.github.io/writing.html) | 85+ technical articles, filterable + searchable |
 
 ---
 
@@ -43,7 +43,8 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 ├── site.js        # shared chrome injection + interactivity
 ├── articles.js    # article data
 ├── .nojekyll      # tells GitHub Pages to skip Jekyll (pure-HTML site)
-└── assets/        # thumbnails, school logos, headshot, favicon, OG image, resume
+└── assets/        # article, case-study & project thumbnails, school logos,
+                   #   headshot, favicon, OG image, resume
 ```
 
 ---
