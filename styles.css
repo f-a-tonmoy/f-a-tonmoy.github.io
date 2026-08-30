@@ -1298,6 +1298,34 @@ h3 {
   gap: 18px;
 }
 
+/* Case-study cards reuse .article-card, two-up with a description line. */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.case-grid .article-card {
+  min-height: 0;
+}
+
+/* These thumbs are chart exports that carry their own padding, so contain them
+   rather than cover-cropping the chart title off the top edge. */
+.case-grid .article-thumb {
+  aspect-ratio: 1.69;
+  background: #fcfaf8;
+}
+
+.case-grid .article-thumb img {
+  object-fit: contain;
+}
+
+.case-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .article-card {
   display: flex;
   flex-direction: column;
@@ -1569,7 +1597,8 @@ h3 {
   .stats,
   .card-grid,
   .education-grid,
-  .article-card-grid {
+  .article-card-grid,
+  .case-grid {
     grid-template-columns: 1fr;
   }
 

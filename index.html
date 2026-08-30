@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=102" />
+    <link rel="stylesheet" href="styles.css?v=104" />
     <script>
       (function () {
         try {
@@ -211,23 +211,25 @@
           <h2>From the Series</h2>
           <a class="section-link" href="projects.html#case-studies">All case studies</a>
         </div>
-        <div class="project-list">
-          <article class="project">
-            <div>
-              <h3>New York City's Quietest Emergency</h3>
-              <p>Eight years of NYC 911 mental health crisis calls, 1.35 million of them &mdash; where the burden actually falls once precinct population is accounted for, and how it lines up with the city's clinician-response coverage.</p>
-              <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-mental-health-case-study/" target="_blank" rel="noopener">Read article</a>
-            </div>
-            <span>Python, pandas, NumPy, GeoPandas, Plotly, HTML/CSS, JavaScript</span>
-          </article>
-          <article class="project">
-            <div>
-              <h3>The Quiet Math of NYC's Restaurant Inspections</h3>
-              <p>An analytical look at ~83,000 NYC health inspections across ~27,000 restaurants &mdash; what an A grade actually signals, where the system bends around the grade boundary, and how few kitchens hold a clean inspection history.</p>
-              <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-inspections-case-study/" target="_blank" rel="noopener">Read article</a>
-            </div>
-            <span>Python, pandas, NumPy, Plotly, HTML/CSS, JavaScript</span>
-          </article>
+        <div class="case-grid">
+          <a class="article-card" href="https://f-a-tonmoy.github.io/nyc-mental-health-case-study/" target="_blank" rel="noopener">
+            <span class="article-thumb">
+              <img src="assets/case-study-thumbnails/nyc-mental-health.jpg" alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />
+            </span>
+            <span class="article-body">
+              <span class="article-title">New York City's Quietest Emergency</span>
+              <span class="case-desc">Eight years of NYC 911 mental health crisis calls, 1.35 million of them. Where the burden actually falls once precinct population is accounted for, and how it lines up with the city's clinician-response coverage.</span>
+            </span>
+          </a>
+          <a class="article-card" href="https://f-a-tonmoy.github.io/nyc-inspections-case-study/" target="_blank" rel="noopener">
+            <span class="article-thumb">
+              <img src="assets/case-study-thumbnails/nyc-restaurant-inspections.jpg" alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />
+            </span>
+            <span class="article-body">
+              <span class="article-title">The Quiet Math of NYC's Restaurant Inspections</span>
+              <span class="case-desc">An analytical look at ~83,000 NYC health inspections across ~27,000 restaurants. What an A grade actually signals, where the system bends around the grade boundary, and how few kitchens hold a clean inspection history.</span>
+            </span>
+          </a>
         </div>
       </section>
 
