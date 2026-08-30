@@ -262,6 +262,45 @@
     }, 1800);
   }
 
+  // --- Thumbnail lightbox -----------------------------------------
+  // Native <dialog> supplies the focus trap, Esc-to-close, and backdrop, so
+  // there's nothing here but wiring. Placeholders hold no <img>, so they're
+  // skipped automatically.
+  var zoomThumbs = document.querySelectorAll('.project-thumb img');
+  if (zoomThumbs.length) {
+    var lightbox = document.createElement('dialog');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = '<img alt="" /><button class="lightbox-close" type="button" aria-label="Close">&times;</button>';
+    document.body.appendChild(lightbox);
+    var lightboxImg = lightbox.querySelector('img');
+
+    zoomThumbs.forEach(function (img) {
+      var holder = img.closest('.project-thumb');
+      holder.classList.add('is-zoomable');
+      holder.setAttribute('role', 'button');
+      holder.setAttribute('tabindex', '0');
+      holder.setAttribute('aria-label', 'View larger image');
+
+      var openLightbox = function () {
+        lightboxImg.src = img.currentSrc || img.src;
+        lightbox.showModal();
+      };
+
+      holder.addEventListener('click', openLightbox);
+      holder.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox();
+        }
+      });
+    });
+
+    // Close on backdrop click (target is the dialog itself) or the X button
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox || e.target.closest('.lightbox-close')) lightbox.close();
+    });
+  }
+
   // --- Cursor-aware glow on cards ---------------------------------
   // Only wires up on hover-capable, no-reduced-motion devices
   if (canHover && !prefersReducedMotion) {

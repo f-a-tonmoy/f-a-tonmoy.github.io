@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=102" />
+    <link rel="stylesheet" href="styles.css?v=110" />
     <script>
       (function () {
         try {
@@ -56,36 +56,42 @@
         </div>
         <p class="section-intro">
           Long-form analyses built as reproducible Python pipelines and published as
-          self-contained interactive articles, no backend required.
+          self-contained interactive articles.
         </p>
         <div class="project-list">
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/case-study-thumbnails/nyc-mental-health.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.remove();" />
+            </span>
             <div>
               <h3>New York City's Quietest Emergency</h3>
               <ul class="detail-list">
-                <li>Pulled 2.59M NYC 911 dispatch rows in year-partitioned, resumable batches with per-year verification counts, deduplicated to 1,348,385 EDP crisis incidents (2018-2025), and spatially joined census blocks to precincts for per-resident baselines.</li>
-                <li>Examined where crisis burden falls once precinct population is accounted for, and whether the raw decline reflects fewer people in crisis or a change in how calls are dispatched.</li>
-                <li>Broke the eight-year window down by hour, weekday, and season. Measured how unevenly volume spreads across the city's 78 precincts.</li>
+                <li>Pulled <strong>2.59M</strong> NYC 911 dispatch rows in year-partitioned, resumable batches with per-year verification counts, deduplicated to <strong>1,348,385</strong> EDP crisis incidents (2018-2025), and spatially joined census blocks to precincts for per-resident baselines.</li>
+                <li>Examined where crisis burden falls once <strong>precinct population</strong> is accounted for, and whether the raw decline reflects fewer people in crisis or a change in how calls are dispatched.</li>
+                <li>Broke the eight-year window down by hour, weekday, and season. Measured how unevenly volume spreads across the city's <strong>78 precincts</strong>.</li>
               </ul>
+              <p class="project-tools">Python, pandas, NumPy, GeoPandas, Plotly, HTML/CSS, JavaScript</p>
               <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-mental-health-case-study/" target="_blank" rel="noopener">Read article</a>
               <span class="project-link-sep" aria-hidden="true">|</span>
               <a class="project-link" href="https://github.com/f-a-tonmoy/nyc-mental-health-case-study" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Python, pandas, NumPy, GeoPandas, Plotly, HTML/CSS, JavaScript</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/case-study-thumbnails/nyc-restaurant-inspections.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.remove();" />
+            </span>
             <div>
               <h3>The Quiet Math of NYC's Restaurant Inspections</h3>
               <ul class="detail-list">
-                <li>Wrangled 83,354 NYC DOHMH inspections across 27,350 restaurants, collapsing noisy violation-level rows into a clean inspection-level dataset.</li>
-                <li>Investigated what an A grade actually signals, what the pile-ups at the passing ('A') grade boundary indicate, and which violations trigger on-the-spot closures.</li>
-                <li>Traced how quickly failing kitchens recover, how cuisines cluster geographically, and how few restaurants hold a clean inspection history.</li>
+                <li>Wrangled <strong>83,354</strong> NYC DOHMH inspections across <strong>27,350</strong> restaurants, collapsing noisy violation-level rows into a clean inspection-level dataset.</li>
+                <li>Investigated what an <strong>A grade</strong> actually signals, what the pile-ups at the passing ('A') grade boundary indicate, and which violations trigger <strong>on-the-spot closures</strong>.</li>
+                <li>Traced how quickly <strong>failing kitchens</strong> recover, how cuisines cluster geographically, and how few restaurants hold a clean inspection history.</li>
               </ul>
+              <p class="project-tools">Python, pandas, NumPy, Plotly, Pillow, HTML/CSS, JavaScript</p>
               <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-inspections-case-study/" target="_blank" rel="noopener">Read article</a>
               <span class="project-link-sep" aria-hidden="true">|</span>
               <a class="project-link" href="https://github.com/f-a-tonmoy/nyc-inspections-case-study" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Python, pandas, NumPy, Plotly, Pillow, HTML/CSS, JavaScript</span>
           </article>
         </div>
       </section>
@@ -96,29 +102,35 @@
           <h2>Analytics & Forecasting</h2>
         </div>
         <div class="project-list">
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/nyc-hiv-trends.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','NYC HIV/AIDS Trend Analysis'); this.remove();" />
+            </span>
             <div>
               <h3>NYC HIV/AIDS Trend Analysis & Predictive Modeling</h3>
               <ul class="detail-list">
-                <li>Cleaned and engineered multi-year NYC Open Data, resolving suppressed values and producing analysis-ready datasets.</li>
-                <li>Conducted spatiotemporal analysis to uncover geographic and demographic disparities relevant to public health interventions.</li>
-                <li>Built tree-based ML models, with Random Forest achieving R-squared of 0.65 and identifying key predictors for planning.</li>
+                <li>Cleaned and engineered multi-year NYC Open Data, resolving <strong>suppressed values</strong> and producing analysis-ready datasets.</li>
+                <li>Conducted <strong>spatiotemporal analysis</strong> to uncover geographic and demographic disparities relevant to public health interventions.</li>
+                <li>Built tree-based ML models, with <strong>Random Forest</strong> achieving <strong>R<sup>2</sup> of 0.65</strong> and identifying key predictors for planning.</li>
               </ul>
+              <p class="project-tools">R, Tidyverse, ggplot2, sf, rpart, RandomForest, caret</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/hiv-nyc-trends-eda-modeling" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>R, Tidyverse, ggplot2, sf, rpart, RandomForest, caret</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/global-population-forecasting.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Global Population Growth Modeling'); this.remove();" />
+            </span>
             <div>
               <h3>Global Population Growth Modeling & Forecasting</h3>
               <ul class="detail-list">
-                <li>Engineered a longitudinal time-series dataset integrating demographic indicators across 200+ countries.</li>
-                <li>Performed 60+ year trend analysis by region and income group to identify structural growth patterns.</li>
-                <li>Developed forecasting models achieving R-squared of 0.755, validated using rolling-window cross-validation.</li>
+                <li>Engineered a longitudinal time-series dataset integrating demographic indicators across <strong>200+ countries</strong>.</li>
+                <li>Performed <strong>60+ year</strong> trend analysis by region and income group to identify structural growth patterns.</li>
+                <li>Developed forecasting models achieving <strong>R<sup>2</sup> of 0.755</strong> across region and income groupings.</li>
               </ul>
+              <p class="project-tools">R, Tidyverse, ggplot2, leaps, caret</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/global-population-dynamics-forecasting" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>R, Tidyverse, ggplot2, leaps, caret</span>
           </article>
         </div>
       </section>
@@ -129,76 +141,95 @@
           <h2>Machine Learning & Deep Learning</h2>
         </div>
         <div class="project-list">
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/clinical-risk-modeling.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Clinical Risk Modeling'); this.remove();" />
+            </span>
             <div>
               <h3>Clinical Risk Modeling & Unsupervised Structure Analysis</h3>
               <ul class="detail-list">
-                <li>Curated and standardized clinical datasets, addressing missingness, outliers, and scaling.</li>
-                <li>Conducted EDA and diagnostic analysis to identify limitations in linear separability.</li>
-                <li>Built a logistic regression model around 80% accuracy and evaluated K-Means clustering using PCA and t-SNE for latent structure analysis.</li>
+                <li>Profiled the dataset for encoded missing values and outliers, then imputed by <strong>group-wise median</strong> before modeling.</li>
+                <li>Fit <strong>logistic regression</strong> on labelled outcomes and <strong>k-means</strong> with labels withheld, running both on raw and standardized inputs.</li>
+                <li>Evaluated clustering with <strong>elbow and silhouette</strong> diagnostics, then inspected structure through <strong>PCA and t-SNE</strong> projections.</li>
               </ul>
+              <p class="project-tools">Python, NumPy, pandas, Matplotlib, Seaborn, scikit-learn</p>
+
             </div>
-            <span>Python, NumPy, pandas, Matplotlib, Seaborn, scikit-learn</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/wound-classification.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Deep Learning'); this.remove();" />
+            </span>
             <div>
               <h3>Deep Learning-Based Wound Classification</h3>
               <ul class="detail-list">
-                <li>Achieved 98.5% accuracy and reduced loss to 0.1061 by refining the CNN architecture and training process.</li>
-                <li>Improved model accuracy by 9 percentage points by adding convolutional layers, batch normalization, dropout, and regularization.</li>
-                <li>Enhanced model fairness and performance by oversampling underrepresented classes to address class imbalance.</li>
+                <li>Standardized <strong>2,940</strong> wound images across <strong>10 classes</strong>, resizing for consistent input and augmenting thin classes with rotation, flip, and shift transforms.</li>
+                <li>Built a <strong>custom CNN</strong>: four convolutional blocks with batch normalization and max pooling, global average pooling, then a dense head with L2 and dropout.</li>
+                <li>Lifted validation accuracy from <strong>89.8% to 98.5%</strong> and cut loss from 0.41 to 0.11 through architecture and training refinements.</li>
               </ul>
+              <p class="project-tools">Python, TensorFlow, OpenCV, NumPy, pandas, Matplotlib, Seaborn</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Wound-Classification-DL" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Python, TensorFlow, OpenCV, NumPy, pandas, Matplotlib, Seaborn</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/intrusion-detection.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Intrusion Detection System'); this.remove();" />
+            </span>
             <div>
               <h3>Intrusion Detection System</h3>
               <ul class="detail-list">
-                <li>Processed and analyzed 2.5M+ network traffic records to uncover key anomaly patterns.</li>
-                <li>Reduced memory usage by 47.5% through optimized numerical data type downcasting.</li>
-                <li>Achieved 97% median accuracy in detecting network anomalies using machine learning models.</li>
+                <li>Compressed <strong>2.8M</strong> network flows across 78 features into a trainable set through dtype downcasting and <strong>incremental PCA</strong>.</li>
+                <li>Framed detection two ways: <strong>binary</strong> anomaly flagging with logistic regression and SVM, and <strong>7-class</strong> attack typing with random forest, decision tree, and k-NN.</li>
+                <li>Corrected severe class imbalance with <strong>SMOTE</strong>, reaching <strong>97% median accuracy</strong> across the model set.</li>
               </ul>
+              <p class="project-tools">Python, NumPy, pandas, SciPy, Matplotlib, Seaborn, scikit-learn</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Intrusion-Detection-System" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Python, NumPy, pandas, SciPy, Matplotlib, Seaborn, scikit-learn</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/credit-score-classification.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Credit Score Classification'); this.remove();" />
+            </span>
             <div>
               <h3>Credit Score Classification</h3>
               <ul class="detail-list">
-                <li>Processed 100,000+ financial records with extensive data cleaning and feature engineering.</li>
-                <li>Trained and optimized classification models, achieving 92% accuracy in predicting credit scores.</li>
-                <li>Reduced training time by 20% through hyperparameter tuning and feature selection.</li>
+                <li>Cleaned a 200K-row credit dataset through <strong>deduplication</strong>, type coercion on malformed numerics, IQR outlier clipping, and <strong>per-customer imputation</strong> drawn from each account's own 8-month history.</li>
+                <li>Selected features by <strong>chi-square</strong> and <strong>Welch's ANOVA</strong>, expanded free-text loan fields into 9 binary indicators, and balanced a 3:2:1 class split with SMOTE.</li>
+                <li>Benchmarked Naive Bayes, decision tree, and random forest on precision, recall, F1, and accuracy, with <strong>random forest</strong> leading at <strong>87% accuracy</strong> and 0.87 macro F1.</li>
               </ul>
+              <p class="project-tools">Python, NumPy, pandas, Matplotlib, Seaborn, scikit-learn</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Credit-Score-Classification" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Python, NumPy, pandas, Matplotlib, Seaborn, scikit-learn</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/movie-recommender.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Hybrid Recommendation System'); this.remove();" />
+            </span>
             <div>
               <h3>Hybrid Recommendation System</h3>
               <ul class="detail-list">
-                <li>Developed a hybrid recommendation engine combining collaborative and content-based filtering to address the cold-start problem.</li>
-                <li>Processed and analyzed over 100,000 user interaction records, improving user engagement metrics by 15%.</li>
-                <li>Implemented a scalable architecture to improve data handling efficiency and integration.</li>
+                <li>Developed a hybrid recommendation engine combining collaborative and content-based filtering to address the <strong>cold-start problem</strong>.</li>
+                <li>Processed and analyzed over <strong>100,000</strong> user interaction records, improving user engagement metrics by 15%.</li>
+                <li>Implemented a <strong>scalable architecture</strong> to improve data handling efficiency and integration.</li>
               </ul>
+              <p class="project-tools">Python, NumPy, pandas, Matplotlib, Tkinter</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Hybrid-Movie-Recommendation-System" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Python, NumPy, pandas, Matplotlib, Tkinter</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/code-smell-detection.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','ML'); this.remove();" />
+            </span>
             <div>
               <h3>ML-Enabled Code Smell Detection System</h3>
               <ul class="detail-list">
-                <li>Developed an ML-based system for detecting code smells with imbalance handling and feature selection analysis.</li>
-                <li>Achieved over 90% accuracy in detecting code smells using Random Forest and XGBoost.</li>
-                <li>Balanced a dataset of 190,707 entries with 73.6% class imbalance, improving detection rates by 32%.</li>
+                <li>Built an ML pipeline over <strong>190,707 classes</strong> of static-analysis metrics, clipping outliers by IQR and rebalancing a 73.6/26.4 split with <strong>SMOTE</strong>.</li>
+                <li>Evaluated three <strong>feature selection</strong> techniques against <strong>four classifiers</strong> across all twelve pairings.</li>
+                <li>The bagging classifier scored highest, at <strong>82.8% accuracy</strong> and 0.66 MCC.</li>
               </ul>
+              <p class="project-tools">Python, NumPy, pandas, Matplotlib, SMOTE, Seaborn, scikit-learn, XGBoost</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Code-Smell-Detection" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Python, NumPy, pandas, Matplotlib, SMOTE, Seaborn, scikit-learn, XGBoost</span>
           </article>
         </div>
       </section>
@@ -209,40 +240,50 @@
           <h2>Pipelines & Applications</h2>
         </div>
         <div class="project-list">
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/nexus-search.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','NEXUS'); this.remove();" />
+            </span>
             <div>
               <h3>NEXUS - Multi-Engine Search Intelligence</h3>
               <ul class="detail-list">
-                <li>Scraped Google, Bing, Yahoo, and DuckDuckGo in parallel with cross-engine deduplication.</li>
-                <li>Ranked results with phrase-weighted scoring (bigrams 2&times;, trigrams 3&times;).</li>
-                <li>Built a Streamlit UI with live pipeline logs, engine filters, and search history.</li>
+                <li>Scraped <strong>four engines</strong> concurrently, unwrapping redirects, stripping ad and tracking parameters, and validating reachability across 20 worker threads.</li>
+                <li>Canonicalized URLs to collapse cross-engine duplicates, persisting every stage to a <strong>six-table schema</strong> that preserves full lineage.</li>
+                <li>Scored relevance with a <strong>phrase-weighted</strong> n-gram model, log-normalized so long pages cannot win on length alone.</li>
               </ul>
+              <p class="project-tools">Python, MySQL, Streamlit, Selenium, undetected-chromedriver, BeautifulSoup</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/nexus-search-bot" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Python, MySQL, Streamlit, Selenium, undetected-chromedriver, BeautifulSoup</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/wanderwoman-travel.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','WanderWoman'); this.remove();" />
+            </span>
             <div>
               <h3>WanderWoman - Travel Management System</h3>
               <ul class="detail-list">
-                <li>Designed and deployed a secure travel management platform for solo women travelers.</li>
-                <li>Integrated real-time updates and community interactions to improve user engagement.</li>
-                <li>Increased query efficiency by 30% through database indexing and optimization.</li>
+                <li>Designed and deployed a secure travel management platform for <strong>solo women travelers</strong>.</li>
+                <li>Integrated real-time updates and <strong>community interactions</strong> to improve user engagement.</li>
+                <li>Increased query efficiency by 30% through <strong>database indexing</strong> and optimization.</li>
               </ul>
+              <p class="project-tools">Django, HTML, CSS, JavaScript, SQLite, MySQL</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/WanderWoman-Travel-Management-System" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <span>Django, HTML, CSS, JavaScript, SQLite, MySQL</span>
           </article>
-          <article class="project">
+          <article class="project has-media">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/fifa-world-cup.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','FIFA World Cup 2022'); this.remove();" />
+            </span>
             <div>
               <h3>FIFA World Cup 2022 Web Application</h3>
               <ul class="detail-list">
-                <li>Developed a feature-rich web application with real-time match simulation, team statistics, and ticket booking.</li>
-                <li>Integrated an Oracle database with over 1,000 data points for match tracking.</li>
-                <li>Awarded Best Project for advanced technical architecture and database design.</li>
+                <li>Modeled the tournament in <strong>Oracle</strong> around a central <strong>match record</strong> linking teams, players, venues, officials, and ticketing.</li>
+                <li>Built <strong>10 form-and-report pairs</strong>, 15 query and aggregate reports, 3 master-detail forms, and 4 charts on top of it.</li>
+                <li>Added <strong>custom authentication</strong> with page-level authorization and session-aware booking. Awarded <strong>Best Project</strong>.</li>
               </ul>
+              <p class="project-tools">Oracle SQL, HTML, CSS, JavaScript</p>
+
             </div>
-            <span>Oracle SQL, HTML, CSS, JavaScript</span>
           </article>
         </div>
       </section>
@@ -251,7 +292,7 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="site.js?v=12" defer></script>
+    <script src="site.js?v=13" defer></script>
   </body>
 </html>
 

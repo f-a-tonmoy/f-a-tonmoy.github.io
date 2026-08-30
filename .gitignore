@@ -20,3 +20,4 @@ Thumbs.db
 PRODUCT.md
 plan-blocks.md
 *.py
+__pycache__/

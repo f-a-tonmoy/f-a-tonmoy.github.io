@@ -1025,6 +1025,177 @@ h3 {
   font-weight: 800;
 }
 
+/* ---------- Project card with a thumbnail (media layout) ---------- */
+/* Fixed-width image column so every card's thumb matches; the text column
+   absorbs the variable bullet length. */
+.project.has-media {
+  grid-template-columns: 330px minmax(0, 1fr);
+  align-items: start;
+}
+
+sup {
+  font-size: 0.72em;
+  line-height: 0; /* superscript must not open up the line box */
+  vertical-align: super;
+}
+
+/* ---------- Homepage: three project cards abreast ---------- */
+/* Vertical cards instead of the list layout, so three fit across. Thumb,
+   text, then tools and link pinned to the bottom edge so cards line up. */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.project-grid .project {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* base .project centres its columns; here they must fill */
+  gap: 0;
+  padding: 0;
+  border: 0;
+}
+
+.project-grid .project > div {
+  flex: 1; /* absorbs the uneven description lengths so the footers line up */
+}
+
+.project-grid .project-thumb {
+  margin-bottom: 16px;
+}
+
+.project-grid .project h3 {
+  margin: 0 0 8px;
+  font-size: 1.06rem;
+}
+
+.project-grid .project p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.project-grid .project-link {
+  margin-top: 14px; /* the flex:1 text block above pins this to the card foot */
+}
+
+.project-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--accent-soft);
+}
+
+.project-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Case-study thumbs are chart exports with their own padding, so contain them
+   rather than cover-cropping the chart title off the top edge. */
+#case-studies .project-thumb {
+  aspect-ratio: 1.69;
+  background: #fcfaf8;
+}
+
+#case-studies .project-thumb img {
+  object-fit: contain;
+}
+
+/* Placeholder until a real thumbnail is dropped in. */
+.project-thumb.is-empty {
+  display: grid;
+  place-items: center;
+  border-style: dashed;
+  background: transparent;
+}
+
+.project-thumb.is-empty::before {
+  content: attr(data-fallback);
+  padding: 10px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.project-thumb.is-zoomable {
+  cursor: zoom-in;
+  transition: border-color 0.2s var(--ease-out);
+}
+
+.project-thumb.is-zoomable:hover,
+.project-thumb.is-zoomable:focus-visible {
+  border-color: var(--accent);
+}
+
+/* ---------- Thumbnail lightbox ---------- */
+.lightbox {
+  max-width: min(94vw, 1200px);
+  max-height: 94vh;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.lightbox::backdrop {
+  background: rgba(10, 14, 12, 0.72);
+}
+
+.lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: 94vh;
+  width: auto;
+  height: auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.18s var(--ease-out), color 0.18s var(--ease-out);
+}
+
+.lightbox-close:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
+}
+
+/* Tools sit below the bullets as quiet metadata: smaller than body copy and
+   separated by a hairline, so the accent link below stays the loudest thing. */
+.project-tools {
+  margin: 16px 0 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-soft);
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
 .project-link {
   display: inline-flex;
   width: fit-content;
@@ -1598,7 +1769,8 @@ h3 {
   .card-grid,
   .education-grid,
   .article-card-grid,
-  .case-grid {
+  .case-grid,
+  .project-grid {
     grid-template-columns: 1fr;
   }
 

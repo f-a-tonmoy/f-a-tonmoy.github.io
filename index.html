@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=104" />
+    <link rel="stylesheet" href="styles.css?v=110" />
     <script>
       (function () {
         try {
@@ -122,14 +122,14 @@
         </div>
         <div class="timeline">
           <article class="timeline-item">
-            <div class="timeline-date">Jul 2026 - Present</div>
+            <div class="timeline-date">Oct 2025 - Feb 2026, Jul 2026 - Present</div>
             <div class="timeline-card">
               <span class="tag part-time">Part-time</span>
               <h3>Data Analyst</h3>
               <p class="meta">The City College of New York | New York, NY</p>
               <p>
-                Leading institutional data analysis, advising insights, and engagement
-                strategy.
+                Analyzing institutional data with Excel, Tableau, and Python to support advising,
+                retention, and engagement strategy.
               </p>
             </div>
           </article>
@@ -239,31 +239,37 @@
           <h2>Applied ML & Data Projects</h2>
           <a class="section-link" href="projects.html">All projects</a>
         </div>
-        <div class="project-list">
-          <article class="project">
-            <div>
-              <h3>NYC HIV/AIDS Trend Analysis & Predictive Modeling</h3>
-              <p>Cleaned and engineered multi-year NYC Open Data, mapped demographic and geographic disparities, and trained tree-based models to identify predictors for public health planning.</p>
-              <a class="project-link" href="https://github.com/f-a-tonmoy/hiv-nyc-trends-eda-modeling" target="_blank" rel="noopener">GitHub</a>
-            </div>
-            <span>R, Tidyverse, ggplot2, sf, rpart, RandomForest, caret</span>
-          </article>
-          <article class="project">
-            <div>
-              <h3>Deep Learning-Based Wound Classification</h3>
-              <p>Developed a CNN-based wound image classifier, improving accuracy through deeper architecture, batch normalization, dropout, regularization, and class imbalance handling.</p>
+        <div class="project-grid">
+            <article class="project">
+              <span class="project-thumb">
+                <img src="assets/project-thumbnails/wound-classification.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Deep'); this.remove();" />
+              </span>
+              <div>
+                <h3>Deep Learning-Based Wound Classification</h3>
+                <p>Developed a CNN-based wound image classifier, improving accuracy through deeper architecture, batch normalization, dropout, regularization, and class imbalance handling.</p>
+              </div>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Wound-Classification-DL" target="_blank" rel="noopener">GitHub</a>
-            </div>
-            <span>Python, TensorFlow, OpenCV, NumPy, pandas, Matplotlib, Seaborn</span>
-          </article>
-          <article class="project">
-            <div>
-              <h3>Intrusion Detection System</h3>
-              <p>Processed millions of network traffic records, optimized memory usage, and trained ML models to detect network anomalies with strong median accuracy.</p>
+            </article>
+            <article class="project">
+              <span class="project-thumb">
+                <img src="assets/project-thumbnails/intrusion-detection.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Intrusion'); this.remove();" />
+              </span>
+              <div>
+                <h3>Intrusion Detection System</h3>
+                <p>Processed millions of network traffic records, optimized memory usage, and trained ML models to detect network anomalies with strong median accuracy.</p>
+              </div>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Intrusion-Detection-System" target="_blank" rel="noopener">GitHub</a>
-            </div>
-            <span>Python, NumPy, pandas, SciPy, Matplotlib, Seaborn, scikit-learn</span>
-          </article>
+            </article>
+            <article class="project">
+              <span class="project-thumb">
+                <img src="assets/project-thumbnails/global-population-forecasting.jpg" alt="" loading="lazy" onerror="this.closest('.project-thumb').classList.add('is-empty'); this.setAttribute('data-fallback','Global'); this.remove();" />
+              </span>
+              <div>
+                <h3>Global Population Growth Modeling &amp; Forecasting</h3>
+                <p>Built a longitudinal dataset of demographic indicators across 200+ countries, analyzed six decades of growth by region and income group, and fit forecasting models reaching an R<sup>2</sup> of 0.755.</p>
+              </div>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/global-population-dynamics-forecasting" target="_blank" rel="noopener">GitHub</a>
+            </article>
         </div>
       </section>
 
@@ -389,7 +395,7 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="site.js?v=12" defer></script>
+    <script src="site.js?v=13" defer></script>
 
     <script src="articles.js?v=2"></script>
     <script>
