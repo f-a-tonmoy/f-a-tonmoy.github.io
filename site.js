@@ -272,6 +272,72 @@
     if (img.complete && !img.naturalWidth) thumbFailed(img);
   });
 
+  // --- Landing trace on the card jumped to from the index map ------
+  // The path starts at the middle of the left edge rather than a corner, so the
+  // line closes on a straight run instead of meeting itself mid-curve.
+  var SVGNS = 'http://www.w3.org/2000/svg';
+
+  function traceCard(card) {
+    // clear any trace anywhere, not just this card's: jumping between cards
+    // would otherwise leave the previous one behind
+    document.querySelectorAll('.trace-svg').forEach(function (n) { n.remove(); });
+
+    var box = card.getBoundingClientRect();
+    var pad = 10, r = 14;
+    var w = box.width + pad * 2, h = box.height + pad * 2, cy = h / 2;
+
+    var svg = document.createElementNS(SVGNS, 'svg');
+    svg.setAttribute('class', 'trace-svg');
+    svg.setAttribute('width', w);
+    svg.setAttribute('height', h);
+    svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    svg.setAttribute('aria-hidden', 'true');
+
+    var path = document.createElementNS(SVGNS, 'path');
+    path.setAttribute('pathLength', '100'); // lets one dasharray fit every card size
+    path.setAttribute('d',
+      'M0 ' + cy + 'L0 ' + r +
+      'A' + r + ' ' + r + ' 0 0 1 ' + r + ' 0' +
+      'L' + (w - r) + ' 0' +
+      'A' + r + ' ' + r + ' 0 0 1 ' + w + ' ' + r +
+      'L' + w + ' ' + (h - r) +
+      'A' + r + ' ' + r + ' 0 0 1 ' + (w - r) + ' ' + h +
+      'L' + r + ' ' + h +
+      'A' + r + ' ' + r + ' 0 0 1 0 ' + (h - r) + 'Z');
+
+    svg.appendChild(path);
+    card.appendChild(svg);
+    // draw + fade run 1s total; drop the node just after, so nothing lingers
+    setTimeout(function () { svg.remove(); }, 1200);
+  }
+
+  // Smooth-scroll duration depends on how far the jump is, so a fixed delay
+  // either fires early on long jumps or dawdles on short ones. Wait for the
+  // scroll position to actually stop moving instead.
+  // Polled on a timer rather than requestAnimationFrame: rAF is suspended while
+  // the document is hidden, which would strand the trace on a background tab.
+  function afterScrollSettles(fn) {
+    var last = window.scrollY, still = 0, ticks = 0;
+    var timer = setInterval(function () {
+      var y = window.scrollY;
+      still = (y === last) ? still + 1 : 0;
+      last = y;
+      if (still >= 3 || ++ticks > 200) { // ~60ms at rest, 4s hard cap
+        clearInterval(timer);
+        fn();
+      }
+    }, 20);
+  }
+
+  function traceHashTarget() {
+    var el = location.hash.length > 1 && document.querySelector(location.hash);
+    if (!el || !el.classList.contains('project')) return;
+    afterScrollSettles(function () { traceCard(el); });
+  }
+
+  window.addEventListener('hashchange', traceHashTarget);
+  traceHashTarget();
+
   // --- Thumbnail lightbox -----------------------------------------
   // Native <dialog> supplies the focus trap, Esc-to-close, and backdrop, so
   // there's nothing here but wiring. Placeholders hold no <img>, so they're
