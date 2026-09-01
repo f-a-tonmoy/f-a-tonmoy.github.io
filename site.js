@@ -156,10 +156,35 @@
       document.documentElement.style.setProperty('--theme-anim-r', endRadius + 'px');
 
       // Newer API (Chrome 125+, Safari 18.2+) accepts {update, types}; older just takes a fn
+      var vt;
       try {
-        document.startViewTransition({ update: apply, types: ['theme'] });
+        vt = document.startViewTransition({ update: apply, types: ['theme'] });
       } catch (err) {
-        document.startViewTransition(apply);
+        vt = document.startViewTransition(apply);
+      }
+
+      // Drive the reveal from here rather than leaning on the CSS keyframes: the
+      // custom properties above do not reach ::view-transition-new(root), so those
+      // keyframes fall back to `50% 50%` and the circle opens from the middle of
+      // the snapshot instead of the button. Passing literal pixels avoids the
+      // substitution entirely. A script animation outranks the CSS one, so the
+      // keyframes stay as a fallback where pseudoElement animation is unsupported.
+      if (vt && vt.ready && document.documentElement.animate) {
+        vt.ready.then(function () {
+          document.documentElement.animate(
+            {
+              clipPath: [
+                'circle(0px at ' + x + 'px ' + y + 'px)',
+                'circle(' + endRadius + 'px at ' + x + 'px ' + y + 'px)'
+              ]
+            },
+            {
+              duration: 500,
+              easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
+              pseudoElement: '::view-transition-new(root)'
+            }
+          );
+        }).catch(function () {});
       }
     });
   }
