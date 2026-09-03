@@ -407,18 +407,26 @@
   if (canHover && !prefersReducedMotion) {
     var glowCards = document.querySelectorAll('.stats > div, .card, .education-grid > article, .profile-panel, .article-card, .timeline-card, .contact');
     glowCards.forEach(function (el) {
+      // Measure once on entry. Reading the rect inside mousemove forces a
+      // synchronous layout on every event — up to 120 a second while hovering,
+      // and the articles page has 89 of these cards.
+      var rect = null;
+      el.addEventListener('mouseenter', function () { rect = el.getBoundingClientRect(); });
       el.addEventListener('mousemove', function (e) {
-        var rect = el.getBoundingClientRect();
+        if (!rect) rect = el.getBoundingClientRect();
         el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
         el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
       });
+      el.addEventListener('mouseleave', function () { rect = null; });
     });
 
     // --- Magnetic primary/secondary buttons ------------------------
     var magnetButtons = document.querySelectorAll('.button');
     magnetButtons.forEach(function (btn) {
+      var bRect = null;
+      btn.addEventListener('mouseenter', function () { bRect = btn.getBoundingClientRect(); });
       btn.addEventListener('mousemove', function (e) {
-        var rect = btn.getBoundingClientRect();
+        var rect = bRect || (bRect = btn.getBoundingClientRect());
         var dx = e.clientX - rect.left - rect.width / 2;
         var dy = e.clientY - rect.top - rect.height / 2;
         // Pull strength ~25% of cursor distance from button center
@@ -426,6 +434,7 @@
         btn.style.setProperty('--mag-y', (dy * 0.25).toFixed(1) + 'px');
       });
       btn.addEventListener('mouseleave', function () {
+        bRect = null;
         btn.style.setProperty('--mag-x', '0px');
         btn.style.setProperty('--mag-y', '0px');
       });
