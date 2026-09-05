@@ -25,7 +25,7 @@
       +   '<a href="/experience.html"' + ariaCurrent('experience') + '>Experience</a>'
       +   '<a href="/research.html"'   + ariaCurrent('research')   + '>Research</a>'
       +   '<a href="/projects.html"'   + ariaCurrent('projects')   + '>Projects</a>'
-      +   '<a href="/writing.html"'    + ariaCurrent('writing')    + '>Articles</a>'
+      +   '<a href="/writing.html"'    + ariaCurrent('writing')    + '>Writing</a>'
       +   '<a class="nav-mobile-action" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>'
       +   '<a class="nav-mobile-action" href="https://linkedin.com/in/f-a-tonmoy" target="_blank" rel="noopener">Contact</a>'
       + '</nav>'

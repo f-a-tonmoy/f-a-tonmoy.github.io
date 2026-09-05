@@ -27,7 +27,7 @@ Data scientist with a background in applied AI research — turning data into in
 | [Experience](https://f-a-tonmoy.github.io/experience.html) | Timeline of roles + education |
 | [Research](https://f-a-tonmoy.github.io/research.html) | Published papers + manuscripts in pipeline |
 | [Projects](https://f-a-tonmoy.github.io/projects.html) | ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
-| [Articles](https://f-a-tonmoy.github.io/writing.html) | 85+ technical articles, filterable + searchable |
+| [Writing](https://f-a-tonmoy.github.io/writing.html) | 85+ technical articles, filterable + searchable |
 
 ---
 
