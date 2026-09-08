@@ -26,10 +26,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=157" />
+    <link rel="stylesheet" href="styles.css?v=160" />
     <script>
       (function () {
         try {
@@ -344,20 +344,6 @@
         </div>
       </section>
 
-      <section class="section now-section reveal" id="now">
-        <div class="now-heading">
-          <p class="section-label">Active Project</p>
-          <h2>An LLM-Powered<br />Research Workflow</h2>
-        </div>
-        <div class="prose now-copy">
-          <p>
-            Building an agentic AI pipeline that connects <strong>RAG</strong>, <strong>LLMs</strong>, and <strong>MCP-connected tools</strong> to enable natural language querying over complex geoscience databases &mdash; part of an NSF-funded geoinformatics research project.
-          </p>
-          <p>
-            The end-to-end stack spans <strong>vector database architecture</strong>, domain-specific embedding models, and LLM optimization, designed to keep outputs grounded in real scientific sources and interpretable to domain experts.
-          </p>
-        </div>
-      </section>
 
 
       <section class="section reveal" id="education">
@@ -390,10 +376,10 @@
       <section class="section reveal" id="writing">
         <div class="section-heading">
           <p class="section-label">Writing</p>
-          <h2>Latest Articles</h2>
+          <h2>Selected Writing</h2>
           <a class="section-link" href="writing.html">All writing</a>
         </div>
-        <div class="article-card-grid" id="recent-articles"></div>
+        <div class="article-card-grid" id="featured-writing"></div>
       </section>
 
       <section class="section contact reveal">
@@ -412,12 +398,17 @@
 
     <script src="site.js?v=26" defer></script>
 
-    <script src="articles.js?v=2"></script>
+    <script src="articles.js?v=5"></script>
     <script>
       (function () {
-        var grid = document.getElementById('recent-articles');
+        var grid = document.getElementById('featured-writing');
         if (!grid || typeof articles === 'undefined') return;
-        grid.innerHTML = articles.slice(0, 6).map(function (article) {
+        // Six hand-picked pieces, one per category. `featured` in articles.js is
+        // the running order, so both the choice and its sequence live with the data.
+        grid.innerHTML = articles
+          .filter(function (a) { return a.featured; })
+          .sort(function (a, b) { return a.featured - b.featured; })
+          .map(function (article) {
           var image = article.image
             ? '<img src="' + article.image + '" alt="" loading="lazy" onerror="this.closest(\'.article-thumb\').classList.add(\'is-empty\'); this.remove();" />'
             : '';

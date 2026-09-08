@@ -713,6 +713,14 @@ h3 {
   position: relative;
 }
 
+/* Real italic, not synthesized — the Fraunces request carries the ital axis. */
+.contact h2 {
+  font-style: italic;
+  /* Holds the break at "… data science, or / AI research." Without it the line
+     takes "AI" too and orphans "research." In ch so it tracks the font size. */
+  max-width: 25ch;
+}
+
 .stats div,
 .card,
 .education-grid article,
@@ -1558,27 +1566,6 @@ sup {
   font-weight: 400;
 }
 
-.now-section {
-  display: grid;
-  grid-template-columns: minmax(500px, 0.92fr) minmax(0, 1fr);
-  gap: 54px;
-  align-items: stretch;
-}
-
-.now-heading {
-  display: flex;
-  flex-direction: column;
-}
-
-.now-heading h2 {
-  margin: auto 0;
-  font-size: clamp(2.75rem, 4vw, 3rem);
-}
-
-.now-copy p:last-child {
-  margin-bottom: 0;
-}
-
 
 .skill-groups {
   display: grid;
@@ -2075,14 +2062,9 @@ sup {
 
   .hero,
   .split,
-  .now-section,
   .contact,
   .timeline-item {
     grid-template-columns: 1fr;
-  }
-
-  .now-heading h2 {
-    margin: 0;
   }
 
   .hero {

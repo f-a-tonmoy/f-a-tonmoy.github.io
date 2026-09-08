@@ -9,7 +9,8 @@ const articles = [
     "title": "Why \"Thinking Mode\" Doesn't Fix AI Hallucinations",
     "url": "https://www.linkedin.com/pulse/why-thinking-mode-doesnt-fix-ai-hallucinations-fahim-ahamed-h9j4e",
     "image": "assets/article-thumbnails/why-thinking-mode-doesnt-fix-ai-hallucinations.jpg",
-    "category": "Generative AI"
+    "category": "Generative AI",
+    "featured": 1
   },
   {
     "title": "Bagging, Boosting, Stacking: Why Each One Works",
@@ -21,13 +22,15 @@ const articles = [
     "title": "Four Ways to Fix Class Imbalance. You've Probably Only Tried One.",
     "url": "https://www.linkedin.com/pulse/four-ways-fix-class-imbalance-youve-probably-only-tried-fahim-ahamed-f6eye",
     "image": "assets/article-thumbnails/four-ways-to-fix-class-imbalance.jpg",
-    "category": "Machine Learning"
+    "category": "Machine Learning",
+    "featured": 4
   },
   {
     "title": "Your Anonymized Data Probably Isn't",
     "url": "https://www.linkedin.com/pulse/your-anonymized-data-probably-isnt-fahim-ahamed-oshye",
     "image": "assets/article-thumbnails/your-anonymized-data-probably-isnt.jpg",
-    "category": "Data Science"
+    "category": "Data Science",
+    "featured": 3
   },
   {
     "title": "Your Cross-Validation Is Lying to You",
@@ -39,7 +42,8 @@ const articles = [
     "title": "Why Smart People Still Get Fooled by AI",
     "url": "https://www.linkedin.com/pulse/why-smart-people-still-get-fooled-ai-fahim-ahamed-fadue/",
     "image": "assets/article-thumbnails/why-smart-people-still-get-fooled-by-ai.jpg",
-    "category": "Responsible AI"
+    "category": "Responsible AI",
+    "featured": 2
   },
   {
     "title": "JEPA Explained: Predicting Representations, Not Pixels",
@@ -51,13 +55,15 @@ const articles = [
     "title": "Your XAI Tools Are Both Right. Here's Why They Disagree",
     "url": "https://www.linkedin.com/pulse/your-xai-tools-both-right-heres-why-disagree-fahim-ahamed-18yoe",
     "image": "assets/article-thumbnails/your-xai-tools-are-both-right-here-s-why-they-disagree.jpg",
-    "category": "Explainable AI"
+    "category": "Explainable AI",
+    "featured": 6
   },
   {
     "title": "Backpropagation Explained: How Neural Networks Actually Learn",
     "url": "https://www.linkedin.com/pulse/backpropagation-explained-how-neural-networks-actually-fahim-ahamed-xdwie",
     "image": "assets/article-thumbnails/backpropagation-explained-how-neural-networks-actually-learn.jpg",
-    "category": "Deep Learning"
+    "category": "Deep Learning",
+    "featured": 5
   },
   {
     "title": "Can We Really Trust a p-Value Below 0.05?",
