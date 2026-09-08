@@ -25,6 +25,7 @@
       +   '<a href="/experience.html"' + ariaCurrent('experience') + '>Experience</a>'
       +   '<a href="/research.html"'   + ariaCurrent('research')   + '>Research</a>'
       +   '<a href="/projects.html"'   + ariaCurrent('projects')   + '>Projects</a>'
+      +   '<a href="/data-stories.html"' + ariaCurrent('data-stories') + '>Data Stories</a>'
       +   '<a href="/writing.html"'    + ariaCurrent('writing')    + '>Writing</a>'
       +   '<a class="nav-mobile-action" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>'
       +   '<a class="nav-mobile-action" href="https://linkedin.com/in/f-a-tonmoy" target="_blank" rel="noopener">Contact</a>'
@@ -367,7 +368,7 @@
   // Native <dialog> supplies the focus trap, Esc-to-close, and backdrop, so
   // there's nothing here but wiring. Placeholders hold no <img>, so they're
   // skipped automatically.
-  var zoomThumbs = document.querySelectorAll('.project-thumb img');
+  var zoomThumbs = document.querySelectorAll('.project-thumb img, .story-media img');
   if (zoomThumbs.length) {
     var lightbox = document.createElement('dialog');
     lightbox.className = 'lightbox';
@@ -376,7 +377,7 @@
     var lightboxImg = lightbox.querySelector('img');
 
     zoomThumbs.forEach(function (img) {
-      var holder = img.closest('.project-thumb');
+      var holder = img.closest('.project-thumb, .story-media');
       holder.classList.add('is-zoomable');
       holder.setAttribute('role', 'button');
       holder.setAttribute('tabindex', '0');

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Stories · Fahim Ahamed | Data &amp; AI</title>
+    <meta name="description" content="Long-form data analyses by Fahim Ahamed, built as reproducible Python pipelines and published as self-contained interactive articles." />
+    <link rel="canonical" href="https://f-a-tonmoy.github.io/data-stories.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://f-a-tonmoy.github.io/data-stories.html" />
+    <meta property="og:title" content="Data Stories · Fahim Ahamed | Data &amp; AI" />
+    <meta property="og:description" content="Each story starts with a published figure and asks whether it means what people assume." />
+    <meta property="og:image" content="https://f-a-tonmoy.github.io/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Data Stories · Fahim Ahamed" />
+    <meta name="twitter:description" content="Each story starts with a published figure and asks whether it means what people assume." />
+    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0f766e" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131c18" />
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=143" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          if (saved === 'dark' || saved === 'light') {
+            document.documentElement.setAttribute('data-theme', saved);
+          }
+        } catch (err) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <p class="eyebrow">Data Stories</p>
+        <h1>What the numbers actually say</h1>
+        <p class="lede">
+          Long-form analyses built as reproducible Python pipelines and published as
+          self-contained interactive articles. Each one starts with a published figure
+          and asks whether it means what people assume.
+        </p>
+      </section>
+
+      <section class="section page-section">
+        <div class="story-list">
+          <article class="story" id="s-us-opioid-treatment-gap">
+            <span class="story-media">
+              <img src="assets/data-stories/us-opioid-treatment-gap.jpg" alt="" loading="lazy" />
+            </span>
+            <div class="story-body">
+              <p class="story-index"><span>01</span></p>
+              <h2 class="story-title">
+                <a href="https://f-a-tonmoy.github.io/us-opioid-treatment-gap/" target="_blank" rel="noopener">One Facility for Every Eighteen Deaths</a>
+              </h2>
+              <p class="story-dek">
+                Eleven years of federal overdose mortality, 612,499 deaths, set against every
+                treatment facility in SAMHSA's national locator. Whether the states carrying
+                the heaviest burden hold the capacity to match, and where that breaks down.
+              </p>
+              <ul class="story-meta">
+                <li>CDC WONDER, SAMHSA, Census ACS</li>
+                <li>612,499 deaths</li>
+                <li>2014&ndash;2024</li>
+              </ul>
+              <details class="story-method">
+                <summary>How it was built</summary>
+                <ul class="detail-list">
+                  <li>Merged two CDC WONDER databases into a single 2014&ndash;2024 series, validated to the death against published NCHS totals.</li>
+                  <li>Tiered SAMHSA's 7,756 facilities by whether they can dispense methadone.</li>
+                  <li>Rank-correlated burden against capacity across 51 jurisdictions, then isolated the widest rank gaps.</li>
+                  <li>Cross-checked against deaths per facility to catch small-state artifacts.</li>
+                </ul>
+                <p class="project-tools">Python, pandas, SciPy, Plotly, Requests, HTML/CSS, JavaScript</p>
+              </details>
+              <p class="story-links">
+                <a class="project-link" href="https://f-a-tonmoy.github.io/us-opioid-treatment-gap/" target="_blank" rel="noopener">Read the story</a>
+                <span class="project-link-sep" aria-hidden="true">|</span>
+                <a class="project-link" href="https://github.com/f-a-tonmoy/us-opioid-treatment-gap" target="_blank" rel="noopener">GitHub</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="story" id="s-nyc-mental-health">
+            <span class="story-media">
+              <img src="assets/data-stories/nyc-mental-health.jpg" alt="" loading="lazy" />
+            </span>
+            <div class="story-body">
+              <p class="story-index"><span>02</span></p>
+              <h2 class="story-title">
+                <a href="https://f-a-tonmoy.github.io/nyc-mental-health-calls/" target="_blank" rel="noopener">New York City's Quietest Emergency</a>
+              </h2>
+              <p class="story-dek">
+                Eight years of NYC 911 mental health crisis calls, 1.35 million of them. Where
+                the burden actually falls once precinct population is accounted for, and how it
+                lines up with the city's clinician-response coverage.
+              </p>
+              <ul class="story-meta">
+                <li>NYC Open Data, NYPD</li>
+                <li>1,348,385 incidents</li>
+                <li>2018&ndash;2025</li>
+              </ul>
+              <details class="story-method">
+                <summary>How it was built</summary>
+                <ul class="detail-list">
+                  <li>Pulled 2.59M NYC 911 dispatch rows in year-partitioned, resumable batches with per-year verification counts.</li>
+                  <li>Deduplicated to 1,348,385 EDP incidents on the CAD event id.</li>
+                  <li>Spatially joined 2020 census blocks to 78 precincts for per-resident baselines.</li>
+                  <li>Separated the fall in calls from the fall in units dispatched per call.</li>
+                </ul>
+                <p class="project-tools">Python, pandas, NumPy, GeoPandas, Plotly, HTML/CSS, JavaScript</p>
+              </details>
+              <p class="story-links">
+                <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-mental-health-calls/" target="_blank" rel="noopener">Read the story</a>
+                <span class="project-link-sep" aria-hidden="true">|</span>
+                <a class="project-link" href="https://github.com/f-a-tonmoy/nyc-mental-health-calls" target="_blank" rel="noopener">GitHub</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="story" id="s-nyc-restaurant-inspections">
+            <span class="story-media">
+              <img src="assets/data-stories/nyc-restaurant-inspections.jpg" alt="" loading="lazy" />
+            </span>
+            <div class="story-body">
+              <p class="story-index"><span>03</span></p>
+              <h2 class="story-title">
+                <a href="https://f-a-tonmoy.github.io/nyc-restaurant-inspections/" target="_blank" rel="noopener">The Quiet Math of NYC's Restaurant Inspections</a>
+              </h2>
+              <p class="story-dek">
+                An analytical look at ~83,000 NYC health inspections across ~27,000 restaurants.
+                What an A grade actually signals, where the system bends around the grade
+                boundary, and how few kitchens hold a clean inspection history.
+              </p>
+              <ul class="story-meta">
+                <li>NYC Open Data, DOHMH</li>
+                <li>83,354 inspections</li>
+                <li>2022&ndash;2026</li>
+              </ul>
+              <details class="story-method">
+                <summary>How it was built</summary>
+                <ul class="detail-list">
+                  <li>Collapsed 296,393 DOHMH violation rows into 83,354 inspections across 27,350 restaurants.</li>
+                  <li>Windowed to mid-2022 onward, where the rolling three-year file reaches full volume.</li>
+                  <li>Measured closure rates by violation code against the citywide baseline.</li>
+                  <li>Traced score distribution at the A/B boundary and re-inspection recovery over time.</li>
+                </ul>
+                <p class="project-tools">Python, pandas, NumPy, Plotly, Pillow, HTML/CSS, JavaScript</p>
+              </details>
+              <p class="story-links">
+                <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-restaurant-inspections/" target="_blank" rel="noopener">Read the story</a>
+                <span class="project-link-sep" aria-hidden="true">|</span>
+                <a class="project-link" href="https://github.com/f-a-tonmoy/nyc-restaurant-inspections" target="_blank" rel="noopener">GitHub</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+    </footer>
+
+    <script src="site.js?v=25"></script>
+  </body>
+</html>

@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=136" />
+    <link rel="stylesheet" href="styles.css?v=143" />
     <script>
       (function () {
         try {
@@ -44,8 +44,8 @@
         <p class="eyebrow">Projects</p>
         <h1>Applied models, analytics, & software systems</h1>
         <p class="lede">
-          A selection of case studies, machine learning, deep learning, public health analytics,
-          cybersecurity, recommendation systems, and software engineering projects.
+          Machine learning, deep learning, public health analytics, cybersecurity,
+          recommendation systems, and software engineering, end to end.
         </p>
       </section>
 
@@ -54,17 +54,6 @@
               <p class="section-label">At a glance</p>
             </div>
             <div class="portfolio-map">
-              <div class="map-group" data-group="case-studies">
-                <a class="map-group-head" href="#case-studies">Case Studies <span>2</span></a>
-                <div class="map-tiles">
-                  <a class="map-tile" href="#p-nyc-mental-health" title="New York City's Quietest Emergency">
-                    <img src="assets/case-study-thumbnails/nyc-mental-health.jpg" alt="New York City's Quietest Emergency" loading="lazy" />
-                  </a>
-                  <a class="map-tile" href="#p-nyc-restaurant-inspections" title="The Quiet Math of NYC's Restaurant Inspections">
-                    <img src="assets/case-study-thumbnails/nyc-restaurant-inspections.jpg" alt="The Quiet Math of NYC's Restaurant Inspections" loading="lazy" />
-                  </a>
-                </div>
-              </div>
               <div class="map-group" data-group="analytics">
                 <a class="map-group-head" href="#analytics">Analytics &amp; Forecasting <span>2</span></a>
                 <div class="map-tiles">
@@ -115,52 +104,6 @@
               </div>
             </div>
           </section>
-      <section class="section page-section" id="case-studies">
-        <div class="section-heading">
-          <p class="section-label">Case Studies</p>
-          <h2>Data Stories</h2>
-        </div>
-        <p class="section-intro">
-          Long-form analyses built as reproducible Python pipelines and published as
-          self-contained interactive articles.
-        </p>
-        <div class="project-list">
-          <article class="project has-media" id="p-nyc-mental-health">
-            <span class="project-thumb">
-              <img src="assets/case-study-thumbnails/nyc-mental-health.jpg" alt="" loading="lazy" />
-            </span>
-            <div>
-              <h3>New York City's Quietest Emergency</h3>
-              <ul class="detail-list">
-                <li>Pulled <strong>2.59M</strong> NYC 911 dispatch rows in year-partitioned, resumable batches with per-year verification counts, deduplicated to <strong>1,348,385</strong> EDP crisis incidents (2018-2025), and spatially joined census blocks to precincts for per-resident baselines.</li>
-                <li>Examined where crisis burden falls once <strong>precinct population</strong> is accounted for, and whether the raw decline reflects fewer people in crisis or a change in how calls are dispatched.</li>
-                <li>Broke the eight-year window down by hour, weekday, and season. Measured how unevenly volume spreads across the city's <strong>78 precincts</strong>.</li>
-              </ul>
-              <p class="project-tools">Python, pandas, NumPy, GeoPandas, Plotly, HTML/CSS, JavaScript</p>
-              <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-mental-health-case-study/" target="_blank" rel="noopener">Read article</a>
-              <span class="project-link-sep" aria-hidden="true">|</span>
-              <a class="project-link" href="https://github.com/f-a-tonmoy/nyc-mental-health-case-study" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="project has-media" id="p-nyc-restaurant-inspections">
-            <span class="project-thumb">
-              <img src="assets/case-study-thumbnails/nyc-restaurant-inspections.jpg" alt="" loading="lazy" />
-            </span>
-            <div>
-              <h3>The Quiet Math of NYC's Restaurant Inspections</h3>
-              <ul class="detail-list">
-                <li>Built a reproducible <strong>ETL pipeline</strong>, collapsing <strong>296,393</strong> NYC DOHMH violation rows into 83,354 inspections across 27,350 restaurants.</li>
-                <li>Investigated what an <strong>A grade</strong> actually signals, what the pile-ups at the passing ('A') grade boundary indicate, and which violations trigger <strong>on-the-spot closures</strong>.</li>
-                <li>Traced how quickly <strong>failing kitchens</strong> recover, how cuisines cluster geographically, and how few restaurants hold a clean inspection history.</li>
-              </ul>
-              <p class="project-tools">Python, pandas, NumPy, Plotly, Pillow, HTML/CSS, JavaScript</p>
-              <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-inspections-case-study/" target="_blank" rel="noopener">Read article</a>
-              <span class="project-link-sep" aria-hidden="true">|</span>
-              <a class="project-link" href="https://github.com/f-a-tonmoy/nyc-inspections-case-study" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-        </div>
-      </section>
 
       <section class="section page-section" id="analytics">
         <div class="section-heading">
@@ -358,7 +301,7 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="site.js?v=23" defer></script>
+    <script src="site.js?v=25" defer></script>
   </body>
 </html>
 

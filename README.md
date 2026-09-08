@@ -27,6 +27,7 @@ Data scientist with a background in applied AI research — turning data into in
 | [Experience](https://f-a-tonmoy.github.io/experience.html) | Timeline of roles + education |
 | [Research](https://f-a-tonmoy.github.io/research.html) | Published papers + manuscripts in pipeline |
 | [Projects](https://f-a-tonmoy.github.io/projects.html) | ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
+| [Data Stories](https://f-a-tonmoy.github.io/data-stories.html) | Long-form analyses of public datasets, published as interactive articles |
 | [Writing](https://f-a-tonmoy.github.io/writing.html) | 85+ technical articles, filterable + searchable |
 
 ---
@@ -37,13 +38,14 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 
 ```
 .
-├── index.html / experience.html / research.html / projects.html / writing.html
+├── index.html / experience.html / research.html / projects.html
+│   data-stories.html / writing.html
 ├── 404.html       # branded not-found page
 ├── styles.css     # single stylesheet
 ├── site.js        # shared chrome injection + interactivity
 ├── articles.js    # article data
 ├── .nojekyll      # tells GitHub Pages to skip Jekyll (pure-HTML site)
-└── assets/        # article, case-study & project thumbnails, school logos,
+└── assets/        # article, data-story & project thumbnails, school logos,
                    #   headshot, favicon, OG image, resume
 ```
 
