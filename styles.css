@@ -813,6 +813,12 @@ h3 {
 
 .split h2 {
   line-height: 1.06; /* tighter than the global 1.18 — this h2 has no descenders that need extra room */
+  /* Sits in the narrower .split column and runs three lines, so it reads larger
+     than the full-width section headings at the same size. */
+  font-size: clamp(2rem, 3.6vw, 2.6rem);
+  /* Holds the break at "A data scientist's / craft, with a / researcher's
+     depth". In ch so it tracks the font size. */
+  max-width: 14ch;
 }
 
 .prose {
