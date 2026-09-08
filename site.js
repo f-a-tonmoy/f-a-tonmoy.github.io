@@ -406,7 +406,7 @@
   // --- Cursor-aware glow on cards ---------------------------------
   // Only wires up on hover-capable, no-reduced-motion devices
   if (canHover && !prefersReducedMotion) {
-    var glowCards = document.querySelectorAll('.stats > div, .card, .education-grid > article, .profile-panel, .article-card, .timeline-card, .contact');
+    var glowCards = document.querySelectorAll('.stats > div, .card, .education-grid > article, .profile-panel, .article-card, .project, .timeline-card, .contact');
     glowCards.forEach(function (el) {
       // Measure once on entry. Reading the rect inside mousemove forces a
       // synchronous layout on every event — up to 120 a second while hovering,

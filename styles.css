@@ -409,7 +409,7 @@ h1 {
   max-width: 11ch;
   margin-bottom: 20px;
   font-family: var(--font-display);
-  font-size: clamp(4.25rem, 9.5vw, 7.5rem);
+  font-size: clamp(4.25rem, 9.5vw, 6.6rem);
   font-weight: 600;
   line-height: 0.92;
   letter-spacing: -0.03em;
@@ -418,7 +418,7 @@ h1 {
 h2 {
   margin-bottom: 0;
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  font-size: clamp(2.1rem, 4.2vw, 3rem);
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -0.02em;
@@ -727,6 +727,7 @@ h3 {
 .education-grid article::before,
 .profile-panel::before,
 .article-card::before,
+.project::before,
 .timeline-card::before,
 .contact::before {
   content: "";
@@ -734,6 +735,7 @@ h3 {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  border-radius: inherit; /* .project keeps overflow:visible for the trace, so clip here */
   background: radial-gradient(140px circle at var(--mx, -200px) var(--my, -200px), var(--card-glow), transparent 65%);
   opacity: 0;
   transition: opacity 0.3s var(--ease-out);
@@ -744,6 +746,7 @@ h3 {
 .education-grid article:hover::before,
 .profile-panel:hover::before,
 .article-card:hover::before,
+.project:hover::before,
 .timeline-card:hover::before,
 .contact:hover::before {
   opacity: 1;
@@ -754,6 +757,7 @@ h3 {
 .education-grid article > *,
 .profile-panel > *,
 .article-card > *,
+.project > *,
 .timeline-card > *,
 .contact > * {
   position: relative;
@@ -869,11 +873,17 @@ h3 {
 
 .page-hero h1 {
   max-width: 1040px;
-  font-size: clamp(3rem, 5.7vw, 5rem);
+  font-size: clamp(2.7rem, 5.7vw, 4.4rem);
   line-height: 1.18;
   /* Keeps a short last word off a line of its own. Ignored by older browsers,
      which fall back to ordinary wrapping. */
   text-wrap: balance;
+}
+
+/* A title short enough to sit on one line, held to two on purpose. In ch so the
+   cap tracks the font size; text-wrap: balance picks the split. */
+.page-hero h1.two-line {
+  max-width: 18ch;
 }
 
 .page-section {
@@ -1042,6 +1052,7 @@ h3 {
 /* Same surface as every other card on the site (.card, .stats div, education),
    so the project rows read as cards rather than a hairline-separated list. */
 .project {
+  position: relative; /* containing block for the glow ::before and the landing trace */
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 0.34fr);
   gap: 24px;
@@ -1562,10 +1573,6 @@ sup {
   margin-bottom: 0;
 }
 
-
-.skills-heading {
-  margin-bottom: 28px;
-}
 
 .skill-groups {
   display: grid;
@@ -2375,8 +2382,12 @@ sup {
     font-size: clamp(3.4rem, 18vw, 4.8rem);
   }
 
+  /* Share the row rather than stacking: three full-width buttons cost ~200px of
+     hero on a phone. min-width lets them wrap only if the labels genuinely
+     cannot fit. A lone button (.contact-actions) still fills the row. */
   .button {
-    width: 100%;
+    flex: 1 1 auto;
+    min-width: 92px;
   }
 
   .stats div,
