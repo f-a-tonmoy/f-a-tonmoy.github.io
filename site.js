@@ -28,11 +28,11 @@
       +   '<a href="/data-stories.html"' + ariaCurrent('data-stories') + '>Data Stories</a>'
       +   '<a href="/writing.html"'    + ariaCurrent('writing')    + '>Writing</a>'
       +   '<a class="nav-mobile-action" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>'
-      +   '<a class="nav-mobile-action" href="https://linkedin.com/in/f-a-tonmoy" target="_blank" rel="noopener">Contact</a>'
+      +   '<a class="nav-mobile-action" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>'
       + '</nav>'
       + '<div class="header-actions">'
       +   '<a class="header-cta" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>'
-      +   '<a class="header-cta" href="https://linkedin.com/in/f-a-tonmoy" target="_blank" rel="noopener">Contact</a>'
+      +   '<a class="header-cta" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>'
       + '</div>'
       + '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">'
       +   '<span></span><span></span><span></span>'
@@ -102,15 +102,17 @@
     });
   }
 
-  // Back-to-top button (visible after 500px scroll)
+  // Scroll state: back-to-top visibility (after 500px) and the header's lifted
+  // edge (after 40px). One listener, since both only read window.scrollY.
   var btt = document.querySelector('.back-to-top');
-  if (btt) {
+  if (btt || header) {
     var onScroll = function () {
-      btt.classList.toggle('visible', window.scrollY > 500);
+      if (btt) btt.classList.toggle('visible', window.scrollY > 500);
+      if (header) header.classList.toggle('is-scrolled', window.scrollY > 40);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-    btt.addEventListener('click', function () {
+    if (btt) btt.addEventListener('click', function () {
       var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
     });
@@ -247,18 +249,29 @@
   var canHover = window.matchMedia('(hover: hover)').matches;
 
   // --- Copy-email button + toast -----------------------------------
-  var copyBtn = document.querySelector('.copy-email');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', function () {
-      var email = copyBtn.dataset.email || '';
-      var done = function (ok) {
-        showToast(ok ? 'Email copied to clipboard' : 'Couldn’t copy — try selecting');
-      };
-      navigator.clipboard.writeText(email).then(function () { done(true); }, function () { done(false); });
+  // mailto: is the right affordance on a phone (taps straight into the mail app)
+  // but can be a dead click on a desktop with no registered client. So touch
+  // navigates and pointer devices copy instead. canHover is the proxy for "has a
+  // real pointer" -- a width query would misfire on a narrow desktop window.
+  var copyTargets = document.querySelectorAll('.copy-email, a[href^="mailto:"]');
+  Array.prototype.forEach.call(copyTargets, function (el) {
+    el.addEventListener('click', function (ev) {
+      // The footer copy button has no href, so it copies on every device.
+      if (!canHover && el.hasAttribute('href')) return;
+      ev.preventDefault();
+      var email = el.dataset.email || (el.getAttribute('href') || '').replace('mailto:', '');
+      if (!navigator.clipboard) { showToast(email); return; }
+      navigator.clipboard.writeText(email).then(
+        function () { showToast('Email copied to clipboard', el); },
+        function () { showToast('Copy failed — ' + email, el); }
+      );
     });
-  }
+  });
 
-  function showToast(msg) {
+  // Pass `anchor` to park the toast against the control that triggered it. The
+  // default bottom-of-window spot is a whole viewport away from a click in the
+  // header, so a visitor reads "nothing happened" before they ever look down.
+  function showToast(msg, anchor) {
     var toast = document.querySelector('.toast');
     if (!toast) {
       toast = document.createElement('div');
@@ -268,8 +281,24 @@
       document.body.appendChild(toast);
     }
     toast.textContent = msg;
-    // Force reflow so the transition runs even if the toast was just created
+    toast.classList.toggle('anchored', !!anchor);
+    // Force reflow so the transition runs even if the toast was just created,
+    // and so offsetHeight below measures the new text.
     void toast.offsetWidth;
+    if (anchor) {
+      var r = anchor.getBoundingClientRect();
+      var y = r.bottom + 10;
+      // clientWidth/Height, not innerWidth/Height: those include the scrollbar,
+      // which position:fixed does not, and the toast would sit a scrollbar-width off.
+      var vw = document.documentElement.clientWidth;
+      if (y + toast.offsetHeight > document.documentElement.clientHeight - 8) y = r.top - toast.offsetHeight - 10;
+      // Centred on the trigger, then clamped: the header CTAs sit close to the
+      // viewport edge, where a toast wider than its trigger would overflow.
+      var half = toast.offsetWidth / 2;
+      var cx = Math.min(Math.max((r.left + r.right) / 2, half + 8), vw - half - 8);
+      toast.style.setProperty('--toast-x', Math.round(cx) + 'px');
+      toast.style.setProperty('--toast-y', Math.round(y) + 'px');
+    }
     toast.classList.add('visible');
     clearTimeout(toast._timer);
     toast._timer = setTimeout(function () {

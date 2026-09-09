@@ -186,6 +186,14 @@ a {
   -webkit-backdrop-filter: saturate(160%) blur(8px);
   box-shadow: 0 1px 0 rgba(44, 35, 20, 0.06);
   transform: translateZ(0);
+  transition: border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+
+/* Sticky but visually static reads as painted on. Once the page has moved,
+   firm up the edge so the bar sits above the content sliding under it. */
+.site-header.is-scrolled {
+  border-color: var(--line);
+  box-shadow: var(--shadow-soft);
 }
 
 /* On narrow desktop widths (901-1280px) the floating theme toggle (top-right, 44px
@@ -1992,6 +2000,26 @@ sup {
 .toast.visible {
   transform: translate(-50%, 0);
   opacity: 1;
+}
+
+/* Parked against the control that triggered it (JS sets the two custom props
+   from the trigger's rect). JS centres it on the trigger and clamps it to the
+   viewport, since a toast is usually wider than the control that fired it. */
+.toast.anchored {
+  top: var(--toast-y);
+  left: var(--toast-x);
+  bottom: auto;
+  right: auto;
+  /* Setting only `left` leaves the available width as the gap to the right edge,
+     which wraps the text for any trigger near that edge. max-content keeps the
+     measured width independent of where it is parked. */
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  transform: translate(-50%, -6px);
+}
+
+.toast.anchored.visible {
+  transform: translate(-50%, 0);
 }
 
 .back-to-top {
