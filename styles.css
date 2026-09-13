@@ -21,6 +21,9 @@
   --button-secondary-bg: rgba(255, 255, 255, 0.62);
   --skill-chip-ink: #17423d;
   --on-accent: #ffffff;
+  --thumb-canvas: #fcfaf8;  /* matches CANVAS in make_thumbnails.py: the tile
+                               letterboxes 16:9 art, so the strips must be the
+                               same tone as the artwork's own ground */
   --hover-bg: rgba(15, 118, 110, 0.08);
   --scrollbar-thumb: rgba(15, 118, 110, 0.45);
   --focus-ring: rgba(15, 118, 110, 0.18);
@@ -53,6 +56,7 @@
   --button-secondary-bg: rgba(255, 255, 255, 0.04);
   --skill-chip-ink: #b8ebe2;
   --on-accent: #0c1410;
+  --thumb-canvas: #1c2622;  /* --surface, matching the dark artwork's CANVAS */
   --hover-bg: rgba(77, 208, 196, 0.12);
   --scrollbar-thumb: rgba(77, 208, 196, 0.32);
   --focus-ring: rgba(77, 208, 196, 0.24);
@@ -84,6 +88,7 @@
     --button-secondary-bg: rgba(255, 255, 255, 0.04);
     --skill-chip-ink: #b8ebe2;
     --on-accent: #0c1410;
+    --thumb-canvas: #1c2622;
     --hover-bg: rgba(77, 208, 196, 0.12);
     --scrollbar-thumb: rgba(77, 208, 196, 0.32);
     --focus-ring: rgba(77, 208, 196, 0.24);
@@ -1188,7 +1193,7 @@ sup {
   min-height: 0;
   border: 1px solid var(--line-soft);
   border-radius: 5px;
-  background: #fcfaf8;
+  background: var(--thumb-canvas);
   transition: border-color 0.18s var(--ease-out), transform 0.18s var(--ease-out);
 }
 

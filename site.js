@@ -118,6 +118,34 @@
     });
   }
 
+  // --- Theme-matched thumbnail art --------------------------------
+  // The project thumbnails are baked raster charts, so they cannot follow CSS
+  // tokens. make_thumbnails.py emits a light/ and a dark/ set; swap the folder
+  // segment to match the active theme. Runs here, as early as site.js can, so
+  // the lazy thumbnails further down the page are fetched once, in the right set.
+  function currentTheme() {
+    var set = document.documentElement.getAttribute('data-theme');
+    if (set === 'light' || set === 'dark') return set;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function syncThumbArt() {
+    var dark = currentTheme() === 'dark';
+    var from = dark ? '/light/' : '/dark/';
+    var to = dark ? '/dark/' : '/light/';
+    document.querySelectorAll('.project-thumb img, .map-tile img').forEach(function (img) {
+      var src = img.getAttribute('src') || '';
+      if (src.indexOf(from) !== -1) img.setAttribute('src', src.split(from).join(to));
+    });
+  }
+
+  syncThumbArt();
+
+  // Follow the OS only while the visitor has expressed no preference of their own.
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+    if (!document.documentElement.getAttribute('data-theme')) syncThumbArt();
+  });
+
   // Theme toggle (persists to localStorage; theme-init script in <head> handles the cold-load)
   // Uses the View Transitions API for a circular reveal animation from the click point.
   // Gracefully falls back to instant toggle on unsupported browsers and reduced-motion users.
@@ -135,6 +163,7 @@
       var apply = function () {
         document.documentElement.setAttribute('data-theme', next);
         try { localStorage.setItem('theme', next); } catch (err) {}
+        syncThumbArt(); // baked art can't follow tokens; swap it with the theme
       };
 
       var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
