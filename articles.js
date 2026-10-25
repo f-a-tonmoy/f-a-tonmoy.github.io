@@ -540,3 +540,27 @@ const articles = [
     "category": "Responsible AI"
   }
 ];
+
+// Shared by index.html and writing.html. Article fields land inside an innerHTML
+// template, so anything with a quote or angle bracket would break out of the markup;
+// titles already contain quotes and apostrophes.
+function esc(value) {
+  return String(value == null ? '' : value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function articleCard(article) {
+  const image = article.image
+    ? `<img src="${esc(article.image)}" alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />`
+    : '';
+  return `<a class="article-card" href="${esc(article.url)}" target="_blank" rel="noopener">`
+    + `<span class="article-thumb ${article.image ? '' : 'is-empty'}" data-fallback="${esc(article.category)}">${image}</span>`
+    + `<span class="article-body">`
+    + `<span class="article-category">${esc(article.category)}</span>`
+    + `<span class="article-title">${esc(article.title)}</span>`
+    + `</span></a>`;
+}

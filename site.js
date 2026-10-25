@@ -8,17 +8,30 @@
   // ============================================================
 
   var path = window.location.pathname;
-  var currentPage = (path.split('/').pop() || 'index.html').toLowerCase();
+  var currentPage = (function () {
+    if (/\/experience\.html$/i.test(path))   return 'experience';
+    if (/\/research\.html$/i.test(path))     return 'research';
+    if (/\/projects\.html$/i.test(path))     return 'projects';
+    if (/\/data-stories\.html$/i.test(path)) return 'data-stories';
+    if (/\/writing\.html$/i.test(path))      return 'writing';
+    return null; // home, 404, anything else
+  })();
 
   function ariaCurrent(name) {
-    return currentPage === name + '.html' ? ' aria-current="page"' : '';
+    return currentPage === name ? ' aria-current="page"' : '';
   }
 
   function headerHTML() {
     return ''
+      + '<div class="header-inner">'
       + '<a class="brand" href="/" aria-label="Home">'
+      // One continuous stroke: apex, left roof, left wall, floor in to the
+      // doorway, up and over the opening, back out along the floor, right wall,
+      // closed to the apex. The door is a notch out of the floor, not a shape.
+      // Reference proportions: roof 36% / walls 64% of height, doorway 33% of
+      // the house width and 64% of the wall height.
       +   '<svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">'
-      +     '<path d="M3.75 10.5 12 3.75l8.25 6.75v8.25a1.5 1.5 0 0 1-1.5 1.5h-4.5v-5.5h-4.5v5.5h-4.5a1.5 1.5 0 0 1-1.5-1.5V10.5Z" />'
+      +     '<path d="M12 3 3.95 9.5V21h5.35v-7.4h5.4V21h5.35V9.5Z" />'
       +   '</svg>'
       + '</a>'
       + '<nav class="nav" aria-label="Primary navigation">'
@@ -36,7 +49,8 @@
       + '</div>'
       + '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">'
       +   '<span></span><span></span><span></span>'
-      + '</button>';
+      + '</button>'
+      + '</div>';
   }
 
   function footerHTML() {
@@ -55,21 +69,35 @@
       + '</div>';
   }
 
-  function iconButton(cls, label, svg, title) {
+  function makeThemeToggle() {
     var btn = document.createElement('button');
-    btn.className = cls;
+    btn.className = 'theme-toggle';
     btn.type = 'button';
-    btn.setAttribute('aria-label', label);
-    if (title) btn.title = title;
-    btn.innerHTML = svg;
+    btn.setAttribute('aria-label', 'Toggle dark mode');
+    btn.title = 'Toggle theme';
+    btn.innerHTML = ''
+      + '<svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">'
+      +   '<path d="M20.6 13.7A8.6 8.6 0 1 1 10.3 3.4a6.8 6.8 0 0 0 10.3 10.3z"/>'
+      + '</svg>'
+      + '<svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">'
+      +   '<circle cx="12" cy="12" r="4.2"/>'
+      +   '<path d="M12 2.4v2.3M12 19.3v2.3M21.6 12h-2.3M4.7 12H2.4"/>'
+      +   '<path d="m18.8 5.2-1.6 1.6M6.8 17.2l-1.6 1.6M18.8 18.8l-1.6-1.6M6.8 6.8 5.2 5.2"/>'
+      + '</svg>';
     return btn;
   }
 
-  var THEME_SVG = ''
-    + '<svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>'
-    + '<svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-6a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm11-7a1 1 0 0 1-1 1h-2a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zM4 12a1 1 0 0 1-1 1H1a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm15.07-7.07a1 1 0 0 1 0 1.41l-1.41 1.42a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zM7.76 16.24a1 1 0 0 1 0 1.41l-1.41 1.42a1 1 0 1 1-1.42-1.42l1.42-1.41a1 1 0 0 1 1.41 0zm11.31 2.83a1 1 0 0 1-1.41 0l-1.42-1.41a1 1 0 1 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41zM7.76 7.76a1 1 0 0 1-1.41 0L4.93 6.35a1 1 0 0 1 1.42-1.42l1.41 1.42a1 1 0 0 1 0 1.41z"/></svg>';
-
-  var TOP_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>';
+  function makeBackToTop() {
+    var btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+      + '<path d="M12 19.5V5.2"/>'
+      + '<path d="M5.4 11.8 12 5.2l6.6 6.6"/>'
+      + '</svg>';
+    return btn;
+  }
 
   // Populate header (children.length ignores whitespace text nodes between tags)
   var header = document.querySelector('.site-header');
@@ -80,12 +108,8 @@
   if (footer && footer.children.length === 0) footer.innerHTML = footerHTML();
 
   // Append floating buttons (idempotent — skips if already present in HTML)
-  if (!document.querySelector('.theme-toggle')) {
-    document.body.appendChild(iconButton('theme-toggle', 'Toggle dark mode', THEME_SVG, 'Toggle theme'));
-  }
-  if (!document.querySelector('.back-to-top')) {
-    document.body.appendChild(iconButton('back-to-top', 'Back to top', TOP_SVG));
-  }
+  if (!document.querySelector('.theme-toggle')) document.body.appendChild(makeThemeToggle());
+  if (!document.querySelector('.back-to-top')) document.body.appendChild(makeBackToTop());
 
   // ============================================================
   //  2. Wire up handlers (run AFTER injection so elements exist)
@@ -103,7 +127,7 @@
   }
 
   // Scroll state: back-to-top visibility (after 500px) and the header's lifted
-  // edge (after 40px). One listener, since both only read window.scrollY.
+  // edge (after 40px). One listener drives both.
   var btt = document.querySelector('.back-to-top');
   if (btt || header) {
     var onScroll = function () {
@@ -112,39 +136,14 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-    if (btt) btt.addEventListener('click', function () {
+  }
+
+  if (btt) {
+    btt.addEventListener('click', function () {
       var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
     });
   }
-
-  // --- Theme-matched thumbnail art --------------------------------
-  // The project thumbnails are baked raster charts, so they cannot follow CSS
-  // tokens. make_thumbnails.py emits a light/ and a dark/ set; swap the folder
-  // segment to match the active theme. Runs here, as early as site.js can, so
-  // the lazy thumbnails further down the page are fetched once, in the right set.
-  function currentTheme() {
-    var set = document.documentElement.getAttribute('data-theme');
-    if (set === 'light' || set === 'dark') return set;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
-  function syncThumbArt() {
-    var dark = currentTheme() === 'dark';
-    var from = dark ? '/light/' : '/dark/';
-    var to = dark ? '/dark/' : '/light/';
-    document.querySelectorAll('.project-thumb img, .map-tile img').forEach(function (img) {
-      var src = img.getAttribute('src') || '';
-      if (src.indexOf(from) !== -1) img.setAttribute('src', src.split(from).join(to));
-    });
-  }
-
-  syncThumbArt();
-
-  // Follow the OS only while the visitor has expressed no preference of their own.
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-    if (!document.documentElement.getAttribute('data-theme')) syncThumbArt();
-  });
 
   // Theme toggle (persists to localStorage; theme-init script in <head> handles the cold-load)
   // Uses the View Transitions API for a circular reveal animation from the click point.
@@ -188,35 +187,10 @@
       document.documentElement.style.setProperty('--theme-anim-r', endRadius + 'px');
 
       // Newer API (Chrome 125+, Safari 18.2+) accepts {update, types}; older just takes a fn
-      var vt;
       try {
-        vt = document.startViewTransition({ update: apply, types: ['theme'] });
+        document.startViewTransition({ update: apply, types: ['theme'] });
       } catch (err) {
-        vt = document.startViewTransition(apply);
-      }
-
-      // Drive the reveal from here rather than leaning on the CSS keyframes: the
-      // custom properties above do not reach ::view-transition-new(root), so those
-      // keyframes fall back to `50% 50%` and the circle opens from the middle of
-      // the snapshot instead of the button. Passing literal pixels avoids the
-      // substitution entirely. A script animation outranks the CSS one, so the
-      // keyframes stay as a fallback where pseudoElement animation is unsupported.
-      if (vt && vt.ready && document.documentElement.animate) {
-        vt.ready.then(function () {
-          document.documentElement.animate(
-            {
-              clipPath: [
-                'circle(0px at ' + x + 'px ' + y + 'px)',
-                'circle(' + endRadius + 'px at ' + x + 'px ' + y + 'px)'
-              ]
-            },
-            {
-              duration: 500,
-              easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
-              pseudoElement: '::view-transition-new(root)'
-            }
-          );
-        }).catch(function () {});
+        document.startViewTransition(apply);
       }
     });
   }
@@ -225,11 +199,15 @@
   // reload (which would trigger an unwanted page-transition flicker). Instead, scroll to
   // top + brief pulse on the link as an acknowledgement.
   function isSamePage(href) {
-    var norm = function (p) { return p.replace(/\/index\.html$/, '/').replace(/(.)\/$/, '$1'); };
+    if (!href) return false;
     try {
       var url = new URL(href, window.location.href);
-      return url.origin === window.location.origin
-        && norm(url.pathname) === norm(window.location.pathname);
+      if (url.origin !== window.location.origin) return false;
+      var normalize = function (p) {
+        if (!p || p === '/' || p === '/index.html') return '/';
+        return p.replace(/\/$/, '');
+      };
+      return normalize(url.pathname) === normalize(window.location.pathname);
     } catch (err) {
       return false;
     }
@@ -289,7 +267,7 @@
       if (!canHover && el.hasAttribute('href')) return;
       ev.preventDefault();
       var email = el.dataset.email || (el.getAttribute('href') || '').replace('mailto:', '');
-      if (!navigator.clipboard) { showToast(email); return; }
+      if (!navigator.clipboard) { showToast(email, el); return; }
       navigator.clipboard.writeText(email).then(
         function () { showToast('Email copied to clipboard', el); },
         function () { showToast('Copy failed — ' + email, el); }
@@ -341,19 +319,60 @@
   function thumbFailed(img) {
     var holder = img.closest('.project-thumb');
     if (!holder || holder.classList.contains('is-empty')) return;
-    var heading = img.closest('.project') && img.closest('.project').querySelector('h3');
+    var card = img.closest('.project');
+    var heading = card && card.querySelector('h3');
     holder.className = 'project-thumb is-empty';
     holder.setAttribute('data-fallback', heading ? heading.textContent.trim() : 'Project');
-    ['role', 'tabindex', 'aria-label'].forEach(function (a) { holder.removeAttribute(a); });
     img.remove();
   }
 
+  // A thumbnail that fails after the lightbox wired it must stop being a button, or
+  // it stays a tab stop that opens an empty dialog. Covers the story cards too,
+  // whose own inline onerror only swaps in the placeholder.
+  function unzoom(holder) {
+    holder.classList.remove('is-zoomable');
+    ['role', 'tabindex', 'aria-label'].forEach(function (a) { holder.removeAttribute(a); });
+  }
+
   document.addEventListener('error', function (e) {
-    if (e.target.tagName === 'IMG' && e.target.closest('.project-thumb')) thumbFailed(e.target);
+    if (e.target.tagName !== 'IMG') return;
+    var holder = e.target.closest('.project-thumb, .story-media');
+    if (!holder) return;
+    unzoom(holder);
+    if (holder.classList.contains('project-thumb')) thumbFailed(e.target);
   }, true);
 
   document.querySelectorAll('.project-thumb img').forEach(function (img) {
     if (img.complete && !img.naturalWidth) thumbFailed(img);
+  });
+
+  // --- Theme-matched thumbnail art --------------------------------
+  // The project thumbnails are baked raster charts, so they cannot follow CSS
+  // tokens. make_thumbnails.py emits a light/ and a dark/ set; swap the folder
+  // segment to match the active theme. Every thumbnail is loading="lazy" and
+  // below the fold, so this runs before any of them are fetched: no flash and
+  // no wasted request.
+  function currentTheme() {
+    var set = document.documentElement.getAttribute('data-theme');
+    if (set === 'light' || set === 'dark') return set;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function syncThumbArt() {
+    var dark = currentTheme() === 'dark';
+    var from = dark ? '/light/' : '/dark/';
+    var to = dark ? '/dark/' : '/light/';
+    document.querySelectorAll('.project-thumb img, .map-tile img').forEach(function (img) {
+      var src = img.getAttribute('src') || '';
+      if (src.indexOf(from) !== -1) img.setAttribute('src', src.split(from).join(to));
+    });
+  }
+
+  syncThumbArt();
+
+  // follow the OS when the visitor has expressed no preference of their own
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+    if (!document.documentElement.getAttribute('data-theme')) syncThumbArt();
   });
 
   // --- Landing trace on the card jumped to from the index map ------
@@ -414,7 +433,11 @@
   }
 
   function traceHashTarget() {
-    var el = location.hash.length > 1 && document.querySelector(location.hash);
+    // getElementById, not querySelector: a fragment like #1 is not a valid selector,
+    // and the throw would stop this whole script (lightbox, glow, buttons never wire).
+    var id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (err) { return; } // malformed %-escape
+    var el = id && document.getElementById(id);
     if (!el || !el.classList.contains('project')) return;
     afterScrollSettles(function () { traceCard(el); });
   }
@@ -426,6 +449,7 @@
   // Native <dialog> supplies the focus trap, Esc-to-close, and backdrop, so
   // there's nothing here but wiring. Placeholders hold no <img>, so they're
   // skipped automatically.
+  // NOT .map-tile: those are navigation into the card (and fire the trace).
   var zoomThumbs = document.querySelectorAll('.project-thumb img, .story-media img');
   if (zoomThumbs.length) {
     var lightbox = document.createElement('dialog');
@@ -439,9 +463,13 @@
       holder.classList.add('is-zoomable');
       holder.setAttribute('role', 'button');
       holder.setAttribute('tabindex', '0');
-      holder.setAttribute('aria-label', 'View larger image');
+      // name the card, or every thumbnail on the page is announced identically
+      var card = holder.closest('.project, .story');
+      var heading = card && card.querySelector('h3, h2');
+      holder.setAttribute('aria-label', 'View larger image' + (heading ? ': ' + heading.textContent.trim() : ''));
 
       var openLightbox = function () {
+        if (!img.isConnected) return; // the image failed and was replaced by a placeholder
         lightboxImg.src = img.currentSrc || img.src;
         lightbox.showModal();
       };
@@ -464,28 +492,20 @@
   // --- Cursor-aware glow on cards ---------------------------------
   // Only wires up on hover-capable, no-reduced-motion devices
   if (canHover && !prefersReducedMotion) {
-    var glowCards = document.querySelectorAll('.stats > div, .card, .education-grid > article, .profile-panel, .article-card, .project, .timeline-card, .contact');
+    var glowCards = document.querySelectorAll('.stats > div, .card, .education-grid > article, .profile-panel, .article-card, .timeline-card, .contact');
     glowCards.forEach(function (el) {
-      // Measure once on entry. Reading the rect inside mousemove forces a
-      // synchronous layout on every event — up to 120 a second while hovering,
-      // and the articles page has 89 of these cards.
-      var rect = null;
-      el.addEventListener('mouseenter', function () { rect = el.getBoundingClientRect(); });
       el.addEventListener('mousemove', function (e) {
-        if (!rect) rect = el.getBoundingClientRect();
+        var rect = el.getBoundingClientRect();
         el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
         el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
       });
-      el.addEventListener('mouseleave', function () { rect = null; });
     });
 
     // --- Magnetic primary/secondary buttons ------------------------
     var magnetButtons = document.querySelectorAll('.button');
     magnetButtons.forEach(function (btn) {
-      var bRect = null;
-      btn.addEventListener('mouseenter', function () { bRect = btn.getBoundingClientRect(); });
       btn.addEventListener('mousemove', function (e) {
-        var rect = bRect || (bRect = btn.getBoundingClientRect());
+        var rect = btn.getBoundingClientRect();
         var dx = e.clientX - rect.left - rect.width / 2;
         var dy = e.clientY - rect.top - rect.height / 2;
         // Pull strength ~25% of cursor distance from button center
@@ -493,7 +513,6 @@
         btn.style.setProperty('--mag-y', (dy * 0.25).toFixed(1) + 'px');
       });
       btn.addEventListener('mouseleave', function () {
-        bRect = null;
         btn.style.setProperty('--mag-x', '0px');
         btn.style.setProperty('--mag-y', '0px');
       });

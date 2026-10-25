@@ -6,13 +6,12 @@
     <title>Page not found · Fahim Ahamed | Data & AI</title>
     <meta name="description" content="The page you were looking for could not be found." />
     <meta name="robots" content="noindex" />
-    <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0f766e" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131c18" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=177" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png?v=3" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f9" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1115" />
+    <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css?v=163" />
     <script>
       (function () {
         try {
@@ -31,25 +30,18 @@
         padding: 80px 24px;
         text-align: center;
       }
-      .notfound-code {
-        margin: 0 0 8px;
-        color: var(--rust);
-        font-size: 0.78rem;
-        font-weight: 800;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
       .notfound h1 {
         max-width: 18ch;
-        margin: 0 auto 16px;
+        margin: 0 auto 20px;
         font-size: clamp(3rem, 7vw, 5.5rem);
         line-height: 0.96;
       }
-      .notfound p {
+      .notfound-text {
         max-width: 56ch;
         margin: 0 auto 28px;
         color: var(--muted);
         font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+        text-wrap: balance;
       }
       .notfound-actions {
         display: flex;
@@ -58,6 +50,13 @@
         justify-content: center;
       }
     </style>
+    <noscript>
+      <style>
+        /* Reveal animations are JS-gated; without JS every section would stay at
+           opacity 0. Ship the content visible instead. */
+        .reveal { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
   </head>
   <body>
     <header class="site-header">
@@ -65,17 +64,17 @@
 
     <main class="notfound">
       <div>
-        <p class="notfound-code">Error 404</p>
-        <h1>This page wandered off.</h1>
-        <p>The link you followed might be broken, or the page may have moved. Either way &mdash; you're a click away from finding your bearings.</p>
+        <p class="eyebrow">Error 404</p>
+        <h1>This page<br>wandered off.</h1>
+        <p class="notfound-text">The link you followed might be broken, or the page may have moved. Either way &mdash; you're a click away from finding your bearings.</p>
         <div class="notfound-actions">
           <a class="button primary" href="/">Back to Home</a>
-          <a class="button secondary" href="/writing.html">Browse Writing</a>
+          <a class="button secondary" href="/data-stories.html">Data Stories</a>
         </div>
       </div>
     </main>
 
-    <script src="/site.js?v=37" defer></script>
+    <script src="/site.js?v=31" defer></script>
   </body>
 </html>
 

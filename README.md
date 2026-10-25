@@ -23,12 +23,25 @@ Data scientist with a background in applied AI research — turning data into in
 
 | | |
 |---|---|
-| [Home](https://f-a-tonmoy.github.io) | Overview, recent work, articles |
+| [Home](https://f-a-tonmoy.github.io) | Overview, current roles, featured work, selected writing |
 | [Experience](https://f-a-tonmoy.github.io/experience.html) | Timeline of roles + education |
 | [Research](https://f-a-tonmoy.github.io/research.html) | Published papers + manuscripts in pipeline |
-| [Projects](https://f-a-tonmoy.github.io/projects.html) | ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
+| [Projects](https://f-a-tonmoy.github.io/projects.html) | Treemap overview, then ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
 | [Data Stories](https://f-a-tonmoy.github.io/data-stories.html) | Long-form analyses of public datasets, published as interactive articles |
 | [Writing](https://f-a-tonmoy.github.io/writing.html) | 85+ technical articles, filterable + searchable |
+
+---
+
+## Design
+
+The UI is a "Data-Noir" system: a near-black base with a plotting-grid background, one emerald accent, square 3px corners, and two typefaces, **Space Grotesk** for text and **JetBrains Mono** for labels, dates, and metadata.
+
+- **Light and dark themes.** First visit follows the system setting; the toggle overrides it and the choice is remembered.
+- **Theme-matched project art.** Every project thumbnail comes in a light and a dark version, and the page swaps between them with the theme.
+- **Projects treemap.** An at-a-glance board of all ten projects, sized by how many each group holds; clicking a tile jumps to the project and draws a trace around its card.
+- **Click to enlarge** on project thumbnails and data-story images (native `<dialog>`, keyboard accessible).
+- **Contact.** Email links copy the address on desktop and open the mail app on touch devices.
+- **No third-party requests on load.** Fonts are self-hosted, and reduced-motion is respected throughout.
 
 ---
 
@@ -43,10 +56,14 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 ├── 404.html       # branded not-found page
 ├── styles.css     # single stylesheet
 ├── site.js        # shared chrome injection + interactivity
-├── articles.js    # article data
+├── articles.js    # article data + the shared article-card renderer
+├── check-articles.js  # `node check-articles.js`: catches bad article data before a push
 ├── .nojekyll      # tells GitHub Pages to skip Jekyll (pure-HTML site)
-└── assets/        # article, data-story & project thumbnails, school logos,
-                   #   headshot, favicon, OG image, resume
+└── assets/
+    ├── project-thumbnails/{light,dark}/   # one set per theme
+    ├── data-stories/  article-thumbnails/  school-logos/
+    ├── webfonts/      # Space Grotesk + JetBrains Mono, Latin subset, woff2
+    └── avatar, favicon, OG image, resume
 ```
 
 ---
@@ -57,6 +74,9 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 # clone and serve
 python -m http.server 8000
 # visit http://localhost:8000
+
+# before pushing, after editing articles.js
+node check-articles.js
 ```
 
 ## Deploy

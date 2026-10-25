@@ -10,20 +10,19 @@
     <meta property="og:url" content="https://f-a-tonmoy.github.io/data-stories.html" />
     <meta property="og:title" content="Data Stories · Fahim Ahamed | Data &amp; AI" />
     <meta property="og:description" content="Each story starts with a published figure and asks whether it means what people assume." />
-    <meta property="og:image" content="https://f-a-tonmoy.github.io/assets/og-image.png" />
+    <meta property="og:image" content="https://f-a-tonmoy.github.io/assets/og-image.png?v=3" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Data Stories · Fahim Ahamed" />
     <meta name="twitter:description" content="Each story starts with a published figure and asks whether it means what people assume." />
-    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0f766e" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131c18" />
-    <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=177" />
+    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png?v=3" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f9" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1115" />
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=3" />
+    <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=163" />
     <script>
       (function () {
         try {
@@ -34,6 +33,13 @@
         } catch (err) {}
       })();
     </script>
+    <noscript>
+      <style>
+        /* Reveal animations are JS-gated; without JS every section would stay at
+           opacity 0. Ship the content visible instead. */
+        .reveal { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
   </head>
   <body>
     <header class="site-header">
@@ -42,7 +48,7 @@
     <main>
       <section class="page-hero section">
         <p class="eyebrow">Data Stories</p>
-        <h1 class="two-line">What the numbers actually say</h1>
+        <h1>What the numbers<br>actually say</h1>
         <p class="lede">
           Long-form analyses built as reproducible Python pipelines and published as
           self-contained interactive articles. Each one starts with a published figure
@@ -52,9 +58,9 @@
 
       <section class="section page-section">
         <div class="story-list">
-          <article class="story" id="s-us-opioid-treatment-gap">
+          <article class="story reveal" id="s-us-opioid-treatment-gap">
             <span class="story-media">
-              <img src="assets/data-stories/us-opioid-treatment-gap.jpg" alt="" loading="lazy" />
+              <img src="assets/data-stories/us-opioid-treatment-gap.jpg" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
             </span>
             <div class="story-body">
               <p class="story-index"><span>01</span></p>
@@ -79,7 +85,7 @@
                   <li>Rank-correlated burden against capacity across 51 jurisdictions, then isolated the widest rank gaps.</li>
                   <li>Cross-checked against deaths per facility to catch small-state artifacts.</li>
                 </ul>
-                <p class="project-tools">Python, pandas, SciPy, Plotly, Requests, HTML/CSS, JavaScript</p>
+                <p class="story-tools">Python, pandas, SciPy, Plotly, Requests, HTML/CSS, JavaScript</p>
               </details>
               <p class="story-links">
                 <a class="project-link" href="https://f-a-tonmoy.github.io/us-opioid-treatment-gap/" target="_blank" rel="noopener">Read the story</a>
@@ -89,9 +95,9 @@
             </div>
           </article>
 
-          <article class="story" id="s-nyc-mental-health">
+          <article class="story reveal" id="s-nyc-mental-health">
             <span class="story-media">
-              <img src="assets/data-stories/nyc-mental-health.jpg" alt="" loading="lazy" />
+              <img src="assets/data-stories/nyc-mental-health.jpg" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
             </span>
             <div class="story-body">
               <p class="story-index"><span>02</span></p>
@@ -116,7 +122,7 @@
                   <li>Spatially joined 2020 census blocks to 78 precincts for per-resident baselines.</li>
                   <li>Separated the fall in calls from the fall in units dispatched per call.</li>
                 </ul>
-                <p class="project-tools">Python, pandas, NumPy, GeoPandas, Plotly, HTML/CSS, JavaScript</p>
+                <p class="story-tools">Python, pandas, NumPy, GeoPandas, Plotly, HTML/CSS, JavaScript</p>
               </details>
               <p class="story-links">
                 <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-mental-health-calls/" target="_blank" rel="noopener">Read the story</a>
@@ -126,9 +132,9 @@
             </div>
           </article>
 
-          <article class="story" id="s-nyc-restaurant-inspections">
+          <article class="story reveal" id="s-nyc-restaurant-inspections">
             <span class="story-media">
-              <img src="assets/data-stories/nyc-restaurant-inspections.jpg" alt="" loading="lazy" />
+              <img src="assets/data-stories/nyc-restaurant-inspections.jpg" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
             </span>
             <div class="story-body">
               <p class="story-index"><span>03</span></p>
@@ -153,7 +159,7 @@
                   <li>Measured closure rates by violation code against the citywide baseline.</li>
                   <li>Traced score distribution at the A/B boundary and re-inspection recovery over time.</li>
                 </ul>
-                <p class="project-tools">Python, pandas, NumPy, Plotly, Pillow, HTML/CSS, JavaScript</p>
+                <p class="story-tools">Python, pandas, NumPy, Plotly, Pillow, HTML/CSS, JavaScript</p>
               </details>
               <p class="story-links">
                 <a class="project-link" href="https://f-a-tonmoy.github.io/nyc-restaurant-inspections/" target="_blank" rel="noopener">Read the story</a>
@@ -169,6 +175,6 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="site.js?v=37"></script>
+    <script src="site.js?v=31" defer></script>
   </body>
 </html>

@@ -10,20 +10,19 @@
     <meta property="og:url" content="https://f-a-tonmoy.github.io/experience.html" />
     <meta property="og:title" content="Experience · Fahim Ahamed | Data & AI" />
     <meta property="og:description" content="Timeline of applied data science, institutional analytics, healthcare AI research, NLP, computer vision, and adversarial AI work." />
-    <meta property="og:image" content="https://f-a-tonmoy.github.io/assets/og-image.png" />
+    <meta property="og:image" content="https://f-a-tonmoy.github.io/assets/og-image.png?v=3" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Experience · Fahim Ahamed" />
     <meta name="twitter:description" content="Timeline of applied data science, institutional analytics, healthcare AI research, NLP, computer vision, and adversarial AI work." />
-    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0f766e" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131c18" />
-    <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=177" />
+    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png?v=3" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f9" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1115" />
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=3" />
+    <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=163" />
     <script>
       (function () {
         try {
@@ -34,6 +33,13 @@
         } catch (err) {}
       })();
     </script>
+    <noscript>
+      <style>
+        /* Reveal animations are JS-gated; without JS every section would stay at
+           opacity 0. Ship the content visible instead. */
+        .reveal { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
   </head>
   <body>
     <header class="site-header">
@@ -42,7 +48,7 @@
     <main>
       <section class="page-hero section">
         <p class="eyebrow">Experience</p>
-        <h1 class="two-line">Work, research, & education</h1>
+        <h1>Work, research, & education</h1>
         <p class="lede">
           A timeline of applied data science, institutional analytics, healthcare AI research,
           NLP, computer vision, and adversarial AI work.
@@ -56,36 +62,64 @@
         </div>
         <div class="timeline">
           <article class="timeline-item">
-            <div class="timeline-date">Oct 2025 - Feb 2026, Jul 2026 - Present</div>
+            <div class="timeline-date">Oct 2026 - Present<span class="timeline-term">Part-time</span></div>
             <div class="timeline-card">
-              <h3>Data Analyst</h3>
-              <p class="meta">The City College of New York</p>
+              <h3>Data Core Intern (Healthcare Analytics)</h3>
+              <p class="meta">NYC Health + Hospitals</p>
               <div class="timeline-side">
-                <span class="tag part-time">Part-time</span>
                 <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
               </div>
               <ul class="detail-list">
-                <li>Analyze institutional data using <strong>Excel, Tableau, and Python</strong>, surfacing patterns that shape advising and student engagement programs.</li>
-                <li>Conduct data-driven surveys and <strong>retention studies</strong>, uncovering behavioral patterns that inform targeted outreach.</li>
-                <li>Build analytical reports and dashboards that surface trends and anomalies across departments, replacing gut-feel decisions with data-backed ones.</li>
+                <li>Engineer and validate LLM prompts to evaluate <strong>commercial LLMs&rsquo; capability to automate population health analytics</strong> tasks like <strong>health disparity detection</strong> and report generation for a grant-funded health equity study.</li>
+                <li>Run <strong>blinded, human-in-the-loop evaluations</strong> of LLM outputs, measuring accuracy, bias, and <strong>hallucination risk</strong> for responsible use in a safety net health system.</li>
+                <li>Translate evaluation results into clear findings for the research team, supporting <strong>manuscript development</strong> and <strong>grant dissemination</strong> on responsible LLM use in healthcare.</li>
               </ul>
             </div>
           </article>
           <article class="timeline-item">
-            <div class="timeline-date">Dec 2025 - Present</div>
+            <div class="timeline-date">Oct 2026 - Present<span class="timeline-term">Part-time &middot; Asynchronous</span></div>
+            <div class="timeline-card">
+              <h3>Data Science Intern</h3>
+              <p class="meta">Tactorum</p>
+              <div class="timeline-side">
+                <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
+              </div>
+              <ul class="detail-list">
+                <li>Develop <strong>deep-learning pose-estimation models</strong> (PyTorch) that track body and facial keypoints in high-speed video, automating <strong>pain behavior measurement</strong> in preclinical research.</li>
+                <li>Own the data side of model training, curating and validating <strong>labeled datasets</strong> with rigorous <strong>quality review</strong> to ensure model generalization across subjects and labs.</li>
+                <li>Run and benchmark <strong>training experiments</strong> on <strong>cloud platforms</strong>, defining evaluation metrics and diagnosing failure modes to improve reliability.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">Dec 2025 - Present<span class="timeline-term">Part-time &middot; Asynchronous</span></div>
             <div class="timeline-card">
               <h3>Research Assistant</h3>
               <p class="meta">CUNY Research Foundation</p>
               <div class="timeline-side">
-                <span class="tag part-time">Part-time</span>
                 <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
               </div>
               <ul class="detail-list">
-                <li>Developing an <strong>agentic AI pipeline</strong> using RAG, LLMs, and MCP-connected tools to enable natural language querying over complex geoscience databases.</li>
-                <li>Bridging the gap between geoscience domain expertise and AI engineering, translating research requirements into technical specifications and iterating on pipeline outputs to ensure interpretability and scientific relevance.</li>
-                <li>Designing the end-to-end technical stack spanning <strong>vector database architecture</strong>, domain-specific embedding models, LLM optimization, and cloud deployment to support a production-ready geoscience research tool.</li>
+                <li>Develop an <strong>agentic AI pipeline</strong> using <strong>RAG</strong>, <strong>LLMs</strong>, and <strong>MCP-connected tools</strong> for natural language querying over complex geoscience databases, as part of an <strong>NSF-funded</strong> geoinformatics project.</li>
+                <li>Bridge <strong>geoscience domain expertise</strong> and <strong>AI engineering</strong>, translating research requirements into technical specs and iterating on pipeline outputs for interpretability and scientific relevance.</li>
+                <li>Design the <strong>end-to-end technical stack</strong>: <strong>vector database architecture</strong>, domain-specific <strong>embedding models</strong>, <strong>LLM optimization</strong>, and <strong>cloud deployment</strong> for a production-ready geoscience research tool.</li>
               </ul>
               <p class="meta" style="margin-top: 12px;">NSF Geoinformatics Grant #2148957</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">Oct 2025 - Feb 2026, Jul 2026 - Present<span class="timeline-term">Part-time</span></div>
+            <div class="timeline-card">
+              <h3>Data Analyst</h3>
+              <p class="meta">The City College of New York</p>
+              <div class="timeline-side">
+                <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
+              </div>
+              <ul class="detail-list">
+                <li>Analyze <strong>institutional data</strong> using <strong>Excel</strong>, <strong>Tableau</strong>, and <strong>Python</strong>, surfacing patterns that shape <strong>advising and student engagement programs</strong>.</li>
+                <li>Conduct <strong>data-driven surveys</strong> and <strong>retention studies</strong>, uncovering behavioral patterns that inform targeted outreach.</li>
+                <li>Build <strong>analytical reports</strong> and <strong>dashboards</strong> that surface trends and anomalies across departments, replacing gut-feel decisions with <strong>data-backed ones</strong>.</li>
+              </ul>
             </div>
           </article>
           <article class="timeline-item">
@@ -97,9 +131,9 @@
                 <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
               </div>
               <ul class="detail-list">
-                <li>Designed and maintained scalable, reproducible pipelines to collect, integrate, and validate multi-source data using <strong>APIs and web scraping</strong>.</li>
-                <li>Built and published data applications and analytical workflows, transforming raw data into user-facing tools for exploring key metrics.</li>
-                <li>Analyzed data to identify trends, patterns, and key drivers, producing clear outputs that support data-driven decision-making.</li>
+                <li>Designed and maintained <strong>scalable data pipelines</strong> to collect, integrate, and validate <strong>multi-source data</strong> through automated scripts, APIs, and web scraping.</li>
+                <li>Built <strong>data applications</strong> and analytical workflows powered by <strong>LLMs</strong>, integrating OpenAI and Hugging Face models into user-facing tools for exploring key metrics.</li>
+                <li>Analyzed data to surface trends and key drivers, packaging findings into <strong>visualizations</strong> and structured reports.</li>
               </ul>
             </div>
           </article>
@@ -107,13 +141,15 @@
             <div class="timeline-date">Feb 2024 - Aug 2025</div>
             <div class="timeline-card">
               <h3>AI Researcher - Healthcare, NLP & Adversarial AI</h3>
-              <p class="meta">East West University</p>
+              <p class="meta">Independent</p>
               <div class="timeline-side">
-                <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Dhaka, BD</span>
+                <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
               </div>
               <ul class="detail-list">
-                <li>Built explainable healthcare AI systems including a skin cancer classifier (<strong>98.65% accuracy</strong>), depression detector (<strong>F1: 81.63%</strong>), and dual-site cancer screening pipeline, deployed via diagnostic web apps with Grad-CAM and LIME interpretability.</li>
-                <li>Developed a real-time drowsiness recognition model achieving <strong>99.2% accuracy</strong> with sub-120ms latency for driver monitoring and workplace safety.</li>
+                <li>Collaborated with faculty at East West University and Southern Illinois University Carbondale, designing and testing models across NLP, computer vision, and adversarial ML.</li>
+                <li>Built explainable healthcare AI systems including a skin cancer classifier (<strong>98.65% accuracy</strong>) and MobileDepFormer-XAI for depression detection (<strong>F1: 81.63%</strong>), deployed via diagnostic web apps with Grad-CAM and LIME interpretability.</li>
+                <li>Developed a dual-site cancer screening pipeline on a multi-scale ViT framework, reaching <strong>99.12%</strong> on skin and <strong>99.37%</strong> on oral lesions without specialized equipment.</li>
+                <li>Developed EMTF-ViT, a token-fusion transformer for drowsiness recognition, achieving <strong>99.2% accuracy</strong> with sub-120ms latency for driver monitoring and workplace safety.</li>
                 <li>Investigated adversarial vulnerabilities in IoT and vision-language models, exposing up to <strong>30x energy amplification</strong> via sponge attacks and proposing defenses.</li>
               </ul>
             </div>
@@ -127,9 +163,9 @@
                 <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Dhaka, BD</span>
               </div>
               <ul class="detail-list">
-                <li>Digitized mixed Bangla-English prescriptions using a custom CNN model, achieving <strong>91% OCR accuracy</strong> including cursive handwriting recognition.</li>
-                <li>Reduced model training time by <strong>20%</strong> through optimized hyperparameter tuning and advanced preprocessing, including noise reduction and character segmentation.</li>
-                <li>Improved system scalability by integrating modular preprocessing components for varied handwriting styles.</li>
+                <li>Digitized mixed <strong>Bangla-English prescriptions</strong> using a custom <strong>CNN model</strong>, achieving <strong>91% OCR accuracy</strong> including cursive handwriting recognition.</li>
+                <li>Reduced model training time by <strong>20%</strong> through optimized <strong>hyperparameter tuning</strong> and advanced preprocessing, including noise reduction and character segmentation.</li>
+                <li>Improved system scalability by integrating <strong>modular preprocessing components</strong> for varied handwriting styles.</li>
               </ul>
             </div>
           </article>
@@ -144,7 +180,7 @@
         <div class="education-grid">
           <article>
             <div class="education-head">
-              <img class="school-logo" src="assets/school-logos/ccny.png?v=2" alt="The City College of New York logo" onerror="this.style.display='none'" />
+              <img class="school-logo" src="assets/school-logos/ccny.png" alt="The City College of New York logo" onerror="this.style.display='none'" />
               <h3>The City College of New York</h3>
             </div>
             <p><strong>M.S. in Data Science & Engineering</strong></p>
@@ -167,7 +203,7 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="site.js?v=37" defer></script>
+    <script src="site.js?v=31" defer></script>
   </body>
 </html>
 

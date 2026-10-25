@@ -13,23 +13,19 @@
     <meta property="og:url" content="https://f-a-tonmoy.github.io/" />
     <meta property="og:title" content="Fahim Ahamed | Data & AI" />
     <meta property="og:description" content="Data scientist with a background in applied AI research - turning data into insights, predictive models, and decisions across healthcare, NLP, computer vision, and beyond." />
-    <meta property="og:image" content="https://f-a-tonmoy.github.io/assets/og-image.png" />
+    <meta property="og:image" content="https://f-a-tonmoy.github.io/assets/og-image.png?v=3" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Fahim Ahamed | Data & AI" />
     <meta name="twitter:description" content="Data scientist with a background in applied AI research - turning data into insights, predictive models, and decisions across healthcare, NLP, computer vision, and beyond." />
-    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0f766e" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#131c18" />
-    <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css?v=177" />
+    <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png?v=3" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f9" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1115" />
+    <link rel="icon" type="image/png" href="assets/favicon.png?v=3" />
+    <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=163" />
     <script>
       (function () {
         try {
@@ -40,6 +36,13 @@
         } catch (err) {}
       })();
     </script>
+    <noscript>
+      <style>
+        /* Reveal animations are JS-gated; without JS every section would stay at
+           opacity 0. Ship the content visible instead. */
+        .reveal { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
   </head>
   <body>
     <header class="site-header">
@@ -64,15 +67,12 @@
           </a>
         </div>
         <aside class="profile-panel" aria-label="Profile summary">
-          <img src="assets/Headshot.jpg?v=2" alt="Fahim Ahamed headshot" decoding="async" fetchpriority="high" width="320" height="320" />
-          <div>
-            <p class="profile-name">Data Science | AI Research | Applied ML</p>
-            <ul class="profile-facts" aria-label="Location and work authorization">
-              <li><span class="fact-icon location" aria-hidden="true"></span>New York City Metropolitan Area</li>
-              <li><span class="fact-icon check" aria-hidden="true"></span>U.S. Permanent Resident</li>
-              <li><span class="fact-icon check" aria-hidden="true"></span>No sponsorship needed</li>
-            </ul>
-          </div>
+          <img src="assets/avatar.webp" alt="Illustrated avatar of Fahim Ahamed" decoding="async" fetchpriority="high" width="320" height="320" />
+          <ul class="profile-facts" aria-label="Location and work authorization">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York City Metropolitan Area</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>U.S. Permanent Resident</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No sponsorship needed</li>
+          </ul>
         </aside>
       </section>
 
@@ -95,21 +95,16 @@
         </div>
       </section>
 
-      <section class="section split reveal" id="about">
-        <div>
-          <p class="section-label">About</p>
-          <h2>A data scientist's craft, with a researcher's depth</h2>
-        </div>
-        <div class="prose">
-          <p>
-            The thread through my work is trust: whether a model can explain its own output,
-            whether a system holds up when someone tries to break it, whether a published
-            number means what people assume. That&rsquo;s taken me from skin-cancer classifiers
-            with Grad-CAM explainability, to sponge attacks on vision-language models, to
-            1.35 million 911 crisis calls.
-          </p>
-        </div>
+      <section class="section about reveal" id="about">
+        <p class="section-label">About</p>
+        <p class="about-statement">
+          <span>The thread through my work is trust.</span> Whether a model can explain its own
+          output, whether a system holds up when someone tries to break it, whether a published
+          number means what people assume. That&rsquo;s taken me from detecting early signs of colon cancer,
+          to sponge attacks on vision-language models, to 1.35 million 911 crisis calls.
+        </p>
       </section>
+
       <section class="section reveal" id="skills">
         <div class="section-heading">
           <p class="section-label">Skills</p>
@@ -175,27 +170,37 @@
         </div>
         <div class="timeline">
           <article class="timeline-item">
-            <div class="timeline-date">Oct 2025 - Feb 2026, Jul 2026 - Present</div>
+            <div class="timeline-date">Oct 2026 - Present<span class="timeline-term">Part-time</span></div>
             <div class="timeline-card">
-              <h3>Data Analyst</h3>
-              <p class="meta">The City College of New York</p>
+              <h3>Data Core Intern (Healthcare Analytics)</h3>
+              <p class="meta">NYC Health + Hospitals</p>
               <div class="timeline-side">
-                <span class="tag part-time">Part-time</span>
                 <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
               </div>
               <p>
-                Analyzing institutional data with Excel, Tableau, and Python to support advising,
-                retention, and engagement strategy.
+                Evaluating commercial LLMs on population health analytics tasks, from disparity detection to report generation, for a grant-funded health equity study.
               </p>
             </div>
           </article>
           <article class="timeline-item">
-            <div class="timeline-date">Dec 2025 - Present</div>
+            <div class="timeline-date">Oct 2026 - Present<span class="timeline-term">Part-time &middot; Asynchronous</span></div>
+            <div class="timeline-card">
+              <h3>Data Science Intern</h3>
+              <p class="meta">Tactorum</p>
+              <div class="timeline-side">
+                <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
+              </div>
+              <p>
+                Building PyTorch pose-estimation models that track body and facial keypoints in high-speed video to automate pain behavior measurement in preclinical research.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">Dec 2025 - Present<span class="timeline-term">Part-time &middot; Asynchronous</span></div>
             <div class="timeline-card">
               <h3>Research Assistant</h3>
               <p class="meta">CUNY Research Foundation</p>
               <div class="timeline-side">
-                <span class="tag part-time">Part-time</span>
                 <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
               </div>
               <p>
@@ -205,16 +210,16 @@
             </div>
           </article>
           <article class="timeline-item">
-            <div class="timeline-date">Feb 2026 - May 2026</div>
+            <div class="timeline-date">Oct 2025 - Feb 2026, Jul 2026 - Present<span class="timeline-term">Part-time</span></div>
             <div class="timeline-card">
-              <h3>Data Evangelist Intern</h3>
-              <p class="meta">DataCamp</p>
+              <h3>Data Analyst</h3>
+              <p class="meta">The City College of New York</p>
               <div class="timeline-side">
                 <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>New York, NY</span>
               </div>
               <p>
-                Built reproducible data pipelines, analytical workflows, and data apps for
-                structured exploration and decision support.
+                Analyzing institutional data with Excel, Tableau, and Python to support advising,
+                retention, and engagement strategy.
               </p>
             </div>
           </article>
@@ -307,44 +312,42 @@
       <section class="section reveal" id="projects">
         <div class="section-heading">
           <p class="section-label">Projects</p>
-          <h2>Applied ML & Data Projects</h2>
+          <h2>Applied ML &amp; Data Projects</h2>
           <a class="section-link" href="projects.html">All projects</a>
         </div>
         <div class="project-grid">
-            <article class="project">
-              <span class="project-thumb">
-                <img src="assets/project-thumbnails/light/wound-classification.jpg" alt="" loading="lazy" />
-              </span>
-              <div>
-                <h3>Deep Learning-Based Wound Classification</h3>
-                <p>A four-block CNN over 2,940 wound images across ten classes, lifting validation accuracy from 89.8% to 98.5% through architecture and training refinements.</p>
-              </div>
-              <a class="project-link" href="https://github.com/f-a-tonmoy/Wound-Classification-DL" target="_blank" rel="noopener">GitHub</a>
-            </article>
-            <article class="project">
-              <span class="project-thumb">
-                <img src="assets/project-thumbnails/light/intrusion-detection.jpg" alt="" loading="lazy" />
-              </span>
-              <div>
-                <h3>Intrusion Detection System</h3>
-                <p>Compressed 2.8M network flows across 78 features, then framed detection two ways: binary anomaly flagging and 7-class attack typing, reaching 97% median accuracy.</p>
-              </div>
-              <a class="project-link" href="https://github.com/f-a-tonmoy/Intrusion-Detection-System" target="_blank" rel="noopener">GitHub</a>
-            </article>
-            <article class="project">
-              <span class="project-thumb">
-                <img src="assets/project-thumbnails/light/global-population-forecasting.jpg" alt="" loading="lazy" />
-              </span>
-              <div>
-                <h3>Global Population Growth Modeling &amp; Forecasting</h3>
-                <p>A longitudinal dataset of demographic indicators across 200+ countries and six decades, modelled by region and income group to an R<sup>2</sup> of 0.755.</p>
-              </div>
-              <a class="project-link" href="https://github.com/f-a-tonmoy/global-population-dynamics-forecasting" target="_blank" rel="noopener">GitHub</a>
-            </article>
+          <article class="project">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/light/wound-classification.jpg?v=4" alt="" loading="lazy" />
+            </span>
+            <div>
+              <h3>Deep Learning-Based Wound Classification</h3>
+              <p>A four-block CNN over 2,940 wound images across ten classes, lifting validation accuracy from 89.8% to 98.5% through architecture refinements.</p>
+            </div>
+            <a class="project-link" href="https://github.com/f-a-tonmoy/Wound-Classification-DL" target="_blank" rel="noopener">GitHub</a>
+          </article>
+          <article class="project">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/light/intrusion-detection.jpg?v=4" alt="" loading="lazy" />
+            </span>
+            <div>
+              <h3>Intrusion Detection System</h3>
+              <p>Compressed 2.8M network flows across 78 features, then framed detection as binary anomaly flagging and 7-class attack typing at 97% median accuracy.</p>
+            </div>
+            <a class="project-link" href="https://github.com/f-a-tonmoy/Intrusion-Detection-System" target="_blank" rel="noopener">GitHub</a>
+          </article>
+          <article class="project">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/light/global-population-forecasting.jpg?v=4" alt="" loading="lazy" />
+            </span>
+            <div>
+              <h3>Global Population Growth Modeling &amp; Forecasting</h3>
+              <p>A longitudinal dataset of demographic indicators across 200+ countries and six decades, modelled by region and income group to an R<sup>2</sup> of 0.755.</p>
+            </div>
+            <a class="project-link" href="https://github.com/f-a-tonmoy/global-population-dynamics-forecasting" target="_blank" rel="noopener">GitHub</a>
+          </article>
         </div>
       </section>
-
-
 
       <section class="section reveal" id="education">
         <div class="section-heading">
@@ -354,7 +357,7 @@
         <div class="education-grid">
           <article>
             <div class="education-head">
-              <img class="school-logo" src="assets/school-logos/ccny.png?v=2" alt="The City College of New York logo" onerror="this.style.display='none'" />
+              <img class="school-logo" src="assets/school-logos/ccny.png" alt="The City College of New York logo" onerror="this.style.display='none'" />
               <h3>The City College of New York</h3>
             </div>
             <p><strong>M.S. in Data Science & Engineering</strong></p>
@@ -396,30 +399,21 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="site.js?v=37" defer></script>
+    <script src="site.js?v=31" defer></script>
 
-    <script src="articles.js?v=5"></script>
+    <script src="articles.js?v=4"></script>
     <script>
       (function () {
         var grid = document.getElementById('featured-writing');
         if (!grid || typeof articles === 'undefined') return;
+
         // Six hand-picked pieces, one per category. `featured` in articles.js is
         // the running order, so both the choice and its sequence live with the data.
         grid.innerHTML = articles
           .filter(function (a) { return a.featured; })
           .sort(function (a, b) { return a.featured - b.featured; })
-          .map(function (article) {
-          var image = article.image
-            ? '<img src="' + article.image + '" alt="" loading="lazy" onerror="this.closest(\'.article-thumb\').classList.add(\'is-empty\'); this.remove();" />'
-            : '';
-          return '<a class="article-card" href="' + article.url + '" target="_blank" rel="noopener">'
-            + '<span class="article-thumb ' + (article.image ? '' : 'is-empty') + '" data-fallback="' + article.category + '">' + image + '</span>'
-            + '<span class="article-body">'
-            + '<span class="article-category">' + article.category + '</span>'
-            + '<span class="article-title">' + article.title + '</span>'
-            + '</span>'
-            + '</a>';
-        }).join('');
+          .map(articleCard)
+          .join('');
       })();
     </script>
 
@@ -443,13 +437,8 @@
 
         if (prefersReduced) return; // leave final values intact, no animation
 
-        // Reset to "starting" state immediately to prevent the final value flashing
-        items.forEach(function (s) {
-          s.el.textContent = s.type === 'count' ? '0' : '';
-        });
-
-        var STARTS    = [  0, 300, 700, 1000]; // ms â€” when each card begins animating
-        var DURATIONS = [500, 500, 700,  900]; // ms â€” per-card animation length
+        var STARTS    = [  0, 300, 700, 1000]; // ms - when each card begins animating
+        var DURATIONS = [500, 500, 700,  900]; // ms - per-card animation length
         var DEFAULT_DURATION = 500;
         var started = false;
 
@@ -484,6 +473,12 @@
         function startAnimation() {
           if (started) return;
           started = true;
+          // Blank only now, at the moment we are certain the animation will run.
+          // Blanking at parse time meant any stalled IntersectionObserver left the
+          // four headline numbers reading "0".
+          items.forEach(function (s) {
+            s.el.textContent = s.type === 'count' ? '0' : '';
+          });
           var maxEnd = 0;
           items.forEach(function (s, index) {
             var delay = STARTS[index] != null ? STARTS[index] : index * DEFAULT_DURATION;
@@ -491,7 +486,7 @@
             maxEnd = Math.max(maxEnd, delay + dur);
             setTimeout(function () { animateCard(s, dur); }, delay);
           });
-          // Enable the Lâ†’R shimmer only after every per-card text animation
+          // Enable the left-to-right shimmer only after every per-card text animation
           // (count-up + typewriter) has finished, plus a small buffer so the
           // shimmer never overlaps the first-impression text reveal.
           setTimeout(function () {
