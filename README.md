@@ -15,7 +15,7 @@ Data scientist with a background in applied AI research — turning data into in
 - Specialties: explainable AI, computer vision, NLP, adversarial robustness
 - Based in NYC · U.S. Permanent Resident · No sponsorship needed
 
-**[Resume](assets/Resume%20-%20Fahim%20Ahamed.pdf)** &nbsp;·&nbsp; **[LinkedIn](https://linkedin.com/in/f-a-tonmoy)** &nbsp;·&nbsp; **[ORCID](https://orcid.org/0009-0006-2638-6521)** &nbsp;·&nbsp; **[Email](mailto:f.a.tonmoy00@gmail.com)**
+**[Resume](assets/fahim-ahamed-resume.pdf)** &nbsp;·&nbsp; **[LinkedIn](https://linkedin.com/in/f-a-tonmoy)** &nbsp;·&nbsp; **[ORCID](https://orcid.org/0009-0006-2638-6521)** &nbsp;·&nbsp; **[Email](mailto:f.a.tonmoy00@gmail.com)**
 
 ---
 

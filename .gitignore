@@ -15,5 +15,8 @@ Thumbs.db
 # Misc
 .impeccable
 PRODUCT.md
-*.py
 __pycache__/
+
+# Image generators and their fonts: kept private (they reproduce the site's visual style)
+tools/*.py
+tools/fonts/

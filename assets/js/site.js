@@ -40,13 +40,13 @@
       +   '<a href="/pages/data-stories.html"' + ariaCurrent('data-stories') + '>Data Stories</a>'
       +   '<a href="/pages/projects.html"'   + ariaCurrent('projects')   + '>Projects</a>'
       +   '<a href="/pages/writing.html"'    + ariaCurrent('writing')    + '>Writing</a>'
-      +   '<a class="nav-mobile-action" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>'
+      +   '<a class="nav-mobile-action" href="/assets/fahim-ahamed-resume.pdf" target="_blank" rel="noopener">Resume</a>'
       +   '<a class="nav-mobile-action" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>'
       + '</nav>'
       + '<div class="header-actions">'
       // Document and envelope drawn on the same 24-unit grid and 2-unit stroke as the theme
       // toggle, so the header icons read at one weight. On a pointer device the envelope copies the address.
-      +   '<a class="header-cta header-cta-icon" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener" aria-label="View resume" data-tip="View resume">'
+      +   '<a class="header-cta header-cta-icon" href="/assets/fahim-ahamed-resume.pdf" target="_blank" rel="noopener" aria-label="View resume" data-tip="View resume">'
       +     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5" /><circle cx="12" cy="12.5" r="2" /><path d="M8.5 18.5a3.5 3.5 0 0 1 7 0" /></svg>'
       +   '</a>'
       +   '<a class="header-cta header-cta-icon" href="mailto:f.a.tonmoy00@gmail.com" aria-label="Copy email address" data-tip="Copy email address">'
