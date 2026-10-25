@@ -35,11 +35,11 @@
       +   '</svg>'
       + '</a>'
       + '<nav class="nav" aria-label="Primary navigation">'
-      +   '<a href="/experience.html"' + ariaCurrent('experience') + '>Experience</a>'
-      +   '<a href="/research.html"'   + ariaCurrent('research')   + '>Research</a>'
-      +   '<a href="/data-stories.html"' + ariaCurrent('data-stories') + '>Data Stories</a>'
-      +   '<a href="/projects.html"'   + ariaCurrent('projects')   + '>Projects</a>'
-      +   '<a href="/writing.html"'    + ariaCurrent('writing')    + '>Writing</a>'
+      +   '<a href="/pages/experience.html"' + ariaCurrent('experience') + '>Experience</a>'
+      +   '<a href="/pages/research.html"'   + ariaCurrent('research')   + '>Research</a>'
+      +   '<a href="/pages/data-stories.html"' + ariaCurrent('data-stories') + '>Data Stories</a>'
+      +   '<a href="/pages/projects.html"'   + ariaCurrent('projects')   + '>Projects</a>'
+      +   '<a href="/pages/writing.html"'    + ariaCurrent('writing')    + '>Writing</a>'
       +   '<a class="nav-mobile-action" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>'
       +   '<a class="nav-mobile-action" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>'
       + '</nav>'
@@ -450,7 +450,7 @@
   // there's nothing here but wiring. Placeholders hold no <img>, so they're
   // skipped automatically.
   // NOT .map-tile: those are navigation into the card (and fire the trace).
-  var zoomThumbs = document.querySelectorAll('.project-thumb img, .story-media img');
+  var zoomThumbs = document.querySelectorAll('.project-thumb img, .story-media:not(a) img'); // a linked story-media navigates instead
   if (zoomThumbs.length) {
     var lightbox = document.createElement('dialog');
     lightbox.className = 'lightbox';

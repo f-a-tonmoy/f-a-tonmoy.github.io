@@ -7,7 +7,7 @@ const path = require('path');
 const dir = process.argv[2] || path.join(__dirname, '..'); // repo root
 const read = (f) => fs.readFileSync(path.join(dir, f), 'utf8');
 const articles = new Function(read('assets/data/articles.js') + '; return articles;')();
-const tabs = [...read('writing.html').matchAll(/data-filter="([^"]+)"/g)].map((m) => m[1]).filter((t) => t !== 'All');
+const tabs = [...read('pages/writing.html').matchAll(/data-filter="([^"]+)"/g)].map((m) => m[1]).filter((t) => t !== 'All');
 
 const problems = [];
 const seen = { url: new Map(), title: new Map(), featured: new Map(), category: new Map() };
@@ -24,7 +24,7 @@ articles.forEach((a, i) => {
   dup('url', a.url, label);
   dup('title', a.title, label);
   if (a.image && !fs.existsSync(path.join(dir, a.image))) problems.push(`${label}: image not found: ${a.image}`);
-  if (!tabs.includes(a.category)) problems.push(`${label}: category "${a.category}" has no tab on writing.html`);
+  if (!tabs.includes(a.category)) problems.push(`${label}: category "${a.category}" has no tab on pages/writing.html`);
   if (a.featured) {
     dup('featured', String(a.featured), label);
     dup('category', a.category, label); // the homepage shows one featured piece per category

@@ -6,12 +6,12 @@
     <title>Page not found · Fahim Ahamed | Data & AI</title>
     <meta name="description" content="The page you were looking for could not be found." />
     <meta name="robots" content="noindex" />
-    <link rel="icon" type="image/png" href="/assets/favicon.png?v=3" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png?v=4" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f9" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1115" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=163" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=166" />
     <script>
       (function () {
         try {
@@ -20,6 +20,15 @@
             document.documentElement.setAttribute('data-theme', saved);
           }
         } catch (err) {}
+      })();
+    </script>
+    <script>
+      // The pages moved into /pages/. GitHub Pages serves this file for any address it
+      // cannot find, so old links (/experience.html, /projects.html#p-nexus-search, ...)
+      // are forwarded here, keeping their query string and #fragment.
+      (function () {
+        var m = location.pathname.match(/^\/(experience|research|projects|data-stories|writing)(\.html)?\/?$/);
+        if (m) location.replace('/pages/' + m[1] + '.html' + location.search + location.hash);
       })();
     </script>
     <style>
@@ -69,12 +78,12 @@
         <p class="notfound-text">The link you followed might be broken, or the page may have moved. Either way &mdash; you're a click away from finding your bearings.</p>
         <div class="notfound-actions">
           <a class="button primary" href="/">Back to Home</a>
-          <a class="button secondary" href="/data-stories.html">Data Stories</a>
+          <a class="button secondary" href="/pages/data-stories.html">Data Stories</a>
         </div>
       </div>
     </main>
 
-    <script src="/assets/js/site.js?v=31" defer></script>
+    <script src="/assets/js/site.js?v=32" defer></script>
   </body>
 </html>
 

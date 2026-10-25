@@ -24,11 +24,11 @@ Data scientist with a background in applied AI research — turning data into in
 | | |
 |---|---|
 | [Home](https://f-a-tonmoy.github.io) | Overview, current roles, featured work, selected writing |
-| [Experience](https://f-a-tonmoy.github.io/experience.html) | Timeline of roles + education |
-| [Research](https://f-a-tonmoy.github.io/research.html) | Published papers + manuscripts in pipeline |
-| [Projects](https://f-a-tonmoy.github.io/projects.html) | Treemap overview, then ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
-| [Data Stories](https://f-a-tonmoy.github.io/data-stories.html) | Long-form analyses of public datasets, published as interactive articles |
-| [Writing](https://f-a-tonmoy.github.io/writing.html) | 85+ technical articles, filterable + searchable |
+| [Experience](https://f-a-tonmoy.github.io/pages/experience.html) | Timeline of roles + education |
+| [Research](https://f-a-tonmoy.github.io/pages/research.html) | Published papers + manuscripts in pipeline |
+| [Projects](https://f-a-tonmoy.github.io/pages/projects.html) | Treemap overview, then ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
+| [Data Stories](https://f-a-tonmoy.github.io/pages/data-stories.html) | Long-form analyses of public datasets, published as interactive articles |
+| [Writing](https://f-a-tonmoy.github.io/pages/writing.html) | Interactive explainers, plus 85+ technical articles (filterable + searchable) |
 
 ---
 
@@ -51,9 +51,9 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 
 ```
 .
-├── index.html / experience.html / research.html / projects.html
-│   data-stories.html / writing.html
-├── 404.html           # branded not-found page
+├── index.html         # home (must stay in the root)
+├── 404.html           # branded not-found page; also forwards the old page addresses
+├── pages/             # experience, research, projects, data-stories, writing (.html)
 ├── .nojekyll          # tells GitHub Pages to skip Jekyll (pure-HTML site)
 ├── assets/
 │   ├── css/styles.css     # single stylesheet
@@ -61,7 +61,7 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 │   ├── data/articles.js   # article data + the shared article-card renderer
 │   ├── webfonts/          # Space Grotesk + JetBrains Mono, Latin subset, woff2
 │   ├── project-thumbnails/{light,dark}/   # one set per theme
-│   ├── data-stories/  article-thumbnails/  school-logos/
+│   ├── data-stories/  explainers/  article-thumbnails/  school-logos/
 │   └── avatar, favicon, OG image, resume
 └── tools/
     └── check-articles.js  # `node tools/check-articles.js`: catches bad article data

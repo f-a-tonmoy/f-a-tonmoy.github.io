@@ -1946,6 +1946,16 @@ h3 {
   display: block;
 }
 
+/* the Writing page's explainer card reuses .story; its fallback says what it is */
+#explainers .story-media.is-empty::before {
+  content: "Interactive explainer";
+}
+
+/* no method disclosure between the meta line and the link here, so give it room */
+#explainers .story-meta {
+  margin-bottom: 18px;
+}
+
 /* Index numeral trailed by a rule — the spine of the list. */
 .story-index {
   display: flex;
