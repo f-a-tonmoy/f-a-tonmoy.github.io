@@ -46,8 +46,8 @@
       + '<div class="header-actions">'
       // Document and envelope drawn on the same 24-unit grid and 2-unit stroke as the theme
       // toggle, so the header icons read at one weight. On a pointer device the envelope copies the address.
-      +   '<a class="header-cta header-cta-icon" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener" aria-label="View or download resume" data-tip="View / download resume">'
-      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5" /><path d="M12 11v6m-3-3 3 3 3-3" /></svg>'
+      +   '<a class="header-cta header-cta-icon" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener" aria-label="View resume" data-tip="View resume">'
+      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5" /><circle cx="12" cy="12.5" r="2" /><path d="M8.5 18.5a3.5 3.5 0 0 1 7 0" /></svg>'
       +   '</a>'
       +   '<a class="header-cta header-cta-icon" href="mailto:f.a.tonmoy00@gmail.com" aria-label="Copy email address" data-tip="Copy email address">'
       +     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m3.6 7 8.4 6.2L20.4 7" /></svg>'
@@ -68,7 +68,7 @@
       +     '<span class="email-action">'
       +       '<a href="mailto:f.a.tonmoy00@gmail.com">Email</a>'
       +       '<button class="copy-email" type="button" data-email="f.a.tonmoy00@gmail.com" aria-label="Copy email address" data-tip="Copy email">'
-      +         '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>'
+      +         '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2" /><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" /></svg>'
       +       '</button>'
       +     '</span>'
       +   '</div>'
@@ -273,10 +273,10 @@
       if (!canHover && el.hasAttribute('href')) return;
       ev.preventDefault();
       var email = el.dataset.email || (el.getAttribute('href') || '').replace('mailto:', '');
-      if (!navigator.clipboard) { showToast(email, el); return; }
+      if (!navigator.clipboard) { showToast('', el, email); return; }
       navigator.clipboard.writeText(email).then(
         function () { showToast('Email copied to clipboard', el); },
-        function () { showToast('Copy failed — ' + email, el); }
+        function () { showToast('Copy failed: ', el, email); }
       );
     });
   });
@@ -325,7 +325,7 @@
   // Pass `anchor` to park the toast against the control that triggered it. The
   // default bottom-of-window spot is a whole viewport away from a click in the
   // header, so a visitor reads "nothing happened" before they ever look down.
-  function showToast(msg, anchor) {
+  function showToast(msg, anchor, address) {
     var toast = document.querySelector('.toast');
     if (!toast) {
       toast = document.createElement('div');
@@ -335,6 +335,13 @@
       document.body.appendChild(toast);
     }
     toast.textContent = msg;
+    // an address shown for copying by hand stays in its own case; the toast sets the rest in caps
+    if (address) {
+      var addr = document.createElement('span');
+      addr.className = 'toast-address';
+      addr.textContent = address;
+      toast.appendChild(addr);
+    }
     toast.classList.toggle('anchored', !!anchor);
     // Force reflow so the transition runs even if the toast was just created,
     // and so offsetHeight below measures the new text.
@@ -422,42 +429,22 @@
     if (!document.documentElement.getAttribute('data-theme')) syncThumbArt();
   });
 
-  // --- Landing trace on the card jumped to from the index map ------
-  // The path starts at the middle of the left edge rather than a corner, so the
-  // line closes on a straight run instead of meeting itself at a corner.
-  var SVGNS = 'http://www.w3.org/2000/svg';
-
-  function traceCard(card) {
-    // clear any trace anywhere, not just this card's: jumping between cards
-    // would otherwise leave the previous one behind
-    document.querySelectorAll('.trace-svg').forEach(function (n) { n.remove(); });
-
-    var box = card.getBoundingClientRect();
-    var pad = 10;
-    var w = box.width + pad * 2, h = box.height + pad * 2, cy = h / 2;
-
-    var svg = document.createElementNS(SVGNS, 'svg');
-    svg.setAttribute('class', 'trace-svg');
-    svg.setAttribute('width', w);
-    svg.setAttribute('height', h);
-    svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
-    svg.setAttribute('aria-hidden', 'true');
-
-    var path = document.createElementNS(SVGNS, 'path');
-    path.setAttribute('pathLength', '100'); // lets one dasharray fit every card size
-    path.setAttribute('d', 'M0 ' + cy + 'V0H' + w + 'V' + h + 'H0Z');
-
-    svg.appendChild(path);
-    card.appendChild(svg);
-    // draw + fade run 1s total; drop the node just after, so nothing lingers
-    setTimeout(function () { svg.remove(); }, 1200);
+  // --- Landing pulse on the card jumped to from the index map ------
+  function pulseCard(card) {
+    // clear it anywhere first: jumping between cards would otherwise leave the previous one lit
+    document.querySelectorAll('.project.is-landed').forEach(function (n) { n.classList.remove('is-landed'); });
+    void card.offsetWidth; // restart the animation when the same card is jumped to twice
+    card.classList.add('is-landed');
+    clearTimeout(card._landTimer);
+    // one 0.6s pulse; the timer also ends the still ring shown under reduced motion
+    card._landTimer = setTimeout(function () { card.classList.remove('is-landed'); }, 700);
   }
 
   // Smooth-scroll duration depends on how far the jump is, so a fixed delay
   // either fires early on long jumps or dawdles on short ones. Wait for the
   // scroll position to actually stop moving instead.
   // Polled on a timer rather than requestAnimationFrame: rAF is suspended while
-  // the document is hidden, which would strand the trace on a background tab.
+  // the document is hidden, which would strand the pulse on a background tab.
   function afterScrollSettles(fn) {
     var last = window.scrollY, still = 0, ticks = 0;
     var timer = setInterval(function () {
@@ -471,29 +458,30 @@
     }, 20);
   }
 
-  function traceHashTarget() {
+  function pulseHashTarget() {
     // getElementById, not querySelector: a fragment like #1 is not a valid selector,
     // and the throw would stop this whole script (lightbox, glow, buttons never wire).
     var id;
     try { id = decodeURIComponent(location.hash.slice(1)); } catch (err) { return; } // malformed %-escape
     var el = id && document.getElementById(id);
     if (!el || !el.classList.contains('project')) return;
-    afterScrollSettles(function () { traceCard(el); });
+    afterScrollSettles(function () { pulseCard(el); });
   }
 
-  window.addEventListener('hashchange', traceHashTarget);
-  traceHashTarget();
+  window.addEventListener('hashchange', pulseHashTarget);
+  pulseHashTarget();
 
   // --- Thumbnail lightbox -----------------------------------------
   // Native <dialog> supplies the focus trap, Esc-to-close, and backdrop, so
   // there's nothing here but wiring. Placeholders hold no <img>, so they're
   // skipped automatically.
-  // NOT .map-tile: those are navigation into the card (and fire the trace).
+  // NOT .map-tile: those are navigation into the card (and fire the pulse).
   var zoomThumbs = document.querySelectorAll('.project-thumb img, .story-media:not(a) img'); // a linked story-media navigates instead
   if (zoomThumbs.length) {
     var lightbox = document.createElement('dialog');
     lightbox.className = 'lightbox';
-    lightbox.innerHTML = '<img alt="" /><button class="lightbox-close" type="button" aria-label="Close">&times;</button>';
+    lightbox.innerHTML = '<img alt="" /><button class="lightbox-close" type="button" aria-label="Close">'
+      + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg></button>';
     document.body.appendChild(lightbox);
     var lightboxImg = lightbox.querySelector('img');
 

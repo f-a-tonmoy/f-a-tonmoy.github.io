@@ -561,9 +561,12 @@ function themedSrc(src) {
   return dark ? src.replace('/light/', '/dark/') : src;
 }
 
+// bump when the thumbnails are regenerated: same file names, so browsers would keep the old art
+const THUMB_VERSION = 2;
+
 function articleCard(article) {
   const image = article.image
-    ? `<img src="${esc(themedSrc(article.image))}" alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />`
+    ? `<img src="${esc(themedSrc(article.image))}?v=${THUMB_VERSION}"alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />`
     : '';
   return `<a class="article-card" href="${esc(article.url)}" target="_blank" rel="noopener">`
     + `<span class="article-thumb ${article.image ? '' : 'is-empty'}" data-fallback="${esc(article.category)}">${image}</span>`

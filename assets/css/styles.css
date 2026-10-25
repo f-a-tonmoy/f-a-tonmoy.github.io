@@ -93,9 +93,7 @@
   /* vertical rhythm: a .section pays this top and bottom, so adjacent
      sections sit 2x apart. Anything else states its offset from it. */
   --section-pad: 64px;
-  --chrome-edge: clamp(20px, 4vw, 48px); /* right inset shared by the floating theme toggle and back-to-top */
-  /* ground behind the data-story chart exports, which are still light art */
-  --chart-ground: #fcfaf8;
+  --chrome-edge: 24px; /* right inset shared by the floating theme toggle and back-to-top */
   /* ground behind the project thumbnails: matches CANVAS in make_thumbnails.py.
      site.js swaps the art per theme, so this tracks it. */
   --thumb-ground: #ffffff;
@@ -130,7 +128,6 @@
   --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-lift: 0 22px 48px rgba(0, 0, 0, 0.55);
   --button-secondary-bg: rgba(255, 255, 255, 0.04);
-  --chart-ground: #e8eaec;
   --thumb-ground: #12161c;
   --logo-invert: 1;
   --show-sun: block;
@@ -164,7 +161,6 @@
     --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
     --shadow-lift: 0 22px 48px rgba(0, 0, 0, 0.55);
     --button-secondary-bg: rgba(255, 255, 255, 0.04);
-    --chart-ground: #e8eaec;
     --thumb-ground: #12161c;
     --logo-invert: 1;
     --show-sun: block;
@@ -284,7 +280,8 @@ a {
 }
 
 @media (min-width: 1320px) {
-  .header-inner { padding-right: 0; }
+  .header-inner,
+  .footer-inner { padding-right: 0; }
 }
 
 /* Sticky but visually static reads as painted on. Once the page has moved,
@@ -341,6 +338,7 @@ a {
 .nav-toggle {
   display: none;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 5px;
   width: 42px;
@@ -354,9 +352,9 @@ a {
 
 .nav-toggle span {
   display: block;
-  width: 100%;
+  width: 17px; /* the drawn width of the sun and envelope beside it, not the whole 21px box */
   height: 2px;
-  background: var(--ink);
+  background: var(--accent-dark); /* green like the other header icons */
   border-radius: var(--radius);
   transition: transform 0.2s, opacity 0.2s;
 }
@@ -926,7 +924,7 @@ h3 {
 .section-link {
   flex: 0 0 auto;
   position: relative;
-  padding-right: 18px;
+  padding-right: 14px; /* room for the ↗, close enough to read as part of the label */
   color: var(--accent-dark);
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -1011,7 +1009,7 @@ h3 {
   position: relative;
   padding: 22px;
   border: 1px solid var(--line);
-  border-left: 2px solid var(--accent-dark);
+  border-left: 1.5px solid var(--accent-dark);
   border-radius: var(--radius);
   background: var(--bg-elev);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
@@ -1092,7 +1090,7 @@ h3 {
 .card a[target="_blank"],
 .project-link[target="_blank"] {
   position: relative;
-  padding-right: 18px;
+  padding-right: 14px; /* room for the ↗, close enough to read as part of the label */
 }
 
 .card a[target="_blank"]::after,
@@ -1130,7 +1128,7 @@ h3 {
 }
 
 .project {
-  position: relative; /* containing block for the landing trace overlay */
+  position: relative; /* containing block for the landing pulse */
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 0.34fr);
   gap: 24px;
@@ -1475,7 +1473,7 @@ h3 {
   margin-top: calc(var(--section-pad) - 36px);
   padding: 36px;
   border: 1px solid var(--line);
-  border-left: 2px solid var(--accent-dark);
+  border-left: 1.5px solid var(--accent-dark);
   border-radius: var(--radius);
   background: var(--bg-elev);
   box-shadow: var(--shadow-soft);
@@ -1532,7 +1530,11 @@ h3 {
   display: block;
   width: 15px;
   height: 15px;
-  fill: currentColor;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2; /* 1.38px rendered, the same as the other 15px inline icons */
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .toast {
@@ -1546,13 +1548,21 @@ h3 {
   background: var(--surface);
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
+  letter-spacing: 0.06em; /* caps, matching the tooltips */
+  text-transform: uppercase;
   box-shadow: var(--shadow);
   transform: translate(-50%, 16px);
   opacity: 0;
   pointer-events: none;
   transition: transform 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
+}
+
+/* an email address shown for copying by hand keeps its real case */
+.toast-address {
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .toast.visible {
@@ -1593,8 +1603,10 @@ h3 {
   box-shadow: var(--shadow-soft);
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.74rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em; /* caps, like the site's other mono labels */
+  text-transform: uppercase;
   white-space: nowrap;
   pointer-events: none;
   opacity: 0;
@@ -1785,7 +1797,8 @@ h3 {
   gap: 24px;
   width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 28px 0;
+  /* right reserve for the floating back-to-top, which covers the footer links below ~1320px */
+  padding: 28px 72px 28px 0;
   flex-wrap: wrap;
 }
 
@@ -1857,11 +1870,21 @@ h3 {
 .theme-toggle .theme-icon-sun  { display: var(--show-sun); }
 .theme-toggle .theme-icon-moon { display: var(--show-moon); }
 
+/* Below 1320px the bar reaches the toggle, so it sits inside the bar's right end
+   (1px border + 12px padding in from the bar's edge) instead of 24px from the window's;
+   header-inner's 52px reserve keeps the nav clear of it. Back-to-top follows, so the
+   two buttons keep one right edge. */
+@media (min-width: 901px) and (max-width: 1319px) {
+  .theme-toggle,
+  .back-to-top {
+    right: calc((100% - min(1120px, 100% - 48px)) / 2 + 13px);
+  }
+}
+
 @media (max-width: 900px) {
   /* On small screens the toggle sits inside the header bar, just left of the menu button,
      instead of floating over the page text. Same 42px box as the menu button. The bar is
      24px in from the viewport edge, then 1px border + 12px padding + 42px button + 8px gap. */
-  :root { --chrome-edge: 24px; }
 
   .theme-toggle {
     top: 27px;            /* 16px sticky offset + (64px bar - 42px button) / 2 */
@@ -1991,9 +2014,9 @@ h3 {
   aspect-ratio: 16 / 9;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  /* the exports are chart art on their own near-white ground, so contain them
-     rather than crop the headline off the top edge */
-  background: var(--chart-ground);
+  /* the art is a themed 16:9 card (site.js swaps it per theme): fill the frame edge to
+     edge on the page's own surface, so no sliver of another ground shows around it */
+  background: var(--surface);
   box-shadow: var(--shadow-soft);
   transition: transform 0.32s var(--ease-out), box-shadow 0.32s var(--ease-out),
     border-color 0.2s var(--ease-out);
@@ -2003,7 +2026,7 @@ h3 {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .story:hover .story-media {
@@ -2035,16 +2058,6 @@ h3 {
 }
 
 /* no method disclosure between the meta line and the link here, so give it room */
-/* the explainer art is a themed 16:9 card, not light-ground chart art: fill the frame
-   edge to edge on the page's own surface, so no light sliver shows around it in dark mode */
-#explainers .story-media {
-  background: var(--surface);
-}
-
-#explainers .story-media img {
-  object-fit: cover;
-}
-
 #explainers .story-meta {
   margin-bottom: 18px;
 }
@@ -2490,7 +2503,7 @@ h3 {
   flex: 0 0 14px;
   width: 14px;
   height: 14px;
-  color: var(--accent-dark); /* same reason as the trace: readable in both themes */
+  color: var(--accent-dark); /* same reason as the landing pulse: readable in both themes */
   stroke-width: 2.4; /* viewBox is 24, so 2.4 x (14/24) = 1.40px rendered */
 }
 
@@ -2586,44 +2599,34 @@ h3 {
 
 
 /* ============================================================
-   Landing trace + thumbnail lightbox
+   Landing pulse + thumbnail lightbox
    ============================================================ */
 
-/* A line sets off from the middle of the card's left edge, travels the whole
-   perimeter and closes on itself: marks which card you just jumped to. */
-.trace-svg {
+/* Marks the card you just jumped to from the map: a ring flashes around it once
+   and fades. --accent-dark, not --accent: --accent is the same bright
+   emerald in both themes, which is 1.79:1 on the light page. */
+.project.is-landed::after {
+  content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
-  overflow: visible;
+  inset: -2px -12px;
+  border: 1.5px solid var(--accent-dark);
+  border-radius: var(--radius);
   pointer-events: none;
+  opacity: 0;
+  animation: land-pulse 0.6s var(--ease-out);
 }
 
-.trace-svg path {
-  fill: none;
-  /* --accent-dark, not --accent: --accent is the same bright emerald in both
-     themes, which is 1.79:1 on the light page. --accent-dark adapts (4.98:1
-     light / 12.84:1 dark) and matches the links and brand mark. */
-  stroke: var(--accent-dark);
-  stroke-width: 1.5;
-  stroke-linecap: square;
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: trace-draw 0.55s linear both, trace-fade 0.45s linear 0.55s both;
+@keyframes land-pulse {
+  0% { opacity: 0; transform: scale(0.995); }
+  35% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.01); }
 }
 
-@keyframes trace-draw {
-  to { stroke-dashoffset: 0; }
-}
-
-@keyframes trace-fade {
-  to { opacity: 0; }
-}
-
+/* no motion: hold the ring still for the same second instead */
 @media (prefers-reduced-motion: reduce) {
-  .trace-svg path {
+  .project.is-landed::after {
     animation: none;
-    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 
@@ -2688,6 +2691,15 @@ h3 {
   cursor: pointer;
   transition: background 0.18s var(--ease-out), color 0.18s var(--ease-out),
     border-color 0.18s var(--ease-out);
+}
+
+.lightbox-close svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.3; /* 1.75px rendered, the header icons' weight */
+  stroke-linecap: round;
 }
 
 .lightbox-close:hover {
