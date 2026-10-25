@@ -60,8 +60,10 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 │   ├── js/site.js         # shared chrome injection + interactivity
 │   ├── data/articles.js   # article data + the shared article-card renderer
 │   ├── webfonts/          # Space Grotesk + JetBrains Mono, Latin subset, woff2
-│   ├── project-thumbnails/{light,dark}/   # one set per theme
-│   ├── data-stories/  explainers/  article-thumbnails/  school-logos/
+│   ├── project-thumbnails/{light,dark}/   # generated art, one set per theme
+│   ├── article-thumbnails/{light,dark}/   # generated art, one set per theme
+│   ├── explainers/{light,dark}/           # generated art, one set per theme
+│   ├── data-stories/  school-logos/
 │   └── avatar, favicon, OG image, resume
 └── tools/
     └── check-articles.js  # `node tools/check-articles.js`: catches bad article data

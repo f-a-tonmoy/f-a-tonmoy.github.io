@@ -44,8 +44,14 @@
       +   '<a class="nav-mobile-action" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>'
       + '</nav>'
       + '<div class="header-actions">'
-      +   '<a class="header-cta" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener">Resume</a>'
-      +   '<a class="header-cta" href="mailto:f.a.tonmoy00@gmail.com">Contact</a>'
+      // Document and envelope drawn on the same 24-unit grid and 2-unit stroke as the theme
+      // toggle, so the header icons read at one weight. On a pointer device the envelope copies the address.
+      +   '<a class="header-cta header-cta-icon" href="/assets/Resume%20-%20Fahim%20Ahamed.pdf" target="_blank" rel="noopener" aria-label="View or download resume" data-tip="View / download resume">'
+      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5" /><path d="M12 11v6m-3-3 3 3 3-3" /></svg>'
+      +   '</a>'
+      +   '<a class="header-cta header-cta-icon" href="mailto:f.a.tonmoy00@gmail.com" aria-label="Copy email address" data-tip="Copy email address">'
+      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m3.6 7 8.4 6.2L20.4 7" /></svg>'
+      +   '</a>'
       + '</div>'
       + '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">'
       +   '<span></span><span></span><span></span>'
@@ -61,7 +67,7 @@
       +     '<a href="https://github.com/f-a-tonmoy" target="_blank" rel="noopener">GitHub</a>'
       +     '<span class="email-action">'
       +       '<a href="mailto:f.a.tonmoy00@gmail.com">Email</a>'
-      +       '<button class="copy-email" type="button" data-email="f.a.tonmoy00@gmail.com" aria-label="Copy email address" title="Copy email">'
+      +       '<button class="copy-email" type="button" data-email="f.a.tonmoy00@gmail.com" aria-label="Copy email address" data-tip="Copy email">'
       +         '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>'
       +       '</button>'
       +     '</span>'
@@ -74,7 +80,7 @@
     btn.className = 'theme-toggle';
     btn.type = 'button';
     btn.setAttribute('aria-label', 'Toggle dark mode');
-    btn.title = 'Toggle theme';
+    btn.dataset.tip = 'Toggle theme';
     btn.innerHTML = ''
       + '<svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">'
       +   '<path d="M20.6 13.7A8.6 8.6 0 1 1 10.3 3.4a6.8 6.8 0 0 0 10.3 10.3z"/>'
@@ -275,6 +281,47 @@
     });
   });
 
+  // --- Themed tooltips ---------------------------------------------
+  // [data-tip] stands in for title=, whose native bubble ignores the theme. One fixed
+  // element, so a tip escapes overflow:hidden parents and is clamped to the viewport.
+  // Hover devices only: on touch, a tap already does the thing the tip would describe.
+  if (canHover) {
+    var tip = document.createElement('div');
+    tip.className = 'tip';
+    tip.setAttribute('aria-hidden', 'true'); // the controls carry aria-labels already
+    document.body.appendChild(tip);
+
+    var showTip = function (el) {
+      tip.textContent = el.dataset.tip;
+      var r = el.getBoundingClientRect();
+      var y = r.bottom + 8;
+      if (y + tip.offsetHeight > document.documentElement.clientHeight - 8) y = r.top - tip.offsetHeight - 8;
+      var half = tip.offsetWidth / 2;
+      var cx = Math.min(Math.max((r.left + r.right) / 2, half + 8), document.documentElement.clientWidth - half - 8);
+      tip.style.left = Math.round(cx - half) + 'px';
+      tip.style.top = Math.round(y) + 'px';
+      tip.classList.add('visible');
+    };
+    var hideTip = function () { tip.classList.remove('visible'); };
+
+    document.addEventListener('mouseover', function (e) {
+      var el = e.target.closest('[data-tip]');
+      if (el) showTip(el);
+    });
+    document.addEventListener('mouseout', function (e) {
+      var el = e.target.closest('[data-tip]');
+      if (el && !el.contains(e.relatedTarget)) hideTip();
+    });
+    document.addEventListener('focusin', function (e) {
+      var el = e.target.closest('[data-tip]');
+      if (el && el.matches(':focus-visible')) showTip(el);
+    });
+    document.addEventListener('focusout', hideTip);
+    // a click hands over to the toast or a new tab; scrolling detaches the tip from its control
+    document.addEventListener('click', hideTip);
+    window.addEventListener('scroll', hideTip, { passive: true });
+  }
+
   // Pass `anchor` to park the toast against the control that triggered it. The
   // default bottom-of-window spot is a whole viewport away from a click in the
   // header, so a visitor reads "nothing happened" before they ever look down.
@@ -362,7 +409,7 @@
     var dark = currentTheme() === 'dark';
     var from = dark ? '/light/' : '/dark/';
     var to = dark ? '/dark/' : '/light/';
-    document.querySelectorAll('.project-thumb img, .map-tile img').forEach(function (img) {
+    document.querySelectorAll('.project-thumb img, .map-tile img, .article-thumb img, .story-media img').forEach(function (img) {
       var src = img.getAttribute('src') || '';
       if (src.indexOf(from) !== -1) img.setAttribute('src', src.split(from).join(to));
     });
@@ -377,7 +424,7 @@
 
   // --- Landing trace on the card jumped to from the index map ------
   // The path starts at the middle of the left edge rather than a corner, so the
-  // line closes on a straight run instead of meeting itself mid-curve.
+  // line closes on a straight run instead of meeting itself at a corner.
   var SVGNS = 'http://www.w3.org/2000/svg';
 
   function traceCard(card) {
@@ -386,7 +433,7 @@
     document.querySelectorAll('.trace-svg').forEach(function (n) { n.remove(); });
 
     var box = card.getBoundingClientRect();
-    var pad = 10, r = 14;
+    var pad = 10;
     var w = box.width + pad * 2, h = box.height + pad * 2, cy = h / 2;
 
     var svg = document.createElementNS(SVGNS, 'svg');
@@ -398,15 +445,7 @@
 
     var path = document.createElementNS(SVGNS, 'path');
     path.setAttribute('pathLength', '100'); // lets one dasharray fit every card size
-    path.setAttribute('d',
-      'M0 ' + cy + 'L0 ' + r +
-      'A' + r + ' ' + r + ' 0 0 1 ' + r + ' 0' +
-      'L' + (w - r) + ' 0' +
-      'A' + r + ' ' + r + ' 0 0 1 ' + w + ' ' + r +
-      'L' + w + ' ' + (h - r) +
-      'A' + r + ' ' + r + ' 0 0 1 ' + (w - r) + ' ' + h +
-      'L' + r + ' ' + h +
-      'A' + r + ' ' + r + ' 0 0 1 0 ' + (h - r) + 'Z');
+    path.setAttribute('d', 'M0 ' + cy + 'V0H' + w + 'V' + h + 'H0Z');
 
     svg.appendChild(path);
     card.appendChild(svg);

@@ -306,7 +306,7 @@ a {
   color: var(--accent-dark);
   background: transparent;
   text-decoration: none;
-  transition: transform 0.18s var(--ease-out), background 0.18s var(--ease-out), border-color 0.18s var(--ease-out);
+  transition: color 0.18s var(--ease-out), background 0.18s var(--ease-out);
 }
 
 /* Icon stroke weight is normalised on RENDERED pixels, not viewBox units:
@@ -327,10 +327,10 @@ a {
   stroke-linejoin: round;
 }
 
+/* same hover as the header icons on the right */
 .brand:hover {
-  border-color: var(--accent-dark);
+  color: var(--ink);
   background: var(--hover-bg);
-  transform: translateY(-1px);
 }
 
 .brand[aria-current="page"] {
@@ -345,7 +345,7 @@ a {
   gap: 5px;
   width: 42px;
   height: 42px;
-  padding: 8px;
+  padding: 10.5px; /* 21px of lines: the same icon box as the other header icons */
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: transparent;
@@ -434,6 +434,23 @@ a {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+/* resume and email as icons: 21px on a 24 grid with a 2-unit stroke, the same weight as the theme toggle */
+.header-cta-icon {
+  display: grid;
+  place-items: center;
+  padding: 9.5px 10px;   /* 21 + 19 = 40px tall */
+}
+
+.header-cta-icon svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .header-actions > .header-cta + .header-cta {
@@ -994,7 +1011,7 @@ h3 {
   position: relative;
   padding: 22px;
   border: 1px solid var(--line);
-  border-left: 3px solid var(--accent-dark);
+  border-left: 2px solid var(--accent-dark);
   border-radius: var(--radius);
   background: var(--bg-elev);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
@@ -1458,7 +1475,7 @@ h3 {
   margin-top: calc(var(--section-pad) - 36px);
   padding: 36px;
   border: 1px solid var(--line);
-  border-left: 3px solid var(--accent-dark);
+  border-left: 2px solid var(--accent-dark);
   border-radius: var(--radius);
   background: var(--bg-elev);
   box-shadow: var(--shadow-soft);
@@ -1481,7 +1498,8 @@ h3 {
 }
 
 .footer-links .email-action a {
-  padding: 0;
+  padding: 6px 0; /* full-height tap target; the margin cancels it in the layout */
+  margin: -6px 0;
   border-radius: 0;
   color: inherit;
   background: transparent;
@@ -1495,7 +1513,9 @@ h3 {
 .copy-email {
   display: inline-grid;
   place-items: center;
-  padding: 0;
+  /* 31px tap target around the 15px icon; the negative margin keeps the layout */
+  padding: 8px;
+  margin: -8px;
   border: 0;
   background: transparent;
   color: inherit;
@@ -1560,6 +1580,33 @@ h3 {
   transform: translate(-50%, 0);
 }
 
+/* ---------- Tooltip (site.js positions it from [data-tip]) ---------- */
+.tip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 110; /* above the toast */
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-3px);
+  transition: opacity 0.15s var(--ease-out), transform 0.15s var(--ease-out);
+}
+
+.tip.visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* ---------- Back to top ---------- */
 .back-to-top {
   position: fixed;
@@ -1611,7 +1658,26 @@ h3 {
     align-items: center;
     flex-wrap: wrap;
     row-gap: 0;
-    padding-right: clamp(20px, 4vw, 48px);
+    /* 1px border + 10px + 42px buttons + 10px + 1px = the 64px bar, so the menu button
+       sits at the same height as the fixed theme toggle with the drawer open or shut */
+    padding-block: 10px;
+  }
+
+  /* the theme toggle sits inside the bar on small screens, so no right reserve:
+     brand left, menu button right, symmetric 12px insets */
+  .header-inner {
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  /* menu button stays on the first row, right; the drawer wraps below the whole row */
+  .nav-toggle {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav {
+    order: 3;
   }
 
   .nav-toggle {
@@ -1792,13 +1858,17 @@ h3 {
 .theme-toggle .theme-icon-moon { display: var(--show-moon); }
 
 @media (max-width: 900px) {
-  /* On mobile, float above the back-to-top button — paired chrome, matching size */
+  /* On small screens the toggle sits inside the header bar, just left of the menu button,
+     instead of floating over the page text. Same 42px box as the menu button. The bar is
+     24px in from the viewport edge, then 1px border + 12px padding + 42px button + 8px gap. */
   :root { --chrome-edge: 24px; }
 
   .theme-toggle {
-    top: auto;
-    left: auto;
-    bottom: 80px;
+    top: 27px;            /* 16px sticky offset + (64px bar - 42px button) / 2 */
+    right: 87px;
+    width: 42px;
+    height: 42px;
+    box-shadow: none;
   }
 }
 
@@ -1843,10 +1913,17 @@ h3 {
 
 /* ---------- Small screens ---------- */
 @media (max-width: 560px) {
+  /* one 16px edge on phones for the header bar, content and footer */
+  :root { --chrome-edge: 16px; }
+
+  .site-header,
   .section,
-  .header-inner,
   .footer-inner {
-    width: min(100% - 24px, 1120px);
+    width: calc(100% - 32px);
+  }
+
+  .theme-toggle {
+    right: 79px; /* 16px edge + 1px border + 12px padding + 42px menu button + 8px gap */
   }
 
   .section {
@@ -1863,6 +1940,12 @@ h3 {
 
   .button {
     width: 100%;
+  }
+
+  /* full-width search so the placeholder isn't cut off; the count wraps below */
+  .article-search {
+    width: 100%;
+    min-width: 0;
   }
 
   .stats > div,
@@ -1952,6 +2035,16 @@ h3 {
 }
 
 /* no method disclosure between the meta line and the link here, so give it room */
+/* the explainer art is a themed 16:9 card, not light-ground chart art: fill the frame
+   edge to edge on the page's own surface, so no light sliver shows around it in dark mode */
+#explainers .story-media {
+  background: var(--surface);
+}
+
+#explainers .story-media img {
+  object-fit: cover;
+}
+
 #explainers .story-meta {
   margin-bottom: 18px;
 }
@@ -2015,9 +2108,10 @@ h3 {
   text-transform: uppercase;
 }
 
-.story-meta li + li::before {
+/* trailing dot, so a wrapped line never starts with a separator */
+.story-meta li:not(:last-child)::after {
   content: "\00b7";
-  margin-right: 10px;
+  margin-left: 10px;
   color: var(--line);
 }
 
@@ -2364,6 +2458,13 @@ h3 {
   }
 }
 
+/* phones: two-up, so tiles are large enough to read and 2 / 6 / 2 fill whole rows */
+@media (max-width: 560px) {
+  .map-group[data-group] .map-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* ---------- Timeline: employer line, with tag + location pinned right ---------- */
 /* display:contents lets the two children pin themselves to the card, so the
    role and employer keep their own flow above the bullets. */
@@ -2504,8 +2605,8 @@ h3 {
      themes, which is 1.79:1 on the light page. --accent-dark adapts (4.98:1
      light / 12.84:1 dark) and matches the links and brand mark. */
   stroke: var(--accent-dark);
-  stroke-width: 2.5;
-  stroke-linecap: round;
+  stroke-width: 1.5;
+  stroke-linecap: square;
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
   animation: trace-draw 0.55s linear both, trace-fade 0.45s linear 0.55s both;

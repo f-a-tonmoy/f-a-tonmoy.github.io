@@ -24,6 +24,8 @@ articles.forEach((a, i) => {
   dup('url', a.url, label);
   dup('title', a.title, label);
   if (a.image && !fs.existsSync(path.join(dir, a.image))) problems.push(`${label}: image not found: ${a.image}`);
+  const dark = a.image && a.image.replace('/light/', '/dark/');
+  if (dark && dark !== a.image && !fs.existsSync(path.join(dir, dark))) problems.push(`${label}: dark version not found: ${dark}`);
   if (!tabs.includes(a.category)) problems.push(`${label}: category "${a.category}" has no tab on pages/writing.html`);
   if (a.featured) {
     dup('featured', String(a.featured), label);
