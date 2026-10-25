@@ -417,8 +417,11 @@
     var from = dark ? '/light/' : '/dark/';
     var to = dark ? '/dark/' : '/light/';
     document.querySelectorAll('.project-thumb img, .map-tile img, .article-thumb img, .story-media img').forEach(function (img) {
-      var src = img.getAttribute('src') || '';
-      if (src.indexOf(from) !== -1) img.setAttribute('src', src.split(from).join(to));
+      // srcset too: the project cards list a 600px and a 1200px copy
+      ['src', 'srcset'].forEach(function (attr) {
+        var val = img.getAttribute(attr) || '';
+        if (val.indexOf(from) !== -1) img.setAttribute(attr, val.split(from).join(to));
+      });
     });
   }
 
@@ -497,7 +500,7 @@
 
       var openLightbox = function () {
         if (!img.isConnected) return; // the image failed and was replaced by a placeholder
-        lightboxImg.src = img.currentSrc || img.src;
+        lightboxImg.src = img.src; // src is the full-size copy; currentSrc may be the 600px one srcset chose
         lightbox.showModal();
       };
 

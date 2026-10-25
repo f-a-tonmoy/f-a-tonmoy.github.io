@@ -700,10 +700,12 @@ h3 {
   transition: transform 0.2s var(--ease-out), border-color 0.2s var(--ease-out), background 0.2s var(--ease-out);
 }
 
+/* animation: none releases the phone layout's breathing border, so hover takes over */
 .status-pill:hover {
   transform: translateY(-1px);
   border-color: var(--accent-dark);
   background: var(--hover-bg);
+  animation: none;
 }
 
 .status-dot {
@@ -729,6 +731,12 @@ h3 {
   0%   { transform: scale(0.6); opacity: 0.5; }
   70%  { transform: scale(1.7); opacity: 0; }
   100% { transform: scale(0.6); opacity: 0; }
+}
+
+/* phones swap the dot for the outline itself slowly breathing to the accent and back */
+@keyframes status-breathe {
+  0%, 100% { border-color: var(--line); }
+  50%      { border-color: var(--accent-dark); }
 }
 
 /* ---------- Stats ---------- */
@@ -1733,9 +1741,35 @@ h3 {
     padding-top: 56px;
   }
 
+  /* stacked, the panel becomes a compact card: avatar left, facts right, so the
+     hero doesn't spend a whole screen on a 300px portrait */
   .profile-panel {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    align-items: center;
+    gap: 14px;
     width: 100%;
     max-width: 360px;
+    padding: 12px;
+  }
+
+  .profile-panel img {
+    width: 112px;
+  }
+
+  .profile-facts {
+    margin: 0;
+    gap: 9px;
+  }
+
+  .profile-facts li {
+    align-items: flex-start; /* icons sit on the first line when a fact wraps */
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+
+  .profile-facts svg {
+    margin-top: 1px;
   }
 
   .section-heading {
@@ -1965,6 +1999,40 @@ h3 {
     width: 100%;
   }
 
+  /* LinkedIn leads full width; GitHub and ORCID share the row under it */
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .hero-actions .button.primary {
+    grid-column: 1 / -1;
+  }
+
+  /* the pill wraps to two lines here, its label centred like the button labels above it.
+     No dot: the outline breathes instead, which reads better on a full-width box. */
+  .status-pill {
+    display: flex; /* full width, so buttons, pill and profile card share one edge */
+    padding: 12px 14px;
+    line-height: 1.55;
+    animation: status-breathe 2.6s ease-in-out infinite;
+  }
+
+  .status-pill .status-dot {
+    display: none;
+  }
+
+  .status-text {
+    flex: 1;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .profile-panel {
+    max-width: none;
+  }
+
   /* full-width search so the placeholder isn't cut off; the count wraps below */
   .article-search {
     width: 100%;
@@ -1982,6 +2050,15 @@ h3 {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
+}
+
+/* no motion on phones, where the outline stands in for the dot: keep it lightly
+   tinted, so it still reads as active. After the phone block, so it wins. */
+@media (prefers-reduced-motion: reduce) and (max-width: 560px) {
+  .status-pill {
+    animation: none;
+    border-color: color-mix(in srgb, var(--accent-dark) 50%, var(--line));
   }
 }
 
@@ -2203,6 +2280,13 @@ h3 {
 
 .case-grid .article-card {
   min-height: 0;
+}
+
+/* reserve two title lines, like the project cards, so a one-line title does not let
+   its description start higher than its neighbours' */
+.case-grid .article-title {
+  display: block;
+  min-height: calc(2 * 1.35em);
 }
 
 .case-desc {
@@ -2584,6 +2668,15 @@ h3 {
 .hero h1 {
   margin-bottom: 26px;
 }
+
+/* The name's pair spacing, adjusted by eye and by measuring the white space between letters.
+   Each class sets the tracking after one letter: the h1's -0.03em base plus a small kern.
+   Straight-sided pairs (H-I, I-M, M-E) get a touch closer; diagonal pairs (A-H, H-A, A-M)
+   and E-D, whose arm tips nearly touch the stem, a touch more room; F-A a little closer. */
+.hero h1 .kn { letter-spacing: -0.086em; } /* F-A: -0.03em base, the font's own -0.044em F-A kern (lost once the letters sit in separate spans), and -0.012em more */
+.hero h1 .kl { letter-spacing: -0.021em; }
+.hero h1 .kt { letter-spacing: -0.040em; }
+.hero h1 .ke { letter-spacing: -0.018em; }
 
 .hero .lede {
   line-height: 1.72;
