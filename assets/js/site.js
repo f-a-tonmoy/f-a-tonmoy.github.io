@@ -31,7 +31,7 @@
       // Reference proportions: roof 36% / walls 64% of height, doorway 33% of
       // the house width and 64% of the wall height.
       +   '<svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">'
-      +     '<path d="M12 3 3.95 9.5V21h5.35v-7.4h5.4V21h5.35V9.5Z" />'
+      +     '<path d="M4 10.4 12 4.2l8 6.2V19a1.6 1.6 0 0 1-1.6 1.6H15v-5.8H9v5.8H5.6A1.6 1.6 0 0 1 4 19z" />'
       +   '</svg>'
       + '</a>'
       + '<nav class="nav" aria-label="Primary navigation">'
@@ -47,10 +47,10 @@
       // Document and envelope drawn on the same 24-unit grid and 2-unit stroke as the theme
       // toggle, so the header icons read at one weight. On a pointer device the envelope copies the address.
       +   '<a class="header-cta header-cta-icon" href="/assets/fahim-ahamed-resume.pdf" target="_blank" rel="noopener" aria-label="View resume" data-tip="View resume">'
-      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5" /><circle cx="12" cy="12.5" r="2" /><path d="M8.5 18.5a3.5 3.5 0 0 1 7 0" /></svg>'
+      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3.4H7a2 2 0 0 0-2 2v13.2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.2z" /><path d="M14.2 3.4v4.8H19" /><circle cx="12" cy="12.4" r="1.9" /><path d="M8.7 17.8a3.3 3.3 0 0 1 6.6 0" /></svg>'
       +   '</a>'
       +   '<a class="header-cta header-cta-icon" href="mailto:f.a.tonmoy00@gmail.com" aria-label="Copy email address" data-tip="Copy email address">'
-      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m3.6 7 8.4 6.2L20.4 7" /></svg>'
+      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="5.2" width="17.6" height="13.6" rx="2.2" /><path d="m3.8 7.4 7.3 5.3a1.6 1.6 0 0 0 1.8 0l7.3-5.3" /></svg>'
       +   '</a>'
       + '</div>'
       + '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">'
@@ -68,7 +68,7 @@
       +     '<span class="email-action">'
       +       '<a href="mailto:f.a.tonmoy00@gmail.com">Email</a>'
       +       '<button class="copy-email" type="button" data-email="f.a.tonmoy00@gmail.com" aria-label="Copy email address" data-tip="Copy email">'
-      +         '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2" /><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" /></svg>'
+      +         '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8.4" y="8.4" width="12.2" height="12.2" rx="2.2" /><path d="M15.6 8.4V5.6a2.2 2.2 0 0 0-2.2-2.2H5.6a2.2 2.2 0 0 0-2.2 2.2v7.8a2.2 2.2 0 0 0 2.2 2.2h2.8" /></svg>'
       +       '</button>'
       +     '</span>'
       +   '</div>'
@@ -83,12 +83,12 @@
     btn.dataset.tip = 'Toggle theme';
     btn.innerHTML = ''
       + '<svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">'
-      +   '<path d="M20.6 13.7A8.6 8.6 0 1 1 10.3 3.4a6.8 6.8 0 0 0 10.3 10.3z"/>'
+      +   '<path d="M20.2 13.95A8.2 8.2 0 1 1 10.05 3.8a6.5 6.5 0 0 0 10.15 10.15z"/>'
       + '</svg>'
       + '<svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">'
-      +   '<circle cx="12" cy="12" r="4.2"/>'
-      +   '<path d="M12 2.4v2.3M12 19.3v2.3M21.6 12h-2.3M4.7 12H2.4"/>'
-      +   '<path d="m18.8 5.2-1.6 1.6M6.8 17.2l-1.6 1.6M18.8 18.8l-1.6-1.6M6.8 6.8 5.2 5.2"/>'
+      +   '<circle cx="12" cy="12" r="3.8"/>'
+      +   '<path d="M12 3v1.9M12 19.1V21M21 12h-1.9M4.9 12H3"/>'
+      +   '<path d="M18.4 5.6l-1.35 1.35M6.95 17.05 5.6 18.4M18.4 18.4l-1.35-1.35M6.95 6.95 5.6 5.6"/>'
       + '</svg>';
     return btn;
   }
@@ -99,8 +99,8 @@
     btn.type = 'button';
     btn.setAttribute('aria-label', 'Back to top');
     btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
-      + '<path d="M12 19.5V5.2"/>'
-      + '<path d="M5.4 11.8 12 5.2l6.6 6.6"/>'
+      + '<path d="M12 19V5.6"/>'
+      + '<path d="m6.2 11.4 5.8-5.8 5.8 5.8"/>'
       + '</svg>';
     return btn;
   }
@@ -484,7 +484,7 @@
     var lightbox = document.createElement('dialog');
     lightbox.className = 'lightbox';
     lightbox.innerHTML = '<img alt="" /><button class="lightbox-close" type="button" aria-label="Close">'
-      + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg></button>';
+      + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.5 6.5 11 11M17.5 6.5l-11 11" /></svg></button>';
     document.body.appendChild(lightbox);
     var lightboxImg = lightbox.querySelector('img');
 

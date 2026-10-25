@@ -117,6 +117,7 @@
   --accent: #34d399;
   --accent-dark: #6ee7c0;
   --accent-soft: rgba(52, 211, 153, 0.12);
+  --tag-line: rgba(52, 211, 153, 0.32); /* --line disappears on dark card surfaces */
   --on-accent: #06170f;
   --hover-bg: rgba(52, 211, 153, 0.08);
   --scrollbar-thumb: rgba(52, 211, 153, 0.3);
@@ -150,6 +151,7 @@
     --accent: #34d399;
     --accent-dark: #6ee7c0;
     --accent-soft: rgba(52, 211, 153, 0.12);
+    --tag-line: rgba(52, 211, 153, 0.32);
     --on-accent: #06170f;
     --hover-bg: rgba(52, 211, 153, 0.08);
     --scrollbar-thumb: rgba(52, 211, 153, 0.3);
@@ -558,7 +560,7 @@ a {
   align-self: flex-start;
   margin: 0 0 14px;
   padding: 4px 10px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--tag-line, var(--line));
   border-radius: var(--radius);
   background: transparent;
   color: var(--accent-dark);
@@ -979,7 +981,8 @@ h3 {
 
 /* inner-page intros get a wider measure than the homepage's 640px lede */
 .page-hero .lede {
-  max-width: 720px;
+  max-width: 620px; /* one measure for every page intro, so they sit at the same width */
+  text-wrap: wrap; /* balance and pretty both shrink lines to fit each text; plain wrapping fills the measure on every page */
 }
 
 /* Only the section directly under a page hero skips its lead-in; the hero has
