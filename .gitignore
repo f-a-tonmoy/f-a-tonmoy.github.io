@@ -1,11 +1,6 @@
-# Local-only working folder
-misc/
-experiment/
-old-ui/
-fonts/
-screenshots/
+# Local-only: sandbox, old UI, font sources, drafts, screenshots
+_local/
 ponytail/
-plans/
 .claude
 
 # OS
@@ -20,6 +15,5 @@ Thumbs.db
 # Misc
 .impeccable
 PRODUCT.md
-plan-blocks.md
 *.py
 __pycache__/

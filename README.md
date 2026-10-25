@@ -53,17 +53,18 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 .
 ├── index.html / experience.html / research.html / projects.html
 │   data-stories.html / writing.html
-├── 404.html       # branded not-found page
-├── styles.css     # single stylesheet
-├── site.js        # shared chrome injection + interactivity
-├── articles.js    # article data + the shared article-card renderer
-├── check-articles.js  # `node check-articles.js`: catches bad article data before a push
-├── .nojekyll      # tells GitHub Pages to skip Jekyll (pure-HTML site)
-└── assets/
-    ├── project-thumbnails/{light,dark}/   # one set per theme
-    ├── data-stories/  article-thumbnails/  school-logos/
-    ├── webfonts/      # Space Grotesk + JetBrains Mono, Latin subset, woff2
-    └── avatar, favicon, OG image, resume
+├── 404.html           # branded not-found page
+├── .nojekyll          # tells GitHub Pages to skip Jekyll (pure-HTML site)
+├── assets/
+│   ├── css/styles.css     # single stylesheet
+│   ├── js/site.js         # shared chrome injection + interactivity
+│   ├── data/articles.js   # article data + the shared article-card renderer
+│   ├── webfonts/          # Space Grotesk + JetBrains Mono, Latin subset, woff2
+│   ├── project-thumbnails/{light,dark}/   # one set per theme
+│   ├── data-stories/  article-thumbnails/  school-logos/
+│   └── avatar, favicon, OG image, resume
+└── tools/
+    └── check-articles.js  # `node tools/check-articles.js`: catches bad article data
 ```
 
 ---
@@ -75,8 +76,8 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 python -m http.server 8000
 # visit http://localhost:8000
 
-# before pushing, after editing articles.js
-node check-articles.js
+# before pushing, after editing assets/data/articles.js
+node tools/check-articles.js
 ```
 
 ## Deploy

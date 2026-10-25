@@ -1,12 +1,12 @@
-// Run before pushing:  node check-articles.js
-// Reports every problem in articles.js that would otherwise misrender silently: a wrong
+// Run before pushing:  node tools/check-articles.js
+// Reports every problem in assets/data/articles.js that would otherwise misrender silently: a wrong
 // image path shows a grey placeholder, a category with no tab only appears under "All".
 const fs = require('fs');
 const path = require('path');
 
-const dir = process.argv[2] || __dirname;
+const dir = process.argv[2] || path.join(__dirname, '..'); // repo root
 const read = (f) => fs.readFileSync(path.join(dir, f), 'utf8');
-const articles = new Function(read('articles.js') + '; return articles;')();
+const articles = new Function(read('assets/data/articles.js') + '; return articles;')();
 const tabs = [...read('writing.html').matchAll(/data-filter="([^"]+)"/g)].map((m) => m[1]).filter((t) => t !== 'All');
 
 const problems = [];
