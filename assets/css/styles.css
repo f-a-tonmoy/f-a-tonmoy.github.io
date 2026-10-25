@@ -569,6 +569,11 @@ a {
   text-transform: uppercase;
 }
 
+/* the funding badge closing a timeline card: the journal-tag style, set off from the bullets above */
+.grant-tag {
+  margin: 14px 0 0;
+}
+
 h1,
 h2,
 h3,
@@ -601,6 +606,7 @@ h3 {
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.01em;
+  text-wrap: pretty; /* no single word stranded on a title's last line */
 }
 
 .lede {
@@ -2634,6 +2640,18 @@ h3 {
 /* the degree line sets up the meta line below it, so give them room apart */
 .education-grid article > p:not(.education-meta) {
   margin-bottom: 0;
+}
+
+/* inline links in the degree notes (Washington Accord): accent colour instead of an underline,
+   which comes back on hover so it still reads as a link */
+.education-grid article a {
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+
+.education-grid article a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .education-grid .education-meta .sep {

@@ -562,7 +562,7 @@ function themedSrc(src) {
 }
 
 // bump when the thumbnails are regenerated: same file names, so browsers would keep the old art
-const THUMB_VERSION = 8;
+const THUMB_VERSION = 21;
 
 function articleCard(article) {
   const image = article.image
