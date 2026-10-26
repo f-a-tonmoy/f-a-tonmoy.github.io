@@ -152,11 +152,11 @@
   }
 
   // Theme toggle (persists to localStorage; theme-init script in <head> handles the cold-load)
-  // Uses the View Transitions API for a circular reveal animation from the click point.
+  // Uses the View Transitions API for a top-to-bottom scanline wipe (see theme-scan in styles.css).
   // Gracefully falls back to instant toggle on unsupported browsers and reduced-motion users.
   var themeBtn = document.querySelector('.theme-toggle');
   if (themeBtn) {
-    themeBtn.addEventListener('click', function (e) {
+    themeBtn.addEventListener('click', function () {
       var current = document.documentElement.getAttribute('data-theme');
       var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       var nextDark;
@@ -178,19 +178,6 @@
         apply();
         return;
       }
-
-      // Capture click point for the circular-reveal origin; compute end radius so
-      // the circle is guaranteed to cover the whole viewport from that point.
-      var x = e.clientX;
-      var y = e.clientY;
-      var endRadius = Math.hypot(
-        Math.max(x, window.innerWidth - x),
-        Math.max(y, window.innerHeight - y)
-      );
-
-      document.documentElement.style.setProperty('--theme-anim-x', x + 'px');
-      document.documentElement.style.setProperty('--theme-anim-y', y + 'px');
-      document.documentElement.style.setProperty('--theme-anim-r', endRadius + 'px');
 
       // Newer API (Chrome 125+, Safari 18.2+) accepts {update, types}; older just takes a fn
       try {

@@ -118,6 +118,7 @@
   --accent-dark: #6ee7c0;
   --accent-soft: rgba(52, 211, 153, 0.12);
   --tag-line: rgba(52, 211, 153, 0.32); /* --line disappears on dark card surfaces */
+  --bar-line: #323a46; /* navbar outline: --line-soft is almost the page colour on dark */
   --on-accent: #06170f;
   --hover-bg: rgba(52, 211, 153, 0.08);
   --scrollbar-thumb: rgba(52, 211, 153, 0.3);
@@ -152,6 +153,7 @@
     --accent-dark: #6ee7c0;
     --accent-soft: rgba(52, 211, 153, 0.12);
     --tag-line: rgba(52, 211, 153, 0.32);
+    --bar-line: #323a46;
     --on-accent: #06170f;
     --hover-bg: rgba(52, 211, 153, 0.08);
     --scrollbar-thumb: rgba(52, 211, 153, 0.3);
@@ -259,7 +261,7 @@ a {
   min-height: 64px; /* reserve space before site.js injects nav content */
   margin: 16px auto 0;
   padding: 8px 12px;
-  border: 1px solid var(--line-soft);
+  border: 1px solid var(--bar-line, var(--line-soft));
   border-radius: var(--radius);
   background: var(--surface-translucent);
   backdrop-filter: saturate(160%) blur(10px);
@@ -289,7 +291,7 @@ a {
 /* Sticky but visually static reads as painted on. Once the page has moved,
    firm up the edge so the bar sits above the content sliding under it. */
 .site-header.is-scrolled {
-  border-color: var(--line);
+  border-color: var(--bar-line, var(--line));
   box-shadow: var(--shadow-soft);
 }
 
@@ -397,10 +399,12 @@ a {
   transition: color 0.18s var(--ease-out), background 0.18s var(--ease-out);
 }
 
-.nav a:hover,
-.header-cta:hover {
-  color: var(--ink);
-  background: var(--hover-bg);
+@media (hover: hover) {
+  .nav a:hover,
+  .header-cta:hover {
+    color: var(--ink);
+    background: var(--hover-bg);
+  }
 }
 
 .nav a[aria-current="page"] {
@@ -644,9 +648,11 @@ h3 {
   transition: color 0.18s var(--ease-out), background 0.18s var(--ease-out), border-color 0.18s var(--ease-out), transform 0.18s var(--ease-out);
 }
 
-.button:hover {
-  /* Magnetic offset (set by JS on hover-capable devices) combined with a 1px lift */
-  transform: translate(var(--mag-x, 0px), calc(var(--mag-y, 0px) - 1px));
+@media (hover: hover) {
+  .button:hover {
+    /* Magnetic offset (set by JS on hover-capable devices) combined with a 1px lift */
+    transform: translate(var(--mag-x, 0px), calc(var(--mag-y, 0px) - 1px));
+  }
 }
 
 .button:active {
@@ -659,8 +665,10 @@ h3 {
   background: var(--accent);
 }
 
-.button.primary:hover {
-  filter: brightness(1.06);
+@media (hover: hover) {
+  .button.primary:hover {
+    filter: brightness(1.06);
+  }
 }
 
 .button.secondary {
@@ -668,8 +676,10 @@ h3 {
   color: var(--ink);
 }
 
-.button.secondary:hover {
-  border-color: var(--accent-dark);
+@media (hover: hover) {
+  .button.secondary:hover {
+    border-color: var(--accent-dark);
+  }
 }
 
 .button.tertiary {
@@ -677,9 +687,11 @@ h3 {
   color: var(--ink-soft);
 }
 
-.button.tertiary:hover {
-  color: var(--accent-dark);
-  border-color: var(--accent-dark);
+@media (hover: hover) {
+  .button.tertiary:hover {
+    color: var(--accent-dark);
+    border-color: var(--accent-dark);
+  }
 }
 
 /* ---------- Profile panel ---------- */
@@ -1318,10 +1330,12 @@ h3 {
   transition: color 0.18s var(--ease-out), background 0.18s var(--ease-out), border-color 0.18s var(--ease-out);
 }
 
-.tab-button:hover {
-  color: var(--ink);
-  border-color: var(--accent-dark);
-  background: var(--hover-bg);
+@media (hover: hover) {
+  .tab-button:hover {
+    color: var(--ink);
+    border-color: var(--accent-dark);
+    background: var(--hover-bg);
+  }
 }
 
 /* the applied filter is the only one that gets the solid fill */
@@ -1675,10 +1689,12 @@ h3 {
   transform: translateY(0);
 }
 
-.back-to-top:hover {
-  background: var(--accent);
-  color: var(--on-accent);
-  border-color: var(--accent);
+@media (hover: hover) {
+  .back-to-top:hover {
+    background: var(--accent);
+    color: var(--on-accent);
+    border-color: var(--accent);
+  }
 }
 
 /* ---------- Responsive ---------- */
@@ -1893,11 +1909,13 @@ h3 {
   transition: background 0.2s var(--ease-out), color 0.2s var(--ease-out), border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
 }
 
-.theme-toggle:hover {
-  background: var(--accent);
-  color: var(--on-accent);
-  border-color: var(--accent);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .theme-toggle:hover {
+    background: var(--accent);
+    color: var(--on-accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
 }
 
 .theme-toggle svg {
@@ -1938,24 +1956,25 @@ h3 {
   }
 }
 
-/* ---------- View Transitions: theme toggle circular reveal ---------- */
+/* ---------- View Transitions: theme toggle scanline wipe ----------
+   The new theme slides down over the old one behind a hard horizontal edge. The old snapshot stays
+   fully opaque underneath (no second mask, so no hairline seam), and blending is set to normal:
+   the browser default adds the two layers' colours together. */
 :root:active-view-transition-type(theme)::view-transition-old(root) {
   animation: none;
+  mix-blend-mode: normal;
   z-index: 1;
 }
 
 :root:active-view-transition-type(theme)::view-transition-new(root) {
+  mix-blend-mode: normal;
   z-index: 2;
-  animation: theme-circle-reveal 0.5s var(--ease-out) forwards;
+  animation: theme-scan 0.5s cubic-bezier(0.5, 0, 0.2, 1) forwards;
 }
 
-@keyframes theme-circle-reveal {
-  from {
-    clip-path: circle(0 at var(--theme-anim-x, 50%) var(--theme-anim-y, 50%));
-  }
-  to {
-    clip-path: circle(var(--theme-anim-r, 150vmax) at var(--theme-anim-x, 50%) var(--theme-anim-y, 50%));
-  }
+@keyframes theme-scan {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
 }
 
 /* ---------- Scroll reveal ---------- */
