@@ -1,11 +1,11 @@
 [
- {"match": "The Number Behind", "label": "Layoff numbers were broken", "keywords": ["layoffs", "metrics", "data quality"], "motif": "timeseries", "variant": "break"},
+ {"match": "The Number Behind", "label": "The AI score behind layoffs was broken", "keywords": ["layoffs", "metrics", "data quality"], "motif": "timeseries", "variant": "break"},
  {"match": "Why \"Thinking Mode\"", "label": "Thinking mode won't stop hallucinations", "keywords": ["LLMs", "reasoning", "hallucination"], "motif": "reasoning", "variant": "chain"},
  {"match": "Bagging, Boosting", "label": "Bagging, boosting, stacking explained", "keywords": ["ensembles", "trees", "variance"], "motif": "tree", "variant": "ensemble"},
  {"match": "Four Ways to Fix Class", "label": "Four fixes for class imbalance", "keywords": ["class imbalance", "SMOTE", "resampling"], "motif": "rebalance"},
  {"match": "Your Anonymized", "label": "Anonymized data isn't anonymous", "keywords": ["privacy", "re-identification", "anonymization"], "motif": "sampling", "variant": "reid"},
  {"match": "Your Cross-Validation", "label": "Your cross-validation is lying", "keywords": ["validation", "leakage", "overfitting"], "motif": "kfold", "variant": "leak"},
- {"match": "Why Smart People", "label": "Smart people still get fooled", "keywords": ["human bias", "trust", "AI literacy"], "motif": "sounds"},
+ {"match": "Why Smart People", "label": "Smart people still get fooled by AI", "keywords": ["human bias", "trust", "AI literacy"], "motif": "sounds"},
  {"match": "JEPA Explained", "label": "JEPA: predict meaning, not pixels", "keywords": ["self-supervised", "representations", "world models"], "motif": "embedding", "variant": "predict"},
  {"match": "Your XAI Tools", "label": "Why XAI tools disagree", "keywords": ["SHAP", "LIME", "explanations"], "motif": "shap", "variant": "pair"},
  {"match": "Backpropagation Explained", "label": "How backpropagation teaches networks", "keywords": ["gradients", "training", "neural nets"], "motif": "network", "variant": "backward"},
