@@ -13,7 +13,7 @@ Data scientist with a background in applied AI research, turning messy data into
 - **4+ peer-reviewed AI research papers** (SAGE, Springer, IEEE), 2 more accepted or under review
 - **85+ articles** on data science, ML, and responsible AI
 - Specialties: explainable AI, computer vision, NLP, adversarial robustness
-- Based in NYC · U.S. Permanent Resident · No sponsorship needed
+- Based in NYC · U.S. Permanent Resident · No sponsorship required
 
 **[Resume](assets/fahim-ahamed-resume.pdf)** &nbsp;·&nbsp; **[LinkedIn](https://linkedin.com/in/f-a-tonmoy)** &nbsp;·&nbsp; **[ORCID](https://orcid.org/0009-0006-2638-6521)** &nbsp;·&nbsp; **[Email](mailto:f.a.tonmoy00@gmail.com)**
 

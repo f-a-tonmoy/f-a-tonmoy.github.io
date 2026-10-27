@@ -25,7 +25,7 @@
     <link rel="icon" type="image/png" href="assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="assets/css/styles.css?v=218" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=244" />
     <script>
       (function () {
         try {
@@ -45,10 +45,11 @@
     </noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section class="hero section">
         <div class="hero-copy">
           <h1><span class="kn">F</span><span class="kl">a</span><span class="kt">h</span><span class="kt">i</span>m <span class="kl">A</span><span class="kl">h</span><span class="kl">a</span><span class="kt">m</span><span class="ke">e</span>d</h1>
@@ -71,12 +72,16 @@
           <ul class="profile-facts" aria-label="Location and work authorization">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 10.2c0 5.6-7.5 10.8-7.5 10.8s-7.5-5.2-7.5-10.8a7.5 7.5 0 0 1 15 0z"/><circle cx="12" cy="10.2" r="2.6"/></svg>New York City Metro Area</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>U.S. Permanent Resident</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No sponsorship needed</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>No sponsorship required</li>
           </ul>
         </aside>
       </section>
 
       <section class="section stats reveal" aria-label="Portfolio highlights">
+        <div>
+          <strong>3+</strong>
+          <span>years of applied AI research and data work</span>
+        </div>
         <div>
           <strong>5+</strong>
           <span>AI research papers, published &amp; in review</span>
@@ -88,10 +93,6 @@
         <div>
           <strong>85+</strong>
           <span>articles on data science &amp; machine learning</span>
-        </div>
-        <div>
-          <strong>500+</strong>
-          <span>DSA problems solved across coding platforms</span>
         </div>
       </section>
 
@@ -120,7 +121,7 @@
           <div class="skill-group">
             <span class="skill-group-label">AI &amp; ML</span>
             <div class="skill-cloud">
-              <span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span><span>MLflow</span>
+              <span>TensorFlow</span><span>PyTorch</span><span>scikit-learn</span><span>MLflow</span>
             </div>
           </div>
           <div class="skill-group">
@@ -132,19 +133,19 @@
           <div class="skill-group">
             <span class="skill-group-label">Computer Vision &amp; NLP</span>
             <div class="skill-cloud">
-              <span>OpenCV</span><span>NLTK</span><span>SpaCy</span><span>Word2Vec</span>
+              <span>OpenCV</span><span>NLTK</span><span>spaCy</span><span>Word2Vec</span>
             </div>
           </div>
           <div class="skill-group">
             <span class="skill-group-label">Analytics &amp; BI</span>
             <div class="skill-cloud">
-              <span>NumPy</span><span>Pandas</span><span>SciPy</span><span>Excel</span><span>Tableau</span>
+              <span>NumPy</span><span>pandas</span><span>SciPy</span><span>Excel</span><span>Tableau</span>
             </div>
           </div>
           <div class="skill-group">
             <span class="skill-group-label">Visualization</span>
             <div class="skill-cloud">
-              <span>Matplotlib</span><span>Seaborn</span><span>Plotly</span><span>Ggplot2</span>
+              <span>Matplotlib</span><span>Seaborn</span><span>Plotly</span><span>ggplot2</span>
             </div>
           </div>
           <div class="skill-group">
@@ -156,7 +157,7 @@
           <div class="skill-group">
             <span class="skill-group-label">Cloud &amp; Deployment</span>
             <div class="skill-cloud">
-              <span>AWS</span><span>Git/GitHub</span><span>Docker</span><span>Vercel</span>
+              <span>AWS</span><span>Git/GitHub</span><span>Docker</span><span>Vercel</span><span>Railway</span>
             </div>
           </div>
         </div>
@@ -178,7 +179,7 @@
                 <span class="timeline-loc"><svg class="loc-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 10.2c0 5.6-7.5 10.8-7.5 10.8s-7.5-5.2-7.5-10.8a7.5 7.5 0 0 1 15 0z"/><circle cx="12" cy="10.2" r="2.6"/></svg>New York, NY</span>
               </div>
               <p>
-                Evaluating commercial LLMs on population health analytics tasks, from disparity detection to report generation, for a grant-funded health equity study.
+                Evaluating commercial LLMs on health disparity detection and report generation, measuring accuracy, bias, and hallucination risk.
               </p>
             </div>
           </article>
@@ -399,7 +400,7 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="assets/js/site.js?v=48" defer></script>
+    <script src="assets/js/site.js?v=56" defer></script>
 
     <script src="assets/data/articles.js?v=54"></script>
     <script>
@@ -442,21 +443,18 @@
         var DEFAULT_DURATION = 500;
         var started = false;
 
-        function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+        function easeOutQuad(t) { return 1 - (1 - t) * (1 - t); }
 
         function animateCard(s, duration) {
           var startTime = performance.now();
           if (s.type === 'count') {
             function tick(now) {
-              var t = Math.min(1, (now - startTime) / duration);
-              var eased = easeOutCubic(t);
-              if (t < 1) {
-                s.el.textContent = Math.floor(eased * s.target);
-                requestAnimationFrame(tick);
-              } else {
-                // Land on target and reveal the suffix (the "+")
-                s.el.textContent = s.target + s.suffix;
-              }
+              var t = Math.min(1, Math.max(0, (now - startTime) / duration));
+              // Round, not floor: floor holds the last digit until the final frame, then
+              // the number and the "+" jump in together. The "+" arrives with the final digit.
+              var value = Math.round(easeOutQuad(t) * s.target);
+              s.el.textContent = value >= s.target ? s.target + s.suffix : value;
+              if (t < 1) requestAnimationFrame(tick);
             }
             requestAnimationFrame(tick);
           } else if (s.type === 'text') {

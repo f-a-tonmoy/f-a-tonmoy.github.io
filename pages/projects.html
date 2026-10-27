@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=218" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=244" />
     <script>
       (function () {
         try {
@@ -42,10 +42,11 @@
     </noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section class="page-hero section">
         <p class="eyebrow">Projects</p>
         <h1>Analytics, modeling,<br>& software systems</h1>
@@ -124,7 +125,7 @@
                 <li>Conducted <strong>spatiotemporal analysis</strong> to uncover geographic and demographic disparities relevant to public health interventions.</li>
                 <li>Built tree-based ML models, with <strong>Random Forest</strong> achieving <strong>R<sup>2</sup> of 0.65</strong> and identifying key predictors for planning.</li>
               </ul>
-              <p class="project-tools">R, Tidyverse, Ggplot2, Sf, Rpart, RandomForest, Caret</p>
+              <p class="project-tools">R, tidyverse, ggplot2, sf, rpart, randomForest, caret</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/hiv-nyc-trends-eda-modeling" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
@@ -139,7 +140,7 @@
                 <li>Performed <strong>60+ year</strong> trend analysis by region and income group to identify structural growth patterns.</li>
                 <li>Developed forecasting models achieving <strong>R<sup>2</sup> of 0.755</strong> across region and income groupings.</li>
               </ul>
-              <p class="project-tools">R, Tidyverse, Ggplot2, Leaps, Caret</p>
+              <p class="project-tools">R, tidyverse, ggplot2, leaps, caret</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/global-population-dynamics-forecasting" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
@@ -163,7 +164,7 @@
                 <li>Showed <strong>four model families</strong> tied within noise (<strong>0.86 ROC AUC</strong>), then tuned the threshold to catch <strong>83%</strong> of held-out cases.</li>
                 <li>Caught a clustering that scored <strong>3.7&times; better</strong> on silhouette yet matched the diagnosis no better than chance.</li>
               </ul>
-              <p class="project-tools">Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn</p>
+              <p class="project-tools">Python, NumPy, pandas, Matplotlib, Seaborn, scikit-learn</p>
               <a class="project-link" href="https://f-a-tonmoy.github.io/pima-diabetes-analysis/" target="_blank" rel="noopener">Interactive report</a>
               <span class="project-link-sep" aria-hidden="true">|</span>
               <a class="project-link" href="https://github.com/f-a-tonmoy/pima-diabetes-analysis" target="_blank" rel="noopener">GitHub</a>
@@ -180,7 +181,7 @@
                 <li>Built a <strong>custom CNN</strong>: four convolutional blocks with batch normalization and max pooling, global average pooling, then a dense head with L2 and dropout.</li>
                 <li>Lifted validation accuracy from <strong>89.8% to 98.5%</strong> and cut loss from 0.41 to 0.11 through architecture and training refinements.</li>
               </ul>
-              <p class="project-tools">Python, TensorFlow, OpenCV, NumPy, Pandas, Matplotlib, Seaborn</p>
+              <p class="project-tools">Python, TensorFlow, OpenCV, NumPy, pandas, Matplotlib, Seaborn</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Wound-Classification-DL" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
@@ -195,7 +196,7 @@
                 <li>Framed detection two ways: <strong>binary</strong> anomaly flagging with logistic regression and SVM, and <strong>7-class</strong> attack typing with random forest, decision tree, and k-NN.</li>
                 <li>Corrected severe class imbalance with <strong>SMOTE</strong>, reaching <strong>97% median accuracy</strong> across the model set.</li>
               </ul>
-              <p class="project-tools">Python, NumPy, Pandas, SciPy, Matplotlib, Seaborn, Scikit-learn</p>
+              <p class="project-tools">Python, NumPy, pandas, SciPy, Matplotlib, Seaborn, scikit-learn</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Intrusion-Detection-System" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
@@ -210,7 +211,7 @@
                 <li>Selected features by <strong>chi-square</strong> and <strong>Welch's ANOVA</strong>, expanded free-text loan fields into 9 binary indicators, and balanced a 3:2:1 class split with SMOTE.</li>
                 <li>Benchmarked Naive Bayes, decision tree, and random forest on precision, recall, F1, and accuracy, with <strong>random forest</strong> leading at <strong>87% accuracy</strong> and 0.87 macro F1.</li>
               </ul>
-              <p class="project-tools">Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn</p>
+              <p class="project-tools">Python, NumPy, pandas, Matplotlib, Seaborn, scikit-learn</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Credit-Score-Classification" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
@@ -225,7 +226,7 @@
                 <li>Processed and analyzed over <strong>100,000</strong> user interaction records, improving user engagement metrics by 15%.</li>
                 <li>Implemented a <strong>scalable architecture</strong> to improve data handling efficiency and integration.</li>
               </ul>
-              <p class="project-tools">Python, NumPy, Pandas, Matplotlib, Tkinter</p>
+              <p class="project-tools">Python, NumPy, pandas, Matplotlib, Tkinter</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Hybrid-Movie-Recommendation-System" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
@@ -240,7 +241,7 @@
                 <li>Evaluated three <strong>feature selection</strong> techniques against <strong>four classifiers</strong> across all twelve pairings.</li>
                 <li>The bagging classifier scored highest, at <strong>82.8% accuracy</strong> and 0.66 MCC.</li>
               </ul>
-              <p class="project-tools">Python, NumPy, Pandas, Matplotlib, SMOTE, Seaborn, Scikit-learn, XGBoost</p>
+              <p class="project-tools">Python, NumPy, pandas, Matplotlib, SMOTE, Seaborn, scikit-learn, XGBoost</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/Code-Smell-Detection" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
@@ -264,7 +265,7 @@
                 <li>Canonicalized URLs to collapse cross-engine duplicates, persisting every stage to a <strong>six-table schema</strong> that preserves full lineage.</li>
                 <li>Scored relevance with a <strong>phrase-weighted</strong> n-gram model, log-normalized so long pages cannot win on length alone.</li>
               </ul>
-              <p class="project-tools">Python, MySQL, Streamlit, Selenium, Undetected-chromedriver, BeautifulSoup</p>
+              <p class="project-tools">Python, MySQL, Streamlit, Selenium, undetected-chromedriver, BeautifulSoup</p>
               <a class="project-link" href="https://github.com/f-a-tonmoy/nexus-search-bot" target="_blank" rel="noopener">GitHub</a>
             </div>
           </article>
@@ -290,7 +291,7 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="/assets/js/site.js?v=48" defer></script>
+    <script src="/assets/js/site.js?v=56" defer></script>
   </body>
 </html>
 

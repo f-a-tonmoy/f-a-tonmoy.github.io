@@ -47,10 +47,10 @@
       // Document and envelope drawn on the same 24-unit grid and 2-unit stroke as the theme
       // toggle, so the header icons read at one weight. On a pointer device the envelope copies the address.
       +   '<a class="header-cta header-cta-icon" href="/assets/fahim-ahamed-resume.pdf" target="_blank" rel="noopener" aria-label="View resume" data-tip="View resume">'
-      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3.4H7a2 2 0 0 0-2 2v13.2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.2z" /><path d="M14.2 3.4v4.8H19" /><circle cx="12" cy="12.4" r="1.9" /><path d="M8.7 17.8a3.3 3.3 0 0 1 6.6 0" /></svg>'
+      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3.4H7a2 2 0 0 0-2 2v13.2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.2z" /><path d="M14.2 3.4v4.8H19" /><path d="M8.6 12.6h6.8" /><path d="M8.6 16.4h4.6" /></svg>'
       +   '</a>'
       +   '<a class="header-cta header-cta-icon" href="mailto:f.a.tonmoy00@gmail.com" aria-label="Copy email address" data-tip="Copy email address">'
-      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="5.2" width="17.6" height="13.6" rx="2.2" /><path d="m3.8 7.4 7.3 5.3a1.6 1.6 0 0 0 1.8 0l7.3-5.3" /></svg>'
+      +     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="4.75" width="17.6" height="14.5" rx="2.2" /><path d="m3.8 6.95 7.3 5.75a1.6 1.6 0 0 0 1.8 0l7.3-5.75" /></svg>'
       +   '</a>'
       + '</div>'
       + '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">'
@@ -137,10 +137,14 @@
   var btt = document.querySelector('.back-to-top');
   if (btt || header) {
     var onScroll = function () {
-      if (btt) btt.classList.toggle('visible', window.scrollY > 500);
+      if (btt) {
+        btt.classList.toggle('visible', window.scrollY > 500);
+        if (footer) btt.style.setProperty('--footer-lift', Math.max(0, window.innerHeight - footer.getBoundingClientRect().top) + 'px');
+      }
       if (header) header.classList.toggle('is-scrolled', window.scrollY > 40);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
     onScroll();
   }
 
@@ -247,6 +251,8 @@
 
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var canHover = window.matchMedia('(hover: hover)').matches;
+  // Older iOS Safari only applies :active outside links and buttons when something is listening for touch.
+  document.addEventListener('touchstart', function () {}, { passive: true });
 
   // --- Copy-email button + toast -----------------------------------
   // mailto: is the right affordance on a phone (taps straight into the mail app)
@@ -474,6 +480,49 @@
       + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.5 6.5 11 11M17.5 6.5l-11 11" /></svg></button>';
     document.body.appendChild(lightbox);
     var lightboxImg = lightbox.querySelector('img');
+    var lightboxClose = lightbox.querySelector('.lightbox-close');
+    var lightboxOrigin = null; // the thumbnail image that opened it, so closing can fly back to it
+    var lightboxBusy = false;  // true while the image loads or the close animation runs
+    var MORPH_MS = 240;
+    var MORPH_EASE = 'cubic-bezier(0.22, 0.61, 0.36, 1)';
+
+    // The transform that makes the open dialog sit exactly over a thumbnail's rectangle
+    var morphFrom = function (rect) {
+      var box = lightbox.getBoundingClientRect();
+      var dx = (rect.left + rect.width / 2) - (box.left + box.width / 2);
+      var dy = (rect.top + rect.height / 2) - (box.top + box.height / 2);
+      return 'translate(' + dx + 'px, ' + dy + 'px) scale(' + (rect.width / box.width) + ', ' + (rect.height / box.height) + ')';
+    };
+
+    var closeLightbox = function () {
+      if (!lightbox.open || lightboxBusy) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { lightbox.close(); return; }
+      var rect = lightboxOrigin && lightboxOrigin.isConnected ? lightboxOrigin.getBoundingClientRect() : null;
+      var onScreen = rect && rect.width > 0 && rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
+      lightboxBusy = true;
+      // clear a still-running open animation first, so the box is measured untransformed
+      lightbox.getAnimations({ subtree: true }).forEach(function (a) { if (!a.effect.pseudoElement) a.cancel(); });
+      lightbox.classList.add('is-closing'); // fades the backdrop in step with the flight
+      var flight = lightbox.animate(
+        [{ transform: 'none', opacity: 1 }, { transform: onScreen ? morphFrom(rect) : 'scale(0.96)', opacity: onScreen ? 1 : 0 }],
+        { duration: MORPH_MS, easing: MORPH_EASE, fill: 'forwards' }
+      );
+      lightboxClose.animate([{ opacity: 1 }, { opacity: 0 }], { duration: MORPH_MS / 2, easing: MORPH_EASE, fill: 'forwards' });
+      var landed = function () {
+        lightbox.close();
+        lightbox.classList.remove('is-closing');
+        lightbox.getAnimations({ subtree: true }).forEach(function (a) { if (!a.effect.pseudoElement) a.cancel(); });
+        lightboxBusy = false;
+      };
+      // both outcomes land: a cancelled flight must still close the dialog, or it would stay open and locked
+      flight.finished.then(landed, landed);
+    };
+
+    // Escape fires cancel: take it over so the image flies back instead of vanishing
+    lightbox.addEventListener('cancel', function (e) {
+      e.preventDefault();
+      closeLightbox();
+    });
 
     zoomThumbs.forEach(function (img) {
       var holder = img.closest('.project-thumb, .story-media');
@@ -486,9 +535,29 @@
       holder.setAttribute('aria-label', 'View larger image' + (heading ? ': ' + heading.textContent.trim() : ''));
 
       var openLightbox = function () {
-        if (!img.isConnected) return; // the image failed and was replaced by a placeholder
-        lightboxImg.src = img.src; // src is the full-size copy; currentSrc may be the 600px one srcset chose
-        lightbox.showModal();
+        if (!img.isConnected || lightboxBusy || lightbox.open) return; // a failed image became a placeholder
+        lightboxBusy = true;
+        holder.setAttribute('aria-busy', 'true');
+        // src is the full-size copy; currentSrc may be the 600px one srcset chose. Load it before opening:
+        // the dialog is exactly as big as its image, so opening early gives a 2px box that then jumps,
+        // and the grow needs the final size to start from.
+        var full = new Image();
+        full.src = img.src;
+        // the load event, not decode(): load needs only the network, while decode() waits on the compositor
+        var loaded = full.complete ? Promise.resolve() : new Promise(function (resolve) { full.onload = full.onerror = resolve; });
+        Promise.race([loaded, new Promise(function (resolve) { setTimeout(resolve, 1500); })])
+          .then(function () {
+            holder.removeAttribute('aria-busy');
+            lightboxOrigin = img;
+            lightboxImg.src = img.src;
+            lightbox.showModal();
+            var big = lightbox.getBoundingClientRect().width > 50; // a slow image falls back to a plain open
+            if (big && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+              lightbox.animate([{ transform: morphFrom(img.getBoundingClientRect()) }, { transform: 'none' }], { duration: MORPH_MS, easing: MORPH_EASE });
+              lightboxClose.animate([{ opacity: 0 }, { opacity: 0, offset: 0.6 }, { opacity: 1 }], { duration: MORPH_MS, easing: MORPH_EASE });
+            }
+            lightboxBusy = false;
+          });
       };
 
       holder.addEventListener('click', openLightbox);
@@ -502,7 +571,7 @@
 
     // Close on backdrop click (target is the dialog itself) or the X button
     lightbox.addEventListener('click', function (e) {
-      if (e.target === lightbox || e.target.closest('.lightbox-close')) lightbox.close();
+      if (e.target === lightbox || e.target.closest('.lightbox-close')) closeLightbox();
     });
   }
 

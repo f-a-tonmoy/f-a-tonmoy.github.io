@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=218" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=244" />
     <script>
       (function () {
         try {
@@ -42,10 +42,11 @@
     </noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section class="page-hero section">
         <p class="eyebrow">Experience</p>
         <h1>Data work, AI research,<br>& education</h1>
@@ -197,12 +198,44 @@
           </article>
         </div>
       </section>
+
+      <section class="section" id="problem-solving">
+        <div class="section-heading">
+          <p class="section-label">Additional</p>
+          <h2>Problem Solving</h2>
+        </div>
+        <div class="education-grid is-solo">
+          <article class="solve-card">
+            <div class="solve-stat">
+              <strong>500+</strong>
+              <span>problems solved</span>
+            </div>
+            <div class="solve-body">
+              <h3>Data Structures &amp; Algorithms</h3>
+              <p>Across LeetCode, HackerRank, and Beecrowd (formerly URI).</p>
+            </div>
+            <div class="solve-medals">
+              <ul class="medals" aria-label="HackerRank badges">
+                <li><span class="medal-name">Problem Solving</span><span class="medal-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="visually-hidden">, gold</span></li>
+                <li><span class="medal-name">Java</span><span class="medal-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="visually-hidden">, gold</span></li>
+                <li><span class="medal-name">SQL</span><span class="medal-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="visually-hidden">, gold</span></li>
+                <li class="silver"><span class="medal-name">C++</span><span class="medal-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;</span><span class="visually-hidden">, silver</span></li>
+              </ul>
+              <div class="medal-legend" aria-hidden="true">
+                <span><i></i>Gold</span>
+                <span class="silver"><i></i>Silver</span>
+                <span class="medal-source">HackerRank badges</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
     </footer>
 
-    <script src="/assets/js/site.js?v=48" defer></script>
+    <script src="/assets/js/site.js?v=56" defer></script>
   </body>
 </html>
 

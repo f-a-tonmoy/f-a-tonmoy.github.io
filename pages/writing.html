@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=218" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=244" />
     <script>
       (function () {
         try {
@@ -42,10 +42,11 @@
     </noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section class="page-hero section">
         <p class="eyebrow">Writing</p>
         <h1>Data science & AI,<br>explained plainly</h1>
@@ -112,7 +113,7 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="/assets/js/site.js?v=48" defer></script>
+    <script src="/assets/js/site.js?v=56" defer></script>
     <script src="/assets/data/articles.js?v=54"></script>
     <script>
       const grid = document.querySelector('#article-grid');
@@ -122,8 +123,9 @@
 
       let activeCategory = 'All';
       let searchTerm = '';
+      let searchTimer;
 
-      function render() {
+      function render(animate) {
         const term = searchTerm.trim().toLowerCase();
         const filtered = articles.filter((article) => {
           const matchesCategory = activeCategory === 'All' || article.category === activeCategory;
@@ -136,6 +138,12 @@
           grid.innerHTML = filtered.map(articleCard).join('');
         }
         count.textContent = `${filtered.length} article${filtered.length === 1 ? '' : 's'}`;
+        grid.classList.toggle('is-updating', Boolean(animate));
+        if (animate) {
+          grid.querySelectorAll('.article-card').forEach((card, i) => {
+            card.style.animationDelay = Math.min(i, 6) * 30 + 'ms';
+          });
+        }
       }
 
       tabs.forEach((tab) => {
@@ -147,14 +155,17 @@
           tab.classList.add('active');
           tab.setAttribute('aria-pressed', 'true');
           activeCategory = tab.dataset.filter;
-          render();
+          clearTimeout(searchTimer);
+          render(true);
         });
       });
 
       if (searchInput) {
         searchInput.addEventListener('input', (event) => {
           searchTerm = event.target.value;
-          render();
+          // wait for a pause in typing: rebuilding on every keystroke would restart the fade each time
+          clearTimeout(searchTimer);
+          searchTimer = setTimeout(() => render(true), 150);
         });
       }
 
