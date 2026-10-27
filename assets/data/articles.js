@@ -22,8 +22,7 @@ const articles = [
     "title": "Four Ways to Fix Class Imbalance. You've Probably Only Tried One.",
     "url": "https://www.linkedin.com/pulse/four-ways-fix-class-imbalance-youve-probably-only-tried-fahim-ahamed-f6eye",
     "image": "/assets/article-thumbnails/light/four-ways-to-fix-class-imbalance.webp",
-    "category": "Machine Learning",
-    "featured": 4
+    "category": "Machine Learning"
   },
   {
     "title": "Your Anonymized Data Probably Isn't",
@@ -36,7 +35,8 @@ const articles = [
     "title": "Your Cross-Validation Is Lying to You",
     "url": "https://www.linkedin.com/pulse/your-cross-validation-lying-you-fahim-ahamed-nhsre",
     "image": "/assets/article-thumbnails/light/your-cross-validation-is-lying-to-you.webp",
-    "category": "Machine Learning"
+    "category": "Machine Learning",
+    "featured": 4
   },
   {
     "title": "Why Smart People Still Get Fooled by AI",
@@ -49,21 +49,20 @@ const articles = [
     "title": "JEPA Explained: Predicting Representations, Not Pixels",
     "url": "https://www.linkedin.com/pulse/jepa-explained-predicting-representations-pixels-fahim-ahamed-trlif/",
     "image": "/assets/article-thumbnails/light/jepa-explained-predicting-representations-not-pixels.webp",
-    "category": "Deep Learning"
+    "category": "Deep Learning",
+    "featured": 5
   },
   {
     "title": "Your XAI Tools Are Both Right. Here's Why They Disagree",
     "url": "https://www.linkedin.com/pulse/your-xai-tools-both-right-heres-why-disagree-fahim-ahamed-18yoe",
     "image": "/assets/article-thumbnails/light/your-xai-tools-are-both-right-here-s-why-they-disagree.webp",
-    "category": "Explainable AI",
-    "featured": 6
+    "category": "Explainable AI"
   },
   {
     "title": "Backpropagation Explained: How Neural Networks Actually Learn",
     "url": "https://www.linkedin.com/pulse/backpropagation-explained-how-neural-networks-actually-fahim-ahamed-xdwie",
     "image": "/assets/article-thumbnails/light/backpropagation-explained-how-neural-networks-actually-learn.webp",
-    "category": "Deep Learning",
-    "featured": 5
+    "category": "Deep Learning"
   },
   {
     "title": "Can We Really Trust a p-Value Below 0.05?",
@@ -315,7 +314,8 @@ const articles = [
     "title": "Inside the Mind of AI: Reward Hacking, Scheming, and Transparency",
     "url": "https://www.linkedin.com/pulse/inside-mind-ai-reward-hacking-scheming-transparency-fahim-ahamed-vbute",
     "image": "/assets/article-thumbnails/light/inside-the-mind-of-ai-reward-hacking-scheming-and-transparency.webp",
-    "category": "Explainable AI"
+    "category": "Explainable AI",
+    "featured": 6
   },
   {
     "title": "Semantic Compression in AI: Learning More by Storing Less",
@@ -562,7 +562,7 @@ function themedSrc(src) {
 }
 
 // bump when the thumbnails are regenerated: same file names, so browsers would keep the old art
-const THUMB_VERSION = 50;
+const THUMB_VERSION = 51;
 
 function articleCard(article) {
   const image = article.image

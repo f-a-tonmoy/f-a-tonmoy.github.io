@@ -25,7 +25,7 @@
     <link rel="icon" type="image/png" href="assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="assets/css/styles.css?v=244" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=250" />
     <script>
       (function () {
         try {
@@ -319,33 +319,37 @@
         <div class="project-grid">
           <article class="project">
             <span class="project-thumb">
-              <img src="assets/project-thumbnails/light/wound-classification.webp?v=3" srcset="assets/project-thumbnails/light/wound-classification-600.webp?v=3 600w, assets/project-thumbnails/light/wound-classification.webp?v=3 1200w" sizes="(max-width: 900px) calc(100vw - 32px), 380px" alt="" loading="lazy" />
+              <img src="assets/project-thumbnails/light/clinical-risk-modeling.webp?v=7" srcset="assets/project-thumbnails/light/clinical-risk-modeling-600.webp?v=7 600w, assets/project-thumbnails/light/clinical-risk-modeling.webp?v=7 1200w" sizes="(max-width: 900px) calc(100vw - 32px), 380px" alt="" loading="lazy" />
             </span>
             <div>
-              <h3>Deep Learning-Based Wound Classification</h3>
-              <p>A four-block CNN over 2,940 wound images across ten classes, lifting validation accuracy from 89.8% to 98.5% through architecture refinements.</p>
+              <h3>Clinical Risk Modeling &amp; Unsupervised Structure Analysis</h3>
+              <p>Recovered 652 hidden missing readings, tied four model families at 0.86 ROC AUC, and caught a clustering that fit the diagnosis no better than chance.</p>
             </div>
-            <a class="project-link" href="https://github.com/f-a-tonmoy/Wound-Classification-DL" target="_blank" rel="noopener">GitHub</a>
+            <span class="project-links">
+              <a class="project-link" href="https://f-a-tonmoy.github.io/pima-diabetes-analysis/" target="_blank" rel="noopener">Interactive report</a>
+              <span class="project-link-sep" aria-hidden="true">|</span>
+              <a class="project-link" href="https://github.com/f-a-tonmoy/pima-diabetes-analysis" target="_blank" rel="noopener">GitHub</a>
+            </span>
+          </article>
+          <article class="project">
+            <span class="project-thumb">
+              <img src="assets/project-thumbnails/light/nyc-hiv-trends.webp?v=2" srcset="assets/project-thumbnails/light/nyc-hiv-trends-600.webp?v=2 600w, assets/project-thumbnails/light/nyc-hiv-trends.webp?v=2 1200w" sizes="(max-width: 900px) calc(100vw - 32px), 380px" alt="" loading="lazy" />
+            </span>
+            <div>
+              <h3>NYC HIV/AIDS Trend Analysis &amp; Predictive Modeling</h3>
+              <p>Multi-year NYC Open Data cleaned past its suppressed values, mapped by geography and demographics, and modelled with Random Forest to an R<sup>2</sup> of 0.65.</p>
+            </div>
+            <a class="project-link" href="https://github.com/f-a-tonmoy/hiv-nyc-trends-eda-modeling" target="_blank" rel="noopener">GitHub</a>
           </article>
           <article class="project">
             <span class="project-thumb">
               <img src="assets/project-thumbnails/light/intrusion-detection.webp?v=5" srcset="assets/project-thumbnails/light/intrusion-detection-600.webp?v=5 600w, assets/project-thumbnails/light/intrusion-detection.webp?v=5 1200w" sizes="(max-width: 900px) calc(100vw - 32px), 380px" alt="" loading="lazy" />
             </span>
             <div>
-              <h3>Intrusion Detection System</h3>
-              <p>Compressed 2.8M network flows across 78 features, then framed detection as binary anomaly flagging and 7-class attack typing at 97% median accuracy.</p>
+              <h3>ML-Based Intrusion Detection System</h3>
+              <p>Compressed 2.8M network flows across 78 features and framed detection two ways, binary anomaly flagging and 7-class attack typing, at 97% median accuracy.</p>
             </div>
             <a class="project-link" href="https://github.com/f-a-tonmoy/Intrusion-Detection-System" target="_blank" rel="noopener">GitHub</a>
-          </article>
-          <article class="project">
-            <span class="project-thumb">
-              <img src="assets/project-thumbnails/light/global-population-forecasting.webp?v=2" srcset="assets/project-thumbnails/light/global-population-forecasting-600.webp?v=2 600w, assets/project-thumbnails/light/global-population-forecasting.webp?v=2 1200w" sizes="(max-width: 900px) calc(100vw - 32px), 380px" alt="" loading="lazy" />
-            </span>
-            <div>
-              <h3>Global Population Growth Modeling &amp; Forecasting</h3>
-              <p>A longitudinal dataset of demographic indicators across 200+ countries and six decades, modelled by region and income group to an R<sup>2</sup> of 0.755.</p>
-            </div>
-            <a class="project-link" href="https://github.com/f-a-tonmoy/global-population-dynamics-forecasting" target="_blank" rel="noopener">GitHub</a>
           </article>
         </div>
       </section>
@@ -402,7 +406,7 @@
 
     <script src="assets/js/site.js?v=56" defer></script>
 
-    <script src="assets/data/articles.js?v=54"></script>
+    <script src="assets/data/articles.js?v=57"></script>
     <script>
       (function () {
         var grid = document.getElementById('featured-writing');

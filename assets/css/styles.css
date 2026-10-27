@@ -2250,13 +2250,21 @@ h3 {
     padding: 18px;
   }
 
+  /* the copyright and the links stay on one row, links at the right; the row wraps only
+     where they no longer fit side by side */
+  .footer-inner {
+    gap: 8px 16px;
+  }
+}
+
+/* below about 340px the copyright and the links no longer fit on one row, so they stack at the left;
+   the links then cancel their side padding on the left instead of the right */
+@media (max-width: 339px) {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
   }
 
-  /* stacked, the links start the column: cancel their side padding on the left, not the right */
   .footer-links {
     margin: 0 0 0 -10px;
   }
@@ -2589,6 +2597,18 @@ h3 {
   margin-top: 14px; /* the flex:1 text block above pins this to the card foot */
 }
 
+/* a card with two links (report and code) keeps them on one line at the card foot */
+.project-grid .project-links {
+  display: flex;
+  align-items: baseline;
+  margin-top: 14px;
+  line-height: inherit; /* .project span sets 1.7, which would sit this row 1px lower than a lone link */
+}
+
+.project-grid .project-links .project-link {
+  margin-top: 0;
+}
+
 /* ---------- Project thumbnails ---------- */
 .project-thumb {
   display: block;
@@ -2913,8 +2933,9 @@ h3 {
 }
 
 .education-grid .education-meta .sep {
-  color: var(--line);
-  font-weight: 400;
+  /* --line is a border colour and all but vanishes as a glyph; this holds 3:1 in both themes */
+  color: color-mix(in srgb, var(--muted) 75%, var(--bg-elev));
+  font-weight: 700;
 }
 
 .education-grid .education-meta .grad-date {
