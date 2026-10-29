@@ -68,6 +68,7 @@
   --accent: #34d399;
   --accent-dark: #0b7a55;
   --accent-soft: rgba(13, 148, 106, 0.12);
+  --accent-2: #4a6fa5; /* reserved secondary accent (steel blue), not used yet */
   --on-accent: #06170f;
   --hover-bg: rgba(11, 122, 85, 0.08);
   --scrollbar-thumb: rgba(11, 122, 85, 0.4);
@@ -126,6 +127,7 @@
   --accent: #34d399;
   --accent-dark: #6ee7c0;
   --accent-soft: rgba(52, 211, 153, 0.12);
+  --accent-2: #8faedd; /* reserved secondary accent (steel blue), not used yet */
   --tag-line: rgba(52, 211, 153, 0.32); /* --line disappears on dark card surfaces */
   --bar-line: #323a46; /* navbar outline: --line-soft is almost the page colour on dark */
   --on-accent: #06170f;
@@ -169,6 +171,7 @@
     --accent: #34d399;
     --accent-dark: #6ee7c0;
     --accent-soft: rgba(52, 211, 153, 0.12);
+    --accent-2: #8faedd; /* reserved secondary accent (steel blue), not used yet */
     --tag-line: rgba(52, 211, 153, 0.32);
     --bar-line: #323a46;
     --on-accent: #06170f;
@@ -905,7 +908,8 @@ h3 {
 /* ---------- Hover-lift + cursor glow (shared card pattern) ---------- */
 .card,
 .education-grid article,
-.article-card {
+.article-card,
+.project-grid .project {
   transition: transform 0.3s var(--ease-out),
               border-color 0.3s var(--ease-out),
               box-shadow 0.3s var(--ease-out);
@@ -914,7 +918,8 @@ h3 {
 @media (hover: hover) {
   .card:hover,
   .education-grid article:hover,
-  .article-card:hover {
+  .article-card:hover,
+  .project-grid .project:hover {
     transform: translate3d(0, -3px, 0);
     border-color: var(--accent-dark);
     box-shadow: var(--shadow-soft);
@@ -925,6 +930,7 @@ h3 {
 .card,
 .education-grid article,
 .article-card,
+.project-grid .project,
 .timeline-card,
 .contact {
   position: relative;
@@ -933,6 +939,7 @@ h3 {
 .stats > div,
 .card,
 .education-grid article,
+.project-grid .project,
 .timeline-card,
 .contact {
   overflow: hidden;
@@ -942,6 +949,7 @@ h3 {
 .card::before,
 .education-grid article::before,
 .article-card::before,
+.project-grid .project::before,
 .timeline-card::before,
 .contact::before {
   content: "";
@@ -959,6 +967,7 @@ h3 {
   .card:hover::before,
   .education-grid article:hover::before,
   .article-card:hover::before,
+  .project-grid .project:hover::before,
   .timeline-card:hover::before,
   .contact:hover::before {
     opacity: 1;
@@ -969,6 +978,7 @@ h3 {
 .card > *,
 .education-grid article > * > *,
 .article-card > *,
+.project-grid .project > *,
 .timeline-card > *,
 .contact > * {
   position: relative;
@@ -980,6 +990,7 @@ h3 {
   .card::before,
   .education-grid article::before,
   .article-card::before,
+  .project-grid .project::before,
   .timeline-card::before,
   .contact::before {
     display: none;
@@ -987,7 +998,8 @@ h3 {
 }
 
 @media (hover: hover) {
-  .article-card:hover {
+  .article-card:hover,
+  .project-grid .project:hover {
     box-shadow: var(--shadow-lift);
   }
 }
@@ -2567,7 +2579,7 @@ h3 {
   flex-direction: column;
   align-items: stretch; /* base .project centres its columns; here they must fill */
   gap: 0;
-  padding: 18px;
+  padding: 0 0 18px; /* the thumbnail runs edge to edge, like the article cards */
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--bg-elev);
@@ -2575,10 +2587,31 @@ h3 {
 
 .project-grid .project > div {
   flex: 1; /* absorbs the uneven description lengths so the footers line up */
+  padding: 18px 18px 0;
 }
 
 .project-grid .project-thumb {
-  margin-bottom: 16px;
+  border: 0;
+  border-bottom: 1px solid var(--line-soft);
+  border-radius: 0;
+}
+
+@media (hover: hover) {
+  .project-grid .project:hover .project-thumb {
+    border-color: var(--line-soft);
+  }
+}
+
+.project-grid .project-thumb img {
+  filter: saturate(0.88);
+  transition: transform 0.5s var(--ease-out), filter 0.5s var(--ease-out);
+}
+
+@media (hover: hover) {
+  .project-grid .project:hover .project-thumb img {
+    transform: scale(1.04);
+    filter: saturate(1);
+  }
 }
 
 .project-grid .project h3 {
@@ -2594,19 +2627,19 @@ h3 {
 }
 
 .project-grid .project-link {
-  margin-top: 14px; /* the flex:1 text block above pins this to the card foot */
+  margin: 14px 18px 0; /* the flex:1 text block above pins this to the card foot */
 }
 
 /* a card with two links (report and code) keeps them on one line at the card foot */
 .project-grid .project-links {
   display: flex;
   align-items: baseline;
-  margin-top: 14px;
+  margin: 14px 18px 0;
   line-height: inherit; /* .project span sets 1.7, which would sit this row 1px lower than a lone link */
 }
 
 .project-grid .project-links .project-link {
-  margin-top: 0;
+  margin: 0;
 }
 
 /* ---------- Project thumbnails ---------- */
