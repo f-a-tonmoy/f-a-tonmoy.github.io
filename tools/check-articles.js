@@ -1,4 +1,4 @@
-// Run before pushing:  node tools/check-articles.js
+// Runs on every push (.github/workflows/check-articles.yml). Locally:  node tools/check-articles.js
 // Reports every problem in assets/data/articles.js that would otherwise misrender silently: a wrong
 // image path shows a grey placeholder, a category with no tab only appears under "All".
 const fs = require('fs');

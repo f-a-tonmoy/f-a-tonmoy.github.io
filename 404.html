@@ -11,15 +11,15 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1115" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=256" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <script>
       (function () {
         try {
           var saved = localStorage.getItem('theme');
-          if (saved === 'dark' || saved === 'light') {
-            document.documentElement.setAttribute('data-theme', saved);
-          }
         } catch (err) {}
+        // no saved choice: follow the OS, so styles.css only needs [data-theme="dark"]
+        if (saved !== 'dark' && saved !== 'light') saved = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', saved);
       })();
     </script>
     <script>
@@ -87,7 +87,7 @@
       </div>
     </main>
 
-    <script src="/assets/js/site.js?v=58" defer></script>
+    <script src="/assets/js/site.js" defer></script>
   </body>
 </html>
 

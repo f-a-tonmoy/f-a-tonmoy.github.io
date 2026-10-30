@@ -22,15 +22,15 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=256" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <script>
       (function () {
         try {
           var saved = localStorage.getItem('theme');
-          if (saved === 'dark' || saved === 'light') {
-            document.documentElement.setAttribute('data-theme', saved);
-          }
         } catch (err) {}
+        // no saved choice: follow the OS, so styles.css only needs [data-theme="dark"]
+        if (saved !== 'dark' && saved !== 'light') saved = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', saved);
       })();
     </script>
     <noscript>
@@ -59,7 +59,7 @@
         <div class="story-list">
           <article class="story reveal" id="s-us-opioid-treatment-gap">
             <span class="story-media">
-              <img src="/assets/data-stories/light/us-opioid-treatment-gap.webp?v=4" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
+              <img src="/assets/data-stories/light/us-opioid-treatment-gap.webp" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
             </span>
             <div class="story-body">
               <p class="story-index"><span>01</span></p>
@@ -96,7 +96,7 @@
 
           <article class="story reveal" id="s-nyc-mental-health">
             <span class="story-media">
-              <img src="/assets/data-stories/light/nyc-mental-health.webp?v=5" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
+              <img src="/assets/data-stories/light/nyc-mental-health.webp" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
             </span>
             <div class="story-body">
               <p class="story-index"><span>02</span></p>
@@ -133,7 +133,7 @@
 
           <article class="story reveal" id="s-nyc-restaurant-inspections">
             <span class="story-media">
-              <img src="/assets/data-stories/light/nyc-restaurant-inspections.webp?v=6" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
+              <img src="/assets/data-stories/light/nyc-restaurant-inspections.webp" alt="" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
             </span>
             <div class="story-body">
               <p class="story-index"><span>03</span></p>
@@ -174,6 +174,6 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="/assets/js/site.js?v=58" defer></script>
+    <script src="/assets/js/site.js" defer></script>
   </body>
 </html>

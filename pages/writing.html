@@ -22,15 +22,15 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/assets/css/styles.css?v=256" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <script>
       (function () {
         try {
           var saved = localStorage.getItem('theme');
-          if (saved === 'dark' || saved === 'light') {
-            document.documentElement.setAttribute('data-theme', saved);
-          }
         } catch (err) {}
+        // no saved choice: follow the OS, so styles.css only needs [data-theme="dark"]
+        if (saved !== 'dark' && saved !== 'light') saved = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', saved);
       })();
     </script>
     <noscript>
@@ -64,7 +64,7 @@
         <div class="story-list">
           <article class="story">
             <a class="story-media" href="https://f-a-tonmoy.github.io/nn-explainer/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-              <img src="/assets/explainers/light/nn-explainer.webp?v=7" alt="" width="1200" height="675" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
+              <img src="/assets/explainers/light/nn-explainer.webp" alt="" width="1200" height="675" loading="lazy" onerror="this.closest('.story-media').classList.add('is-empty'); this.remove();" />
             </a>
             <div class="story-body">
               <h3 class="story-title">
@@ -90,7 +90,7 @@
           <p class="section-label">Archive</p>
           <h2>Technical Articles</h2>
         </div>
-        <div class="writing-toolbar" aria-label="Article categories">
+        <div class="writing-toolbar" role="group" aria-label="Article categories">
           <button class="tab-button active" type="button" aria-pressed="true" data-filter="All">All</button>
           <button class="tab-button" type="button" aria-pressed="false" data-filter="Data Science">Data Science</button>
           <button class="tab-button" type="button" aria-pressed="false" data-filter="Machine Learning">Machine Learning</button>
@@ -113,8 +113,8 @@
     <footer class="site-footer">
     </footer>
 
-    <script src="/assets/js/site.js?v=58" defer></script>
-    <script src="/assets/data/articles.js?v=59"></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/data/articles.js"></script>
     <script>
       const grid = document.querySelector('#article-grid');
       const count = document.querySelector('#article-count');

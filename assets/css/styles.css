@@ -104,7 +104,7 @@
      sections sit 2x apart. Anything else states its offset from it. */
   --section-pad: 64px;
   --chrome-edge: 24px; /* right inset shared by the floating theme toggle and back-to-top */
-  /* ground behind the project thumbnails: matches CANVAS in make_thumbnails.py.
+  /* ground behind the project thumbnails: matches the background in tools/make_article_thumbs.py.
      site.js swaps the art per theme, so this tracks it. */
   --thumb-ground: #ffffff;
   --font-display: "Space Grotesk", "Segoe UI", Arial, sans-serif;
@@ -154,51 +154,6 @@
   --show-sun: block;
   --show-moon: none;
   color-scheme: dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0e1115;
-    --bg-elev: #11141a;
-    --surface: #12161c;
-    --surface-translucent: rgba(15, 18, 23, 0.9);
-    --ink: #d6dce5;
-    --ink-soft: #b0b9c6;
-    --muted: #8590a0;
-  --label-ink: #9aa5b4;
-    --line: #242a33;
-    --line-soft: rgba(36, 42, 51, 0.8);
-    --accent: #34d399;
-    --accent-dark: #6ee7c0;
-    --accent-soft: rgba(52, 211, 153, 0.12);
-    --accent-2: #8faedd; /* reserved secondary accent (steel blue), not used yet */
-    --tag-line: rgba(52, 211, 153, 0.32);
-    --bar-line: #323a46;
-    --on-accent: #06170f;
-    --hover-bg: rgba(52, 211, 153, 0.08);
-    --scrollbar-thumb: rgba(52, 211, 153, 0.3);
-    --focus-ring: rgba(52, 211, 153, 0.28);
-    --card-glow: rgba(52, 211, 153, 0.07);
-    --grid-line: rgba(233, 237, 242, 0.045);
-    --shimmer-tint: rgba(52, 211, 153, 0.05);
-    --medal-line: #b88a1f;
-    --medal-fill: #2a2410;
-    --medal-ink: #ecc766;
-    --medal-star: #d9a93a;
-    --silver-line: #7d8794;
-    --silver-fill: #1a2027;
-    --silver-ink: #b4bcc7;
-    --silver-star: #9aa3af;
-    --shadow: 0 18px 44px rgba(0, 0, 0, 0.5);
-    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
-    --shadow-lift: 0 22px 48px rgba(0, 0, 0, 0.55);
-    --button-secondary-bg: rgba(255, 255, 255, 0.04);
-    --thumb-ground: #12161c;
-    --logo-invert: 1;
-    --show-sun: block;
-    --show-moon: none;
-    color-scheme: dark;
-  }
 }
 
 * {

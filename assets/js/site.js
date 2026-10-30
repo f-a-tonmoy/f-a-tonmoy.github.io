@@ -161,13 +161,7 @@
   var themeBtn = document.querySelector('.theme-toggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
-      var current = document.documentElement.getAttribute('data-theme');
-      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var nextDark;
-      if (current === 'dark') nextDark = false;
-      else if (current === 'light') nextDark = true;
-      else nextDark = !systemDark;
-      var next = nextDark ? 'dark' : 'light';
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
 
       var apply = function () {
         document.documentElement.setAttribute('data-theme', next);
@@ -395,18 +389,12 @@
 
   // --- Theme-matched thumbnail art --------------------------------
   // The project thumbnails are baked raster charts, so they cannot follow CSS
-  // tokens. make_thumbnails.py emits a light/ and a dark/ set; swap the folder
+  // tokens. tools/make_article_thumbs.py emits a light/ and a dark/ set; swap the folder
   // segment to match the active theme. Every thumbnail is loading="lazy" and
   // below the fold, so this runs before any of them are fetched: no flash and
   // no wasted request.
-  function currentTheme() {
-    var set = document.documentElement.getAttribute('data-theme');
-    if (set === 'light' || set === 'dark') return set;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
   function syncThumbArt() {
-    var dark = currentTheme() === 'dark';
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
     var from = dark ? '/light/' : '/dark/';
     var to = dark ? '/dark/' : '/light/';
     document.querySelectorAll('.project-thumb img, .map-tile img, .article-thumb img, .story-media img').forEach(function (img) {
@@ -421,8 +409,12 @@
   syncThumbArt();
 
   // follow the OS when the visitor has expressed no preference of their own
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-    if (!document.documentElement.getAttribute('data-theme')) syncThumbArt();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (err) {}
+    if (saved === 'dark' || saved === 'light') return;
+    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+    syncThumbArt();
   });
 
   // --- Landing pulse on the card jumped to from the index map ------
@@ -579,13 +571,14 @@
   // --- Cursor-aware glow on cards ---------------------------------
   // Only wires up on hover-capable, no-reduced-motion devices
   if (canHover && !prefersReducedMotion) {
-    var glowCards = document.querySelectorAll('.stats > div, .card, .education-grid > article, .profile-panel, .article-card, .project-grid .project, .timeline-card, .contact');
-    glowCards.forEach(function (el) {
-      el.addEventListener('mousemove', function (e) {
-        var rect = el.getBoundingClientRect();
-        el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
-        el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
-      });
+    // one listener on document: the Writing page rebuilds its cards on every filter
+    var glowCards = '.stats > div, .card, .education-grid > article, .profile-panel, .article-card, .project-grid .project, .timeline-card, .contact';
+    document.addEventListener('mousemove', function (e) {
+      var el = e.target.closest(glowCards);
+      if (!el) return;
+      var rect = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+      el.style.setProperty('--my', (e.clientY - rect.top) + 'px');
     });
 
     // --- Magnetic primary/secondary buttons ------------------------
