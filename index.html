@@ -20,8 +20,7 @@
     <meta name="twitter:title" content="Fahim Ahamed | Data & AI" />
     <meta name="twitter:description" content="Data scientist with a background in applied AI research, turning messy data into models and decisions people can trust across healthcare, NLP, computer vision, and beyond." />
     <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png?v=3" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f9" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1115" />
+    <meta name="theme-color" content="#f5f7f9" />
     <link rel="icon" type="image/png" href="assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
@@ -34,6 +33,8 @@
         // no saved choice: follow the OS, so styles.css only needs [data-theme="dark"]
         if (saved !== 'dark' && saved !== 'light') saved = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', saved);
+        // the phone browser bar follows the chosen theme, not only the OS (site.js keeps it in sync)
+        document.querySelector('meta[name="theme-color"]').content = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
       })();
     </script>
     <noscript>
@@ -238,8 +239,8 @@
             <span class="tag">Digital Health &middot; Q1</span>
             <h3>Explainable AI-driven hybrid deep learning framework for skin cancer diagnosis</h3>
             <p>
-              EfficientNetB0 plus Random Forest fusion model with Grad-CAM explainability and a
-              web interface for clinical decision support.
+              Hybrid EfficientNetB0 and Random Forest model with 98.61% accuracy, Grad-CAM
+              explainability, and a clinical decision support interface.
             </p>
             <a href="https://journals.sagepub.com/doi/10.1177/20552076261438923" target="_blank" rel="noopener">Read paper</a>
           </article>
@@ -256,8 +257,8 @@
             <span class="tag">Springer Nature</span>
             <h3>Texture Feature-Based Colonic Polyp Detection Using Deep Learning Techniques</h3>
             <p>
-              DeepLab3+ segmentation approach achieving 97.33% IoU accuracy for colorectal polyp
-              boundary detection.
+              DeepLab3+ segmentation with ResNet50 features, outlining colonic polyp boundaries at
+              97.33% IoU for early colorectal cancer detection.
             </p>
             <a href="https://link.springer.com/chapter/10.1007/978-3-031-73324-6_2" target="_blank" rel="noopener">Read paper</a>
           </article>

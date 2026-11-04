@@ -624,6 +624,11 @@ h2 {
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
+  text-wrap: balance; /* no section heading ends on a lone word on phones */
+}
+
+p {
+  text-wrap: pretty;
 }
 
 h3 {
@@ -675,8 +680,9 @@ h3 {
   }
 }
 
+/* keep the magnetic offset while pressed; without hover the vars are unset, so this is a plain 1px press */
 .button:active {
-  transform: translateY(1px);
+  transform: translate(var(--mag-x, 0px), calc(var(--mag-y, 0px) + 1px));
 }
 
 .button.primary {
@@ -1202,6 +1208,13 @@ h3 {
   }
 }
 
+/* article cards open in a new tab too; the no-break space keeps the arrow on the title's last word */
+.article-card[target="_blank"] .article-title::after {
+  content: "\00a0\2197";
+  color: var(--accent-dark);
+  font-weight: 400;
+}
+
 .paper-status {
   width: fit-content;
   margin-top: auto;
@@ -1332,15 +1345,6 @@ h3 {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 600;
-  transition: background 0.2s var(--ease-out), border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
-}
-
-@media (hover: hover) {
-  .skill-cloud span:hover {
-    border-color: var(--accent-dark);
-    background: var(--accent-soft);
-    transform: translateY(-2px);
-  }
 }
 
 /* ---------- Education ---------- */
@@ -1607,6 +1611,7 @@ h3 {
 .article-title {
   font-weight: 700;
   line-height: 1.35;
+  text-wrap: balance; /* pretty still left lone words ("AI") at 1024 */
 }
 
 /* ---------- Contact ---------- */
@@ -1789,9 +1794,10 @@ h3 {
   cursor: pointer;
   box-shadow: var(--shadow-soft);
   opacity: 0;
+  visibility: hidden; /* out of the tab order while invisible; the transition delays it until the fade ends */
   pointer-events: none;
   transform: translateY(8px);
-  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out), background 0.2s var(--ease-out), color 0.2s var(--ease-out);
+  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out), background 0.2s var(--ease-out), color 0.2s var(--ease-out), visibility 0.2s;
 }
 
 .back-to-top svg {
@@ -1806,6 +1812,7 @@ h3 {
 
 .back-to-top.visible {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
 }
@@ -2390,7 +2397,7 @@ h3 {
 .story-meta li:not(:last-child)::after {
   content: "\00b7";
   margin-left: 10px;
-  color: var(--line);
+  color: color-mix(in srgb, var(--muted) 75%, var(--bg-elev)); /* same as the education separator; --line vanishes as a glyph */
 }
 
 .story-method {

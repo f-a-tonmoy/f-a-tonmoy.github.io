@@ -34,7 +34,12 @@
       +     '<path d="M4 10.4 12 4.2l8 6.2V19a1.6 1.6 0 0 1-1.6 1.6H15v-5.8H9v5.8H5.6A1.6 1.6 0 0 1 4 19z" />'
       +   '</svg>'
       + '</a>'
-      + '<nav class="nav" aria-label="Primary navigation">'
+      // before the nav in the DOM so Tab goes from the menu button into the open drawer;
+      // CSS order still draws it at the right end of the bar
+      + '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">'
+      +   '<span></span><span></span><span></span>'
+      + '</button>'
+      + '<nav class="nav" id="site-nav" aria-label="Primary navigation">'
       +   '<a href="/pages/experience.html"' + ariaCurrent('experience') + '>Experience</a>'
       +   '<a href="/pages/research.html"'   + ariaCurrent('research')   + '>Research</a>'
       +   '<a href="/pages/data-stories.html"' + ariaCurrent('data-stories') + '>Data Stories</a>'
@@ -53,9 +58,6 @@
       +     '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="4.75" width="17.6" height="14.5" rx="2.2" /><path d="m3.8 6.95 7.3 5.75a1.6 1.6 0 0 0 1.8 0l7.3-5.75" /></svg>'
       +   '</a>'
       + '</div>'
-      + '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">'
-      +   '<span></span><span></span><span></span>'
-      + '</button>'
       + '</div>';
   }
 
@@ -130,6 +132,13 @@
       navToggle.classList.toggle('open', open);
       navToggle.setAttribute('aria-expanded', String(open));
     });
+    // Esc closes the drawer and hands focus back to the button that opened it
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        navToggle.click();
+        navToggle.focus();
+      }
+    });
   }
 
   // Scroll state: back-to-top visibility (after 500px) and the header's lifted
@@ -167,6 +176,7 @@
         document.documentElement.setAttribute('data-theme', next);
         try { localStorage.setItem('theme', next); } catch (err) {}
         syncThumbArt(); // baked art can't follow tokens; swap it with the theme
+        syncThemeColor();
       };
 
       var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -255,6 +265,8 @@
   // real pointer" -- a width query would misfire on a narrow desktop window.
   var copyTargets = document.querySelectorAll('.copy-email, a[href^="mailto:"]');
   Array.prototype.forEach.call(copyTargets, function (el) {
+    // on touch a mailto link opens the mail app, so its "Copy email address" label would be wrong
+    if (!canHover && el.hasAttribute('href') && el.hasAttribute('aria-label')) el.setAttribute('aria-label', 'Send email');
     el.addEventListener('click', function (ev) {
       // The footer copy button has no href, so it copies on every device.
       if (!canHover && el.hasAttribute('href')) return;
@@ -408,6 +420,12 @@
 
   syncThumbArt();
 
+  // the phone's browser bar: one theme-color meta, set to the page background of the active theme
+  function syncThemeColor() {
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+  }
+
   // follow the OS when the visitor has expressed no preference of their own
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
     var saved = null;
@@ -415,6 +433,7 @@
     if (saved === 'dark' || saved === 'light') return;
     document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
     syncThumbArt();
+    syncThemeColor();
   });
 
   // --- Landing pulse on the card jumped to from the index map ------
@@ -543,6 +562,10 @@
             holder.removeAttribute('aria-busy');
             lightboxOrigin = img;
             lightboxImg.src = img.src;
+            // name the dialog and image after the card, from the label the holder already carries
+            var name = holder.getAttribute('aria-label').replace(/^View larger image:? ?/, '');
+            lightboxImg.alt = name;
+            lightbox.setAttribute('aria-label', name || 'Image');
             lightbox.showModal();
             var big = lightbox.getBoundingClientRect().width > 50; // a slow image falls back to a plain open
             if (big && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

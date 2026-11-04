@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Research · Fahim Ahamed | Data & AI</title>
+    <title>Research · Fahim Ahamed</title>
     <meta name="description" content="Research and publications by Fahim Ahamed in healthcare AI, NLP, computer vision, and adversarial AI." />
     <link rel="canonical" href="https://f-a-tonmoy.github.io/pages/research.html" />
     <meta property="og:type" content="website" />
@@ -17,8 +17,7 @@
     <meta name="twitter:title" content="Research · Fahim Ahamed" />
     <meta name="twitter:description" content="Research spanning healthcare AI, adversarial robustness, computer vision, NLP, and sustainable computing." />
     <meta name="twitter:image" content="https://f-a-tonmoy.github.io/assets/og-image.png?v=3" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7f9" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1115" />
+    <meta name="theme-color" content="#f5f7f9" />
     <link rel="icon" type="image/png" href="/assets/favicon.png?v=5" />
     <link rel="preload" href="/assets/webfonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/webfonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
@@ -31,6 +30,8 @@
         // no saved choice: follow the OS, so styles.css only needs [data-theme="dark"]
         if (saved !== 'dark' && saved !== 'light') saved = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', saved);
+        // the phone browser bar follows the chosen theme, not only the OS (site.js keeps it in sync)
+        document.querySelector('meta[name="theme-color"]').content = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
       })();
     </script>
     <noscript>
