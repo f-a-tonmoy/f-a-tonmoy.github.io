@@ -1,4 +1,5 @@
 [
+ {"match": "Is Your RAG Failing", "label": "Where did your RAG break?", "keywords": ["RAG", "retrieval", "evaluation"], "motif": "ragsuspects"},
  {"match": "The Number Behind", "label": "The AI score behind layoffs was broken", "keywords": ["layoffs", "metrics", "data quality"], "motif": "timeseries", "variant": "break"},
  {"match": "Why \"Thinking Mode\"", "label": "Thinking mode won't stop hallucinations", "keywords": ["LLMs", "reasoning", "hallucination"], "motif": "reasoning", "variant": "chain"},
  {"match": "Bagging, Boosting", "label": "Bagging, boosting, stacking explained", "keywords": ["ensembles", "trees", "variance"], "motif": "tree", "variant": "ensemble"},

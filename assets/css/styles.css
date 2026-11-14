@@ -427,7 +427,8 @@ main[id="main"]:focus-visible {
   }
 }
 
-.nav a[aria-current="page"] {
+.nav a[aria-current="page"],
+.nav a.is-section { /* homepage scroll-spy, set by site.js */
   color: var(--accent-dark);
   background: var(--accent-soft);
 }
@@ -583,7 +584,9 @@ main[id="main"]:focus-visible {
   display: inline-block;
   align-self: flex-start;
   margin: 0 0 14px;
-  padding: 4px 10px;
+  /* optically centred, not equal: all-caps leaves the descender space empty (text sat ~1.4px high)
+     and letter-spacing adds 0.87px after the last glyph */
+  padding: 5px 9px 4px 10px;
   border: 1px solid var(--tag-line, var(--line));
   border-radius: var(--radius);
   background: transparent;
@@ -1308,15 +1311,15 @@ h3 {
 /* ---------- Skills ---------- */
 .skill-groups {
   display: grid;
-  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 var(--gap-lg);
   border-top: 1px solid var(--line);
 }
 
 .skill-group {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  align-items: center;
-  gap: 18px;
+  align-content: start;
+  gap: 10px;
   padding: 16px 0;
   border-bottom: 1px solid var(--line);
 }
@@ -1958,11 +1961,6 @@ h3 {
     border-top: 1px solid var(--line);
   }
 
-  .skill-group {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
   .writing-toolbar {
     position: static;
   }
@@ -2127,6 +2125,27 @@ h3 {
   to   { clip-path: inset(0 0 0 0); }
 }
 
+/* Reading progress on the bar's bottom edge. scaleX(0) is the resting state, so pages
+   too short to scroll (no active timeline) and browsers without scroll timelines show nothing. */
+@supports (animation-timeline: scroll()) {
+  .site-header::after {
+    content: "";
+    position: absolute;
+    inset: auto -1px -1px;
+    height: 2px;
+    background: var(--accent-dark);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: scroll-progress linear both;
+    animation-timeline: scroll(root);
+    pointer-events: none;
+  }
+}
+
+@keyframes scroll-progress {
+  to { transform: scaleX(1); }
+}
+
 /* ---------- Scroll reveal ---------- */
 .reveal {
   opacity: 0;
@@ -2141,6 +2160,29 @@ h3 {
   transform: none;
 }
 
+/* Cards inside a revealed section arrive one after another. An animation, not a
+   transition, so the cards' own hover transitions stay untouched. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal > :is(.card-grid, .case-grid, .project-grid, .article-card-grid, .education-grid, .timeline, .skill-groups) > * {
+    --i: 0; /* set on the card itself: an inherited --i would come from the grid's own position */
+    &:nth-child(2) { --i: 1; }
+    &:nth-child(3) { --i: 2; }
+    &:nth-child(4) { --i: 3; }
+    &:nth-child(5) { --i: 4; }
+    &:nth-child(6) { --i: 5; }
+    &:nth-child(7) { --i: 6; }
+    &:nth-child(n + 8) { --i: 7; }
+  }
+  .reveal.is-visible > :is(.card-grid, .case-grid, .project-grid, .article-card-grid, .education-grid, .timeline, .skill-groups) > * {
+    animation: reveal-rise 0.5s var(--ease-out) backwards;
+    animation-delay: calc(var(--i) * 70ms);
+  }
+}
+
+@keyframes reveal-rise {
+  from { opacity: 0; transform: translateY(14px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .status-dot::after { animation: none; }
@@ -2150,6 +2192,8 @@ h3 {
 @media (max-width: 560px) {
   /* one 16px edge on phones for the header bar, content and footer */
   :root { --chrome-edge: 16px; }
+
+  .skill-groups { grid-template-columns: 1fr; }
 
   .site-header,
   .section,

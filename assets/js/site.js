@@ -249,6 +249,17 @@
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  // Homepage scroll-spy: light the nav link whose section crosses the middle of the viewport.
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = document.querySelector('.nav a[href$="/' + entry.target.id + '.html"]');
+        if (link) link.classList.toggle('is-section', entry.isIntersecting);
+      });
+    }, { rootMargin: '-50% 0px -50% 0px' });
+    document.querySelectorAll('main > section[id]').forEach(function (s) { spy.observe(s); });
+  }
+
   // ============================================================
   //  3. Interactivity polish
   // ============================================================

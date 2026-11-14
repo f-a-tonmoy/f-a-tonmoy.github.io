@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "Is Your RAG Failing at Retrieval or Generation?",
+    "url": "https://www.linkedin.com/pulse/your-rag-failing-retrieval-generation-fahim-ahamed-pbgje",
+    "image": "/assets/article-thumbnails/light/is-your-rag-failing-at-retrieval-or-generation.webp",
+    "category": "Generative AI"
+  },
+  {
     "title": "The Number Behind Every Tech Layoff Was Broken the Whole Time",
     "url": "https://www.linkedin.com/pulse/number-behind-every-tech-layoff-broken-whole-time-fahim-ahamed-uzjae",
     "image": "/assets/article-thumbnails/light/the-number-behind-every-tech-layoff-was-broken-the-whole-time.webp",
