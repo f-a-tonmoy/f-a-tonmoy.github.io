@@ -1090,7 +1090,7 @@ h3 {
   position: relative;
   padding: 22px;
   border: 1px solid var(--line);
-  border-left: 1.5px solid var(--accent-dark);
+  border-left: 1.5px solid var(--line); /* green on hover only; the width stays so nothing shifts */
   border-radius: var(--radius);
   background: var(--bg-elev);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
@@ -1209,13 +1209,6 @@ h3 {
   .project-link[target="_blank"]:hover::after {
     transform: translate(2px, -2px);
   }
-}
-
-/* article cards open in a new tab too; the no-break space keeps the arrow on the title's last word */
-.article-card[target="_blank"] .article-title::after {
-  content: "\00a0\2197";
-  color: var(--accent-dark);
-  font-weight: 400;
 }
 
 .paper-status {
@@ -1348,6 +1341,15 @@ h3 {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 600;
+  transition: background 0.2s var(--ease-out), border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+
+@media (hover: hover) {
+  .skill-cloud span:hover {
+    border-color: var(--accent-dark);
+    background: var(--accent-soft);
+    transform: translateY(-2px);
+  }
 }
 
 /* ---------- Education ---------- */

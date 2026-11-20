@@ -3,7 +3,8 @@ const articles = [
     "title": "Is Your RAG Failing at Retrieval or Generation?",
     "url": "https://www.linkedin.com/pulse/your-rag-failing-retrieval-generation-fahim-ahamed-pbgje",
     "image": "/assets/article-thumbnails/light/is-your-rag-failing-at-retrieval-or-generation.webp",
-    "category": "Generative AI"
+    "category": "Generative AI",
+    "featured": 1
   },
   {
     "title": "The Number Behind Every Tech Layoff Was Broken the Whole Time",
@@ -15,8 +16,7 @@ const articles = [
     "title": "Why \"Thinking Mode\" Doesn't Fix AI Hallucinations",
     "url": "https://www.linkedin.com/pulse/why-thinking-mode-doesnt-fix-ai-hallucinations-fahim-ahamed-h9j4e",
     "image": "/assets/article-thumbnails/light/why-thinking-mode-doesnt-fix-ai-hallucinations.webp",
-    "category": "Generative AI",
-    "featured": 1
+    "category": "Generative AI"
   },
   {
     "title": "Bagging, Boosting, Stacking: Why Each One Works",
