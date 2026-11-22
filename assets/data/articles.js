@@ -185,7 +185,7 @@ const articles = [
     "category": "Data Science"
   },
   {
-    "title": "Context Engineering: The Craft of Feeding Large Language Models the Right Stuff",
+    "title": "Context Engineering: The Craft of Feeding LLMs the Right Stuff",
     "url": "https://www.linkedin.com/pulse/context-engineering-craft-feeding-large-language-models-fahim-ahamed-gfgje",
     "image": "/assets/article-thumbnails/light/context-engineering-the-craft-of-feeding-large-language-models-the-right-stuff.webp",
     "category": "Generative AI"
