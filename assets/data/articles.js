@@ -1,5 +1,11 @@
 const articles = [
   {
+    "title": "What a Reranker Fixes That Vector Search Can't",
+    "url": "https://www.linkedin.com/pulse/what-reranker-fixes-vector-search-cant-fahim-ahamed-j2uac",
+    "image": "/assets/article-thumbnails/light/what-a-reranker-fixes-that-vector-search-can-t.webp",
+    "category": "Generative AI"
+  },
+  {
     "title": "Is Your RAG Failing at Retrieval or Generation?",
     "url": "https://www.linkedin.com/pulse/your-rag-failing-retrieval-generation-fahim-ahamed-pbgje",
     "image": "/assets/article-thumbnails/light/is-your-rag-failing-at-retrieval-or-generation.webp",

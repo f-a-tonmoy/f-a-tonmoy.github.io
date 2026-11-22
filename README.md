@@ -11,7 +11,7 @@ Personal portfolio site for **Fahim Ahamed** — data scientist with a backgroun
 Data scientist with a background in applied AI research, turning messy data into models and decisions people can trust across healthcare, NLP, computer vision, and beyond.
 
 - **4+ peer-reviewed AI research papers** (SAGE, Springer, IEEE), 2 more accepted or under review
-- **85+ articles** on data science, ML, and responsible AI
+- **90+ articles** on data science, ML, and responsible AI
 - Specialties: explainable AI, computer vision, NLP, adversarial robustness
 - Based in NYC · U.S. Permanent Resident · No sponsorship required
 
@@ -23,12 +23,12 @@ Data scientist with a background in applied AI research, turning messy data into
 
 | | |
 |---|---|
-| [Home](https://f-a-tonmoy.github.io) | Overview, current roles, featured work, selected writing |
+| [Home](https://f-a-tonmoy.github.io) | Overview, current roles, featured work, the three latest data stories, selected writing |
 | [Experience](https://f-a-tonmoy.github.io/pages/experience.html) | Timeline of roles + education |
 | [Research](https://f-a-tonmoy.github.io/pages/research.html) | Published papers + manuscripts in pipeline |
 | [Projects](https://f-a-tonmoy.github.io/pages/projects.html) | Treemap overview, then ML, deep learning, public health analytics, cybersecurity, recommendation systems, software engineering |
 | [Data Stories](https://f-a-tonmoy.github.io/pages/data-stories.html) | Long-form analyses of public datasets, published as interactive articles |
-| [Writing](https://f-a-tonmoy.github.io/pages/writing.html) | Interactive explainers, plus 85+ technical articles (filterable + searchable) |
+| [Writing](https://f-a-tonmoy.github.io/pages/writing.html) | Interactive explainers, plus 90+ technical articles (filterable + searchable) |
 
 ---
 
@@ -55,6 +55,7 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 ├── 404.html           # branded not-found page; also forwards the old page addresses
 ├── pages/             # experience, research, projects, data-stories, writing (.html)
 ├── .nojekyll          # tells GitHub Pages to skip Jekyll (pure-HTML site)
+├── .github/workflows/ # runs tools/check-articles.js on every push
 ├── assets/
 │   ├── css/styles.css     # single stylesheet
 │   ├── js/site.js         # shared chrome injection + interactivity
@@ -63,7 +64,8 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 │   ├── project-thumbnails/{light,dark}/   # generated art, one set per theme
 │   ├── article-thumbnails/{light,dark}/   # generated art, one set per theme
 │   ├── explainers/{light,dark}/           # generated art, one set per theme
-│   ├── data-stories/  school-logos/
+│   ├── data-stories/{light,dark}/         # generated art, one set per theme
+│   ├── school-logos/
 │   └── avatar, favicon, OG image, resume
 └── tools/
     └── check-articles.js  # `node tools/check-articles.js`: catches bad article data
@@ -78,9 +80,14 @@ Pure static site — **HTML · CSS · vanilla JavaScript**. No build step. Deplo
 python -m http.server 8000
 # visit http://localhost:8000
 
-# before pushing, after editing assets/data/articles.js
+# before pushing, after editing assets/data/articles.js (CI runs it on push too)
 node tools/check-articles.js
 ```
+
+## Adding content
+
+- **Article:** add an entry at the top of `assets/data/articles.js` with its light thumbnail path (the dark one is found by swapping the folder). `featured` (1–6, one per category) picks the homepage's six and their order.
+- **Data story:** add an `<article class="story">` at the top of `pages/data-stories.html` and renumber the rest. The homepage reads that page and shows its first three, so nothing else needs editing.
 
 ## Deploy
 

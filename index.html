@@ -92,7 +92,7 @@
           <span>of records processed for analytics and ML pipelines</span>
         </div>
         <div>
-          <strong>85+</strong>
+          <strong>90+</strong>
           <span>articles on data science &amp; machine learning</span>
         </div>
       </section>
@@ -280,35 +280,8 @@
           <h2>Behind the Numbers</h2>
           <a class="section-link" href="/pages/data-stories.html">All stories</a>
         </div>
-        <div class="case-grid">
-          <a class="article-card" href="https://f-a-tonmoy.github.io/us-opioid-treatment-gap/" target="_blank" rel="noopener">
-            <span class="article-thumb">
-              <img src="/assets/data-stories/light/us-opioid-treatment-gap.webp" alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />
-            </span>
-            <span class="article-body">
-              <span class="article-title">One Facility for Every Nineteen Deaths</span>
-              <span class="case-desc">Eleven years of federal overdose mortality, 612,499 deaths, set against every treatment facility in SAMHSA's national locator. Whether the states carrying the heaviest burden hold the capacity to match, and where that breaks down.</span>
-            </span>
-          </a>
-          <a class="article-card" href="https://f-a-tonmoy.github.io/nyc-mental-health-calls/" target="_blank" rel="noopener">
-            <span class="article-thumb">
-              <img src="/assets/data-stories/light/nyc-mental-health.webp" alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />
-            </span>
-            <span class="article-body">
-              <span class="article-title">New York City's Quietest Emergency</span>
-              <span class="case-desc">Eight years of NYC 911 mental health crisis calls, 1.35 million of them. Where the burden actually falls once precinct population is accounted for, and how it lines up with the city's clinician-response coverage.</span>
-            </span>
-          </a>
-          <a class="article-card" href="https://f-a-tonmoy.github.io/nyc-restaurant-inspections/" target="_blank" rel="noopener">
-            <span class="article-thumb">
-              <img src="/assets/data-stories/light/nyc-restaurant-inspections.webp" alt="" loading="lazy" onerror="this.closest('.article-thumb').classList.add('is-empty'); this.remove();" />
-            </span>
-            <span class="article-body">
-              <span class="article-title">The Quiet Math of NYC's Restaurant Inspections</span>
-              <span class="case-desc">An analytical look at ~83,000 NYC health inspections across ~27,000 restaurants. What an A grade actually signals, where the system bends around the grade boundary, and how few kitchens hold a clean inspection history.</span>
-            </span>
-          </a>
-        </div>
+        <!-- filled from pages/data-stories.html: its three newest stories -->
+        <div class="case-grid" id="latest-stories"></div>
       </section>
 
       <section class="section reveal" id="projects">
@@ -420,6 +393,34 @@
           .sort(function (a, b) { return a.featured - b.featured; })
           .map(articleCard)
           .join('');
+      })();
+
+      // The three newest data stories. pages/data-stories.html lists them newest first and is
+      // the only place a story is written, so adding one there updates this section too.
+      (function () {
+        var grid = document.getElementById('latest-stories');
+        if (!grid || typeof esc === 'undefined') return;
+        fetch('/pages/data-stories.html')
+          .then(function (res) { if (!res.ok) throw new Error(res.status); return res.text(); })
+          .then(function (html) {
+            var stories = new DOMParser().parseFromString(html, 'text/html').querySelectorAll('.story');
+            grid.innerHTML = Array.prototype.slice.call(stories, 0, 3).map(function (story) {
+              var link = story.querySelector('.story-title a');
+              var img = story.querySelector('.story-media img');
+              var thumb = img
+                ? '<img src="' + esc(themedSrc(img.getAttribute('src'))) + '" alt="" loading="lazy" onerror="this.closest(\'.article-thumb\').classList.add(\'is-empty\'); this.remove();" />'
+                : '';
+              return '<a class="article-card" href="' + esc(link.getAttribute('href')) + '" target="_blank" rel="noopener">'
+                + '<span class="article-thumb' + (img ? '' : ' is-empty') + '">' + thumb + '</span>'
+                + '<span class="article-body">'
+                + '<span class="article-title">' + esc(link.textContent.trim()) + '</span>'
+                + '<span class="case-desc">' + esc(story.querySelector('.story-dek').textContent.trim().replace(/\s+/g, ' ')) + '</span>'
+                + '</span></a>';
+            }).join('');
+          })
+          .catch(function () {
+            grid.closest('section').hidden = true; // no stories to show beats an empty heading
+          });
       })();
     </script>
 
