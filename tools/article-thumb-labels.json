@@ -69,7 +69,7 @@
  {"match": "Federated Learning", "label": "Training without sharing data", "keywords": ["federated", "privacy", "edge"], "motif": "fedhub"},
  {"match": "Multiclass vs.", "label": "Multiclass vs multilabel", "keywords": ["classification", "labels", "metrics"], "motif": "labelgrid"},
  {"match": "The Double Descent", "label": "Overfitting, then better again", "keywords": ["double descent", "overfitting", "scaling"], "motif": "ddescent"},
- {"match": "Demystifying Loss", "label": "Choosing a loss function", "keywords": ["loss functions", "optimization", "training"], "motif": "lossfns"},
+ {"match": "Demystifying Loss", "label": "Choosing a loss function", "keywords": ["loss functions", "optimization", "training"], "motif": "losscurves"},
  {"match": "The AI Feedback Loop", "label": "Models reshape their own data", "keywords": ["feedback loops", "drift", "bias"], "motif": "narrow", "variant": null},
  {"match": "Retraining AI Models", "label": "When to retrain your model", "keywords": ["retraining", "drift", "MLOps"], "motif": "retrain"},
  {"match": "Synthetic Data in", "label": "When synthetic data drifts", "keywords": ["synthetic data", "augmentation", "privacy"], "motif": "synthdrift"},
